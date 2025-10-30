@@ -1,0 +1,22 @@
+[project]
+name = "co2-synthesis"
+version = "0.1.0"
+description = "Creates a static web page of information about different ocean CO2 products."
+readme = "README.md"
+authors = [
+    { name = "lukegre", email = "lukegre@gmail.com" }
+]
+requires-python = ">=3.11"
+dependencies = [
+    "gspread",
+    "oauth2client",
+    "jinja2",
+    "requests"
+]
+
+[project.scripts]
+co2-synthesis = "co2_synthesis:main"
+
+[build-system]
+requires = ["uv_build>=0.8.4,<0.9.0"]
+build-backend = "uv_build"
