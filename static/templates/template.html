@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ocean CO2 Products</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/{{ cfg.FONTAWESOME_KEY }}.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <header class="banner">
@@ -12,86 +13,15 @@
         <p>Publication by Jiang et al. (2025)</p>
     </header>
     <div class="container">
-        <div class="sidebar">
-            <h2>Filters</h2>
-            {%- for header, f in filters.items() -%}
-            {%- set filter_id = header|lower|replace(' ', '-') -%}
-            <div class="filter">
-                <label>{{ header }}</label>
-                {%- if f.type == 'checkbox' -%}
-                {%- for opt in f.options -%}
-                <input type="checkbox" class="filter-checkbox" data-filter="{{ header }}" data-filter-type="{{ f.type }}" value="{{ opt }}" checked="checked"> {{ opt }}<br>
-                {%- endfor -%}
-                {%- elif f.type == 'radio' -%}
-                {%- for opt in f.options -%}
-                <input type="radio" class="filter-radio" name="{{ header }}" data-filter="{{ header }}" data-filter-type="{{ f.type }}" value="{{ opt }}"> {{ opt }}<br>
-                {%- endfor -%}
-                {%- elif f.type == 'slider' -%}
-                <input type="number" class="filter-slider-min" id="{{ filter_id }}-min" data-filter="{{ header }}" data-filter-type="{{ f.type }}" placeholder="Min" step="0.01">
-                <input type="number" class="filter-slider-max" id="{{ filter_id }}-max" data-filter="{{ header }}" data-filter-type="{{ f.type }}" placeholder="Max" step="0.01">
-                {%- elif f.type == 'period' -%}
-                    {%- if f.get('range_min') -%}
-                    <div class="period-slider-wrapper" data-filter="{{ header }}">
-                        <div class="period-slider">
-                            <input type="range" class="filter-slider-min period-slider-input" min="{{ f.range_min }}" max="{{ f.range_max }}" value="{{ f.default_min }}" data-filter="{{ header }}" data-filter-type="{{ f.type }}" id="{{ filter_id }}-min">
-                            <input type="range" class="filter-slider-max period-slider-input" min="{{ f.range_min }}" max="{{ f.range_max }}" value="{{ f.default_max }}" data-filter="{{ header }}" data-filter-type="{{ f.type }}" id="{{ filter_id }}-max">
-                        </div>
-                        <div class="period-slider-values">
-                            <span id="{{ filter_id }}-min-value">{{ f.default_min }}</span>
-                            <span class="period-slider-separator">–</span>
-                            <span id="{{ filter_id }}-max-value">{{ f.default_max }}</span>
-                        </div>
-                    </div>
-                    {%- endif -%}
-                    {%- if f.get('options') -%}
-                    {%- for opt in f.options -%}
-                    <div>
-                        <input type="checkbox" class="filter-checkbox period-option" data-filter="{{ header }}" data-filter-type="{{ f.type }}" value="{{ opt }}" checked="checked"> {{ opt }}
-                    </div>
-                    {%- endfor -%}
-                    {%- endif -%}
-                {%- endif -%}
-            </div>
-            {%- endfor -%}
-        </div>
+        {% include 'sidebar.html' %}
         <div class="content">
-            <div class="products">{%- for p in products -%}
-                <div class="product-card" {{ p['data_attrs'] }}>
-                    <div class="card-inner">
-                        <div class="card-front">
-                            <div class="card-header">
-                                <h3 class="card-title">{{ p['Product name'] }}</h3>
-                                <div class="card-subheading">{{ p['Subheading'] }}</div>
-                            </div>
-                            {%- if p['Image'] -%} <img src="{{ p['Image'] }}" alt="Product image">
-                            {%- else -%} <div class="back-placeholder"></div>
-                            {%- endif -%}
-                            <p>{{ p['Methodology'] }}</p>
-                            {%- for i in range(headers|length) -%}
-                            {%- if shown_on_card[i] == 'front' and headers[i] not in ['Product name', 'Image'] -%}
-                            <p><strong>{{ headers[i] }}:</strong> {{ p[headers[i]] }}</p>
-                            {%- endif -%}
-                            {%- endfor -%}
-                        </div>
-                        <div class="card-back">
-                            <div class="card-header">
-                                <h3 class="card-title">{{ p['Product name'] }}</h3>
-                                <div class="card-subheading">{{ p['Subheading'] }}</div>
-                            </div>
-                            <p><strong>Highlights:</strong> {{ p['Highlights'] }}</p>
-                            <p><strong>Reference:</strong> {{ p['Reference'] }}</p>
-                            <p><strong>Data Access:</strong> <a href="{{ p['Data access'] }}" target="_blank">Link</a></p>
-                            {%- for i in range(headers|length) -%}
-                            {%- if shown_on_card[i] == 'back' and headers[i] not in ['Product name', 'Highlights', 'Reference', 'Data access'] -%}
-                            <p><strong>{{ headers[i] }}:</strong> {{ p[headers[i]] }}</p>
-                            {%- endif -%}
-                            {%- endfor -%}
-                        </div>
-                    </div>
-                </div>{%- endfor -%}
+            <div class="products">
+                {%- for p in products -%}
+                {% include 'data-card.html' %}
+                {%- endfor -%}
             </div>
         </div>
     </div>
-    <script src="scripts.js"></script>
+    <!-- <script src="scripts.js"></script> -->
 </body>
 </html>

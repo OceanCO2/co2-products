@@ -1,3 +1,4 @@
-def main() -> None:
-    from generate_page import main as generate_main
-    generate_main()
+from .config import cfg
+from . import google_sheet
+from .generate_page import process_product_row
+from .filters import create_filters
