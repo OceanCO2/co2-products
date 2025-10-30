@@ -1,61 +1,41 @@
-import os
+import pathlib
 import shutil
-import re
-import html
+import numpy as np
 import pandas as pd
 from jinja2 import Environment, FileSystemLoader
-from . google_sheet import get_sheet_data
+from .google_sheet import get_sheet_data
+from .config import cfg
+from .filters import create_filters
+
+
+def generate_filters(filter_types, headers, data):
+    # Dummy implementation, assuming filter_types is already the dict
+    return filter_types
 
 
 def main():
-    sheet_id = '1rg9yf1IxSr6fI7UvbrbMqrywRgIPS240uaphIplUXBo'
-    filter_types, shown_on_card, headers, data = get_sheet_data(sheet_id)
+    static_dir = cfg.ROOT / 'static'
+    template_dir = static_dir / 'templates'
+    output_dir = cfg.ROOT / 'output'
+    output_dir.mkdir(exist_ok=True)
     
-    filters = generate_filters(filter_types, headers, data)
+    full_url = "https://docs.google.com/spreadsheets/d/1rg9yf1IxSr6fI7UvbrbMqrywRgIPS240uaphIplUXBo/edit?gid=0#gid=0"
+
+    df = get_sheet_data(full_url, reader='pandas').replace({np.nan: ""})
+    products = df.apply(process_product_row, axis=1)
+    filters = create_filters(products)
     
-    # Prepare products
-    products = []
-    for row in data:
-        product = dict(zip(headers, row))
-        if product.get('Image'):
-            match = re.search(r'href="([^"]*)"', product['Image'])
-            if match:
-                product['Image'] = match.group(1)
-        data_attrs = {}
-        for h in headers:
-            if h in filters:
-                attr_name = 'data-' + h.lower().replace(' ', '-')
-                filter_config = filters[h]
-                raw_value = product.get(h, '')
-                attr_value = raw_value.strip()
-                if filter_config['type'] in ('checkbox', 'radio'):
-                    tokens = split_multi_values(raw_value)
-                    attr_value = '||'.join(tokens)
-                elif filter_config['type'] == 'period':
-                    attr_value = raw_value.strip()
-                attr_value = html.escape(attr_value, quote=True)
-                data_attrs[attr_name] = attr_value
-        product['data_attrs'] = ' '.join(f'{key}="{value}"' for key, value in data_attrs.items())
-        products.append(product)
-    
-    # Setup Jinja2
-    template_dir = os.path.join(os.path.dirname(__file__), '..', 'static', 'templates')
     env = Environment(loader=FileSystemLoader(template_dir))
     template = env.get_template('template.html')
-    
-    # Render
-    output = template.render(products=products, filters=filters, shown_on_card=shown_on_card, headers=headers)
-    
-    # Write to output
-    output_dir = os.path.join(os.path.dirname(__file__), '..', 'output')
-    os.makedirs(output_dir, exist_ok=True)
-    with open(os.path.join(output_dir, 'index.html'), 'w') as f:
-        f.write(output)
-    
+
+    html = template.render(products=products, filters=filters, cfg=cfg)
+
+    with open(output_dir / 'index2.html', 'w') as f:
+        f.write(html)
+
     # Copy static files
-    static_dir = os.path.join(os.path.dirname(__file__), '..', 'static')
     for file in ['styles.css', 'scripts.js']:
-        shutil.copy(os.path.join(static_dir, file), output_dir)
+        shutil.copy(static_dir / file, output_dir / file)
 
 
 def process_product_row(product_row: pd.Series) -> dict:
@@ -82,14 +62,24 @@ def process_product_row(product_row: pd.Series) -> dict:
                 data[main_key] = pd.DataFrame()
             # now, we can insert the value at the correct index
             data[main_key].loc[index, sub_key] = ser[key]
-
     # Convert any DataFrames to list of dicts
     for key in data:
         if isinstance(data[key], pd.DataFrame):
             data[key] = data[key].to_dict(orient='records')
 
-    return data
+    # Create data attributes for filtering
+    data_attrs = {}
+    data_attrs[f"data-data-type"] = data.get('data-category', '')
+    for attr in data.get('card-attribute', []):
+        if attr.get('value'):
+            attr_name = f"data-{attr['label'].lower().replace(' ', '-')}"
+            # handle multiple values for multi-select filters
+            values = [v.strip() for v in str(attr['value']).split(',')]
+            data_attrs[attr_name] = '||'.join(values)
+    
+    data['data-attrs'] = ' '.join([f'{k}="{v}"' for k, v in data_attrs.items()])
 
+    return data
 
 if __name__ == '__main__':
     main()
