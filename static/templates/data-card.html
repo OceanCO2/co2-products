@@ -1,0 +1,48 @@
+<!-- <div class="product-card" {{ p['data-attrs'] }}> -->
+<div class="product-card">
+    <div class="card-inner">
+        <div class="card-front">
+            <div class="card-header">
+                <h3 class="card-title">{{ p['card-title'] }}</h3>
+                <div class="card-subheading">{{ p['card-subheading'] }}</div>
+            </div>
+            <div class="card-image">
+                <img src="{{ p['card-image'] }}" alt="Product image">
+            </div>
+            <div class="card-attributes">
+                {%- for attr in p['card-attribute'] -%}
+                {%- if attr['value'] -%}
+                <!-- card-attribute-icon if fontawesome - and then hover text with description -->
+                 <div class="card-attr">
+                    <i class="{{ attr['icon']|safe }}" title="{{ attr['label'] }}"></i>
+                <span class="card-attribute-value">{{ attr['value'] }}</span>
+                </div>
+                {%- endif -%}
+                {%- endfor -%}
+            </div>
+            <div class="card-summary">
+                <p>{{ p['card-summary'] }}</p>
+            </div>
+        </div>
+        <div class="card-back">
+            <div class="card-header">
+                <h3 class="card-title">{{ p['card-title'] }}</h3>
+                <div class="card-subheading">{{ p['card-subheading'] }}</div>
+            </div>
+            <div class="card-citation">
+                <a href="{{ p['card-citation-link'] }}" target="_blank" rel="noopener noreferrer">{{ p['card-citation'] }}</a>
+            </div>
+            <div class="card-data-access">
+                Data access: <a href="{{ p['card-data-access'] }}" target="_blank" rel="noopener noreferrer">{{ p['card-data-access'] }}</a>
+            </div>
+            <div class="card-details">
+                {%- for detail in p['card-detail'] -%}
+                <div class="card-detail">
+                    <h4 class="card-detail-title">{{ detail['title'] }}</h4>
+                    <p class="card-detail-content">{{ detail['content'] }}</p>
+                </div>
+                {%- endfor -%}
+            </div>
+        </div>
+    </div>
+</div>

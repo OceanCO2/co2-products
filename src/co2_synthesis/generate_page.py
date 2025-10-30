@@ -2,9 +2,10 @@ import os
 import shutil
 import re
 import html
+import pandas as pd
 from jinja2 import Environment, FileSystemLoader
-from google_sheet import get_sheet_data
-from filters import generate_filters, split_multi_values
+from . google_sheet import get_sheet_data
+
 
 def main():
     sheet_id = '1rg9yf1IxSr6fI7UvbrbMqrywRgIPS240uaphIplUXBo'
@@ -55,6 +56,40 @@ def main():
     static_dir = os.path.join(os.path.dirname(__file__), '..', 'static')
     for file in ['styles.css', 'scripts.js']:
         shutil.copy(os.path.join(static_dir, file), output_dir)
+
+
+def process_product_row(product_row: pd.Series) -> dict:
+    """
+    Process a product row from the DataFrame into a nested dictionary.
+    that matches the structure required in the data-card.html template.
+    """
+    
+    ser:pd.Series = product_row
+
+    data = {}
+    for key in ser.index:
+        if '.' not in key:  # Simple key-value pair
+            data[key] = ser[key]
+        else:  # Nested structure (only 1 level deep)
+            splits = key.split('.')
+            if len(splits) == 2:  # the first nested key-value item
+                (main_key, sub_key), index = splits, 0
+            elif len(splits) == 3:  # subsequent nested key-value items have .num suffix
+                main_key, sub_key, index = splits
+                index = int(index)
+            # create a dataframe that can insert at the correct index
+            if main_key not in data:
+                data[main_key] = pd.DataFrame()
+            # now, we can insert the value at the correct index
+            data[main_key].loc[index, sub_key] = ser[key]
+
+    # Convert any DataFrames to list of dicts
+    for key in data:
+        if isinstance(data[key], pd.DataFrame):
+            data[key] = data[key].to_dict(orient='records')
+
+    return data
+
 
 if __name__ == '__main__':
     main()
