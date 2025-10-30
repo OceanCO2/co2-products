@@ -10,13 +10,12 @@ On the website, all products are listed together (inspired by CMEMS). One can fi
 
 The table below shows information about the Google Sheet structure. The first row contains information about the filter type - if no type is given, then it is not filterable. The second row contains the column headers. The subsequent rows contain the actual data for each product. When fully populated, the table will contain > 80 products.
 
-| Filter type | checkbox | radio | checkbox | checkbox | slider |  |  |  |  |  |  |
-|---|---|---|---|---|---|---|---|---|---|---|---|
-| Shown on card | subheader | back | front | front | back | header | back | back | back | back | no |
-|  | Product type | Area | Spatial resolution | Temporal resolution | Years | Product name | Methodology | Highlights | Reference | Data access | Image |
-|  | Data synthesis products | Both | 0.25 | monthly | climatology | MPI-ULB-SOM-FFN | ... | ... | Landschützer et al. (2020) | Link to data | https://www.ncei.noaa.gov/access/ocean-carbon-acidification-data-system/oceans/Figure1_MPI-ULB-SOM_FFN.jpg |
-|  | Data synthesis products | Both | 0.25 | monthly | 1982 - 2024 | OceanSODA-ETHZv2 | A neural network approach | ... | Gregor et al. (2024) | https://zenodo.org/records/11206366 | https://data.up.ethz.ch/shared/ESA-OHOA/OceanSODA_ETHZ_HR-v2023.prerelease-flux/_img/gantt_chart.png |
-
+| data-category | card-title | card-subheading | card-image | card-attribute.icon | card-attribute.label | card-attribute.value | card-attribute.icon | card-attribute.label | card-attribute.value | card-attribute.icon | card-attribute.label | card-attribute.value | card-attribute.icon | card-attribute.label | card-attribute.value | card-summary | card-citation | card-citation-link | card-data-access | card-detail.title | card-detail.content | card-detail.title | card-detail.content |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| Surface data-derived | OceanSODA-ETHZv1 | Gregor and Gruber (2020) | https://essd.copernicus.org/articles/13/777/2021/essd-13-777-2021-avatar-web.png | fa-solid fa-hourglass-start | Temporal resolution | monthly | fa-solid fa-ruler-horizontal | Spatial resolution | 1.0° | fa-solid fa-calendar-days | Period | 1982 - 2022 | fa-solid fa-globe | Spatial domains | Open Ocean, Surface | Full marine carbonate system | Gregor and Gruber (2020) | https://doi.org/10.5194/essd-13-777-2021 | https://doi.org/10.25921/m5wx-ja34 | Highlight |  | Method |  |
+| Surface data-derived | OceanSODA-ETHZv2 | Gregor et al. (2024) | https://agupubs.onlinelibrary.wiley.com/cms/asset/7decc330-7468-429c-bae9-ac51b085be30/gbc21584-fig-0007-m.jpg | fa-solid fa-hourglass-start | Temporal resolution | 8-daily | fa-solid fa-ruler-horizontal | Spatial resolution | 0.25° | fa-solid fa-calendar-days | Period | 1982 - 2024 | fa-solid fa-globe | Spatial domains | Open Ocean, Surface | High resolution fluxes | Gregor et al. (2024) | https://doi.org/10.1029/2024GB008127 | https://zenodo.org/records/11206366 | Highlight |  | Method |  |
+| Surface data-derived | ∆fCO2 and Flux Climatology | Fay et al. (2023) | https://essd.copernicus.org/articles/16/2123/2024/essd-16-2123-2024-avatar-web.png | fa-solid fa-hourglass-start | Temporal resolution | climatology, monthly | fa-solid fa-ruler-horizontal | Spatial resolution | 1.0° | fa-solid fa-calendar-days | Period |  | fa-solid fa-globe | Spatial domains | Open Ocean, Surface | Updated Takahashi climatology | Fay et al. (2023) | https://essd.copernicus.org/articles/16/2123/2024/ | https://doi.org/10.25921/295g-sn13 | Highlight | else | Method | something |
+| Surface data-derived | VLIZ-SOMFFN | Landschützer et al. (2016) | https://agupubs.onlinelibrary.wiley.com/cms/asset/547d18a7-69b5-4e93-96b2-5e8371310b43/gbc20188-fig-0001-m.jpg | fa-solid fa-hourglass-start | Temporal resolution | monthly | fa-solid fa-ruler-horizontal | Spatial resolution | 1.0° | fa-solid fa-calendar-days | Period | 1982 - 2024 | fa-solid fa-globe | Spatial domains | Surface, Open Ocean | The OG | Landschützer et al. (2016) |  |  | Highlight |  | Method |  |
 Here is the link to the Google Sheet:  
 https://docs.google.com/spreadsheets/d/1rg9yf1IxSr6fI7UvbrbMqrywRgIPS240uaphIplUXBo/edit?usp=sharing
 
@@ -30,19 +29,14 @@ Styling of the web page is done using CSS, which is included in the `styles.css`
 
 The filters will be located in a sidebar on the left side of the page, while the product cards will be displayed in a grid layout on the right side. 
 
-### Details about "product-card"
-Each product card contains the following elements:
-- Product name: displayed as a heading
-- Image: a thumbnail image representing the product - if no image is provided, show the back of the card instead
-- Methodology: a brief description of the methodology used for the product
-- Clicking the product card will display more detailed information about the product - the card will turn over to show the back side with more details such as highlights, reference, and data access link. The header will still be the same when turned over. Users can click again to turn the card back to the front side. Links here will take the user to the data source. 
+### Product card structure
+This can be found in the `static/templates/data-card.html` file. This will be populated from the Google Sheet data (see table example above). 
+
 
 ### Details about filter types
 
 - **Checkbox filter**: Shows a list of options that are checkboxes - users can select multiple options. Products that match any of the selected options will be displayed.
-- **Radio filter**: Shows a list of options that are radio buttons - users can select only one option. Products that match the selected option will be displayed.
-- **Slider filter**: Column may contain A - B, where A is valid min, and B is valid max for that product . Alternatively, the product may have a string in the slider column - if this is the case, then add a radio box selector to that column category. If a product's range overlaps with the selected range, it will be displayed.
-- **No filter**: Columns without a filter type are displayed as-is in the product cards and are not filterable.
+- **Number range filter**: Allows users to select a range of numbers. Products that fall within the selected range will be displayed.
 
 
 ## Repository structure
@@ -56,4 +50,4 @@ Each product card contains the following elements:
   - `styles.css`: CSS file for styling the web page
   - `scripts.js`: JavaScript file for handling filter interactions
 - `/output/`: contains the generated web page files
-  - `index.html`: the main HTML file for the web page
+  - `index2.html`: the main HTML file for the web page

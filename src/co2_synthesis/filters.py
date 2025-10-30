@@ -15,6 +15,7 @@ def create_filters(products:list[dict]) -> dict:
 
     filter = defeaultdict_to_dict(filter)
 
+    dates = []
     for key in filter:
         # first remove duplicates and empty strings
         filter[key]['options'] = [k for k in set(filter[key]['options']) if k]
@@ -35,9 +36,12 @@ def create_filters(products:list[dict]) -> dict:
             filter[key]['min_max'] = [range_min, range_max]
             filter[key]['default'] = [default_min, default_max]
             filter[key].pop('options', None)
+            dates += key,
         else:
             filter[key]['type'] = 'multi-select'
-
+    for key in dates:
+        filter.pop(key, None)
+        
     return defeaultdict_to_dict(filter)
 
 
