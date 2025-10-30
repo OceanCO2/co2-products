@@ -1,6 +1,53 @@
 document.addEventListener('DOMContentLoaded', () => {
     const filterInputs = document.querySelectorAll('.filter-checkbox, .filter-range-min, .filter-range-max');
 
+    // Read URL parameters and set filters
+    function setFiltersFromURL() {
+        const params = new URLSearchParams(window.location.search);
+        
+        console.log('URL params:', Array.from(params.entries())); // Debug log
+        
+        params.forEach((value, key) => {
+            console.log(`Processing param: ${key} = ${value}`); // Debug log
+            
+            // Convert URL parameter to a normalized search string (lowercase, spaces)
+            const searchName = key.replace(/-/g, ' ').toLowerCase();
+            console.log(`Looking for filter: ${searchName}`); // Debug log
+            
+            // Find filter element by matching data-filter attribute (case-insensitive)
+            let filterEl = null;
+            document.querySelectorAll('[data-filter]').forEach(el => {
+                const filterName = el.dataset.filter.toLowerCase();
+                if (filterName === searchName) {
+                    filterEl = el.closest('.filter');
+                }
+            });
+            
+            if (filterEl) {
+                console.log(`Found filter element for: ${searchName}`); // Debug log
+                const filterType = filterEl.querySelector('[data-filter-type]').dataset.filterType;
+                
+                if (filterType === 'multi-select') {
+                    // Split multiple values by comma
+                    const values = value.split(',');
+                    values.forEach(v => {
+                        const checkbox = filterEl.querySelector(`input[type="checkbox"][value="${v.trim()}"]`);
+                        console.log(`Looking for checkbox with value: ${v.trim()}, found:`, checkbox); // Debug log
+                        if (checkbox) {
+                            checkbox.checked = true;
+                        }
+                    });
+                } else if (filterType === 'date-range') {
+                    const [min, max] = value.split(',');
+                    if (min) filterEl.querySelector('.filter-range-min').value = min;
+                    if (max) filterEl.querySelector('.filter-range-max').value = max;
+                }
+            } else {
+                console.log(`Filter element NOT found for: ${searchName}`); // Debug log
+            }
+        });
+    }
+
     function getActiveFilters() {
         const activeFilters = {};
         const filterElements = document.querySelectorAll('.filter');
@@ -61,16 +108,8 @@ document.addEventListener('DOMContentLoaded', () => {
                         isVisible = false;
                         break;
                     }
-                    const rangeMatch = cardAttrValue.match(/(\d{4})\s*[-:]\s*(\d{4})/);
-                    if (rangeMatch) {
-                        const cardStart = parseInt(rangeMatch[1], 10);
-                        const cardEnd = parseInt(rangeMatch[2], 10);
-                        // Check for overlap between card's range and filter's range
-                        if (cardEnd < filterValue.min || cardStart > filterValue.max) {
-                            isVisible = false;
-                            break;
-                        }
-                    } else {
+                    const cardYear = parseInt(cardAttrValue.split(' - ')[0], 10);
+                    if (cardYear < filterValue.min || cardYear > filterValue.max) {
                         isVisible = false;
                         break;
                     }
@@ -85,6 +124,7 @@ document.addEventListener('DOMContentLoaded', () => {
         input.addEventListener('change', filterProducts);
     });
 
-    // Initial filter on page load
+    // Set filters from URL parameters, then filter
+    setFiltersFromURL();
     filterProducts();
 });
