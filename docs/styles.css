@@ -3,12 +3,13 @@ body {
     margin: 0;
     padding: 0;
     background-color: #f8f9fa;
+    min-width: 680px;
 }
 
 .banner {
     background-color: hwb(211 29% 15%);
     color: white;
-    text-align: center;
+    text-align: left;
     padding: 20px;
     margin-bottom: 0px;
 }
@@ -23,9 +24,39 @@ body {
     font-size: 1.2rem;
 }
 
+.page-title{
+    display: inline-block;
+}
+
+.web-page-info{
+    float: right;
+}
+
+.web-page-info a{
+    color: white;
+    text-decoration: none;
+    font-size: 4rem;
+    float: right;
+    height: 100%
+}
+
+.web-copyright{
+    color: #ffffff4a;
+    font-size: 0.7rem;
+    float: right;
+    margin-top: -18px;
+    margin-right: -10px
+}
+
+.github-icon {
+    float: right;
+    margin-right: -10px;
+    margin-top: 7px;
+}
+
 .container {
     display: flex;
-    min-height: 100vh;
+    /* min-height: 100vh; */
 }
 
 .sidebar {
@@ -34,8 +65,19 @@ body {
     background-color: #fff;
     padding: 20px;
     box-shadow: 2px 0 5px rgba(0,0,0,0.1);
-    overflow-y: auto;
+    /* overflow-y: auto; */
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
+
+.sidebar-filters {
+    overflow-y: auto;
+    flex-grow: 1;
+}
+
 
 .sidebar h2 {
     margin-top: 0;
