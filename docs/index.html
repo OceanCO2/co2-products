@@ -24,7 +24,7 @@
     <h2>Filters</h2><div class="filter">
         <label>Data Type</label><input type="checkbox" class="filter-checkbox" data-filter="Data Type" data-filter-type="multi-select" value="Observations"> Observations<br><input type="checkbox" class="filter-checkbox" data-filter="Data Type" data-filter-type="multi-select" value="Surface data-derived"> Surface data-derived<br></div><div class="filter">
         <label>Spatial domains</label><input type="checkbox" class="filter-checkbox" data-filter="Spatial domains" data-filter-type="multi-select" value="Coastal"> Coastal<br><input type="checkbox" class="filter-checkbox" data-filter="Spatial domains" data-filter-type="multi-select" value="Open Ocean"> Open Ocean<br><input type="checkbox" class="filter-checkbox" data-filter="Spatial domains" data-filter-type="multi-select" value="Surface"> Surface<br><input type="checkbox" class="filter-checkbox" data-filter="Spatial domains" data-filter-type="multi-select" value="Water column"> Water column<br></div><div class="filter">
-        <label>Temporal resolution</label><input type="checkbox" class="filter-checkbox" data-filter="Temporal resolution" data-filter-type="multi-select" value="8-daily"> 8-daily<br><input type="checkbox" class="filter-checkbox" data-filter="Temporal resolution" data-filter-type="multi-select" value="climatology"> climatology<br><input type="checkbox" class="filter-checkbox" data-filter="Temporal resolution" data-filter-type="multi-select" value="continuous"> continuous<br><input type="checkbox" class="filter-checkbox" data-filter="Temporal resolution" data-filter-type="multi-select" value="monthly"> monthly<br></div><div class="filter">
+        <label>Temporal resolution</label><input type="checkbox" class="filter-checkbox" data-filter="Temporal resolution" data-filter-type="multi-select" value="8-daily"> 8-daily<br><input type="checkbox" class="filter-checkbox" data-filter="Temporal resolution" data-filter-type="multi-select" value="climatology"> climatology<br><input type="checkbox" class="filter-checkbox" data-filter="Temporal resolution" data-filter-type="multi-select" value="continuous"> continuous<br><input type="checkbox" class="filter-checkbox" data-filter="Temporal resolution" data-filter-type="multi-select" value="discrete"> discrete<br><input type="checkbox" class="filter-checkbox" data-filter="Temporal resolution" data-filter-type="multi-select" value="monthly"> monthly<br></div><div class="filter">
         <label>Spatial resolution</label><input type="checkbox" class="filter-checkbox" data-filter="Spatial resolution" data-filter-type="multi-select" value="0.25°"> 0.25°<br><input type="checkbox" class="filter-checkbox" data-filter="Spatial resolution" data-filter-type="multi-select" value="1.0°"> 1.0°<br></div></div>
         <div class="content">
             <div class="products"><!-- <div class="product-card" data-data-type="Observations" data-spatial-domains="Surface||Open Ocean||Coastal" data-temporal-resolution="continuous" data-period="1960 - 2025"> -->
@@ -81,8 +81,8 @@
             </div>
         </div>
     </div>
-</div><!-- <div class="product-card" data-data-type="Observations" data-spatial-domains="Water column||Open Ocean" data-period="1960 - 2024"> -->
-<div class="product-card" data-data-type="Observations" data-spatial-domains="Water column||Open Ocean" data-period="1960 - 2024">
+</div><!-- <div class="product-card" data-data-type="Observations" data-spatial-domains="Water column||Open Ocean" data-temporal-resolution="discrete" data-period="1960 - 2024"> -->
+<div class="product-card" data-data-type="Observations" data-spatial-domains="Water column||Open Ocean" data-temporal-resolution="discrete" data-period="1960 - 2024">
     <div class="card-inner">
         <div class="card-front">
             <div class="card-header">
@@ -100,6 +100,10 @@
                     <div class="card-attr">
                         <i class="fa-solid fa-globe" title="Spatial domains"></i>
                         <span class="card-attribute-value">Water column, Open Ocean</span>
+                    </div><!-- card-attribute-icon if fontawesome - and then hover text with description -->
+                    <div class="card-attr">
+                        <i class="fa-solid fa-hourglass-start" title="Temporal resolution"></i>
+                        <span class="card-attribute-value">discrete</span>
                     </div><!-- card-attribute-icon if fontawesome - and then hover text with description -->
                     <div class="card-attr">
                         <i class="fa-solid fa-calendar-days" title="Period"></i>
