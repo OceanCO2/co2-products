@@ -37,7 +37,7 @@
         <label>Spatial domains</label><input type="checkbox" class="filter-checkbox" data-filter="Spatial domains" data-filter-type="multi-select" value="Coastal"> Coastal<br><input type="checkbox" class="filter-checkbox" data-filter="Spatial domains" data-filter-type="multi-select" value="Open Ocean"> Open Ocean<br><input type="checkbox" class="filter-checkbox" data-filter="Spatial domains" data-filter-type="multi-select" value="Surface"> Surface<br><input type="checkbox" class="filter-checkbox" data-filter="Spatial domains" data-filter-type="multi-select" value="Water column"> Water column<br></div><div class="filter">
         <label>Temporal resolution</label><input type="checkbox" class="filter-checkbox" data-filter="Temporal resolution" data-filter-type="multi-select" value="8-daily"> 8-daily<br><input type="checkbox" class="filter-checkbox" data-filter="Temporal resolution" data-filter-type="multi-select" value="climatology"> climatology<br><input type="checkbox" class="filter-checkbox" data-filter="Temporal resolution" data-filter-type="multi-select" value="continuous"> continuous<br><input type="checkbox" class="filter-checkbox" data-filter="Temporal resolution" data-filter-type="multi-select" value="discrete"> discrete<br><input type="checkbox" class="filter-checkbox" data-filter="Temporal resolution" data-filter-type="multi-select" value="monthly"> monthly<br><input type="checkbox" class="filter-checkbox" data-filter="Temporal resolution" data-filter-type="multi-select" value="referenced"> referenced<br></div><div class="filter">
         <label>Spatial resolution</label><input type="checkbox" class="filter-checkbox" data-filter="Spatial resolution" data-filter-type="multi-select" value="0.25°"> 0.25°<br><input type="checkbox" class="filter-checkbox" data-filter="Spatial resolution" data-filter-type="multi-select" value="1.0°"> 1.0°<br></div><div class="filter">
-        <label>Institution</label><input type="checkbox" class="filter-checkbox" data-filter="Institution" data-filter-type="multi-select" value="ETHZ"> ETHZ<br><input type="checkbox" class="filter-checkbox" data-filter="Institution" data-filter-type="multi-select" value="MPI"> MPI<br><input type="checkbox" class="filter-checkbox" data-filter="Institution" data-filter-type="multi-select" value="Multi"> Multi<br><input type="checkbox" class="filter-checkbox" data-filter="Institution" data-filter-type="multi-select" value="VLIZ"> VLIZ<br></div></div>
+        <label>Institution</label><input type="checkbox" class="filter-checkbox" data-filter="Institution" data-filter-type="multi-select" value="ETHZ"> ETHZ<br><input type="checkbox" class="filter-checkbox" data-filter="Institution" data-filter-type="multi-select" value="LDEO"> LDEO<br><input type="checkbox" class="filter-checkbox" data-filter="Institution" data-filter-type="multi-select" value="MPI"> MPI<br><input type="checkbox" class="filter-checkbox" data-filter="Institution" data-filter-type="multi-select" value="Multi"> Multi<br><input type="checkbox" class="filter-checkbox" data-filter="Institution" data-filter-type="multi-select" value="VLIZ"> VLIZ<br></div></div>
         <div class="content">
             <div class="products"><!-- <div class="product-card" data-data-type="Data compilations" data-spatial-domains="Surface||Open Ocean||Coastal" data-temporal-resolution="continuous" data-period="1960 - 2025" data-institution="Multi"> -->
 <div class="product-card" data-data-type="Data compilations" data-spatial-domains="Surface||Open Ocean||Coastal" data-temporal-resolution="continuous" data-period="1960 - 2025" data-institution="Multi">
@@ -356,8 +356,8 @@
             </div>
         </div>
     </div>
-</div><!-- <div class="product-card" data-data-type="Gridded surface" data-spatial-domains="Open Ocean||Surface" data-temporal-resolution="climatology||monthly||referenced" data-spatial-resolution="1.0°"> -->
-<div class="product-card" data-data-type="Gridded surface" data-spatial-domains="Open Ocean||Surface" data-temporal-resolution="climatology||monthly||referenced" data-spatial-resolution="1.0°">
+</div><!-- <div class="product-card" data-data-type="Gridded surface" data-spatial-domains="Open Ocean||Surface" data-temporal-resolution="climatology||monthly||referenced" data-spatial-resolution="1.0°" data-institution="LDEO"> -->
+<div class="product-card" data-data-type="Gridded surface" data-spatial-domains="Open Ocean||Surface" data-temporal-resolution="climatology||monthly||referenced" data-spatial-resolution="1.0°" data-institution="LDEO">
     <div class="card-inner">
         <div class="card-front">
             <div class="card-header">
@@ -383,6 +383,10 @@
                     <div class="card-attr">
                         <i class="fa-solid fa-ruler-horizontal" title="Spatial resolution"></i>
                         <span class="card-attribute-value">1.0°</span>
+                    </div><!-- card-attribute-icon if fontawesome - and then hover text with description -->
+                    <div class="card-attr">
+                        <i class="fa-solid fa-building-columns" title="Institution"></i>
+                        <span class="card-attribute-value">LDEO</span>
                     </div></div>
             </div>
         </div>
