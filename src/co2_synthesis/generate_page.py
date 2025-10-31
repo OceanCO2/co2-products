@@ -16,7 +16,7 @@ def generate_filters(filter_types, headers, data):
 def main():
     static_dir = cfg.ROOT / 'static'
     template_dir = static_dir / 'templates'
-    output_dir = cfg.ROOT / 'output'
+    output_dir = cfg.ROOT / 'docs'
     output_dir.mkdir(exist_ok=True)
     
     full_url = "https://docs.google.com/spreadsheets/d/1rg9yf1IxSr6fI7UvbrbMqrywRgIPS240uaphIplUXBo/edit?gid=0#gid=0"
