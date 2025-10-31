@@ -14,7 +14,7 @@ readers = {
 }
 
 
-def get_sheet_data(full_url: str, reader='pandas'):
+def get_sheet_data(full_url: str, reader='pandas', **kwargs):
     """
     Retrieve data from the public Google Sheet.
 
@@ -32,7 +32,7 @@ def get_sheet_data(full_url: str, reader='pandas'):
     url = get_download_url_from_sheet_url(full_url, format='csv')
     buffer = get_sheet_as_buffer(url)
 
-    data = readers[reader](buffer)
+    data = readers[reader](buffer, **kwargs)
     
     return data 
 

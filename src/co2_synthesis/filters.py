@@ -19,7 +19,7 @@ def create_filters(products:list[dict]) -> dict:
     dates = []
     for key in filter:
         # first remove duplicates and empty strings
-        filter[key]['options'] = [k for k in set(filter[key]['options']) if k]
+        filter[key]['options'] = sorted([k for k in set(filter[key]['options']) if k])
 
         # then determine type of the filter
         vals = filter[key]['options']
@@ -40,6 +40,9 @@ def create_filters(products:list[dict]) -> dict:
             dates += key,
         else:
             filter[key]['type'] = 'multi-select'
+    
+    # EXCLUDE DATE FILTER BY POPPING THE FILTER KEY 
+    # SINCE THE SCRIPT ISN'T WORKING AND WILL NEED TIME TO DEBUG
     for key in dates:
         filter.pop(key, None)
         
