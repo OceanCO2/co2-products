@@ -3,7 +3,7 @@ import shutil
 import numpy as np
 import pandas as pd
 from jinja2 import Environment, FileSystemLoader
-from .google_sheet import get_sheet_data
+from .google_sheet import get_sheet_data, download_sheet_as_excel
 from .config import cfg
 from .filters import create_filters
 from loguru import logger
@@ -20,13 +20,8 @@ def generate_page_main(google_sheet_url: str):
     df = get_sheet_data(google_sheet_url, reader='pandas')
     logger.debug(f"Retrieved {len(df)} rows from Google Sheet.\n{df.T}")
 
-    df_no_incomplete_products = df.dropna(subset='card-title').replace({np.nan: ""})
-    # show difference between incomplete and complete cards
-    idx_incomplete = df.index.difference(df_no_incomplete_products.index)
-    if len(idx_incomplete) > 0:
-        logger.warning(f"Dropping {len(idx_incomplete)} incomplete products (missing card-title):\n{df.loc[idx_incomplete].T}")
-    
-    products = df_no_incomplete_products.apply(process_product_row, axis=1)
+    df = get_valid_products_only(df)
+    products = list(df.apply(process_product_row, axis=1))
     filters = create_filters(products)
     
     jinja2_env = Environment(loader=FileSystemLoader(template_dir))
@@ -37,10 +32,30 @@ def generate_page_main(google_sheet_url: str):
     with open(output_dir / 'index.html', 'w') as f:
         f.write(html)
 
+    download_sheet_as_excel(google_sheet_url, output_dir / 'data.xlsx')
+    logger.info("Downloaded Google Sheet as Excel file for backup.")
+
     # Copy static files
     for file in ['styles.css', 'scripts.js']:
         shutil.copy(static_dir / file, output_dir / file)
 
+
+def get_valid_products_only(products: pd.DataFrame) -> pd.DataFrame:
+    """
+    Check for incomplete product entries missing required fields.
+    Logs a warning for any incomplete products found.
+    Returns a DataFrame with only complete products.
+    """
+    df_no_incomplete_products = products.dropna(subset='card-title').replace({np.nan: ""})
+    # show difference between incomplete and complete cards
+    idx_incomplete = products.index.difference(df_no_incomplete_products.index)
+    if len(idx_incomplete) > 0:
+        logger.warning(
+            f"Dropping {len(idx_incomplete)} incomplete products (missing card-title):\n"
+            f"{products.loc[idx_incomplete].T}")
+        
+    return df_no_incomplete_products
+    
 
 def process_product_row(product_row: pd.Series) -> dict:
     """
