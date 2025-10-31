@@ -30,7 +30,7 @@ def main():
 
     html = template.render(products=products, filters=filters, cfg=cfg)
 
-    with open(output_dir / 'index2.html', 'w') as f:
+    with open(output_dir / 'index.html', 'w') as f:
         f.write(html)
 
     # Copy static files
