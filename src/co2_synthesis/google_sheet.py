@@ -1,9 +1,11 @@
+import pathlib
 import re
 import requests
 import csv
 import pandas as pd
 from io import StringIO
 from typing import Literal
+from functools import lru_cache
 
 
 readers = {
@@ -35,6 +37,25 @@ def get_sheet_data(full_url: str, reader='pandas'):
     return data 
 
 
+def download_sheet_as_excel(full_url: str, output_path: str | pathlib.Path):
+    """
+    Download the Google Sheet as an Excel file.
+
+    Args:
+        full_url (str): The full URL of the Google Sheet.
+        output_path (str): The path to save the Excel file.
+    """
+
+    sheet_id, gid = get_id_and_gid_from_url(full_url)  # validate URL
+    download_url = f"https://docs.google.com/spreadsheets/d/{sheet_id}/export?format=xlsx"
+
+    response = requests.get(download_url)
+    response.raise_for_status()
+    with open(output_path, 'wb') as f:
+        f.write(response.content)
+
+
+@lru_cache(maxsize=1)
 def get_sheet_as_buffer(full_url: str, format:Literal['csv', 'excel']='csv') -> StringIO:
     """
     Retrieve the Google Sheet data as a StringIO object.
@@ -85,3 +106,23 @@ def get_url_from_sheet_id_and_gid(sheet_id: str, gid: str) -> str:
         str: The full Google Sheet URL.
     """
     return f'https://docs.google.com/spreadsheets/d/{sheet_id}/edit?gid={gid}'
+
+
+def get_id_and_gid_from_url(sheet_url: str) -> tuple[str, str]:
+    """
+    Extract the sheet ID and gid from a full Google Sheet URL.
+
+    Args:
+        sheet_url (str): The full URL of the Google Sheet.
+
+    Returns:
+        tuple[str, str]: A tuple containing the sheet ID and gid.
+    """
+    match = re.match(r'https://docs.google.com/spreadsheets/d/([a-zA-Z0-9-_]+)(/.*gid=(\d+))?', sheet_url)
+    if not match:
+        raise ValueError("Invalid Google Sheet URL")
+
+    sheet_id = match.group(1)
+    gid = match.group(3) if match.group(3) else '0'
+
+    return sheet_id, gid
