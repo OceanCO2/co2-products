@@ -37,10 +37,12 @@
                 </div> -->
                 <div class="card-details">
                     {%- for detail in p['card-detail'] -%}
+                    {%- if detail['content'] -%}
                     <div class="card-detail">
                         <span class="card-detail-title">{{ detail['title'] }}: </span>
                         <span class="card-detail-content">{{ detail['content'] }}</span>
                     </div>
+                    {%- endif -%}
                     {%- endfor -%}
                 </div>
                 <div class="card-links">
