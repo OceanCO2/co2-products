@@ -17,7 +17,7 @@ def generate_page_main(google_sheet_url: str):
     output_dir.mkdir(exist_ok=True)  # create if doesn't exist
 
     logger.debug(f"Fetching data from Google Sheet: {google_sheet_url}")
-    df = get_sheet_data(google_sheet_url, reader='pandas')
+    df = get_sheet_data(google_sheet_url, reader='pandas', skiprows=1)
     logger.debug(f"Retrieved {len(df)} rows from Google Sheet.\n{df.T}")
 
     df = get_valid_products_only(df)
