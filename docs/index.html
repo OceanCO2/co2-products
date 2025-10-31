@@ -22,193 +22,147 @@
 
 <div class="sidebar">
     <h2>Filters</h2><div class="filter">
-        <label>Data Type</label><input type="checkbox" class="filter-checkbox" data-filter="Data Type" data-filter-type="multi-select" value="Surface data-derived"> Surface data-derived<br></div><div class="filter">
-        <label>Temporal resolution</label><input type="checkbox" class="filter-checkbox" data-filter="Temporal resolution" data-filter-type="multi-select" value="climatology"> climatology<br><input type="checkbox" class="filter-checkbox" data-filter="Temporal resolution" data-filter-type="multi-select" value="monthly"> monthly<br><input type="checkbox" class="filter-checkbox" data-filter="Temporal resolution" data-filter-type="multi-select" value="8-daily"> 8-daily<br></div><div class="filter">
-        <label>Spatial resolution</label><input type="checkbox" class="filter-checkbox" data-filter="Spatial resolution" data-filter-type="multi-select" value="1.0°"> 1.0°<br><input type="checkbox" class="filter-checkbox" data-filter="Spatial resolution" data-filter-type="multi-select" value="0.25°"> 0.25°<br></div><div class="filter">
-        <label>Spatial domains</label><input type="checkbox" class="filter-checkbox" data-filter="Spatial domains" data-filter-type="multi-select" value="Surface"> Surface<br><input type="checkbox" class="filter-checkbox" data-filter="Spatial domains" data-filter-type="multi-select" value="Open Ocean"> Open Ocean<br></div></div>
+        <label>Data Type</label><input type="checkbox" class="filter-checkbox" data-filter="Data Type" data-filter-type="multi-select" value="Observations"> Observations<br><input type="checkbox" class="filter-checkbox" data-filter="Data Type" data-filter-type="multi-select" value="Surface data-derived"> Surface data-derived<br></div><div class="filter">
+        <label>Spatial domains</label><input type="checkbox" class="filter-checkbox" data-filter="Spatial domains" data-filter-type="multi-select" value="Coastal"> Coastal<br><input type="checkbox" class="filter-checkbox" data-filter="Spatial domains" data-filter-type="multi-select" value="Open Ocean"> Open Ocean<br><input type="checkbox" class="filter-checkbox" data-filter="Spatial domains" data-filter-type="multi-select" value="Surface"> Surface<br><input type="checkbox" class="filter-checkbox" data-filter="Spatial domains" data-filter-type="multi-select" value="Water column"> Water column<br></div><div class="filter">
+        <label>Temporal resolution</label><input type="checkbox" class="filter-checkbox" data-filter="Temporal resolution" data-filter-type="multi-select" value="8-daily"> 8-daily<br><input type="checkbox" class="filter-checkbox" data-filter="Temporal resolution" data-filter-type="multi-select" value="climatology"> climatology<br><input type="checkbox" class="filter-checkbox" data-filter="Temporal resolution" data-filter-type="multi-select" value="continuous"> continuous<br><input type="checkbox" class="filter-checkbox" data-filter="Temporal resolution" data-filter-type="multi-select" value="monthly"> monthly<br></div><div class="filter">
+        <label>Spatial resolution</label><input type="checkbox" class="filter-checkbox" data-filter="Spatial resolution" data-filter-type="multi-select" value="0.25°"> 0.25°<br><input type="checkbox" class="filter-checkbox" data-filter="Spatial resolution" data-filter-type="multi-select" value="1.0°"> 1.0°<br></div></div>
         <div class="content">
-            <div class="products"><!-- <div class="product-card" data-data-type="Surface data-derived" data-temporal-resolution="monthly" data-spatial-resolution="1.0°" data-period="1982 - 2022" data-spatial-domains="Open Ocean||Surface"> -->
-<div class="product-card" data-data-type="Surface data-derived" data-temporal-resolution="monthly" data-spatial-resolution="1.0°" data-period="1982 - 2022" data-spatial-domains="Open Ocean||Surface">
+            <div class="products"><!-- <div class="product-card" data-data-type="Observations" data-spatial-domains="Surface||Open Ocean||Coastal" data-temporal-resolution="continuous" data-period="1960 - 2025"> -->
+<div class="product-card" data-data-type="Observations" data-spatial-domains="Surface||Open Ocean||Coastal" data-temporal-resolution="continuous" data-period="1960 - 2025">
     <div class="card-inner">
         <div class="card-front">
             <div class="card-header">
-                <h3 class="card-title">OceanSODA-ETHZv1</h3>
-                <div class="card-subheading">Gregor and Gruber (2020)</div>
+                <h3 class="card-title">SOCAT</h3>
+                <div class="card-subheading">Bakker et al. (2016)</div>
             </div>
-            <div class="card-image">
-                <img src="https://essd.copernicus.org/articles/13/777/2021/essd-13-777-2021-avatar-web.png" alt="Product image">
-            </div>
-            <div class="card-attributes"><!-- card-attribute-icon if fontawesome - and then hover text with description -->
-                 <div class="card-attr">
-                    <i class="fa-solid fa-hourglass-start" title="Temporal resolution"></i>
-                <span class="card-attribute-value">monthly</span>
-                </div><!-- card-attribute-icon if fontawesome - and then hover text with description -->
-                 <div class="card-attr">
-                    <i class="fa-solid fa-ruler-horizontal" title="Spatial resolution"></i>
-                <span class="card-attribute-value">1.0°</span>
-                </div><!-- card-attribute-icon if fontawesome - and then hover text with description -->
-                 <div class="card-attr">
-                    <i class="fa-solid fa-calendar-days" title="Period"></i>
-                <span class="card-attribute-value">1982 - 2022</span>
-                </div><!-- card-attribute-icon if fontawesome - and then hover text with description -->
-                 <div class="card-attr">
-                    <i class="fa-solid fa-globe" title="Spatial domains"></i>
-                <span class="card-attribute-value">Open Ocean, Surface</span>
-                </div></div>
-            <div class="card-summary">
-                <p>Full marine carbonate system</p>
+            <div class="card-content">
+                <div class="card-image">
+                    <img src="https://socat.info/wp-content/uploads/2017/06/cropped-socat_cat.png" alt="Product image">
+                </div>
+                <div class="card-summary">
+                    <p>The largest collection of surface ocean carbon observations</p>
+                </div>
+                <div class="card-attributes"><!-- card-attribute-icon if fontawesome - and then hover text with description -->
+                    <div class="card-attr">
+                        <i class="fa-solid fa-globe" title="Spatial domains"></i>
+                        <span class="card-attribute-value">Surface, Open Ocean, Coastal</span>
+                    </div><!-- card-attribute-icon if fontawesome - and then hover text with description -->
+                    <div class="card-attr">
+                        <i class="fa-solid fa-hourglass-start" title="Temporal resolution"></i>
+                        <span class="card-attribute-value">continuous</span>
+                    </div><!-- card-attribute-icon if fontawesome - and then hover text with description -->
+                    <div class="card-attr">
+                        <i class="fa-solid fa-calendar-days" title="Period"></i>
+                        <span class="card-attribute-value">1960 - 2025</span>
+                    </div></div>
             </div>
         </div>
         <div class="card-back">
             <div class="card-header">
-                <h3 class="card-title">OceanSODA-ETHZv1</h3>
-                <div class="card-subheading">Gregor and Gruber (2020)</div>
+                <h3 class="card-title">SOCAT</h3>
+                <div class="card-subheading">Bakker et al. (2016)</div>
             </div>
-            <div class="card-citation">
-                <a href="https://doi.org/10.5194/essd-13-777-2021" target="_blank" rel="noopener noreferrer">Gregor and Gruber (2020)</a>
+            <div class="card-content">
+                <!-- <div class="card-data-access">
+                    <span class="card-data-access-label">Data access:</span> <a href="https://socat.info/" target="_blank" rel="noopener noreferrer">https://socat.info/</a>
+                </div> -->
+                <div class="card-details"><div class="card-detail">
+                        <span class="card-detail-title">Description: </span>
+                        <span class="card-detail-content">The Surface Ocean CO2 Atlas features surface fCO2 measurements from both the open ocean and the coastal ocean, predominantly sourced from research vessels, ships of opportunity, and autonomous platforms including fixed moorings and uncrewed surface vehicles (USVs) (Bakker et al., 2016). It represents the most extensive collection of observational ocean CO2 data for the global surface ocean. Since 2013, SOCAT has been updated annually. Dataset flags indicate the estimated uncertainty and completeness of metadata in SOCAT synthesis products. The SOCAT gridded product contains fCO2 values with an estimated uncertainty of less than 5 µatm. </span>
+                    </div></div>
+                <div class="card-links">
+                    <div class="card-link">
+                        <a href="https://doi.org/10.5194/essd-8-383-2016" target="_blank" rel="noopener noreferrer"><i class="fas fa-book"></i> Publication</a>
+                    </div>
+                    <div class="card-link">
+                        <a href="" target="_blank" rel="noopener noreferrer"><i class="fa fa-download"></i> Data Access</a>
+                    </div>
+                </div>  
             </div>
-            <div class="card-data-access">
-                Data access: <a href="https://doi.org/10.25921/m5wx-ja34" target="_blank" rel="noopener noreferrer">https://doi.org/10.25921/m5wx-ja34</a>
-            </div>
-            <div class="card-details"><div class="card-detail">
-                    <h4 class="card-detail-title">Highlight</h4>
-                    <p class="card-detail-content"></p>
-                </div><div class="card-detail">
-                    <h4 class="card-detail-title">Method</h4>
-                    <p class="card-detail-content"></p>
-                </div></div>
         </div>
     </div>
-</div><!-- <div class="product-card" data-data-type="Surface data-derived" data-temporal-resolution="8-daily" data-spatial-resolution="0.25°" data-period="1982 - 2024" data-spatial-domains="Open Ocean||Surface"> -->
-<div class="product-card" data-data-type="Surface data-derived" data-temporal-resolution="8-daily" data-spatial-resolution="0.25°" data-period="1982 - 2024" data-spatial-domains="Open Ocean||Surface">
+</div><!-- <div class="product-card" data-data-type="Observations" data-spatial-domains="Water column||Open Ocean" data-period="1960 - 2024"> -->
+<div class="product-card" data-data-type="Observations" data-spatial-domains="Water column||Open Ocean" data-period="1960 - 2024">
     <div class="card-inner">
         <div class="card-front">
             <div class="card-header">
-                <h3 class="card-title">OceanSODA-ETHZv2</h3>
-                <div class="card-subheading">Gregor et al. (2024)</div>
+                <h3 class="card-title">GLODAPv2</h3>
+                <div class="card-subheading">Lauvset et al. (2024)</div>
             </div>
-            <div class="card-image">
-                <img src="https://agupubs.onlinelibrary.wiley.com/cms/asset/7decc330-7468-429c-bae9-ac51b085be30/gbc21584-fig-0007-m.jpg" alt="Product image">
-            </div>
-            <div class="card-attributes"><!-- card-attribute-icon if fontawesome - and then hover text with description -->
-                 <div class="card-attr">
-                    <i class="fa-solid fa-hourglass-start" title="Temporal resolution"></i>
-                <span class="card-attribute-value">8-daily</span>
-                </div><!-- card-attribute-icon if fontawesome - and then hover text with description -->
-                 <div class="card-attr">
-                    <i class="fa-solid fa-ruler-horizontal" title="Spatial resolution"></i>
-                <span class="card-attribute-value">0.25°</span>
-                </div><!-- card-attribute-icon if fontawesome - and then hover text with description -->
-                 <div class="card-attr">
-                    <i class="fa-solid fa-calendar-days" title="Period"></i>
-                <span class="card-attribute-value">1982 - 2024</span>
-                </div><!-- card-attribute-icon if fontawesome - and then hover text with description -->
-                 <div class="card-attr">
-                    <i class="fa-solid fa-globe" title="Spatial domains"></i>
-                <span class="card-attribute-value">Open Ocean, Surface</span>
-                </div></div>
-            <div class="card-summary">
-                <p>High resolution fluxes</p>
+            <div class="card-content">
+                <div class="card-image">
+                    <img src="https://glodap.info/wp-content/uploads/2017/09/cropped-glodap_logo_trans.png" alt="Product image">
+                </div>
+                <div class="card-summary">
+                    <p>Adjustments are applied by comparing data in the deep ocean (>2000 m) using a crossover and inversion method as described by Johnson et al. (2001).</p>
+                </div>
+                <div class="card-attributes"><!-- card-attribute-icon if fontawesome - and then hover text with description -->
+                    <div class="card-attr">
+                        <i class="fa-solid fa-globe" title="Spatial domains"></i>
+                        <span class="card-attribute-value">Water column, Open Ocean</span>
+                    </div><!-- card-attribute-icon if fontawesome - and then hover text with description -->
+                    <div class="card-attr">
+                        <i class="fa-solid fa-calendar-days" title="Period"></i>
+                        <span class="card-attribute-value">1960 - 2024</span>
+                    </div></div>
             </div>
         </div>
         <div class="card-back">
             <div class="card-header">
-                <h3 class="card-title">OceanSODA-ETHZv2</h3>
-                <div class="card-subheading">Gregor et al. (2024)</div>
+                <h3 class="card-title">GLODAPv2</h3>
+                <div class="card-subheading">Lauvset et al. (2024)</div>
             </div>
-            <div class="card-citation">
-                <a href="https://doi.org/10.1029/2024GB008127" target="_blank" rel="noopener noreferrer">Gregor et al. (2024)</a>
+            <div class="card-content">
+                <!-- <div class="card-data-access">
+                    <span class="card-data-access-label">Data access:</span> <a href="https://glodap.info/" target="_blank" rel="noopener noreferrer">https://glodap.info/</a>
+                </div> -->
+                <div class="card-details"><div class="card-detail">
+                        <span class="card-detail-title">Description: </span>
+                        <span class="card-detail-content">The Global Ocean Data Analysis Project Version 2 (GLODAPv2) aggregates biogeochemical data collected from discrete bottle samples, offering extensive global coverage from the surface to depths (Key et al., 2015; Olsen et al., 2016; Lauvset et al., 2024). While GLODAP is primarily a product for basin-scale hydrographic data, it also includes coastal datasets and observations from a few time-series. The GLODAPv2 data product provides rigorously quality-controlled measurements for 14 essential oceanographic variables: temperature, salinity, dissolved oxygen (DO), nitrate, silicate, phosphate, DIC, TA, pH, chlorofluorocarbons (CFC-11, CFC-12, CFC-113), carbon tetrachloride (CCl4), and sulfur hexafluoride (SF6). These variables, excluding temperature, undergo both primary and secondary quality control procedures to detect outliers and adjust for significant measurement biases. GLODAPv2 was first published in 2016 and was updated annually through a living data process in Earth System Science Data from 2019 through “v2023,” which was published in 2024. For these updates, new data (including historical data not previously included in the data product) are quality controlled and adjusted to the 2016 version (Olsen et al., 2019; Olsen et al., 2020; Lauvset et al., 2021; Lauvset et al., 2022; Lauvset et al., 2024). Since the global repeat hydrography programs operate with decadal repetitions, the aim is to produce a completely new version of GLODAP, where all cruise datasets will be reevaluated, every decade. Release of the GLODAPv3 data product is planned for 2026, and is expected to evolve the secondary data quality control practices relative to those used in GLODAPv2. For more information on the secondary quality control process, refer to Tanhua et al. (2010) and Lauvset and Tanhua (2015). GLODAPv2 offers two kind of products: the collection of quality controlled data from discrete bottle samples taken at sampling location (Key et al., 2015; Olsen et al., 2016; Olsen et al., 2019; Olsen et al., 2020; Lauvset et al., 2021; Lauvset et al., 2022; Lauvset et al., 2024), and a gridded product, interpolated to a 1° × 1°  grid and the 33 standard depth levels of World Ocean Atlas (WOA) (Lauvset et al., 2016). </span>
+                    </div></div>
+                <div class="card-links">
+                    <div class="card-link">
+                        <a href="https://doi.org/10.5194/essd-16-2047-2024" target="_blank" rel="noopener noreferrer"><i class="fas fa-book"></i> Publication</a>
+                    </div>
+                    <div class="card-link">
+                        <a href="" target="_blank" rel="noopener noreferrer"><i class="fa fa-download"></i> Data Access</a>
+                    </div>
+                </div>  
             </div>
-            <div class="card-data-access">
-                Data access: <a href="https://zenodo.org/records/11206366" target="_blank" rel="noopener noreferrer">https://zenodo.org/records/11206366</a>
-            </div>
-            <div class="card-details"><div class="card-detail">
-                    <h4 class="card-detail-title">Highlight</h4>
-                    <p class="card-detail-content"></p>
-                </div><div class="card-detail">
-                    <h4 class="card-detail-title">Method</h4>
-                    <p class="card-detail-content"></p>
-                </div></div>
         </div>
     </div>
-</div><!-- <div class="product-card" data-data-type="Surface data-derived" data-temporal-resolution="climatology||monthly" data-spatial-resolution="1.0°" data-spatial-domains="Open Ocean||Surface"> -->
-<div class="product-card" data-data-type="Surface data-derived" data-temporal-resolution="climatology||monthly" data-spatial-resolution="1.0°" data-spatial-domains="Open Ocean||Surface">
-    <div class="card-inner">
-        <div class="card-front">
-            <div class="card-header">
-                <h3 class="card-title">∆fCO2 and Flux Climatology</h3>
-                <div class="card-subheading">Fay et al. (2023)</div>
-            </div>
-            <div class="card-image">
-                <img src="https://essd.copernicus.org/articles/16/2123/2024/essd-16-2123-2024-avatar-web.png" alt="Product image">
-            </div>
-            <div class="card-attributes"><!-- card-attribute-icon if fontawesome - and then hover text with description -->
-                 <div class="card-attr">
-                    <i class="fa-solid fa-hourglass-start" title="Temporal resolution"></i>
-                <span class="card-attribute-value">climatology, monthly</span>
-                </div><!-- card-attribute-icon if fontawesome - and then hover text with description -->
-                 <div class="card-attr">
-                    <i class="fa-solid fa-ruler-horizontal" title="Spatial resolution"></i>
-                <span class="card-attribute-value">1.0°</span>
-                </div><!-- card-attribute-icon if fontawesome - and then hover text with description -->
-                 <div class="card-attr">
-                    <i class="fa-solid fa-globe" title="Spatial domains"></i>
-                <span class="card-attribute-value">Open Ocean, Surface</span>
-                </div></div>
-            <div class="card-summary">
-                <p>Updated Takahashi climatology</p>
-            </div>
-        </div>
-        <div class="card-back">
-            <div class="card-header">
-                <h3 class="card-title">∆fCO2 and Flux Climatology</h3>
-                <div class="card-subheading">Fay et al. (2023)</div>
-            </div>
-            <div class="card-citation">
-                <a href="https://essd.copernicus.org/articles/16/2123/2024/" target="_blank" rel="noopener noreferrer">Fay et al. (2023)</a>
-            </div>
-            <div class="card-data-access">
-                Data access: <a href="https://doi.org/10.25921/295g-sn13" target="_blank" rel="noopener noreferrer">https://doi.org/10.25921/295g-sn13</a>
-            </div>
-            <div class="card-details"><div class="card-detail">
-                    <h4 class="card-detail-title">Highlight</h4>
-                    <p class="card-detail-content">else</p>
-                </div><div class="card-detail">
-                    <h4 class="card-detail-title">Method</h4>
-                    <p class="card-detail-content">something</p>
-                </div></div>
-        </div>
-    </div>
-</div><!-- <div class="product-card" data-data-type="Surface data-derived" data-temporal-resolution="monthly" data-spatial-resolution="1.0°" data-period="1982 - 2024" data-spatial-domains="Surface||Open Ocean"> -->
-<div class="product-card" data-data-type="Surface data-derived" data-temporal-resolution="monthly" data-spatial-resolution="1.0°" data-period="1982 - 2024" data-spatial-domains="Surface||Open Ocean">
+</div><!-- <div class="product-card" data-data-type="Surface data-derived" data-spatial-domains="Surface||Open Ocean" data-temporal-resolution="monthly" data-spatial-resolution="1.0°" data-period="1982 - 2024"> -->
+<div class="product-card" data-data-type="Surface data-derived" data-spatial-domains="Surface||Open Ocean" data-temporal-resolution="monthly" data-spatial-resolution="1.0°" data-period="1982 - 2024">
     <div class="card-inner">
         <div class="card-front">
             <div class="card-header">
                 <h3 class="card-title">VLIZ-SOMFFN</h3>
                 <div class="card-subheading">Landschützer et al. (2016)</div>
             </div>
-            <div class="card-image">
-                <img src="https://agupubs.onlinelibrary.wiley.com/cms/asset/547d18a7-69b5-4e93-96b2-5e8371310b43/gbc20188-fig-0001-m.jpg" alt="Product image">
-            </div>
-            <div class="card-attributes"><!-- card-attribute-icon if fontawesome - and then hover text with description -->
-                 <div class="card-attr">
-                    <i class="fa-solid fa-hourglass-start" title="Temporal resolution"></i>
-                <span class="card-attribute-value">monthly</span>
-                </div><!-- card-attribute-icon if fontawesome - and then hover text with description -->
-                 <div class="card-attr">
-                    <i class="fa-solid fa-ruler-horizontal" title="Spatial resolution"></i>
-                <span class="card-attribute-value">1.0°</span>
-                </div><!-- card-attribute-icon if fontawesome - and then hover text with description -->
-                 <div class="card-attr">
-                    <i class="fa-solid fa-calendar-days" title="Period"></i>
-                <span class="card-attribute-value">1982 - 2024</span>
-                </div><!-- card-attribute-icon if fontawesome - and then hover text with description -->
-                 <div class="card-attr">
-                    <i class="fa-solid fa-globe" title="Spatial domains"></i>
-                <span class="card-attribute-value">Surface, Open Ocean</span>
-                </div></div>
-            <div class="card-summary">
-                <p>The OG</p>
+            <div class="card-content">
+                <div class="card-image">
+                    <img src="https://agupubs.onlinelibrary.wiley.com/cms/asset/547d18a7-69b5-4e93-96b2-5e8371310b43/gbc20188-fig-0001-m.jpg" alt="Product image">
+                </div>
+                <div class="card-summary">
+                    <p>Monthly gridded pCO2 from 1982 through near present</p>
+                </div>
+                <div class="card-attributes"><!-- card-attribute-icon if fontawesome - and then hover text with description -->
+                    <div class="card-attr">
+                        <i class="fa-solid fa-globe" title="Spatial domains"></i>
+                        <span class="card-attribute-value">Surface, Open Ocean</span>
+                    </div><!-- card-attribute-icon if fontawesome - and then hover text with description -->
+                    <div class="card-attr">
+                        <i class="fa-solid fa-hourglass-start" title="Temporal resolution"></i>
+                        <span class="card-attribute-value">monthly</span>
+                    </div><!-- card-attribute-icon if fontawesome - and then hover text with description -->
+                    <div class="card-attr">
+                        <i class="fa-solid fa-ruler-horizontal" title="Spatial resolution"></i>
+                        <span class="card-attribute-value">1.0°</span>
+                    </div><!-- card-attribute-icon if fontawesome - and then hover text with description -->
+                    <div class="card-attr">
+                        <i class="fa-solid fa-calendar-days" title="Period"></i>
+                        <span class="card-attribute-value">1982 - 2024</span>
+                    </div></div>
             </div>
         </div>
         <div class="card-back">
@@ -216,19 +170,193 @@
                 <h3 class="card-title">VLIZ-SOMFFN</h3>
                 <div class="card-subheading">Landschützer et al. (2016)</div>
             </div>
-            <div class="card-citation">
-                <a href="https://doi.org/10.1002/2015GB005359" target="_blank" rel="noopener noreferrer">Landschützer et al. (2016)</a>
+            <div class="card-content">
+                <!-- <div class="card-data-access">
+                    <span class="card-data-access-label">Data access:</span> <a href="https://doi.org/10.7289/v5z899n6" target="_blank" rel="noopener noreferrer">https://doi.org/10.7289/v5z899n6</a>
+                </div> -->
+                <div class="card-details"><div class="card-detail">
+                        <span class="card-detail-title">Description: </span>
+                        <span class="card-detail-content">Landschützer et al. (2016) employed the Self-Organizing-Map Feed-Forward Network (SOM-FFN) neural network method (Landschützer et al., 2013) to map sea surface pCO2 from SOCAT (see No. 1 above) (Bakker et al., 2014) to generate monthly pCO2 fields on a 1° × 1° global surface ocean grid, covering the period from 1982 to near present. It is based on the gridded pCO2 measurements from SOCAT and is updated regularly. The creation of the pCO2 fields involve a two-step neural network approach, which has been extensively detailed and validated in previous works by Landschützer et al. (2013, 2014, 2016). In the initial step, the global ocean is clustered into biogeochemical provinces, and subsequently, the non-linear relationship between CO2 driver variables and gridded data from SOCAT (Bakker et al., 2016) is reconstructed. Air-sea CO2 fluxes are also computed based on the air-sea pCO2 difference, utilizing a bulk gas transfer formulation as described by Landschützer et al. (2013, 2014, 2016). </span>
+                    </div></div>
+                <div class="card-links">
+                    <div class="card-link">
+                        <a href="https://doi.org/10.1002/2015GB005359" target="_blank" rel="noopener noreferrer"><i class="fas fa-book"></i> Publication</a>
+                    </div>
+                    <div class="card-link">
+                        <a href="" target="_blank" rel="noopener noreferrer"><i class="fa fa-download"></i> Data Access</a>
+                    </div>
+                </div>  
             </div>
-            <div class="card-data-access">
-                Data access: <a href="https://doi.org/10.7289/v5z899n6" target="_blank" rel="noopener noreferrer">https://doi.org/10.7289/v5z899n6</a>
+        </div>
+    </div>
+</div><!-- <div class="product-card" data-data-type="Surface data-derived" data-spatial-domains="Open Ocean||Surface" data-temporal-resolution="monthly" data-spatial-resolution="1.0°" data-period="1982 - 2022"> -->
+<div class="product-card" data-data-type="Surface data-derived" data-spatial-domains="Open Ocean||Surface" data-temporal-resolution="monthly" data-spatial-resolution="1.0°" data-period="1982 - 2022">
+    <div class="card-inner">
+        <div class="card-front">
+            <div class="card-header">
+                <h3 class="card-title">OceanSODA-ETHZv1</h3>
+                <div class="card-subheading">Gregor and Gruber (2020)</div>
             </div>
-            <div class="card-details"><div class="card-detail">
-                    <h4 class="card-detail-title">Highlight</h4>
-                    <p class="card-detail-content"></p>
-                </div><div class="card-detail">
-                    <h4 class="card-detail-title">Method</h4>
-                    <p class="card-detail-content"></p>
-                </div></div>
+            <div class="card-content">
+                <div class="card-image">
+                    <img src="https://essd.copernicus.org/articles/13/777/2021/essd-13-777-2021-avatar-web.png" alt="Product image">
+                </div>
+                <div class="card-summary">
+                    <p>Temporal trends of DIC, TA, pCO2, pH, Ωarag, and Ωcalc</p>
+                </div>
+                <div class="card-attributes"><!-- card-attribute-icon if fontawesome - and then hover text with description -->
+                    <div class="card-attr">
+                        <i class="fa-solid fa-globe" title="Spatial domains"></i>
+                        <span class="card-attribute-value">Open Ocean, Surface</span>
+                    </div><!-- card-attribute-icon if fontawesome - and then hover text with description -->
+                    <div class="card-attr">
+                        <i class="fa-solid fa-hourglass-start" title="Temporal resolution"></i>
+                        <span class="card-attribute-value">monthly</span>
+                    </div><!-- card-attribute-icon if fontawesome - and then hover text with description -->
+                    <div class="card-attr">
+                        <i class="fa-solid fa-ruler-horizontal" title="Spatial resolution"></i>
+                        <span class="card-attribute-value">1.0°</span>
+                    </div><!-- card-attribute-icon if fontawesome - and then hover text with description -->
+                    <div class="card-attr">
+                        <i class="fa-solid fa-calendar-days" title="Period"></i>
+                        <span class="card-attribute-value">1982 - 2022</span>
+                    </div></div>
+            </div>
+        </div>
+        <div class="card-back">
+            <div class="card-header">
+                <h3 class="card-title">OceanSODA-ETHZv1</h3>
+                <div class="card-subheading">Gregor and Gruber (2020)</div>
+            </div>
+            <div class="card-content">
+                <!-- <div class="card-data-access">
+                    <span class="card-data-access-label">Data access:</span> <a href="https://doi.org/10.25921/m5wx-ja34" target="_blank" rel="noopener noreferrer">https://doi.org/10.25921/m5wx-ja34</a>
+                </div> -->
+                <div class="card-details"><div class="card-detail">
+                        <span class="card-detail-title">Description: </span>
+                        <span class="card-detail-content">A monthly gridded global surface ocean data product for multiple ocean carbonate system variables, including DIC, TA, pCO2, pH (total scale), Ωarag, and Ωcalc (Gregor and Gruber, 2020; Gregor and Gruber, 2021; Gregor and Gruber, 2023; Ma et al., 2023). This dataset is structured on a 1°×1° global surface ocean grid with monthly resolution from 1982–2022, facilitating research on OA over seasonal to decadal scales. The OceanSODA-ETHZ data product was created by extrapolating in time and space the surface ocean observations of fCO2 from SOCATv2022 (Bakker et al., 2016) and TA from GLODAPv2.2022 using the newly developed Geospatial Random Cluster Ensemble Regression (GRaCER) method (Gregor, 2021). TA and pCO2 were then used to calculate the remaining variables of the marine carbonate system with the PyCO2SYS software (Humphreys et al., 2022). Phosphate and silicate from WOA 2018 product were used (Boyer et al., 2018; Garcia et al., 2018a).</span>
+                    </div></div>
+                <div class="card-links">
+                    <div class="card-link">
+                        <a href="https://doi.org/10.5194/essd-13-777-2021" target="_blank" rel="noopener noreferrer"><i class="fas fa-book"></i> Publication</a>
+                    </div>
+                    <div class="card-link">
+                        <a href="" target="_blank" rel="noopener noreferrer"><i class="fa fa-download"></i> Data Access</a>
+                    </div>
+                </div>  
+            </div>
+        </div>
+    </div>
+</div><!-- <div class="product-card" data-data-type="Surface data-derived" data-spatial-domains="Open Ocean||Surface" data-temporal-resolution="8-daily" data-spatial-resolution="0.25°" data-period="1982 - 2024"> -->
+<div class="product-card" data-data-type="Surface data-derived" data-spatial-domains="Open Ocean||Surface" data-temporal-resolution="8-daily" data-spatial-resolution="0.25°" data-period="1982 - 2024">
+    <div class="card-inner">
+        <div class="card-front">
+            <div class="card-header">
+                <h3 class="card-title">OceanSODA-ETHZv2</h3>
+                <div class="card-subheading">Gregor et al. (2024)</div>
+            </div>
+            <div class="card-content">
+                <div class="card-image">
+                    <img src="https://agupubs.onlinelibrary.wiley.com/cms/asset/7decc330-7468-429c-bae9-ac51b085be30/gbc21584-fig-0007-m.jpg" alt="Product image">
+                </div>
+                <div class="card-summary">
+                    <p>Highlighting fine-scale and short-term variability of the ocean carbon sink</p>
+                </div>
+                <div class="card-attributes"><!-- card-attribute-icon if fontawesome - and then hover text with description -->
+                    <div class="card-attr">
+                        <i class="fa-solid fa-globe" title="Spatial domains"></i>
+                        <span class="card-attribute-value">Open Ocean, Surface</span>
+                    </div><!-- card-attribute-icon if fontawesome - and then hover text with description -->
+                    <div class="card-attr">
+                        <i class="fa-solid fa-hourglass-start" title="Temporal resolution"></i>
+                        <span class="card-attribute-value">8-daily</span>
+                    </div><!-- card-attribute-icon if fontawesome - and then hover text with description -->
+                    <div class="card-attr">
+                        <i class="fa-solid fa-ruler-horizontal" title="Spatial resolution"></i>
+                        <span class="card-attribute-value">0.25°</span>
+                    </div><!-- card-attribute-icon if fontawesome - and then hover text with description -->
+                    <div class="card-attr">
+                        <i class="fa-solid fa-calendar-days" title="Period"></i>
+                        <span class="card-attribute-value">1982 - 2024</span>
+                    </div></div>
+            </div>
+        </div>
+        <div class="card-back">
+            <div class="card-header">
+                <h3 class="card-title">OceanSODA-ETHZv2</h3>
+                <div class="card-subheading">Gregor et al. (2024)</div>
+            </div>
+            <div class="card-content">
+                <!-- <div class="card-data-access">
+                    <span class="card-data-access-label">Data access:</span> <a href="https://zenodo.org/records/11206366" target="_blank" rel="noopener noreferrer">https://zenodo.org/records/11206366</a>
+                </div> -->
+                <div class="card-details"><div class="card-detail">
+                        <span class="card-detail-title">Description: </span>
+                        <span class="card-detail-content">a surface fCO₂ product with a 0.25° × 0.25° spatial resolution and an 8-day temporal resolution, providing estimates starting from 1982 (Gregor et al., 2024a; Gregor et al., 2024b). The high-resolution outputs are suitable for investigating the shorter- and finer-scale dynamics of surface fCO2. Despite sharing a name with its predecessor, OceanSODA-ETHZv2 does not provide TA estimates and employs a different methodology, as described in the following steps: 1) The atmospheric trend of CO2 is removed by subtracting marine boundary layer CO2 concentrations from SOCAT fCO2 producing a new target ∆*CO2 to reduce the biases at the start and end of the time-series. 2) An 8-day seasonal climatology of ∆*CO2 is estimated using Gradient Boosted Decision Trees (GBDT), which is later used as a predictor. 3) The non-seasonal thermal component is removed from ∆*CO2, resulting in a new target, ∆*CO2nonT. 4) The new target is estimated using a feed-forward neural network, with the GBDT as one of the forcing variables. 5) Steps 4 through to 1 are inverted to arrive at fCO2. 6) Air-sea CO2 fluxes are computed using ERA5 winds.</span>
+                    </div></div>
+                <div class="card-links">
+                    <div class="card-link">
+                        <a href="https://doi.org/10.1029/2024GB008127" target="_blank" rel="noopener noreferrer"><i class="fas fa-book"></i> Publication</a>
+                    </div>
+                    <div class="card-link">
+                        <a href="" target="_blank" rel="noopener noreferrer"><i class="fa fa-download"></i> Data Access</a>
+                    </div>
+                </div>  
+            </div>
+        </div>
+    </div>
+</div><!-- <div class="product-card" data-data-type="Surface data-derived" data-spatial-domains="Open Ocean||Surface" data-temporal-resolution="climatology||monthly" data-spatial-resolution="1.0°"> -->
+<div class="product-card" data-data-type="Surface data-derived" data-spatial-domains="Open Ocean||Surface" data-temporal-resolution="climatology||monthly" data-spatial-resolution="1.0°">
+    <div class="card-inner">
+        <div class="card-front">
+            <div class="card-header">
+                <h3 class="card-title">fCO2 and Flux Climatology</h3>
+                <div class="card-subheading">Fay et al. (2023)</div>
+            </div>
+            <div class="card-content">
+                <div class="card-image">
+                    <img src="https://essd.copernicus.org/articles/16/2123/2024/essd-16-2123-2024-avatar-web.png" alt="Product image">
+                </div>
+                <div class="card-summary">
+                    <p>Does not use proxy variables for extrapolation. Only produced as monthly climatology.</p>
+                </div>
+                <div class="card-attributes"><!-- card-attribute-icon if fontawesome - and then hover text with description -->
+                    <div class="card-attr">
+                        <i class="fa-solid fa-globe" title="Spatial domains"></i>
+                        <span class="card-attribute-value">Open Ocean, Surface</span>
+                    </div><!-- card-attribute-icon if fontawesome - and then hover text with description -->
+                    <div class="card-attr">
+                        <i class="fa-solid fa-hourglass-start" title="Temporal resolution"></i>
+                        <span class="card-attribute-value">climatology, monthly</span>
+                    </div><!-- card-attribute-icon if fontawesome - and then hover text with description -->
+                    <div class="card-attr">
+                        <i class="fa-solid fa-ruler-horizontal" title="Spatial resolution"></i>
+                        <span class="card-attribute-value">1.0°</span>
+                    </div></div>
+            </div>
+        </div>
+        <div class="card-back">
+            <div class="card-header">
+                <h3 class="card-title">fCO2 and Flux Climatology</h3>
+                <div class="card-subheading">Fay et al. (2023)</div>
+            </div>
+            <div class="card-content">
+                <!-- <div class="card-data-access">
+                    <span class="card-data-access-label">Data access:</span> <a href="https://doi.org/10.25921/295g-sn13" target="_blank" rel="noopener noreferrer">https://doi.org/10.25921/295g-sn13</a>
+                </div> -->
+                <div class="card-details"><div class="card-detail">
+                        <span class="card-detail-title">Description: </span>
+                        <span class="card-detail-content">Following on previous climatologies published by the late Taro Takahashi in 1997 and 2009, Fay et al. (2024) created a legacy climatology using his methodology and the updated SOCAT database of observations. This product provides 12 months of delta fCO2 values and corresponding fluxes for a base year of 2010 at 4° × 5° resolution subsequently subgridded to  1° × 1° resolution and near-global coverage. This climatology represents the mean of ocean conditions over the last four decades and is distinctive relative to many other mechanistic machine learning approaches in that it interpolates in time and space using only the available fCO2 data and a surface water advection scheme rather than using proxy variables for gap filling. It uses the median of observations to determine a reference year of 2010 and fluxes are provided using air-sea partial pressure differences and inputs from the SeaFlux product (Fay et al., 2021). </span>
+                    </div></div>
+                <div class="card-links">
+                    <div class="card-link">
+                        <a href="https://essd.copernicus.org/articles/16/2123/2024/" target="_blank" rel="noopener noreferrer"><i class="fas fa-book"></i> Publication</a>
+                    </div>
+                    <div class="card-link">
+                        <a href="" target="_blank" rel="noopener noreferrer"><i class="fa fa-download"></i> Data Access</a>
+                    </div>
+                </div>  
+            </div>
         </div>
     </div>
 </div></div>
