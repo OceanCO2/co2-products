@@ -1,0 +1,63 @@
+name: manual-update
+
+on:
+  workflow_dispatch:
+    inputs:
+      spreadsheet_id:
+        # set the value when manually triggering the workflow
+        default: '1rg9yf1IxSr6fI7UvbrbMqrywRgIPS240uaphIplUXBo'
+        description: 'Google Sheet ID'
+        required: true
+      spreadsheet_tab_id:
+        default: '0'
+        description: 'Google Sheet Tab ID'
+        required: true
+
+jobs:
+  run-python-script:
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: write
+
+    steps:
+    # Step 1: Get your repository's code
+    - name: Check out repository
+      uses: actions/checkout@v4
+
+    # Step 2: Set up a Python environment
+    - name: Set up Python
+      uses: actions/setup-python@v6
+      with:
+        python-version-file: "pyproject.toml"
+
+    # Step 3: Install uv (the fast, modern way)
+    - name: Install uv
+      uses: astral-sh/setup-uv@v6
+
+    # Step 4: Install your project's dependencies using uv
+    # uv will find your requirements.txt or pyproject.toml
+    # and install dependencies into a virtual environment.
+    - name: Install dependencies with uv
+      run: uv sync
+
+    # Step 5: Run your Python script
+    - name: Run main Python script
+      env:
+        # This securely passes the data from the Apps Script payload
+        # into your script as environment variables.
+        GOOGLE_SHEET_ID: ${{ github.event.client_payload.spreadsheet_id }}
+        GOOGLE_TAB_ID: ${{ github.event.client_payload.spreadsheet_tab_id }}
+        LOGGER_LEVEL: DEBUG
+      run: |
+        # Activate the virtual environment created by uv
+        uv run co2-synthesis
+
+    # ✨ Step 6: Commit and push any changes
+    - name: Commit and push changes
+      uses: stefanzweifel/git-auto-commit-action@v5
+      with:
+        # This is the message that will appear in your commit history
+        commit_message: "ci: Auto-update files from Google Sheet trigger"
+        commit_user_name: "GitHub Action"
+        commit_user_email: "github-actions@github.com"
