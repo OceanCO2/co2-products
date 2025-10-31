@@ -47,4 +47,6 @@ jobs:
         LOGGER_LEVEL: DEBUG
       run: |
         # Activate the virtual environment created by uv
+        echo $GOOGLE_SHEET_ID
+        echo $GOOGLE_TAB_ID
         uv run co2-synthesis
