@@ -14,6 +14,7 @@ def create_filters(products:list[dict]) -> dict:
             filter[key]['options'].extend(value)
 
     filter = defeaultdict_to_dict(filter)
+    filter = {k: v for k, v in filter.items() if key}
 
     dates = []
     for key in filter:

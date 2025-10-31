@@ -6,10 +6,10 @@ dotenv.load_dotenv()
 
 
 class Config(BaseSettings):
+    LOGGER_LEVEL: str = 'DEBUG'
     GOOGLE_SHEET_ID: str
     GOOGLE_TAB_ID: str
-    FONTAWESOME_KEY: str
 
     ROOT: pathlib.Path = pathlib.Path(dotenv.find_dotenv('.env')).parent.resolve()
 
-cfg = Config()
+cfg = Config()   # type: ignore
