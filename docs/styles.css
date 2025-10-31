@@ -6,7 +6,7 @@ body {
 }
 
 .banner {
-    background-color: #007bff;
+    background-color: hwb(211 29% 15%);
     color: white;
     text-align: center;
     padding: 20px;
@@ -68,10 +68,6 @@ body {
 }
 
 .product-card {
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 3px 5px rgba(0,0,0,0.13);
-    overflow: hidden;
     perspective: 1000px;
     margin-bottom: 20px;
     min-height: 420px;
@@ -93,7 +89,11 @@ body {
 
 .card-front,
 .card-back {
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
     position: absolute;
+    overflow: hidden;
     width: 100%;
     height: 100%;
     backface-visibility: hidden;
@@ -133,6 +133,7 @@ body {
     text-align: center;
     background-color: #eeeeee;
     padding-top: 20px;
+    max-height: 80px;
 }
 
 .card-title {
@@ -225,15 +226,20 @@ body {
     margin-right: 0px;
 }
 
+.card-details{
+    max-height: 310px;
+    overflow-y: auto;
+}
+
 .card-detail{
     font-size: 0.9rem;
     text-align: left;
     color: #555;
     /* compute max height */
-    max-height: 300px;
-    overflow-y: auto;
+    /* overflow-y: auto; */
     padding-top: 10px;
     padding-right: 4px;
+    padding-bottom: 10px
     
 }
 
