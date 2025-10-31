@@ -6,27 +6,31 @@ from jinja2 import Environment, FileSystemLoader
 from .google_sheet import get_sheet_data
 from .config import cfg
 from .filters import create_filters
+from loguru import logger
 
 
-def generate_filters(filter_types, headers, data):
-    # Dummy implementation, assuming filter_types is already the dict
-    return filter_types
-
-
-def main():
+def generate_page_main(google_sheet_url: str):
     static_dir = cfg.ROOT / 'static'
     template_dir = static_dir / 'templates'
-    output_dir = cfg.ROOT / 'docs'
-    output_dir.mkdir(exist_ok=True)
-    
-    full_url = "https://docs.google.com/spreadsheets/d/1rg9yf1IxSr6fI7UvbrbMqrywRgIPS240uaphIplUXBo/edit?gid=0#gid=0"
 
-    df = get_sheet_data(full_url, reader='pandas').replace({np.nan: ""})
-    products = df.apply(process_product_row, axis=1)
+    output_dir = cfg.ROOT / 'docs'  # GitHub Pages serves from /docs
+    output_dir.mkdir(exist_ok=True)  # create if doesn't exist
+
+    logger.debug(f"Fetching data from Google Sheet: {google_sheet_url}")
+    df = get_sheet_data(google_sheet_url, reader='pandas')
+    logger.debug(f"Retrieved {len(df)} rows from Google Sheet.\n{df.T}")
+
+    df_no_incomplete_products = df.dropna(subset='card-title').replace({np.nan: ""})
+    # show difference between incomplete and complete cards
+    idx_incomplete = df.index.difference(df_no_incomplete_products.index)
+    if len(idx_incomplete) > 0:
+        logger.warning(f"Dropping {len(idx_incomplete)} incomplete products (missing card-title):\n{df.loc[idx_incomplete].T}")
+    
+    products = df_no_incomplete_products.apply(process_product_row, axis=1)
     filters = create_filters(products)
     
-    env = Environment(loader=FileSystemLoader(template_dir))
-    template = env.get_template('template.html')
+    jinja2_env = Environment(loader=FileSystemLoader(template_dir))
+    template = jinja2_env.get_template('template.html')
 
     html = template.render(products=products, filters=filters, cfg=cfg)
 
@@ -81,5 +85,3 @@ def process_product_row(product_row: pd.Series) -> dict:
 
     return data
 
-if __name__ == '__main__':
-    main()

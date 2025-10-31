@@ -3,6 +3,7 @@ import requests
 import csv
 import pandas as pd
 from io import StringIO
+from typing import Literal
 
 
 readers = {
@@ -25,8 +26,8 @@ def get_sheet_data(full_url: str, reader='pandas'):
             - headers: List of column headers.
             - data: List of lists, each inner list is a row of data.
     """
-    
-    url = google_sheet_url_to_csv_url(full_url)
+
+    url = get_download_url_from_sheet_url(full_url, format='csv')
     buffer = get_sheet_as_buffer(url)
 
     data = readers[reader](buffer)
@@ -34,8 +35,7 @@ def get_sheet_data(full_url: str, reader='pandas'):
     return data 
 
 
-
-def get_sheet_as_buffer(full_url: str) -> StringIO:
+def get_sheet_as_buffer(full_url: str, format:Literal['csv', 'excel']='csv') -> StringIO:
     """
     Retrieve the Google Sheet data as a StringIO object.
 
@@ -45,28 +45,43 @@ def get_sheet_as_buffer(full_url: str) -> StringIO:
     Returns:
         StringIO: A StringIO object containing the CSV data.
     """
-    csv_url = google_sheet_url_to_csv_url(full_url)
-    response = requests.get(csv_url)
+    download_url = get_download_url_from_sheet_url(full_url, format=format)
+    response = requests.get(download_url)
     response.raise_for_status()
     return StringIO(response.content.decode('utf-8-sig'))
 
 
-def google_sheet_url_to_csv_url(full_url:str) -> str:
+def get_download_url_from_sheet_url(sheet_url:str, format:Literal['csv', 'excel']='csv') -> str:
     """
     Convert a full Google Sheet URL to a direct CSV export URL, including tab ID if present.
 
     Args:
-        full_url (str): The full URL of the Google Sheet.
+        sheet_url (str): The full URL of the Google Sheet.
 
     Returns:
         str: The direct CSV export URL.
     """
-    match = re.match(r'https://docs.google.com/spreadsheets/d/([a-zA-Z0-9-_]+)(/.*gid=(\d+))?', full_url)
+    match = re.match(r'https://docs.google.com/spreadsheets/d/([a-zA-Z0-9-_]+)(/.*gid=(\d+))?', sheet_url)
     if not match:
         raise ValueError("Invalid Google Sheet URL")
     
     sheet_id = match.group(1)
     gid = match.group(3) if match.group(3) else '0'
-    
-    csv_url = f'https://docs.google.com/spreadsheets/d/{sheet_id}/gviz/tq?tqx=out:csv&gid={gid}'
-    return csv_url
+
+    download_url = f'https://docs.google.com/spreadsheets/d/{sheet_id}/gviz/tq?tqx=out:{format}&gid={gid}'
+
+    return download_url
+
+
+def get_url_from_sheet_id_and_gid(sheet_id: str, gid: str) -> str:
+    """
+    Construct the full Google Sheet URL from sheet ID and gid.
+
+    Args:
+        sheet_id (str): The Google Sheet ID.
+        gid (str): The tab ID (gid).
+
+    Returns:
+        str: The full Google Sheet URL.
+    """
+    return f'https://docs.google.com/spreadsheets/d/{sheet_id}/edit?gid={gid}'
