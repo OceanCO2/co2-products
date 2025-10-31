@@ -22,10 +22,10 @@
 
 <div class="sidebar">
     <h2>Filters</h2><div class="filter">
-        <label>Data Type</label><input type="checkbox" class="filter-checkbox" data-filter="Data Type" data-filter-type="multi-select" value="Surface data-derived"> Surface data-derived<br></div><div class="filter">
-        <label>Temporal resolution</label><input type="checkbox" class="filter-checkbox" data-filter="Temporal resolution" data-filter-type="multi-select" value="climatology"> climatology<br><input type="checkbox" class="filter-checkbox" data-filter="Temporal resolution" data-filter-type="multi-select" value="monthly"> monthly<br><input type="checkbox" class="filter-checkbox" data-filter="Temporal resolution" data-filter-type="multi-select" value="8-daily"> 8-daily<br></div><div class="filter">
+        <label>Data Type</label><input type="checkbox" class="filter-checkbox" data-filter="Data Type" data-filter-type="multi-select" value="Surface data-derived"> Surface data-derived<br><input type="checkbox" class="filter-checkbox" data-filter="Data Type" data-filter-type="multi-select" value="Observations"> Observations<br></div><div class="filter">
+        <label>Temporal resolution</label><input type="checkbox" class="filter-checkbox" data-filter="Temporal resolution" data-filter-type="multi-select" value="monthly"> monthly<br><input type="checkbox" class="filter-checkbox" data-filter="Temporal resolution" data-filter-type="multi-select" value="8-daily"> 8-daily<br><input type="checkbox" class="filter-checkbox" data-filter="Temporal resolution" data-filter-type="multi-select" value="climatology"> climatology<br><input type="checkbox" class="filter-checkbox" data-filter="Temporal resolution" data-filter-type="multi-select" value="continuous"> continuous<br></div><div class="filter">
         <label>Spatial resolution</label><input type="checkbox" class="filter-checkbox" data-filter="Spatial resolution" data-filter-type="multi-select" value="1.0°"> 1.0°<br><input type="checkbox" class="filter-checkbox" data-filter="Spatial resolution" data-filter-type="multi-select" value="0.25°"> 0.25°<br></div><div class="filter">
-        <label>Spatial domains</label><input type="checkbox" class="filter-checkbox" data-filter="Spatial domains" data-filter-type="multi-select" value="Surface"> Surface<br><input type="checkbox" class="filter-checkbox" data-filter="Spatial domains" data-filter-type="multi-select" value="Open Ocean"> Open Ocean<br></div></div>
+        <label>Spatial domains</label><input type="checkbox" class="filter-checkbox" data-filter="Spatial domains" data-filter-type="multi-select" value="Open Ocean"> Open Ocean<br><input type="checkbox" class="filter-checkbox" data-filter="Spatial domains" data-filter-type="multi-select" value="Coastal"> Coastal<br><input type="checkbox" class="filter-checkbox" data-filter="Spatial domains" data-filter-type="multi-select" value="Surface"> Surface<br></div></div>
         <div class="content">
             <div class="products"><!-- <div class="product-card" data-data-type="Surface data-derived" data-temporal-resolution="monthly" data-spatial-resolution="1.0°" data-period="1982 - 2022" data-spatial-domains="Open Ocean||Surface"> -->
 <div class="product-card" data-data-type="Surface data-derived" data-temporal-resolution="monthly" data-spatial-resolution="1.0°" data-period="1982 - 2022" data-spatial-domains="Open Ocean||Surface">
@@ -136,7 +136,7 @@
     <div class="card-inner">
         <div class="card-front">
             <div class="card-header">
-                <h3 class="card-title">∆fCO2 and Flux Climatology</h3>
+                <h3 class="card-title">fCO2 and Flux Climatology</h3>
                 <div class="card-subheading">Fay et al. (2023)</div>
             </div>
             <div class="card-image">
@@ -161,7 +161,7 @@
         </div>
         <div class="card-back">
             <div class="card-header">
-                <h3 class="card-title">∆fCO2 and Flux Climatology</h3>
+                <h3 class="card-title">fCO2 and Flux Climatology</h3>
                 <div class="card-subheading">Fay et al. (2023)</div>
             </div>
             <div class="card-citation">
@@ -225,6 +225,54 @@
             <div class="card-details"><div class="card-detail">
                     <h4 class="card-detail-title">Highlight</h4>
                     <p class="card-detail-content"></p>
+                </div><div class="card-detail">
+                    <h4 class="card-detail-title">Method</h4>
+                    <p class="card-detail-content">Self Organising Map – Feed-Forward Neural Network</p>
+                </div></div>
+        </div>
+    </div>
+</div><!-- <div class="product-card" data-data-type="Observations" data-temporal-resolution="continuous" data-period="1960 - 2025" data-spatial-domains="Surface||Open Ocean||Coastal"> -->
+<div class="product-card" data-data-type="Observations" data-temporal-resolution="continuous" data-period="1960 - 2025" data-spatial-domains="Surface||Open Ocean||Coastal">
+    <div class="card-inner">
+        <div class="card-front">
+            <div class="card-header">
+                <h3 class="card-title">SOCAT</h3>
+                <div class="card-subheading">Bakker et al. (2016)</div>
+            </div>
+            <div class="card-image">
+                <img src="" alt="Product image">
+            </div>
+            <div class="card-attributes"><!-- card-attribute-icon if fontawesome - and then hover text with description -->
+                 <div class="card-attr">
+                    <i class="fa-solid fa-hourglass-start" title="Temporal resolution"></i>
+                <span class="card-attribute-value">continuous</span>
+                </div><!-- card-attribute-icon if fontawesome - and then hover text with description -->
+                 <div class="card-attr">
+                    <i class="fa-solid fa-calendar-days" title="Period"></i>
+                <span class="card-attribute-value">1960 - 2025</span>
+                </div><!-- card-attribute-icon if fontawesome - and then hover text with description -->
+                 <div class="card-attr">
+                    <i class="fa-solid fa-globe" title="Spatial domains"></i>
+                <span class="card-attribute-value">Surface, Open Ocean, Coastal</span>
+                </div></div>
+            <div class="card-summary">
+                <p>Measurements of fCO2 from various sea-faring platforms. Undergoes community QA</p>
+            </div>
+        </div>
+        <div class="card-back">
+            <div class="card-header">
+                <h3 class="card-title">SOCAT</h3>
+                <div class="card-subheading">Bakker et al. (2016)</div>
+            </div>
+            <div class="card-citation">
+                <a href="https://doi.org/10.5194/essd-8-383-2016" target="_blank" rel="noopener noreferrer">Bakker et al. (2016)</a>
+            </div>
+            <div class="card-data-access">
+                Data access: <a href="" target="_blank" rel="noopener noreferrer"></a>
+            </div>
+            <div class="card-details"><div class="card-detail">
+                    <h4 class="card-detail-title">Highlight</h4>
+                    <p class="card-detail-content">The largest collection of surface ocean carbon observations</p>
                 </div><div class="card-detail">
                     <h4 class="card-detail-title">Method</h4>
                     <p class="card-detail-content"></p>
