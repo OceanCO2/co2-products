@@ -2,7 +2,7 @@
 
 Creates a static web page of information about different ocean CO2 products. 
 The web page is populated from a Google Sheet document. 
-Email [Luke Gregor](mailto:luke.gregor@sdsc.ethz.ch), or [Liqing Jiang](mailto:lqjiang@umd.edu) for access to the Google Sheets link.
+Email Luke Gregor ([luke.gregor@sdsc.ethz.ch](mailto:luke.gregor@sdsc.ethz.ch)), or Liqing Jiang ([lqjiang@umd.edu](mailto:lqjiang@umd.edu)) for the Google Sheets link.
 
 
 ## Usage
