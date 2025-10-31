@@ -10,6 +10,8 @@ class Config(BaseSettings):
     GOOGLE_SHEET_ID: str
     GOOGLE_TAB_ID: str
 
+    GITHUB_REPO: str = 'https://github.com/OceanCO2/co2-products'
+
     ROOT: pathlib.Path = pathlib.Path(dotenv.find_dotenv('.env')).parent.resolve()
 
 cfg = Config()   # type: ignore
