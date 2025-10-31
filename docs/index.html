@@ -22,11 +22,11 @@
 
 <div class="sidebar">
     <h2>Filters</h2><div class="filter">
-        <label>Data Type</label><input type="checkbox" class="filter-checkbox" data-filter="Data Type" data-filter-type="multi-select" value="Observations"> Observations<br><input type="checkbox" class="filter-checkbox" data-filter="Data Type" data-filter-type="multi-select" value="Surface data-derived"> Surface data-derived<br></div><div class="filter">
+        <label>Data Type</label><input type="checkbox" class="filter-checkbox" data-filter="Data Type" data-filter-type="multi-select" value="Observations"> Observations<br><input type="checkbox" class="filter-checkbox" data-filter="Data Type" data-filter-type="multi-select" value="Subsurface data-derived"> Subsurface data-derived<br><input type="checkbox" class="filter-checkbox" data-filter="Data Type" data-filter-type="multi-select" value="Surface data-derived"> Surface data-derived<br></div><div class="filter">
         <label>Spatial domains</label><input type="checkbox" class="filter-checkbox" data-filter="Spatial domains" data-filter-type="multi-select" value="Coastal"> Coastal<br><input type="checkbox" class="filter-checkbox" data-filter="Spatial domains" data-filter-type="multi-select" value="Open Ocean"> Open Ocean<br><input type="checkbox" class="filter-checkbox" data-filter="Spatial domains" data-filter-type="multi-select" value="Surface"> Surface<br><input type="checkbox" class="filter-checkbox" data-filter="Spatial domains" data-filter-type="multi-select" value="Water column"> Water column<br></div><div class="filter">
-        <label>Temporal resolution</label><input type="checkbox" class="filter-checkbox" data-filter="Temporal resolution" data-filter-type="multi-select" value="8-daily"> 8-daily<br><input type="checkbox" class="filter-checkbox" data-filter="Temporal resolution" data-filter-type="multi-select" value="climatology"> climatology<br><input type="checkbox" class="filter-checkbox" data-filter="Temporal resolution" data-filter-type="multi-select" value="continuous"> continuous<br><input type="checkbox" class="filter-checkbox" data-filter="Temporal resolution" data-filter-type="multi-select" value="discrete"> discrete<br><input type="checkbox" class="filter-checkbox" data-filter="Temporal resolution" data-filter-type="multi-select" value="monthly"> monthly<br></div><div class="filter">
+        <label>Temporal resolution</label><input type="checkbox" class="filter-checkbox" data-filter="Temporal resolution" data-filter-type="multi-select" value="8-daily"> 8-daily<br><input type="checkbox" class="filter-checkbox" data-filter="Temporal resolution" data-filter-type="multi-select" value="climatology"> climatology<br><input type="checkbox" class="filter-checkbox" data-filter="Temporal resolution" data-filter-type="multi-select" value="continuous"> continuous<br><input type="checkbox" class="filter-checkbox" data-filter="Temporal resolution" data-filter-type="multi-select" value="discrete"> discrete<br><input type="checkbox" class="filter-checkbox" data-filter="Temporal resolution" data-filter-type="multi-select" value="monthly"> monthly<br><input type="checkbox" class="filter-checkbox" data-filter="Temporal resolution" data-filter-type="multi-select" value="referenced"> referenced<br></div><div class="filter">
         <label>Spatial resolution</label><input type="checkbox" class="filter-checkbox" data-filter="Spatial resolution" data-filter-type="multi-select" value="0.25°"> 0.25°<br><input type="checkbox" class="filter-checkbox" data-filter="Spatial resolution" data-filter-type="multi-select" value="1.0°"> 1.0°<br></div><div class="filter">
-        <label>Institution</label><input type="checkbox" class="filter-checkbox" data-filter="Institution" data-filter-type="multi-select" value="ETHZ"> ETHZ<br><input type="checkbox" class="filter-checkbox" data-filter="Institution" data-filter-type="multi-select" value="Multi"> Multi<br><input type="checkbox" class="filter-checkbox" data-filter="Institution" data-filter-type="multi-select" value="VLIZ"> VLIZ<br></div></div>
+        <label>Institution</label><input type="checkbox" class="filter-checkbox" data-filter="Institution" data-filter-type="multi-select" value="ETHZ"> ETHZ<br><input type="checkbox" class="filter-checkbox" data-filter="Institution" data-filter-type="multi-select" value="MPI"> MPI<br><input type="checkbox" class="filter-checkbox" data-filter="Institution" data-filter-type="multi-select" value="Multi"> Multi<br><input type="checkbox" class="filter-checkbox" data-filter="Institution" data-filter-type="multi-select" value="VLIZ"> VLIZ<br></div></div>
         <div class="content">
             <div class="products"><!-- <div class="product-card" data-data-type="Observations" data-spatial-domains="Surface||Open Ocean||Coastal" data-temporal-resolution="continuous" data-period="1960 - 2025" data-institution="Multi"> -->
 <div class="product-card" data-data-type="Observations" data-spatial-domains="Surface||Open Ocean||Coastal" data-temporal-resolution="continuous" data-period="1960 - 2025" data-institution="Multi">
@@ -330,8 +330,8 @@
             </div>
         </div>
     </div>
-</div><!-- <div class="product-card" data-data-type="Surface data-derived" data-spatial-domains="Open Ocean||Surface" data-temporal-resolution="climatology||monthly" data-spatial-resolution="1.0°"> -->
-<div class="product-card" data-data-type="Surface data-derived" data-spatial-domains="Open Ocean||Surface" data-temporal-resolution="climatology||monthly" data-spatial-resolution="1.0°">
+</div><!-- <div class="product-card" data-data-type="Surface data-derived" data-spatial-domains="Open Ocean||Surface" data-temporal-resolution="climatology||monthly||referenced" data-spatial-resolution="1.0°"> -->
+<div class="product-card" data-data-type="Surface data-derived" data-spatial-domains="Open Ocean||Surface" data-temporal-resolution="climatology||monthly||referenced" data-spatial-resolution="1.0°">
     <div class="card-inner">
         <div class="card-front">
             <div class="card-header">
@@ -352,7 +352,7 @@
                     </div><!-- card-attribute-icon if fontawesome - and then hover text with description -->
                     <div class="card-attr">
                         <i class="fa-solid fa-hourglass-start" title="Temporal resolution"></i>
-                        <span class="card-attribute-value">climatology, monthly</span>
+                        <span class="card-attribute-value">climatology, monthly, referenced</span>
                     </div><!-- card-attribute-icon if fontawesome - and then hover text with description -->
                     <div class="card-attr">
                         <i class="fa-solid fa-ruler-horizontal" title="Spatial resolution"></i>
@@ -376,6 +376,68 @@
                 <div class="card-links">
                     <div class="card-link">
                         <a href="https://essd.copernicus.org/articles/16/2123/2024/" target="_blank" rel="noopener noreferrer"><i class="fas fa-book"></i> Publication</a>
+                    </div>
+                    <div class="card-link">
+                        <a href="" target="_blank" rel="noopener noreferrer"><i class="fa fa-download"></i> Data Access</a>
+                    </div>
+                </div>  
+            </div>
+        </div>
+    </div>
+</div><!-- <div class="product-card" data-data-type="Subsurface data-derived" data-spatial-domains="Open Ocean||Water column" data-temporal-resolution="monthly" data-spatial-resolution="1.0°" data-period="2004 - 2019" data-institution="MPI"> -->
+<div class="product-card" data-data-type="Subsurface data-derived" data-spatial-domains="Open Ocean||Water column" data-temporal-resolution="monthly" data-spatial-resolution="1.0°" data-period="2004 - 2019" data-institution="MPI">
+    <div class="card-inner">
+        <div class="card-front">
+            <div class="card-header">
+                <h3 class="card-title">MOBO-DIC</h3>
+                <div class="card-subheading">Keppler et al. (2023)</div>
+            </div>
+            <div class="card-content">
+                <div class="card-image">
+                    <img src="https://mpimet.mpg.de/fileadmin/04_Kommunikation/01_Aktuelles/2020/201211_Paper_Keppler/Temporal_mean_MOBO-DIC_200x300_.jpg" alt="Product image">
+                </div>
+                <div class="card-summary">
+                    <p>Temporal trends and interannual variability of DIC in the interior ocean from surface to 1500 m</p>
+                </div>
+                <div class="card-attributes"><!-- card-attribute-icon if fontawesome - and then hover text with description -->
+                    <div class="card-attr">
+                        <i class="fa-solid fa-globe" title="Spatial domains"></i>
+                        <span class="card-attribute-value">Open Ocean, Water column</span>
+                    </div><!-- card-attribute-icon if fontawesome - and then hover text with description -->
+                    <div class="card-attr">
+                        <i class="fa-solid fa-hourglass-start" title="Temporal resolution"></i>
+                        <span class="card-attribute-value">monthly</span>
+                    </div><!-- card-attribute-icon if fontawesome - and then hover text with description -->
+                    <div class="card-attr">
+                        <i class="fa-solid fa-ruler-horizontal" title="Spatial resolution"></i>
+                        <span class="card-attribute-value">1.0°</span>
+                    </div><!-- card-attribute-icon if fontawesome - and then hover text with description -->
+                    <div class="card-attr">
+                        <i class="fa-solid fa-calendar-days" title="Period"></i>
+                        <span class="card-attribute-value">2004 - 2019</span>
+                    </div><!-- card-attribute-icon if fontawesome - and then hover text with description -->
+                    <div class="card-attr">
+                        <i class="fa-solid fa-building-columns" title="Institution"></i>
+                        <span class="card-attribute-value">MPI</span>
+                    </div></div>
+            </div>
+        </div>
+        <div class="card-back">
+            <div class="card-header">
+                <h3 class="card-title">MOBO-DIC</h3>
+                <div class="card-subheading">Keppler et al. (2023)</div>
+            </div>
+            <div class="card-content">
+                <!-- <div class="card-data-access">
+                    <span class="card-data-access-label">Data access:</span> <a href="https://doi.org/10.25921/yvzj-zx46" target="_blank" rel="noopener noreferrer">https://doi.org/10.25921/yvzj-zx46</a>
+                </div> -->
+                <div class="card-details"><div class="card-detail">
+                        <span class="card-detail-title">Description: </span>
+                        <span class="card-detail-content">Extends the temporal resolution of MOBO-DIC to resolve monthly fields from January 2004 to December 2019, as opposed to the average climatological values in Keppler et al. (2020). This data product is on a 1° × 1° grid at 28 depth levels from the surface to 1500 m. </span>
+                    </div></div>
+                <div class="card-links">
+                    <div class="card-link">
+                        <a href="https://doi.org/10.1029/2022GB007677" target="_blank" rel="noopener noreferrer"><i class="fas fa-book"></i> Publication</a>
                     </div>
                     <div class="card-link">
                         <a href="" target="_blank" rel="noopener noreferrer"><i class="fa fa-download"></i> Data Access</a>
