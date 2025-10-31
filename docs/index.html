@@ -23,11 +23,97 @@
 <div class="sidebar">
     <h2>Filters</h2><div class="filter">
         <label>Data Type</label><input type="checkbox" class="filter-checkbox" data-filter="Data Type" data-filter-type="multi-select" value="Observations"> Observations<br><input type="checkbox" class="filter-checkbox" data-filter="Data Type" data-filter-type="multi-select" value="Surface data-derived"> Surface data-derived<br></div><div class="filter">
-        <label>Spatial domains</label><input type="checkbox" class="filter-checkbox" data-filter="Spatial domains" data-filter-type="multi-select" value="Water column"> Water column<br><input type="checkbox" class="filter-checkbox" data-filter="Spatial domains" data-filter-type="multi-select" value="Surface"> Surface<br><input type="checkbox" class="filter-checkbox" data-filter="Spatial domains" data-filter-type="multi-select" value="Open Ocean"> Open Ocean<br><input type="checkbox" class="filter-checkbox" data-filter="Spatial domains" data-filter-type="multi-select" value="Coastal"> Coastal<br></div><div class="filter">
-        <label>Temporal resolution</label><input type="checkbox" class="filter-checkbox" data-filter="Temporal resolution" data-filter-type="multi-select" value="monthly"> monthly<br><input type="checkbox" class="filter-checkbox" data-filter="Temporal resolution" data-filter-type="multi-select" value="climatology"> climatology<br><input type="checkbox" class="filter-checkbox" data-filter="Temporal resolution" data-filter-type="multi-select" value="continuous"> continuous<br><input type="checkbox" class="filter-checkbox" data-filter="Temporal resolution" data-filter-type="multi-select" value="8-daily"> 8-daily<br></div><div class="filter">
+        <label>Spatial domains</label><input type="checkbox" class="filter-checkbox" data-filter="Spatial domains" data-filter-type="multi-select" value="Surface"> Surface<br><input type="checkbox" class="filter-checkbox" data-filter="Spatial domains" data-filter-type="multi-select" value="Coastal"> Coastal<br><input type="checkbox" class="filter-checkbox" data-filter="Spatial domains" data-filter-type="multi-select" value="Water column"> Water column<br><input type="checkbox" class="filter-checkbox" data-filter="Spatial domains" data-filter-type="multi-select" value="Open Ocean"> Open Ocean<br></div><div class="filter">
+        <label>Temporal resolution</label><input type="checkbox" class="filter-checkbox" data-filter="Temporal resolution" data-filter-type="multi-select" value="monthly"> monthly<br><input type="checkbox" class="filter-checkbox" data-filter="Temporal resolution" data-filter-type="multi-select" value="climatology"> climatology<br><input type="checkbox" class="filter-checkbox" data-filter="Temporal resolution" data-filter-type="multi-select" value="8-daily"> 8-daily<br><input type="checkbox" class="filter-checkbox" data-filter="Temporal resolution" data-filter-type="multi-select" value="continuous"> continuous<br></div><div class="filter">
         <label>Spatial resolution</label><input type="checkbox" class="filter-checkbox" data-filter="Spatial resolution" data-filter-type="multi-select" value="1.0°"> 1.0°<br><input type="checkbox" class="filter-checkbox" data-filter="Spatial resolution" data-filter-type="multi-select" value="0.25°"> 0.25°<br></div></div>
         <div class="content">
-            <div class="products"><!-- <div class="product-card" data-data-type="Surface data-derived" data-spatial-domains="Open Ocean||Surface" data-temporal-resolution="monthly" data-spatial-resolution="1.0°" data-period="1982 - 2022"> -->
+            <div class="products"><!-- <div class="product-card" data-data-type="Observations" data-spatial-domains="Surface||Open Ocean||Coastal" data-temporal-resolution="continuous" data-period="1960 - 2025"> -->
+<div class="product-card" data-data-type="Observations" data-spatial-domains="Surface||Open Ocean||Coastal" data-temporal-resolution="continuous" data-period="1960 - 2025">
+    <div class="card-inner">
+        <div class="card-front">
+            <div class="card-header">
+                <h3 class="card-title">SOCAT</h3>
+                <div class="card-subheading">Bakker et al. (2016)</div>
+            </div>
+            <div class="card-image">
+                <img src="https://socat.info/wp-content/uploads/2017/06/cropped-socat_cat.png" alt="Product image">
+            </div>
+            <div class="card-attributes"><!-- card-attribute-icon if fontawesome - and then hover text with description -->
+                 <div class="card-attr">
+                    <i class="fa-solid fa-globe" title="Spatial domains"></i>
+                <span class="card-attribute-value">Surface, Open Ocean, Coastal</span>
+                </div><!-- card-attribute-icon if fontawesome - and then hover text with description -->
+                 <div class="card-attr">
+                    <i class="fa-solid fa-hourglass-start" title="Temporal resolution"></i>
+                <span class="card-attribute-value">continuous</span>
+                </div><!-- card-attribute-icon if fontawesome - and then hover text with description -->
+                 <div class="card-attr">
+                    <i class="fa-solid fa-calendar-days" title="Period"></i>
+                <span class="card-attribute-value">1960 - 2025</span>
+                </div></div>
+            <div class="card-summary">
+                <p>The largest collection of surface ocean carbon observations</p>
+            </div>
+        </div>
+        <div class="card-back">
+            <div class="card-header">
+                <h3 class="card-title">SOCAT</h3>
+                <div class="card-subheading">Bakker et al. (2016)</div>
+            </div>
+            <div class="card-citation">
+                <a href="https://doi.org/10.5194/essd-8-383-2016" target="_blank" rel="noopener noreferrer">Bakker et al. (2016)</a>
+            </div>
+            <div class="card-data-access">
+                Data access: <a href="https://socat.info/" target="_blank" rel="noopener noreferrer">https://socat.info/</a>
+            </div>
+            <div class="card-details"><div class="card-detail">
+                    <h4 class="card-detail-title">Description</h4>
+                    <p class="card-detail-content">The Surface Ocean CO2 Atlas features surface fCO2 measurements from both the open ocean and the coastal ocean, predominantly sourced from research vessels, ships of opportunity, and autonomous platforms including fixed moorings and uncrewed surface vehicles (USVs) (Bakker et al., 2016). It represents the most extensive collection of observational ocean CO2 data for the global surface ocean. Since 2013, SOCAT has been updated annually. Dataset flags indicate the estimated uncertainty and completeness of metadata in SOCAT synthesis products. The SOCAT gridded product contains fCO2 values with an estimated uncertainty of less than 5 µatm. </p>
+                </div></div>
+        </div>
+    </div>
+</div><!-- <div class="product-card" data-data-type="Observations" data-spatial-domains="Water column||Open Ocean" data-period="1960 - 2024"> -->
+<div class="product-card" data-data-type="Observations" data-spatial-domains="Water column||Open Ocean" data-period="1960 - 2024">
+    <div class="card-inner">
+        <div class="card-front">
+            <div class="card-header">
+                <h3 class="card-title">GLODAPv2</h3>
+                <div class="card-subheading">Lauvset et al. (2024)</div>
+            </div>
+            <div class="card-image">
+                <img src="https://glodap.info/wp-content/uploads/2017/09/cropped-glodap_logo_trans.png" alt="Product image">
+            </div>
+            <div class="card-attributes"><!-- card-attribute-icon if fontawesome - and then hover text with description -->
+                 <div class="card-attr">
+                    <i class="fa-solid fa-globe" title="Spatial domains"></i>
+                <span class="card-attribute-value">Water column, Open Ocean</span>
+                </div><!-- card-attribute-icon if fontawesome - and then hover text with description -->
+                 <div class="card-attr">
+                    <i class="fa-solid fa-calendar-days" title="Period"></i>
+                <span class="card-attribute-value">1960 - 2024</span>
+                </div></div>
+            <div class="card-summary">
+                <p>Adjustments are applied by comparing data in the deep ocean (>2000 m) using a crossover and inversion method as described by Johnson et al. (2001).</p>
+            </div>
+        </div>
+        <div class="card-back">
+            <div class="card-header">
+                <h3 class="card-title">GLODAPv2</h3>
+                <div class="card-subheading">Lauvset et al. (2024)</div>
+            </div>
+            <div class="card-citation">
+                <a href="https://doi.org/10.5194/essd-16-2047-2024" target="_blank" rel="noopener noreferrer">Lauvset et al. (2024)</a>
+            </div>
+            <div class="card-data-access">
+                Data access: <a href="https://glodap.info/" target="_blank" rel="noopener noreferrer">https://glodap.info/</a>
+            </div>
+            <div class="card-details"><div class="card-detail">
+                    <h4 class="card-detail-title">Description</h4>
+                    <p class="card-detail-content">The Global Ocean Data Analysis Project Version 2 (GLODAPv2) aggregates biogeochemical data collected from discrete bottle samples, offering extensive global coverage from the surface to depths (Key et al., 2015; Olsen et al., 2016; Lauvset et al., 2024). While GLODAP is primarily a product for basin-scale hydrographic data, it also includes coastal datasets and observations from a few time-series. The GLODAPv2 data product provides rigorously quality-controlled measurements for 14 essential oceanographic variables: temperature, salinity, dissolved oxygen (DO), nitrate, silicate, phosphate, DIC, TA, pH, chlorofluorocarbons (CFC-11, CFC-12, CFC-113), carbon tetrachloride (CCl4), and sulfur hexafluoride (SF6). These variables, excluding temperature, undergo both primary and secondary quality control procedures to detect outliers and adjust for significant measurement biases. GLODAPv2 was first published in 2016 and was updated annually through a living data process in Earth System Science Data from 2019 through “v2023,” which was published in 2024. For these updates, new data (including historical data not previously included in the data product) are quality controlled and adjusted to the 2016 version (Olsen et al., 2019; Olsen et al., 2020; Lauvset et al., 2021; Lauvset et al., 2022; Lauvset et al., 2024). Since the global repeat hydrography programs operate with decadal repetitions, the aim is to produce a completely new version of GLODAP, where all cruise datasets will be reevaluated, every decade. Release of the GLODAPv3 data product is planned for 2026, and is expected to evolve the secondary data quality control practices relative to those used in GLODAPv2. For more information on the secondary quality control process, refer to Tanhua et al. (2010) and Lauvset and Tanhua (2015). GLODAPv2 offers two kind of products: the collection of quality controlled data from discrete bottle samples taken at sampling location (Key et al., 2015; Olsen et al., 2016; Olsen et al., 2019; Olsen et al., 2020; Lauvset et al., 2021; Lauvset et al., 2022; Lauvset et al., 2024), and a gridded product, interpolated to a 1° × 1°  grid and the 33 standard depth levels of World Ocean Atlas (WOA) (Lauvset et al., 2016). </p>
+                </div></div>
+        </div>
+    </div>
+</div><!-- <div class="product-card" data-data-type="Surface data-derived" data-spatial-domains="Open Ocean||Surface" data-temporal-resolution="monthly" data-spatial-resolution="1.0°" data-period="1982 - 2022"> -->
 <div class="product-card" data-data-type="Surface data-derived" data-spatial-domains="Open Ocean||Surface" data-temporal-resolution="monthly" data-spatial-resolution="1.0°" data-period="1982 - 2022">
     <div class="card-inner">
         <div class="card-front">
@@ -216,92 +302,6 @@
             <div class="card-details"><div class="card-detail">
                     <h4 class="card-detail-title">Description</h4>
                     <p class="card-detail-content">Self Organising Map – Feed-Forward Neural Network</p>
-                </div></div>
-        </div>
-    </div>
-</div><!-- <div class="product-card" data-data-type="Observations" data-spatial-domains="Surface||Open Ocean||Coastal" data-temporal-resolution="continuous" data-period="1960 - 2025"> -->
-<div class="product-card" data-data-type="Observations" data-spatial-domains="Surface||Open Ocean||Coastal" data-temporal-resolution="continuous" data-period="1960 - 2025">
-    <div class="card-inner">
-        <div class="card-front">
-            <div class="card-header">
-                <h3 class="card-title">SOCAT</h3>
-                <div class="card-subheading">Bakker et al. (2016)</div>
-            </div>
-            <div class="card-image">
-                <img src="https://socat.info/wp-content/uploads/2017/06/cropped-socat_cat.png" alt="Product image">
-            </div>
-            <div class="card-attributes"><!-- card-attribute-icon if fontawesome - and then hover text with description -->
-                 <div class="card-attr">
-                    <i class="fa-solid fa-globe" title="Spatial domains"></i>
-                <span class="card-attribute-value">Surface, Open Ocean, Coastal</span>
-                </div><!-- card-attribute-icon if fontawesome - and then hover text with description -->
-                 <div class="card-attr">
-                    <i class="fa-solid fa-hourglass-start" title="Temporal resolution"></i>
-                <span class="card-attribute-value">continuous</span>
-                </div><!-- card-attribute-icon if fontawesome - and then hover text with description -->
-                 <div class="card-attr">
-                    <i class="fa-solid fa-calendar-days" title="Period"></i>
-                <span class="card-attribute-value">1960 - 2025</span>
-                </div></div>
-            <div class="card-summary">
-                <p>The largest collection of surface ocean carbon observations</p>
-            </div>
-        </div>
-        <div class="card-back">
-            <div class="card-header">
-                <h3 class="card-title">SOCAT</h3>
-                <div class="card-subheading">Bakker et al. (2016)</div>
-            </div>
-            <div class="card-citation">
-                <a href="https://doi.org/10.5194/essd-8-383-2016" target="_blank" rel="noopener noreferrer">Bakker et al. (2016)</a>
-            </div>
-            <div class="card-data-access">
-                Data access: <a href="https://socat.info/" target="_blank" rel="noopener noreferrer">https://socat.info/</a>
-            </div>
-            <div class="card-details"><div class="card-detail">
-                    <h4 class="card-detail-title">Description</h4>
-                    <p class="card-detail-content">The Surface Ocean CO2 Atlas features surface fCO2 measurements from both the open ocean and the coastal ocean, predominantly sourced from research vessels, ships of opportunity, and autonomous platforms including fixed moorings and uncrewed surface vehicles (USVs) (Bakker et al., 2016). It represents the most extensive collection of observational ocean CO2 data for the global surface ocean. Since 2013, SOCAT has been updated annually. Dataset flags indicate the estimated uncertainty and completeness of metadata in SOCAT synthesis products. The SOCAT gridded product contains fCO2 values with an estimated uncertainty of less than 5 µatm. </p>
-                </div></div>
-        </div>
-    </div>
-</div><!-- <div class="product-card" data-data-type="Observations" data-spatial-domains="Water column||Open Ocean" data-period="1960 - 2024"> -->
-<div class="product-card" data-data-type="Observations" data-spatial-domains="Water column||Open Ocean" data-period="1960 - 2024">
-    <div class="card-inner">
-        <div class="card-front">
-            <div class="card-header">
-                <h3 class="card-title">GLODAPv2</h3>
-                <div class="card-subheading">Lauvset et al. (2024)</div>
-            </div>
-            <div class="card-image">
-                <img src="https://glodap.info/wp-content/uploads/2017/09/cropped-glodap_logo_trans.png" alt="Product image">
-            </div>
-            <div class="card-attributes"><!-- card-attribute-icon if fontawesome - and then hover text with description -->
-                 <div class="card-attr">
-                    <i class="fa-solid fa-globe" title="Spatial domains"></i>
-                <span class="card-attribute-value">Water column, Open Ocean</span>
-                </div><!-- card-attribute-icon if fontawesome - and then hover text with description -->
-                 <div class="card-attr">
-                    <i class="fa-solid fa-calendar-days" title="Period"></i>
-                <span class="card-attribute-value">1960 - 2024</span>
-                </div></div>
-            <div class="card-summary">
-                <p>Adjustments are applied by comparing data in the deep ocean (>2000 m) using a crossover and inversion method as described by Johnson et al. (2001).</p>
-            </div>
-        </div>
-        <div class="card-back">
-            <div class="card-header">
-                <h3 class="card-title">GLODAPv2</h3>
-                <div class="card-subheading">Lauvset et al. (2024)</div>
-            </div>
-            <div class="card-citation">
-                <a href="https://doi.org/10.5194/essd-16-2047-2024" target="_blank" rel="noopener noreferrer">Lauvset et al. (2024)</a>
-            </div>
-            <div class="card-data-access">
-                Data access: <a href="https://glodap.info/" target="_blank" rel="noopener noreferrer">https://glodap.info/</a>
-            </div>
-            <div class="card-details"><div class="card-detail">
-                    <h4 class="card-detail-title">Description</h4>
-                    <p class="card-detail-content">The Global Ocean Data Analysis Project Version 2 (GLODAPv2) aggregates biogeochemical data collected from discrete bottle samples, offering extensive global coverage from the surface to depths (Key et al., 2015; Olsen et al., 2016; Lauvset et al., 2024). While GLODAP is primarily a product for basin-scale hydrographic data, it also includes coastal datasets and observations from a few time-series. The GLODAPv2 data product provides rigorously quality-controlled measurements for 14 essential oceanographic variables: temperature, salinity, dissolved oxygen (DO), nitrate, silicate, phosphate, DIC, TA, pH, chlorofluorocarbons (CFC-11, CFC-12, CFC-113), carbon tetrachloride (CCl4), and sulfur hexafluoride (SF6). These variables, excluding temperature, undergo both primary and secondary quality control procedures to detect outliers and adjust for significant measurement biases. GLODAPv2 was first published in 2016 and was updated annually through a living data process in Earth System Science Data from 2019 through “v2023,” which was published in 2024. For these updates, new data (including historical data not previously included in the data product) are quality controlled and adjusted to the 2016 version (Olsen et al., 2019; Olsen et al., 2020; Lauvset et al., 2021; Lauvset et al., 2022; Lauvset et al., 2024). Since the global repeat hydrography programs operate with decadal repetitions, the aim is to produce a completely new version of GLODAP, where all cruise datasets will be reevaluated, every decade. Release of the GLODAPv3 data product is planned for 2026, and is expected to evolve the secondary data quality control practices relative to those used in GLODAPv2. For more information on the secondary quality control process, refer to Tanhua et al. (2010) and Lauvset and Tanhua (2015). GLODAPv2 offers two kind of products: the collection of quality controlled data from discrete bottle samples taken at sampling location (Key et al., 2015; Olsen et al., 2016; Olsen et al., 2019; Olsen et al., 2020; Lauvset et al., 2021; Lauvset et al., 2022; Lauvset et al., 2024), and a gridded product, interpolated to a 1° × 1°  grid and the 33 standard depth levels of World Ocean Atlas (WOA) (Lauvset et al., 2016). </p>
                 </div></div>
         </div>
     </div>
