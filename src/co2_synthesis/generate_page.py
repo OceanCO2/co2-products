@@ -17,10 +17,10 @@ def generate_page_main(google_sheet_url: str):
     output_dir.mkdir(exist_ok=True)  # create if doesn't exist
 
     logger.debug(f"Fetching data from Google Sheet: {google_sheet_url}")
-    df = get_sheet_data(google_sheet_url, reader='pandas', skiprows=1)
+    df = get_sheet_data(google_sheet_url, reader='pandas', index_col=0, skiprows=1)
+    df = get_valid_products_only(df)
     logger.debug(f"Retrieved {len(df)} rows from Google Sheet.\n{df.T}")
 
-    df = get_valid_products_only(df)
     products = list(df.apply(process_product_row, axis=1))
     filters = create_filters(products)
     
@@ -46,13 +46,14 @@ def get_valid_products_only(products: pd.DataFrame) -> pd.DataFrame:
     Logs a warning for any incomplete products found.
     Returns a DataFrame with only complete products.
     """
-    df_no_incomplete_products = products.dropna(subset='card-title').replace({np.nan: ""})
+    df_no_rows = products.dropna(how='all')  # drop completely empty rows
+    df_no_incomplete_products = df_no_rows.dropna(subset='card-title').replace({np.nan: ""})
     # show difference between incomplete and complete cards
-    idx_incomplete = products.index.difference(df_no_incomplete_products.index)
+    idx_incomplete = df_no_rows.index.difference(df_no_incomplete_products.index)
     if len(idx_incomplete) > 0:
         logger.warning(
             f"Dropping {len(idx_incomplete)} incomplete products (missing card-title):\n"
-            f"{products.loc[idx_incomplete].T}")
+            f"{df_no_rows.loc[idx_incomplete].T}")
         
     return df_no_incomplete_products
     

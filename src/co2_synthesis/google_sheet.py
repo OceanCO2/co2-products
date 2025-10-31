@@ -5,7 +5,6 @@ import csv
 import pandas as pd
 from io import StringIO
 from typing import Literal
-from functools import lru_cache
 
 
 readers = {
@@ -55,7 +54,6 @@ def download_sheet_as_excel(full_url: str, output_path: str | pathlib.Path):
         f.write(response.content)
 
 
-@lru_cache(maxsize=1)
 def get_sheet_as_buffer(full_url: str, format:Literal['csv', 'excel']='csv') -> StringIO:
     """
     Retrieve the Google Sheet data as a StringIO object.
