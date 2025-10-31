@@ -23,9 +23,9 @@
 <div class="sidebar">
     <h2>Filters</h2><div class="filter">
         <label>Data Type</label><input type="checkbox" class="filter-checkbox" data-filter="Data Type" data-filter-type="multi-select" value="Surface data-derived"> Surface data-derived<br><input type="checkbox" class="filter-checkbox" data-filter="Data Type" data-filter-type="multi-select" value="Observations"> Observations<br></div><div class="filter">
-        <label>Temporal resolution</label><input type="checkbox" class="filter-checkbox" data-filter="Temporal resolution" data-filter-type="multi-select" value="climatology"> climatology<br><input type="checkbox" class="filter-checkbox" data-filter="Temporal resolution" data-filter-type="multi-select" value="8-daily"> 8-daily<br><input type="checkbox" class="filter-checkbox" data-filter="Temporal resolution" data-filter-type="multi-select" value="monthly"> monthly<br><input type="checkbox" class="filter-checkbox" data-filter="Temporal resolution" data-filter-type="multi-select" value="continuous"> continuous<br></div><div class="filter">
-        <label>Spatial resolution</label><input type="checkbox" class="filter-checkbox" data-filter="Spatial resolution" data-filter-type="multi-select" value="0.25°"> 0.25°<br><input type="checkbox" class="filter-checkbox" data-filter="Spatial resolution" data-filter-type="multi-select" value="1.0°"> 1.0°<br></div><div class="filter">
-        <label>Spatial domains</label><input type="checkbox" class="filter-checkbox" data-filter="Spatial domains" data-filter-type="multi-select" value="Open Ocean"> Open Ocean<br><input type="checkbox" class="filter-checkbox" data-filter="Spatial domains" data-filter-type="multi-select" value="Coastal"> Coastal<br><input type="checkbox" class="filter-checkbox" data-filter="Spatial domains" data-filter-type="multi-select" value="Surface"> Surface<br></div></div>
+        <label>Temporal resolution</label><input type="checkbox" class="filter-checkbox" data-filter="Temporal resolution" data-filter-type="multi-select" value="continuous"> continuous<br><input type="checkbox" class="filter-checkbox" data-filter="Temporal resolution" data-filter-type="multi-select" value="monthly"> monthly<br><input type="checkbox" class="filter-checkbox" data-filter="Temporal resolution" data-filter-type="multi-select" value="climatology"> climatology<br><input type="checkbox" class="filter-checkbox" data-filter="Temporal resolution" data-filter-type="multi-select" value="8-daily"> 8-daily<br></div><div class="filter">
+        <label>Spatial resolution</label><input type="checkbox" class="filter-checkbox" data-filter="Spatial resolution" data-filter-type="multi-select" value="1.0°"> 1.0°<br><input type="checkbox" class="filter-checkbox" data-filter="Spatial resolution" data-filter-type="multi-select" value="0.25°"> 0.25°<br></div><div class="filter">
+        <label>Spatial domains</label><input type="checkbox" class="filter-checkbox" data-filter="Spatial domains" data-filter-type="multi-select" value="Coastal"> Coastal<br><input type="checkbox" class="filter-checkbox" data-filter="Spatial domains" data-filter-type="multi-select" value="Open Ocean"> Open Ocean<br><input type="checkbox" class="filter-checkbox" data-filter="Spatial domains" data-filter-type="multi-select" value="Water column"> Water column<br><input type="checkbox" class="filter-checkbox" data-filter="Spatial domains" data-filter-type="multi-select" value="Surface"> Surface<br></div></div>
         <div class="content">
             <div class="products"><!-- <div class="product-card" data-data-type="Surface data-derived" data-temporal-resolution="monthly" data-spatial-resolution="1.0°" data-period="1982 - 2022" data-spatial-domains="Open Ocean||Surface"> -->
 <div class="product-card" data-data-type="Surface data-derived" data-temporal-resolution="monthly" data-spatial-resolution="1.0°" data-period="1982 - 2022" data-spatial-domains="Open Ocean||Surface">
@@ -273,6 +273,50 @@
             <div class="card-details"><div class="card-detail">
                     <h4 class="card-detail-title">Highlight</h4>
                     <p class="card-detail-content">The largest collection of surface ocean carbon observations</p>
+                </div><div class="card-detail">
+                    <h4 class="card-detail-title">Method</h4>
+                    <p class="card-detail-content"></p>
+                </div></div>
+        </div>
+    </div>
+</div><!-- <div class="product-card" data-data-type="Observations" data-period="1960 - 2024" data-spatial-domains="Water column||Open Ocean"> -->
+<div class="product-card" data-data-type="Observations" data-period="1960 - 2024" data-spatial-domains="Water column||Open Ocean">
+    <div class="card-inner">
+        <div class="card-front">
+            <div class="card-header">
+                <h3 class="card-title">GLODAPv2</h3>
+                <div class="card-subheading">Lauvset et al. (2024)</div>
+            </div>
+            <div class="card-image">
+                <img src="https://glodap.info/wp-content/uploads/2017/09/cropped-glodap_logo_trans.png" alt="Product image">
+            </div>
+            <div class="card-attributes"><!-- card-attribute-icon if fontawesome - and then hover text with description -->
+                 <div class="card-attr">
+                    <i class="fa-solid fa-calendar-days" title="Period"></i>
+                <span class="card-attribute-value">1960 - 2024</span>
+                </div><!-- card-attribute-icon if fontawesome - and then hover text with description -->
+                 <div class="card-attr">
+                    <i class="fa-solid fa-globe" title="Spatial domains"></i>
+                <span class="card-attribute-value">Water column, Open Ocean</span>
+                </div></div>
+            <div class="card-summary">
+                <p>Biogeochemical data collected from discrete bottle samples</p>
+            </div>
+        </div>
+        <div class="card-back">
+            <div class="card-header">
+                <h3 class="card-title">GLODAPv2</h3>
+                <div class="card-subheading">Lauvset et al. (2024)</div>
+            </div>
+            <div class="card-citation">
+                <a href="https://doi.org/10.5194/essd-16-2047-2024" target="_blank" rel="noopener noreferrer">Lauvset et al. (2024)</a>
+            </div>
+            <div class="card-data-access">
+                Data access: <a href="https://glodap.info/" target="_blank" rel="noopener noreferrer">https://glodap.info/</a>
+            </div>
+            <div class="card-details"><div class="card-detail">
+                    <h4 class="card-detail-title">Highlight</h4>
+                    <p class="card-detail-content">Adjustments are applied by comparing data in the deep ocean (>2000 m) using a crossover and inversion method as described by Johnson et al. (2001).</p>
                 </div><div class="card-detail">
                     <h4 class="card-detail-title">Method</h4>
                     <p class="card-detail-content"></p>
