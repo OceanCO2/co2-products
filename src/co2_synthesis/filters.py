@@ -1,5 +1,6 @@
 from collections import defaultdict
 import numpy as np
+from . import cfg
 
 
 def create_filters(products:list[dict]) -> dict:
@@ -14,37 +15,12 @@ def create_filters(products:list[dict]) -> dict:
             filter[key]['options'].extend(value)
 
     filter = defeaultdict_to_dict(filter)
-    filter = {k: v for k, v in filter.items() if key}
+    filter = {k: v for k, v in filter.items() if k in cfg.DATA_FILTERS}
 
-    dates = []
     for key in filter:
         # first remove duplicates and empty strings
         filter[key]['options'] = sorted([k for k in set(filter[key]['options']) if k])
-
-        # then determine type of the filter
-        vals = filter[key]['options']
-        if all([is_date_range(v) for v in vals]):
-            filter[key]['type'] = 'date-range'
-            ranges = np.array([get_date_ranges(v) for v in vals])
-            # determines the overall min and max range
-            range_min = int(ranges[:,0].min())
-            range_max = int(ranges[:,1].max())
-            # defaults are the ranges that cover most products
-            default_min = int(ranges[:,0].max())
-            default_max = int(ranges[:,1].min())
-            if default_min > default_max:
-                default_min = default_min - 1
-            filter[key]['min_max'] = [range_min, range_max]
-            filter[key]['default'] = [default_min, default_max]
-            filter[key].pop('options', None)
-            dates += key,
-        else:
-            filter[key]['type'] = 'multi-select'
-    
-    # EXCLUDE DATE FILTER BY POPPING THE FILTER KEY 
-    # SINCE THE SCRIPT ISN'T WORKING AND WILL NEED TIME TO DEBUG
-    for key in dates:
-        filter.pop(key, None)
+        filter[key]['type'] = 'multi-select'
         
     return defeaultdict_to_dict(filter)
 
