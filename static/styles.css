@@ -113,7 +113,7 @@ body {
 .product-card {
     perspective: 1000px;
     margin-bottom: 20px;
-    min-height: 420px;
+    min-height: 440px;
     max-width: 370px;
     min-width: 300px;
 }
@@ -169,6 +169,13 @@ body {
 .card-back h3 {
     margin-top: 0;
     text-align: center;
+}
+
+.card-front h3{
+    /* truncate text */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
 .card-header {
