@@ -22,6 +22,7 @@ body {
 .banner p {
     margin: 5px 0 0 0;
     font-size: 1.2rem;
+    color: #ffffffa3;
 }
 
 .page-title{
@@ -41,7 +42,7 @@ body {
 }
 
 .web-copyright{
-    color: #ffffff4a;
+    color: #ffffffa3;
     font-size: 0.7rem;
     float: right;
     margin-top: -18px;
@@ -112,7 +113,7 @@ body {
 .product-card {
     perspective: 1000px;
     margin-bottom: 20px;
-    min-height: 420px;
+    min-height: 440px;
     max-width: 370px;
     min-width: 300px;
 }
@@ -124,9 +125,9 @@ body {
     transition: transform 0.6s;
     transform-style: preserve-3d;
 }
-
 .product-card:hover .card-inner {
     transform: rotateY(180deg);
+    transition: transform 0.6s 0.3s;
 }
 
 .card-front,
@@ -168,6 +169,13 @@ body {
 .card-back h3 {
     margin-top: 0;
     text-align: center;
+}
+
+.card-front h3{
+    /* truncate text */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
 .card-header {
