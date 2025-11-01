@@ -33,10 +33,10 @@
 
 <div class="sidebar">
     <h2>Filters</h2><div class="filter">
-        <label>Data Type</label><input type="checkbox" class="filter-checkbox" data-filter="Data Type" data-filter-type="multi-select" value="Data compilations"> Data compilations<br><input type="checkbox" class="filter-checkbox" data-filter="Data Type" data-filter-type="multi-select" value="Gridded surface"> Gridded surface<br><input type="checkbox" class="filter-checkbox" data-filter="Data Type" data-filter-type="multi-select" value="Harmonized"> Harmonized<br></div><div class="filter">
+        <label>Data Type</label><input type="checkbox" class="filter-checkbox" data-filter="Data Type" data-filter-type="multi-select" value="Data compilations"> Data compilations<br><input type="checkbox" class="filter-checkbox" data-filter="Data Type" data-filter-type="multi-select" value="Gridded subsurface"> Gridded subsurface<br><input type="checkbox" class="filter-checkbox" data-filter="Data Type" data-filter-type="multi-select" value="Gridded surface"> Gridded surface<br><input type="checkbox" class="filter-checkbox" data-filter="Data Type" data-filter-type="multi-select" value="Harmonized"> Harmonized<br></div><div class="filter">
         <label>Spatial domains</label><input type="checkbox" class="filter-checkbox" data-filter="Spatial domains" data-filter-type="multi-select" value="Coastal"> Coastal<br><input type="checkbox" class="filter-checkbox" data-filter="Spatial domains" data-filter-type="multi-select" value="Open ocean"> Open ocean<br><input type="checkbox" class="filter-checkbox" data-filter="Spatial domains" data-filter-type="multi-select" value="Surface"> Surface<br><input type="checkbox" class="filter-checkbox" data-filter="Spatial domains" data-filter-type="multi-select" value="Water column"> Water column<br></div><div class="filter">
-        <label>Temporal resolution</label><input type="checkbox" class="filter-checkbox" data-filter="Temporal resolution" data-filter-type="multi-select" value="8-day"> 8-day<br><input type="checkbox" class="filter-checkbox" data-filter="Temporal resolution" data-filter-type="multi-select" value="continuous"> continuous<br><input type="checkbox" class="filter-checkbox" data-filter="Temporal resolution" data-filter-type="multi-select" value="discrete"> discrete<br><input type="checkbox" class="filter-checkbox" data-filter="Temporal resolution" data-filter-type="multi-select" value="monthly"> monthly<br></div><div class="filter">
-        <label>Spatial resolution</label><input type="checkbox" class="filter-checkbox" data-filter="Spatial resolution" data-filter-type="multi-select" value="0.25°"> 0.25°<br><input type="checkbox" class="filter-checkbox" data-filter="Spatial resolution" data-filter-type="multi-select" value="1.0°"> 1.0°<br></div></div>
+        <label>Temporal resolution</label><input type="checkbox" class="filter-checkbox" data-filter="Temporal resolution" data-filter-type="multi-select" value="8-day"> 8-day<br><input type="checkbox" class="filter-checkbox" data-filter="Temporal resolution" data-filter-type="multi-select" value="climatology"> climatology<br><input type="checkbox" class="filter-checkbox" data-filter="Temporal resolution" data-filter-type="multi-select" value="continuous"> continuous<br><input type="checkbox" class="filter-checkbox" data-filter="Temporal resolution" data-filter-type="multi-select" value="discrete"> discrete<br><input type="checkbox" class="filter-checkbox" data-filter="Temporal resolution" data-filter-type="multi-select" value="monthly"> monthly<br></div><div class="filter">
+        <label>Spatial resolution</label><input type="checkbox" class="filter-checkbox" data-filter="Spatial resolution" data-filter-type="multi-select" value="0.25°"> 0.25°<br><input type="checkbox" class="filter-checkbox" data-filter="Spatial resolution" data-filter-type="multi-select" value="1.0°"> 1.0°<br><input type="checkbox" class="filter-checkbox" data-filter="Spatial resolution" data-filter-type="multi-select" value="1° x 1°"> 1° x 1°<br></div></div>
         <div class="content">
             <div class="products"><!-- <div class="product-card" data-data-type="Data compilations" data-spatial-domains="Open ocean||Coastal||Surface" data-temporal-resolution="continuous" data-period="1960 - 2025"> -->
 <div class="product-card" data-data-type="Data compilations" data-spatial-domains="Open ocean||Coastal||Surface" data-temporal-resolution="continuous" data-period="1960 - 2025">
@@ -391,6 +391,124 @@
                     </div>
                     <div class="card-link">
                         <a href="https://zenodo.org/records/8280457" target="_blank" rel="noopener noreferrer"><i class="fa fa-download"></i> Data Access</a>
+                    </div>
+                </div>  
+            </div>
+        </div>
+    </div>
+</div><!-- <div class="product-card" data-data-type="Data compilations" data-spatial-domains="Coastal||Water column" data-temporal-resolution="discrete" data-period="2003 - 2018"> -->
+<div class="product-card" data-data-type="Data compilations" data-spatial-domains="Coastal||Water column" data-temporal-resolution="discrete" data-period="2003 - 2018">
+    <div class="card-inner">
+        <div class="card-front">
+            <div class="card-header">
+                <h3 class="card-title">CODAP-NA</h3>
+                <div class="card-subheading">Jiang et al. (2021)</div>
+            </div>
+            <div class="card-content">
+                <div class="card-image">
+                    <img src="https://essd.copernicus.org/articles/13/2777/2021/essd-13-2777-2021-f01-web.png" alt="Product image">
+                </div>
+                <div class="card-summary">
+                    <p>Like GLODAPv2, but for the North American coastal ocean</p>
+                </div>
+                <div class="card-attributes"><!-- card-attribute-icon if fontawesome - and then hover text with description -->
+                    <div class="card-attr">
+                        <i class="fa-solid fa-globe" title="Spatial domains"></i>
+                        <span class="card-attribute-value">Coastal, Water column</span>
+                    </div><!-- card-attribute-icon if fontawesome - and then hover text with description -->
+                    <div class="card-attr">
+                        <i class="fa-solid fa-hourglass-start" title="Temporal resolution"></i>
+                        <span class="card-attribute-value">discrete</span>
+                    </div><!-- card-attribute-icon if fontawesome - and then hover text with description -->
+                    <div class="card-attr">
+                        <i class="fa-solid fa-calendar-days" title="Period"></i>
+                        <span class="card-attribute-value">2003 - 2018</span>
+                    </div></div>
+            </div>
+        </div>
+        <div class="card-back">
+            <div class="card-header">
+                <h3 class="card-title">CODAP-NA</h3>
+                <div class="card-subheading">Jiang et al. (2021)</div>
+            </div>
+            <div class="card-content">
+                <!-- <div class="card-data-access">
+                    <span class="card-data-access-label">Data access:</span> <a href="https://www.ncei.noaa.gov/data/oceans/ncei/ocads/metadata/0219960.html" target="_blank" rel="noopener noreferrer">https://www.ncei.noaa.gov/data/oceans/ncei/ocads/metadata/0219960.html</a>
+                </div> -->
+                <div class="card-details"><div class="card-detail">
+                        <span class="card-detail-title">Description: </span>
+                        <span class="card-detail-content">Jiang et al. (2021) synthesized two decades of discrete measurements of carbonate system variables, DO, and nutrient data from the North American continental shelves to generate the first version of Coastal Ocean Data Analysis Data Product in North America (CODAP-NA). The 2021 release encompasses 3,391 oceanographic profiles from 61 research cruises spanning the North American continental shelves from Alaska to Mexico in the west and from Canada to the Caribbean in the east. It includes 14 key variables, including temperature, salinity, DO, DIC, TA, pH, carbonate ion, fCO2, silicate, phosphate, nitrate. </span>
+                    </div><div class="card-detail">
+                        <span class="card-detail-title">Reference: </span>
+                        <span class="card-detail-content">Jiang, L.-Q., Feely, R. A., Wanninkhof, R., Greeley, D., Barbero, L., Alin, S., Carter, B. R., Pierrot, D., Featherstone, C., Hooper, J., Melrose, C., Monacci, N., Sharp, J. D., Shellito, S., Xu, Y.-Y., Kozyr, A., Byrne, R. H., Cai, W.-J., Cross, J., Johnson, G. C., Hales, B., Langdon, C., Mathis, J., Salisbury, J., and Townsend, D. W.: Coastal Ocean Data Analysis Product in North America (CODAP-NA) – an internally consistent data product for discrete inorganic carbon, oxygen, and nutrients on the North American ocean margins, Earth Syst. Sci. Data, 13, 2777–2799, https://doi.org/10.5194/essd-13-2777-2021, 2021.</span>
+                    </div></div>
+                <div class="card-links">
+                    <div class="card-link">
+                        <a href="https://doi.org/10.5194/essd-13-2777-2021" target="_blank" rel="noopener noreferrer"><i class="fas fa-book"></i> Publication</a>
+                    </div>
+                    <div class="card-link">
+                        <a href="https://www.ncei.noaa.gov/data/oceans/ncei/ocads/metadata/0219960.html" target="_blank" rel="noopener noreferrer"><i class="fa fa-download"></i> Data Access</a>
+                    </div>
+                </div>  
+            </div>
+        </div>
+    </div>
+</div><!-- <div class="product-card" data-data-type="Gridded subsurface" data-spatial-domains="Open ocean||Water column" data-temporal-resolution="climatology" data-spatial-resolution="1° x 1°" data-period="2000 - 2000"> -->
+<div class="product-card" data-data-type="Gridded subsurface" data-spatial-domains="Open ocean||Water column" data-temporal-resolution="climatology" data-spatial-resolution="1° x 1°" data-period="2000 - 2000">
+    <div class="card-inner">
+        <div class="card-front">
+            <div class="card-header">
+                <h3 class="card-title">Aragonite Saturation State Climatology</h3>
+                <div class="card-subheading">Jiang et al. (2015) </div>
+            </div>
+            <div class="card-content">
+                <div class="card-image">
+                    <img src="https://agupubs.onlinelibrary.wiley.com/cms/asset/1787fd59-795c-4979-9565-6e7270b0fdbf/gbc20348-fig-0002-m.jpg" alt="Product image">
+                </div>
+                <div class="card-summary">
+                    <p>Ocean interior climatology for (Ωarag) from surface to 4000 m (referenced to year 2000)</p>
+                </div>
+                <div class="card-attributes"><!-- card-attribute-icon if fontawesome - and then hover text with description -->
+                    <div class="card-attr">
+                        <i class="fa-solid fa-globe" title="Spatial domains"></i>
+                        <span class="card-attribute-value">Open ocean, Water column</span>
+                    </div><!-- card-attribute-icon if fontawesome - and then hover text with description -->
+                    <div class="card-attr">
+                        <i class="fa-solid fa-hourglass-start" title="Temporal resolution"></i>
+                        <span class="card-attribute-value">climatology</span>
+                    </div><!-- card-attribute-icon if fontawesome - and then hover text with description -->
+                    <div class="card-attr">
+                        <i class="fa-solid fa-ruler-horizontal" title="Spatial resolution"></i>
+                        <span class="card-attribute-value">1° x 1°</span>
+                    </div><!-- card-attribute-icon if fontawesome - and then hover text with description -->
+                    <div class="card-attr">
+                        <i class="fa-solid fa-calendar-days" title="Period"></i>
+                        <span class="card-attribute-value">2000 - 2000</span>
+                    </div></div>
+            </div>
+        </div>
+        <div class="card-back">
+            <div class="card-header">
+                <h3 class="card-title">Aragonite Saturation State Climatology</h3>
+                <div class="card-subheading">Jiang et al. (2015) </div>
+            </div>
+            <div class="card-content">
+                <!-- <div class="card-data-access">
+                    <span class="card-data-access-label">Data access:</span> <a href="https://www.ncei.noaa.gov/data/oceans/ncei/ocads/metadata/0139360.html" target="_blank" rel="noopener noreferrer">https://www.ncei.noaa.gov/data/oceans/ncei/ocads/metadata/0139360.html</a>
+                </div> -->
+                <div class="card-details"><div class="card-detail">
+                        <span class="card-detail-title">Description: </span>
+                        <span class="card-detail-content">Jiang et al. (2015a) developed an interior ocean Ωarag climatology (referenced to 2000), on a 1° × 1° grid at 9 standardized depth levels from the surface down to 4000m. This was accomplished by integrating data from the first version of GLODAP (Key et al., 2004), CARINA (Key et al., 2010), and PACIFICA (Suzuki et al., 2013), along with additional recent cruise datasets up to 2012. </span>
+                    </div><div class="card-detail">
+                        <span class="card-detail-title">Reference: </span>
+                        <span class="card-detail-content">Jiang, L.-Q., Feely, R. A., Carter, B. R., Greeley, D. J., Gledhill, D. K., and Arzayus, K. M.: Climatological distribution of aragonite saturation state in the global oceans,  Global Biogeochemical Cycles, 29(10), 1656–1673, https://doi.org/10.1002/2015GB005198, 2015. </span>
+                    </div></div>
+                <div class="card-links">
+                    <div class="card-link">
+                        <a href="https://doi.org/10.1002/2015GB005198" target="_blank" rel="noopener noreferrer"><i class="fas fa-book"></i> Publication</a>
+                    </div>
+                    <div class="card-link">
+                        <a href="https://www.ncei.noaa.gov/data/oceans/ncei/ocads/metadata/0139360.html" target="_blank" rel="noopener noreferrer"><i class="fa fa-download"></i> Data Access</a>
                     </div>
                 </div>  
             </div>
