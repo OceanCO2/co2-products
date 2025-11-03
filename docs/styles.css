@@ -47,7 +47,15 @@ body {
     color: white;
     text-decoration: none;
     font-size: 3rem;
-    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.contact-email{
+    margin-bottom: 5px;
+}
+
+.contact-email a{
+    color: #ffffff;
 }
 
 .web-copyright{
@@ -55,6 +63,10 @@ body {
     font-size: 0.7rem;
     margin-bottom: 5px; /* Add small space above icon */
     text-align: right;
+    text-decoration: none;
+}
+.web-copyright a{
+    color: #ffffffa3;
 }
 
 .container {
@@ -318,13 +330,12 @@ body {
     justify-content: center;
 }
 
-.footer div{
-    padding-bottom: 5px;
-}
-.footer a{
+.footer .submit{
     color: white;
     text-decoration: underline;
     font-size: 1.1rem;
+    margin-bottom: 20px;
+    margin-top: 10px
 }
 
 /* Hide toggle button on desktop by default */
