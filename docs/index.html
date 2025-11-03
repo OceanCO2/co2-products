@@ -11,19 +11,18 @@
     <header class="banner">
         <div class="page-title">
             <h1>Ocean CO2 Products</h1>
-            <p>Synthesis of ocean carbon dioxide data products from publication by Jiang et al. (2025)</p>
+            <p>Ocean carbon products from Jiang et al. (2025)</p>
         </div>
         <div class="web-page-info">
             <!-- add github icon and link -->
-            <div class="web-copyright">&copy; Website by Luke Gregor (2025)</div>
-            <div class="github-icon">
-                <a href="https://github.com/OceanCO2/co2-products" target="_blank" rel="noopener noreferrer">
-                    <i class="fab fa-github"></i>
-                </a>
-            </div>
         </div>
     </header>
     <div class="container">
+        <div class="sidebar-toggle-wrapper">
+            <button id="toggle-filters-btn">
+                <i class="fas fa-filter"></i> Show Filters
+            </button>
+        </div>
         <!-- 
  'Temporal resolution': {'options': ['climatology', 'monthly', '8-daily'], 'type': 'multi-select'},
  'Spatial resolution': {'options': ['0.25', '1.0'], 'type': 'multi-select'},
@@ -32,11 +31,46 @@
 -->
 
 <div class="sidebar">
-    <h2>Filters</h2><div class="filter">
-        <label>Data Type</label><input type="checkbox" class="filter-checkbox" data-filter="Data Type" data-filter-type="multi-select" value="Data compilations"> Data compilations<br><input type="checkbox" class="filter-checkbox" data-filter="Data Type" data-filter-type="multi-select" value="Gridded subsurface"> Gridded subsurface<br><input type="checkbox" class="filter-checkbox" data-filter="Data Type" data-filter-type="multi-select" value="Gridded surface"> Gridded surface<br><input type="checkbox" class="filter-checkbox" data-filter="Data Type" data-filter-type="multi-select" value="Harmonized"> Harmonized<br><input type="checkbox" class="filter-checkbox" data-filter="Data Type" data-filter-type="multi-select" value="Time series"> Time series<br></div><div class="filter">
-        <label>Spatial domains</label><input type="checkbox" class="filter-checkbox" data-filter="Spatial domains" data-filter-type="multi-select" value="Coastal"> Coastal<br><input type="checkbox" class="filter-checkbox" data-filter="Spatial domains" data-filter-type="multi-select" value="Open ocean"> Open ocean<br><input type="checkbox" class="filter-checkbox" data-filter="Spatial domains" data-filter-type="multi-select" value="Surface"> Surface<br><input type="checkbox" class="filter-checkbox" data-filter="Spatial domains" data-filter-type="multi-select" value="Water column"> Water column<br></div><div class="filter">
-        <label>Temporal resolution</label><input type="checkbox" class="filter-checkbox" data-filter="Temporal resolution" data-filter-type="multi-select" value="8-day"> 8-day<br><input type="checkbox" class="filter-checkbox" data-filter="Temporal resolution" data-filter-type="multi-select" value="climatology"> climatology<br><input type="checkbox" class="filter-checkbox" data-filter="Temporal resolution" data-filter-type="multi-select" value="continuous"> continuous<br><input type="checkbox" class="filter-checkbox" data-filter="Temporal resolution" data-filter-type="multi-select" value="decadal"> decadal<br><input type="checkbox" class="filter-checkbox" data-filter="Temporal resolution" data-filter-type="multi-select" value="discrete"> discrete<br><input type="checkbox" class="filter-checkbox" data-filter="Temporal resolution" data-filter-type="multi-select" value="monthly"> monthly<br></div><div class="filter">
-        <label>Spatial resolution</label><input type="checkbox" class="filter-checkbox" data-filter="Spatial resolution" data-filter-type="multi-select" value="0.25° x 0.25°"> 0.25° x 0.25°<br><input type="checkbox" class="filter-checkbox" data-filter="Spatial resolution" data-filter-type="multi-select" value="1° x 1°"> 1° x 1°<br></div></div>
+    <h2>Filters</h2>
+    <div class="sidebar-filters"><div class="filter">
+            <label>Data Type</label><input type="checkbox" class="filter-checkbox" data-filter="Data Type" data-filter-type="multi-select"
+                value="Data compilations"> Data compilations<br><input type="checkbox" class="filter-checkbox" data-filter="Data Type" data-filter-type="multi-select"
+                value="Gridded subsurface"> Gridded subsurface<br><input type="checkbox" class="filter-checkbox" data-filter="Data Type" data-filter-type="multi-select"
+                value="Gridded surface"> Gridded surface<br><input type="checkbox" class="filter-checkbox" data-filter="Data Type" data-filter-type="multi-select"
+                value="Harmonized"> Harmonized<br><input type="checkbox" class="filter-checkbox" data-filter="Data Type" data-filter-type="multi-select"
+                value="Time series"> Time series<br></div><div class="filter">
+            <label>Spatial domains</label><input type="checkbox" class="filter-checkbox" data-filter="Spatial domains" data-filter-type="multi-select"
+                value="Coastal"> Coastal<br><input type="checkbox" class="filter-checkbox" data-filter="Spatial domains" data-filter-type="multi-select"
+                value="Open ocean"> Open ocean<br><input type="checkbox" class="filter-checkbox" data-filter="Spatial domains" data-filter-type="multi-select"
+                value="Surface"> Surface<br><input type="checkbox" class="filter-checkbox" data-filter="Spatial domains" data-filter-type="multi-select"
+                value="Water column"> Water column<br></div><div class="filter">
+            <label>Temporal resolution</label><input type="checkbox" class="filter-checkbox" data-filter="Temporal resolution" data-filter-type="multi-select"
+                value="8-day"> 8-day<br><input type="checkbox" class="filter-checkbox" data-filter="Temporal resolution" data-filter-type="multi-select"
+                value="climatology"> climatology<br><input type="checkbox" class="filter-checkbox" data-filter="Temporal resolution" data-filter-type="multi-select"
+                value="continuous"> continuous<br><input type="checkbox" class="filter-checkbox" data-filter="Temporal resolution" data-filter-type="multi-select"
+                value="decadal"> decadal<br><input type="checkbox" class="filter-checkbox" data-filter="Temporal resolution" data-filter-type="multi-select"
+                value="discrete"> discrete<br><input type="checkbox" class="filter-checkbox" data-filter="Temporal resolution" data-filter-type="multi-select"
+                value="monthly"> monthly<br></div><div class="filter">
+            <label>Spatial resolution</label><input type="checkbox" class="filter-checkbox" data-filter="Spatial resolution" data-filter-type="multi-select"
+                value="0.25° x 0.25°"> 0.25° x 0.25°<br><input type="checkbox" class="filter-checkbox" data-filter="Spatial resolution" data-filter-type="multi-select"
+                value="1° x 1°"> 1° x 1°<br></div></div>
+    <footer class="footer">
+        <div class="website-infos">
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSdguEed1sRdgHjhP_KsgHeh_G7gHjz8qGmuTu9C7K_fK7hyUQ/viewform" target="_blank">Submit a new dataset</a>
+        <br>
+
+    </div>
+        <!-- add spacer so website copy is on bottom -->
+
+        <div class="github-icon">
+            <a href="https://github.com/OceanCO2/co2-products" target="_blank" rel="noopener noreferrer">
+                <i class="fab fa-github"></i>
+            </a>
+        </div>
+        <div class="web-spacer"></div>
+        <div class="web-copyright">&copy; Website by Luke Gregor (2025)</div>
+    </footer>    
+</div>
         <div class="content">
             <div class="products"><!-- <div class="product-card" data-data-type="Data compilations" data-spatial-domains="Open ocean||Coastal||Surface" data-temporal-resolution="continuous" data-period="1960 - 2025"> -->
 <div class="product-card" data-data-type="Data compilations" data-spatial-domains="Open ocean||Coastal||Surface" data-temporal-resolution="continuous" data-period="1960 - 2025">
