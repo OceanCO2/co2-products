@@ -16,7 +16,13 @@ class Config(BaseSettings):
 
     # website settings
     WEBSITE_TITLE: str = "Ocean CO2 Products"
-    WEBSITE_DESCRIPTION: str = "Synthesis of ocean carbon dioxide data products from publication by Jiang et al. (2025)"
+    WEBSITE_DESCRIPTION: str = "Ocean carbon products from Jiang et al. (2025)"
+    WEBSITE_COPY: str = "&copy; Website by Luke Gregor (2025)"
+    WEBSITE_INFOS_HTML: str = """
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSdguEed1sRdgHjhP_KsgHeh_G7gHjz8qGmuTu9C7K_fK7hyUQ/viewform" target="_blank">Submit a new dataset</a>
+        <br>
+
+    """
 
     DATA_FILTERS: tuple[str, ...] = (
         "Data Type",

@@ -7,18 +7,36 @@
 
 <div class="sidebar">
     <h2>Filters</h2>
-    {%- for name, f in filters.items() -%}
-    {%- set filter_id = name|lower|replace(' ', '-') -%}
-    <div class="filter">
-        <label>{{ name }}</label>
-        {%- if f.type == 'multi-select' -%}
+    <div class="sidebar-filters"> {%- for name, f in filters.items() -%}
+        {%- set filter_id = name|lower|replace(' ', '-') -%}
+        <div class="filter">
+            <label>{{ name }}</label>
+            {%- if f.type == 'multi-select' -%}
             {%- for opt in f.options -%}
-                <input type="checkbox" class="filter-checkbox" data-filter="{{ name }}" data-filter-type="{{ f.type }}" value="{{ opt }}"> {{ opt }}<br>
+            <input type="checkbox" class="filter-checkbox" data-filter="{{ name }}" data-filter-type="{{ f.type }}"
+                value="{{ opt }}"> {{ opt }}<br>
             {%- endfor -%}
-        {%- elif f.type == 'date-range' -%}
-            <input type="number" class="filter-range-min" id="{{ filter_id }}-min" data-filter="{{ name }}" data-filter-type="{{ f.type }}" placeholder="Min" step="1" min="{{ f.min_max[0] }}" max="{{ f.min_max[1] }}" value="{{ f.default[0] }}">
-            <input type="number" class="filter-range-max" id="{{ filter_id }}-max" data-filter="{{ name }}" data-filter-type="{{ f.type }}" placeholder="Max" step="1" min="{{ f.min_max[0] }}" max="{{ f.min_max[1] }}" value="{{ f.default[1] }}">
-        {%- endif -%}
+            {%- elif f.type == 'date-range' -%}
+            <input type="number" class="filter-range-min" id="{{ filter_id }}-min" data-filter="{{ name }}"
+                data-filter-type="{{ f.type }}" placeholder="Min" step="1" min="{{ f.min_max[0] }}"
+                max="{{ f.min_max[1] }}" value="{{ f.default[0] }}">
+            <input type="number" class="filter-range-max" id="{{ filter_id }}-max" data-filter="{{ name }}"
+                data-filter-type="{{ f.type }}" placeholder="Max" step="1" min="{{ f.min_max[0] }}"
+                max="{{ f.min_max[1] }}" value="{{ f.default[1] }}">
+            {%- endif -%}
+        </div>
+        {%- endfor -%}
     </div>
-    {%- endfor -%}
+    <footer class="footer">
+        <div class="website-infos">{{ cfg.WEBSITE_INFOS_HTML | safe }}</div>
+        <!-- add spacer so website copy is on bottom -->
+
+        <div class="github-icon">
+            <a href="{{ cfg.GITHUB_REPO }}" target="_blank" rel="noopener noreferrer">
+                <i class="fab fa-github"></i>
+            </a>
+        </div>
+        <div class="web-spacer"></div>
+        <div class="web-copyright">{{ cfg.WEBSITE_COPY }}</div>
+    </footer>    
 </div>

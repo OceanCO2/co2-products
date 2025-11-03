@@ -15,15 +15,14 @@
         </div>
         <div class="web-page-info">
             <!-- add github icon and link -->
-            <div class="web-copyright">&copy; Website by Luke Gregor (2025)</div>
-            <div class="github-icon">
-                <a href="{{ cfg.GITHUB_REPO }}" target="_blank" rel="noopener noreferrer">
-                    <i class="fab fa-github"></i>
-                </a>
-            </div>
         </div>
     </header>
     <div class="container">
+        <div class="sidebar-toggle-wrapper">
+            <button id="toggle-filters-btn">
+                <i class="fas fa-filter"></i> Show Filters
+            </button>
+        </div>
         {% include 'sidebar.html' %}
         <div class="content">
             <div class="products">
