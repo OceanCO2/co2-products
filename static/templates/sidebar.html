@@ -28,15 +28,18 @@
         {%- endfor -%}
     </div>
     <footer class="footer">
-        <div class="website-infos">{{ cfg.WEBSITE_INFOS_HTML | safe }}</div>
+        <a class='submit' href="{{ cfg.SUBMISSION_FORM }}" target="_blank">Submit a new dataset</a>
         <!-- add spacer so website copy is on bottom -->
-
+        
         <div class="github-icon">
             <a href="{{ cfg.GITHUB_REPO }}" target="_blank" rel="noopener noreferrer">
                 <i class="fab fa-github"></i>
             </a>
         </div>
         <div class="web-spacer"></div>
+        <div class="contact-email">
+            for help, <a href="mailto:{{ cfg.CONTACT_EMAIL }}">{{ cfg.CONTACT_EMAIL }}</a>
+        </div>
         <div class="web-copyright">{{ cfg.WEBSITE_COPY }}</div>
     </footer>    
 </div>
