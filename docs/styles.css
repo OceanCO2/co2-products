@@ -3,68 +3,68 @@ body {
     margin: 0;
     padding: 0;
     background-color: #f8f9fa;
-    min-width: 680px;
+    min-width: 390px;
 }
-
 .banner {
     background-color: hwb(211 29% 15%);
     color: white;
     text-align: left;
     padding: 20px;
     margin-bottom: 0px;
+    /* --- NEW FLEXBOX LAYOUT --- */
+    display: flex; 
+    /* flex: 1; */
+    /* min-width: 0; */
+    overflow: hidden;
+    align-items: center; /* Vertically center items */
+    justify-content: space-between; /* Push title and web-info to ends */
 }
 
 .banner h1 {
     margin: 0;
-    font-size: 2.5rem;
+    font-size: 2.3rem;
 }
 
 .banner p {
     margin: 5px 0 0 0;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     color: #ffffffa3;
-}
-
-.page-title{
-    display: inline-block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    max-width: 100%; /* Ensure it respects container width */
 }
 
 .web-page-info{
-    float: right;
+    /* float: right; - REMOVED */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end; /* Align contents (copyright and icon) to the right */
+    justify-content: center;
 }
 
-.web-page-info a{
+.fa-github{
     color: white;
     text-decoration: none;
-    font-size: 4rem;
-    float: right;
-    height: 100%
+    font-size: 3rem;
+    padding-top: px;
 }
 
 .web-copyright{
     color: #ffffffa3;
     font-size: 0.7rem;
-    float: right;
-    margin-top: -18px;
-    margin-right: -10px
-}
-
-.github-icon {
-    float: right;
-    margin-right: -10px;
-    margin-top: 7px;
+    margin-bottom: 5px; /* Add small space above icon */
+    text-align: right;
 }
 
 .container {
     display: flex;
-    /* min-height: 100vh; */
 }
 
 .sidebar {
-    min-width: 200px;
+    min-width: 240px;
     max-width: 300px;
     background-color: #fff;
-    padding: 20px;
     box-shadow: 2px 0 5px rgba(0,0,0,0.1);
     /* overflow-y: auto; */
     position: sticky;
@@ -75,13 +75,14 @@ body {
 }
 
 .sidebar-filters {
+    padding: 0px 20px;
     overflow-y: auto;
     flex-grow: 1;
 }
 
-
 .sidebar h2 {
-    margin-top: 0;
+    padding: 0px 20px;
+    margin-top: 10px;
 }
 
 .filter {
@@ -298,12 +299,86 @@ body {
     font-size: 1rem;
 }
 
+.footer {
+    position: relative; /* Change from sticky */
+    bottom: 0;
+    left: 0; /* Add this */
+    width: 100%;
+    min-height: 130px;
+    background-color: hwb(211 29% 15%);
+    color: white;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 0.8rem;
+    margin-top: 0px;
+    z-index: 10;
+    display: flex;
+    flex-direction: column; /* Stack child elements vertically */
+    align-items: center;
+    justify-content: center;
+}
 
-@media (max-width: 568px) {
+.footer div{
+    padding-bottom: 5px;
+}
+.footer a{
+    color: white;
+    text-decoration: underline;
+    font-size: 1.1rem;
+}
+
+/* Hide toggle button on desktop by default */
+.sidebar-toggle-wrapper {
+    display: none;
+}
+.web-spacer {
+    flex-grow: 1; /* This will push the copyright to the bottom */
+}
+
+@media (max-width: 680px) {
     .container {
         flex-direction: column;
     }
-    .sidebar {
+
+    /* Show toggle button on mobile */
+    .sidebar-toggle-wrapper {
+        display: block;
         width: 100%;
+        padding: 15px;
+        background-color: #f1f1f1;
+        box-sizing: border-box;
+    }
+
+    #toggle-filters-btn {
+        width: 100%;
+        padding: 12px;
+        background-color: hwb(211 29% 15%);
+        color: white;
+        border: none;
+        border-radius: 4px;
+        font-size: 1rem;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+    }
+
+    #toggle-filters-btn:hover {
+        background-color: hwb(211 29% 25%);
+    }
+
+    /* Hide sidebar by default on mobile */
+    .sidebar {
+        display: none;
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        position: relative;
+    }
+    
+    /* Show sidebar when active */
+    .sidebar.active {
+        display: flex;
     }
 }
