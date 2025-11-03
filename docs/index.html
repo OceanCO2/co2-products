@@ -33,7 +33,7 @@
 
 <div class="sidebar">
     <h2>Filters</h2><div class="filter">
-        <label>Data Type</label><input type="checkbox" class="filter-checkbox" data-filter="Data Type" data-filter-type="multi-select" value="Data compilations"> Data compilations<br><input type="checkbox" class="filter-checkbox" data-filter="Data Type" data-filter-type="multi-select" value="Gridded subsurface"> Gridded subsurface<br><input type="checkbox" class="filter-checkbox" data-filter="Data Type" data-filter-type="multi-select" value="Gridded surface"> Gridded surface<br><input type="checkbox" class="filter-checkbox" data-filter="Data Type" data-filter-type="multi-select" value="Harmonized"> Harmonized<br></div><div class="filter">
+        <label>Data Type</label><input type="checkbox" class="filter-checkbox" data-filter="Data Type" data-filter-type="multi-select" value="Data compilations"> Data compilations<br><input type="checkbox" class="filter-checkbox" data-filter="Data Type" data-filter-type="multi-select" value="Gridded subsurface"> Gridded subsurface<br><input type="checkbox" class="filter-checkbox" data-filter="Data Type" data-filter-type="multi-select" value="Gridded surface"> Gridded surface<br><input type="checkbox" class="filter-checkbox" data-filter="Data Type" data-filter-type="multi-select" value="Harmonized"> Harmonized<br><input type="checkbox" class="filter-checkbox" data-filter="Data Type" data-filter-type="multi-select" value="Time series"> Time series<br></div><div class="filter">
         <label>Spatial domains</label><input type="checkbox" class="filter-checkbox" data-filter="Spatial domains" data-filter-type="multi-select" value="Coastal"> Coastal<br><input type="checkbox" class="filter-checkbox" data-filter="Spatial domains" data-filter-type="multi-select" value="Open ocean"> Open ocean<br><input type="checkbox" class="filter-checkbox" data-filter="Spatial domains" data-filter-type="multi-select" value="Surface"> Surface<br><input type="checkbox" class="filter-checkbox" data-filter="Spatial domains" data-filter-type="multi-select" value="Water column"> Water column<br></div><div class="filter">
         <label>Temporal resolution</label><input type="checkbox" class="filter-checkbox" data-filter="Temporal resolution" data-filter-type="multi-select" value="8-day"> 8-day<br><input type="checkbox" class="filter-checkbox" data-filter="Temporal resolution" data-filter-type="multi-select" value="climatology"> climatology<br><input type="checkbox" class="filter-checkbox" data-filter="Temporal resolution" data-filter-type="multi-select" value="continuous"> continuous<br><input type="checkbox" class="filter-checkbox" data-filter="Temporal resolution" data-filter-type="multi-select" value="decadal"> decadal<br><input type="checkbox" class="filter-checkbox" data-filter="Temporal resolution" data-filter-type="multi-select" value="discrete"> discrete<br><input type="checkbox" class="filter-checkbox" data-filter="Temporal resolution" data-filter-type="multi-select" value="monthly"> monthly<br></div><div class="filter">
         <label>Spatial resolution</label><input type="checkbox" class="filter-checkbox" data-filter="Spatial resolution" data-filter-type="multi-select" value="0.25° x 0.25°"> 0.25° x 0.25°<br><input type="checkbox" class="filter-checkbox" data-filter="Spatial resolution" data-filter-type="multi-select" value="1° x 1°"> 1° x 1°<br></div></div>
@@ -95,6 +95,59 @@
             </div>
         </div>
     </div>
+</div><!-- <div class="product-card" data-data-type="Data compilations" data-spatial-domains="Open ocean||Surface" data-temporal-resolution="continuous"> -->
+<div class="product-card" data-data-type="Data compilations" data-spatial-domains="Open ocean||Surface" data-temporal-resolution="continuous">
+    <div class="card-inner">
+        <div class="card-front">
+            <div class="card-header">
+                <h3 class="card-title">LDEO Surface pCO2 Database</h3>
+                <div class="card-subheading">Takahashi et a. (2009)</div>
+            </div>
+            <div class="card-content">
+                <div class="card-image">
+                    <img src="https://www.ncei.noaa.gov/access/ocean-carbon-acidification-data-system/oceans/LDEO_Underway_Database/LDEOv2019_map.jpg" alt="Product image">
+                </div>
+                <div class="card-summary">
+                    <p>The LDEO database reports pCO2 exclusively from equilibrator-CO2 analyzer systems</p>
+                </div>
+                <div class="card-attributes"><!-- card-attribute-icon if fontawesome - and then hover text with description -->
+                    <div class="card-attr">
+                        <i class="fa-solid fa-globe" title="Spatial domains"></i>
+                        <span class="card-attribute-value">Open ocean, Surface</span>
+                    </div><!-- card-attribute-icon if fontawesome - and then hover text with description -->
+                    <div class="card-attr">
+                        <i class="fa-solid fa-hourglass-start" title="Temporal resolution"></i>
+                        <span class="card-attribute-value">continuous</span>
+                    </div></div>
+            </div>
+        </div>
+        <div class="card-back">
+            <div class="card-header">
+                <h3 class="card-title">LDEO Surface pCO2 Database</h3>
+                <div class="card-subheading">Takahashi et a. (2009)</div>
+            </div>
+            <div class="card-content">
+                <!-- <div class="card-data-access">
+                    <span class="card-data-access-label">Data access:</span> <a href="https://www.ncei.noaa.gov/data/oceans/ncei/ocads/metadata/0160492.html" target="_blank" rel="noopener noreferrer">https://www.ncei.noaa.gov/data/oceans/ncei/ocads/metadata/0160492.html</a>
+                </div> -->
+                <div class="card-details"><div class="card-detail">
+                        <span class="card-detail-title">Description: </span>
+                        <span class="card-detail-content">Dr. Taro Takahashi [LDEO, Palisades, New York] started synthesizing global surface ocean CO2 data in 1997, compiling three decades of observations (~250,000 measurements) to create  inaugural monthly global surface pCO2 maps (Takahashi et al., 1997; Takahashi et al., 2002). The most recent version (V2019) expanded this dataset to approximately 14.2 million surface water pCO2 measurements spanning from 1957–2019. Distinct from the SOCAT database, the LDEO database reports pCO2, instead of fCO2, exclusively from equilibrator-CO2 analyzer systems, with an average estimated uncertainty of ± 2.5 µatm. The database is also interpolated onto a global surface ocean 4° × 5° grid for a reference year 2000 (Takahashi et al., 2009) and 2010 (Fay et al., 2024). </span>
+                    </div><div class="card-detail">
+                        <span class="card-detail-title">Reference: </span>
+                        <span class="card-detail-content">Takahashi, T., Sutherland, S. C., Wanninkhof, R., Sweeney, C., Feely, R. A., Chipman, D. W., Hales, B., Friederich, G., Chavez, F., Sabine, C., Watson, A., Bakker, D. C. E., Schuster, U., Metzl, N., Yoshikawa-Inoue, H., Ishii, M., Midorikawa, T., Nojiri, Y., Körtzinger, A., Steinhoff, T., and de Baar, H. J. W.: Climatological mean and decadal change in Surface Ocean pCO2, and net sea–air CO2 flux over the Global Oceans, Deep Sea Research Part II: Topical Studies in Oceanography, 56(8–10), 554–577, https://doi.org/10.1016/j.dsr2.2008.12.009, 2009.</span>
+                    </div></div>
+                <div class="card-links">
+                    <div class="card-link">
+                        <a href="https://doi.org/10.1016/j.dsr2.2008.12.009" target="_blank" rel="noopener noreferrer"><i class="fas fa-book"></i> Publication</a>
+                    </div>
+                    <div class="card-link">
+                        <a href="https://www.ncei.noaa.gov/data/oceans/ncei/ocads/metadata/0160492.html" target="_blank" rel="noopener noreferrer"><i class="fa fa-download"></i> Data Access</a>
+                    </div>
+                </div>  
+            </div>
+        </div>
+    </div>
 </div><!-- <div class="product-card" data-data-type="Data compilations" data-spatial-domains="Open ocean||Water column" data-temporal-resolution="discrete" data-period="1960 - 2024"> -->
 <div class="product-card" data-data-type="Data compilations" data-spatial-domains="Open ocean||Water column" data-temporal-resolution="discrete" data-period="1960 - 2024">
     <div class="card-inner">
@@ -147,6 +200,279 @@
                     </div>
                     <div class="card-link">
                         <a href="https://glodap.info/" target="_blank" rel="noopener noreferrer"><i class="fa fa-download"></i> Data Access</a>
+                    </div>
+                </div>  
+            </div>
+        </div>
+    </div>
+</div><!-- <div class="product-card" data-data-type="Data compilations" data-spatial-domains="Open ocean||Water column" data-temporal-resolution="discrete"> -->
+<div class="product-card" data-data-type="Data compilations" data-spatial-domains="Open ocean||Water column" data-temporal-resolution="discrete">
+    <div class="card-inner">
+        <div class="card-front">
+            <div class="card-header">
+                <h3 class="card-title">World Ocean Database</h3>
+                <div class="card-subheading">Mishonov et al. (2024)</div>
+            </div>
+            <div class="card-content">
+                <div class="card-image">
+                    <img src="https://www.ncei.noaa.gov/sites/g/files/anmtlf171/files/inline-images/World%20Ocean%20Atlas%202023%20Climatology%2C%20Decade%202015-2022.png" alt="Product image">
+                </div>
+                <div class="card-summary">
+                    <p>Similar to GLODAPv2, with no adjustments</p>
+                </div>
+                <div class="card-attributes"><!-- card-attribute-icon if fontawesome - and then hover text with description -->
+                    <div class="card-attr">
+                        <i class="fa-solid fa-globe" title="Spatial domains"></i>
+                        <span class="card-attribute-value">Open ocean, Water column</span>
+                    </div><!-- card-attribute-icon if fontawesome - and then hover text with description -->
+                    <div class="card-attr">
+                        <i class="fa-solid fa-hourglass-start" title="Temporal resolution"></i>
+                        <span class="card-attribute-value">discrete</span>
+                    </div></div>
+            </div>
+        </div>
+        <div class="card-back">
+            <div class="card-header">
+                <h3 class="card-title">World Ocean Database</h3>
+                <div class="card-subheading">Mishonov et al. (2024)</div>
+            </div>
+            <div class="card-content">
+                <!-- <div class="card-data-access">
+                    <span class="card-data-access-label">Data access:</span> <a href="https://www.ncei.noaa.gov/products/world-ocean-database" target="_blank" rel="noopener noreferrer">https://www.ncei.noaa.gov/products/world-ocean-database</a>
+                </div> -->
+                <div class="card-details"><div class="card-detail">
+                        <span class="card-detail-title">Description: </span>
+                        <span class="card-detail-content">In addition to the GLODAPv2 and JOA Suite, users can also access historical and recent original biogeochemical data collected from discrete bottle samples in a uniform format and units, along with their originator quality control (QC) flags, through the World Ocean Database (WOD) (Mishonov et al., 2024). Like the JOA Suite, these measured data remain unaltered. The WOD allows users to filter and subset data with specific variables, platforms, institutions, projects, regions, or time periods (Garcia et al., 2024). Users can visualize sampling locations on a “distribution plot” and access a cruise list for all selected data and variables. Users also have the option of exporting data in NetCDF or Comma-Separated Values (CSV) formats. Additionally, all data in the WOD are reproducible and traceable to their original data sources archived at NOAA’s National Centers for Environmental Information (NCEI). </span>
+                    </div><div class="card-detail">
+                        <span class="card-detail-title">Reference: </span>
+                        <span class="card-detail-content">Mishonov, A. V., Boyer, T. P., Baranova, O. K., Bouchard, C. N., Cross, S. L., Garcia H. E., Locarnini, R. A., Paver, C. R., Wang, Z., Seidov, D., Grodsky, A. I., Beauchamp, J. G.: World Ocean Database 2023, C. Bouchard, Technical Ed., NOAA Atlas NESDIS 97, 206 pp., https://doi.org/10.25923/z885-h264, 2024. </span>
+                    </div></div>
+                <div class="card-links">
+                    <div class="card-link">
+                        <a href="https://doi.org/10.25923/z885-h264" target="_blank" rel="noopener noreferrer"><i class="fas fa-book"></i> Publication</a>
+                    </div>
+                    <div class="card-link">
+                        <a href="https://www.ncei.noaa.gov/products/world-ocean-database" target="_blank" rel="noopener noreferrer"><i class="fa fa-download"></i> Data Access</a>
+                    </div>
+                </div>  
+            </div>
+        </div>
+    </div>
+</div><!-- <div class="product-card" data-data-type="Data compilations" data-spatial-domains="Open ocean||Coastal" data-temporal-resolution="discrete" data-period="1993 - 2022"> -->
+<div class="product-card" data-data-type="Data compilations" data-spatial-domains="Open ocean||Coastal" data-temporal-resolution="discrete" data-period="1993 - 2022">
+    <div class="card-inner">
+        <div class="card-front">
+            <div class="card-header">
+                <h3 class="card-title">SNAPO-CO2</h3>
+                <div class="card-subheading">Metzl et al. (2024) </div>
+            </div>
+            <div class="card-content">
+                <div class="card-image">
+                    <img src="https://essd.copernicus.org/articles/16/89/2024/essd-16-89-2024-avatar-web.png" alt="Product image">
+                </div>
+                <div class="card-summary">
+                    <p>A compilation of cruises from multiple French initiatives</p>
+                </div>
+                <div class="card-attributes"><!-- card-attribute-icon if fontawesome - and then hover text with description -->
+                    <div class="card-attr">
+                        <i class="fa-solid fa-globe" title="Spatial domains"></i>
+                        <span class="card-attribute-value">Open ocean, Coastal</span>
+                    </div><!-- card-attribute-icon if fontawesome - and then hover text with description -->
+                    <div class="card-attr">
+                        <i class="fa-solid fa-hourglass-start" title="Temporal resolution"></i>
+                        <span class="card-attribute-value">discrete</span>
+                    </div><!-- card-attribute-icon if fontawesome - and then hover text with description -->
+                    <div class="card-attr">
+                        <i class="fa-solid fa-calendar-days" title="Period"></i>
+                        <span class="card-attribute-value">1993 - 2022</span>
+                    </div></div>
+            </div>
+        </div>
+        <div class="card-back">
+            <div class="card-header">
+                <h3 class="card-title">SNAPO-CO2</h3>
+                <div class="card-subheading">Metzl et al. (2024) </div>
+            </div>
+            <div class="card-content">
+                <!-- <div class="card-data-access">
+                    <span class="card-data-access-label">Data access:</span> <a href="https://www.ncei.noaa.gov/data/oceans/ncei/ocads/metadata/0285681.html" target="_blank" rel="noopener noreferrer">https://www.ncei.noaa.gov/data/oceans/ncei/ocads/metadata/0285681.html</a>
+                </div> -->
+                <div class="card-details"><div class="card-detail">
+                        <span class="card-detail-title">Description: </span>
+                        <span class="card-detail-content">Metzl et al. (2024) aggregated over 44,400 measurements of DIC and TA from a series of research cruises and ships of opportunity across various oceanic regions from 1993-2022, under several French research programs, to create a product called “Service National d’Analyse des Paramètres Océaniques du CO2 (SNAPO-CO2)”. The majority of the samples were analyzed by the Service National d’Analyse des Paramètres Océaniques du CO2 (SNAPO-CO2) at the LOCEAN laboratory in Paris, France. Sampling was performed either from CTD-rosette casts (Niskin bottles) or collected from the ship’s flow-through system (intake at roughly 5m depth). </span>
+                    </div><div class="card-detail">
+                        <span class="card-detail-title">Reference: </span>
+                        <span class="card-detail-content">Metzl, N., Fin, J., Lo Monaco, C., Mignon, C., Alliouane, S., Antoine, D., Bourdin, G., Boutin, J., Bozec, Y., Conan, P., Coppola, L., Diaz, F., Douville, E., Durrieu de Madron, X., Gattuso, J.-P., Gazeau, F., Golbol, M., Lansard, B., Lefèvre, D., Lefèvre, N., Lombard, F., Louanchi, F., Merlivat, L., Olivier, L., Petrenko, A., Petton, S., Pujo-Pay, M., Rabouille, C., Reverdin, G., Ridame, C., Tribollet, A., Vellucci, V., Wagener, T., and Wimart-Rousseau, C.: A synthesis of ocean total alkalinity and dissolved inorganic carbon measurements from 1993 to 2022: the SNAPO-CO2-v1 dataset, Earth Syst. Sci. Data, 16, 89–120, https://doi.org/10.5194/essd-16-89-2024, 2024.</span>
+                    </div></div>
+                <div class="card-links">
+                    <div class="card-link">
+                        <a href="https://doi.org/10.5194/essd-16-89-2024" target="_blank" rel="noopener noreferrer"><i class="fas fa-book"></i> Publication</a>
+                    </div>
+                    <div class="card-link">
+                        <a href="https://www.ncei.noaa.gov/data/oceans/ncei/ocads/metadata/0285681.html" target="_blank" rel="noopener noreferrer"><i class="fa fa-download"></i> Data Access</a>
+                    </div>
+                </div>  
+            </div>
+        </div>
+    </div>
+</div><!-- <div class="product-card" data-data-type="Data compilations" data-spatial-domains="Coastal||Water column" data-temporal-resolution="discrete" data-period="2003 - 2018"> -->
+<div class="product-card" data-data-type="Data compilations" data-spatial-domains="Coastal||Water column" data-temporal-resolution="discrete" data-period="2003 - 2018">
+    <div class="card-inner">
+        <div class="card-front">
+            <div class="card-header">
+                <h3 class="card-title">CODAP-NA</h3>
+                <div class="card-subheading">Jiang et al. (2021)</div>
+            </div>
+            <div class="card-content">
+                <div class="card-image">
+                    <img src="https://essd.copernicus.org/articles/13/2777/2021/essd-13-2777-2021-f01-web.png" alt="Product image">
+                </div>
+                <div class="card-summary">
+                    <p>Like GLODAPv2, but for the North American coastal ocean</p>
+                </div>
+                <div class="card-attributes"><!-- card-attribute-icon if fontawesome - and then hover text with description -->
+                    <div class="card-attr">
+                        <i class="fa-solid fa-globe" title="Spatial domains"></i>
+                        <span class="card-attribute-value">Coastal, Water column</span>
+                    </div><!-- card-attribute-icon if fontawesome - and then hover text with description -->
+                    <div class="card-attr">
+                        <i class="fa-solid fa-hourglass-start" title="Temporal resolution"></i>
+                        <span class="card-attribute-value">discrete</span>
+                    </div><!-- card-attribute-icon if fontawesome - and then hover text with description -->
+                    <div class="card-attr">
+                        <i class="fa-solid fa-calendar-days" title="Period"></i>
+                        <span class="card-attribute-value">2003 - 2018</span>
+                    </div></div>
+            </div>
+        </div>
+        <div class="card-back">
+            <div class="card-header">
+                <h3 class="card-title">CODAP-NA</h3>
+                <div class="card-subheading">Jiang et al. (2021)</div>
+            </div>
+            <div class="card-content">
+                <!-- <div class="card-data-access">
+                    <span class="card-data-access-label">Data access:</span> <a href="https://www.ncei.noaa.gov/data/oceans/ncei/ocads/metadata/0219960.html" target="_blank" rel="noopener noreferrer">https://www.ncei.noaa.gov/data/oceans/ncei/ocads/metadata/0219960.html</a>
+                </div> -->
+                <div class="card-details"><div class="card-detail">
+                        <span class="card-detail-title">Description: </span>
+                        <span class="card-detail-content">Jiang et al. (2021) synthesized two decades of discrete measurements of carbonate system variables, DO, and nutrient data from the North American continental shelves to generate the first version of Coastal Ocean Data Analysis Data Product in North America (CODAP-NA). The 2021 release encompasses 3,391 oceanographic profiles from 61 research cruises spanning the North American continental shelves from Alaska to Mexico in the west and from Canada to the Caribbean in the east. It includes 14 key variables, including temperature, salinity, DO, DIC, TA, pH, carbonate ion, fCO2, silicate, phosphate, nitrate. </span>
+                    </div><div class="card-detail">
+                        <span class="card-detail-title">Reference: </span>
+                        <span class="card-detail-content">Jiang, L.-Q., Feely, R. A., Wanninkhof, R., Greeley, D., Barbero, L., Alin, S., Carter, B. R., Pierrot, D., Featherstone, C., Hooper, J., Melrose, C., Monacci, N., Sharp, J. D., Shellito, S., Xu, Y.-Y., Kozyr, A., Byrne, R. H., Cai, W.-J., Cross, J., Johnson, G. C., Hales, B., Langdon, C., Mathis, J., Salisbury, J., and Townsend, D. W.: Coastal Ocean Data Analysis Product in North America (CODAP-NA) – an internally consistent data product for discrete inorganic carbon, oxygen, and nutrients on the North American ocean margins, Earth Syst. Sci. Data, 13, 2777–2799, https://doi.org/10.5194/essd-13-2777-2021, 2021.</span>
+                    </div></div>
+                <div class="card-links">
+                    <div class="card-link">
+                        <a href="https://doi.org/10.5194/essd-13-2777-2021" target="_blank" rel="noopener noreferrer"><i class="fas fa-book"></i> Publication</a>
+                    </div>
+                    <div class="card-link">
+                        <a href="https://www.ncei.noaa.gov/data/oceans/ncei/ocads/metadata/0219960.html" target="_blank" rel="noopener noreferrer"><i class="fa fa-download"></i> Data Access</a>
+                    </div>
+                </div>  
+            </div>
+        </div>
+    </div>
+</div><!-- <div class="product-card" data-data-type="Data compilations" data-spatial-domains="Coastal||Water column" data-temporal-resolution="discrete"> -->
+<div class="product-card" data-data-type="Data compilations" data-spatial-domains="Coastal||Water column" data-temporal-resolution="discrete">
+    <div class="card-inner">
+        <div class="card-front">
+            <div class="card-header">
+                <h3 class="card-title">Salish Sea Multi-stressor Data Product</h3>
+                <div class="card-subheading">Alin et al. (2024)</div>
+            </div>
+            <div class="card-content">
+                <div class="card-image">
+                    <img src="https://essd.copernicus.org/articles/16/837/2024/essd-16-837-2024-avatar-web.png" alt="Product image">
+                </div>
+                <div class="card-summary">
+                    <p>A data compilation and multi-stressor (OA, hypoxia, temperature) data product based on cruises from 2002 to 2018 in the southern Salish Sea and Washington coast. </p>
+                </div>
+                <div class="card-attributes"><!-- card-attribute-icon if fontawesome - and then hover text with description -->
+                    <div class="card-attr">
+                        <i class="fa-solid fa-globe" title="Spatial domains"></i>
+                        <span class="card-attribute-value">Coastal, Water column</span>
+                    </div><!-- card-attribute-icon if fontawesome - and then hover text with description -->
+                    <div class="card-attr">
+                        <i class="fa-solid fa-hourglass-start" title="Temporal resolution"></i>
+                        <span class="card-attribute-value">discrete</span>
+                    </div></div>
+            </div>
+        </div>
+        <div class="card-back">
+            <div class="card-header">
+                <h3 class="card-title">Salish Sea Multi-stressor Data Product</h3>
+                <div class="card-subheading">Alin et al. (2024)</div>
+            </div>
+            <div class="card-content">
+                <!-- <div class="card-data-access">
+                    <span class="card-data-access-label">Data access:</span> <a href="https://www.ncei.noaa.gov/access/ocean-at-acidification-data-system/oceans/SalishCruise_DataPackage.html. " target="_blank" rel="noopener noreferrer">https://www.ncei.noaa.gov/access/ocean-at-acidification-data-system/oceans/SalishCruise_DataPackage.html. </a>
+                </div> -->
+                <div class="card-details"><div class="card-detail">
+                        <span class="card-detail-title">Description: </span>
+                        <span class="card-detail-content">Alin et al. (2024a) compiled data from 35 individual cruise data sets that sampled marine waters of the southern Salish Sea and northern Washington coast (United States) from 2008 to 2018. Ongoing seasonal sampling occurred during April, July, and September for Puget Sound cruises has occurred since 2014 and most frequently during May and October for Sound-to-Sea cruises, which sample from Puget Sound through the Strait of Juan de Fuca to the northern Washington coast. The Salish cruise data package contains observations from a total of 715 oceanographic profiles, with > 7490 sensor measurements of temperature, salinity, and DO; ≥ 6070 measurements of discrete DO and nutrient (nitrate, phosphate, silicate, ammonium, nitrite) samples; and ≥ 4462 measurements of inorganic carbonate system variables (DIC and TA). A follow-on data product based on the Salish cruise data package, which only included the 3971 samples with complete information for temperature, salinity, DO, nutrients, DIC, and TA, is also available (Alin et al., 2023). This product additionally provides the most commonly used calculated carbonate system variables: pH (total scale), fCO2, pCO2, Ωarag, and Ωcalc. </span>
+                    </div><div class="card-detail">
+                        <span class="card-detail-title">Reference: </span>
+                        <span class="card-detail-content">Alin, S. R., Newton, J. A., Feely, R. A., Greeley, D., Curry, B., Herndon, J., and Warner, M.: A decade-long cruise time series (2008–2018) of physical and biogeochemical conditions in the southern Salish Sea, North America, Earth Syst. Sci. Data, 16, 837–865, https://doi.org/10.5194/essd-16-837-2024, 2024. </span>
+                    </div></div>
+                <div class="card-links">
+                    <div class="card-link">
+                        <a href="https://doi.org/10.5194/essd-16-837-2024" target="_blank" rel="noopener noreferrer"><i class="fas fa-book"></i> Publication</a>
+                    </div>
+                    <div class="card-link">
+                        <a href="https://www.ncei.noaa.gov/access/ocean-at-acidification-data-system/oceans/SalishCruise_DataPackage.html. " target="_blank" rel="noopener noreferrer"><i class="fa fa-download"></i> Data Access</a>
+                    </div>
+                </div>  
+            </div>
+        </div>
+    </div>
+</div><!-- <div class="product-card" data-data-type="Time series" data-spatial-domains="Open ocean||Coastal||Surface" data-temporal-resolution="continuous"> -->
+<div class="product-card" data-data-type="Time series" data-spatial-domains="Open ocean||Coastal||Surface" data-temporal-resolution="continuous">
+    <div class="card-inner">
+        <div class="card-front">
+            <div class="card-header">
+                <h3 class="card-title">pCO2 and pH Time-series from 40 Surface Buoys</h3>
+                <div class="card-subheading">Sutton et al. (2019)</div>
+            </div>
+            <div class="card-content">
+                <div class="card-image">
+                    <img src="https://essd.copernicus.org/articles/11/421/2019/essd-11-421-2019-avatar-web.png" alt="Product image">
+                </div>
+                <div class="card-summary">
+                    <p>Based on 40 moored surface pCO2 time-series, with 17 of them containing pH</p>
+                </div>
+                <div class="card-attributes"><!-- card-attribute-icon if fontawesome - and then hover text with description -->
+                    <div class="card-attr">
+                        <i class="fa-solid fa-globe" title="Spatial domains"></i>
+                        <span class="card-attribute-value">Open ocean, Coastal, Surface</span>
+                    </div><!-- card-attribute-icon if fontawesome - and then hover text with description -->
+                    <div class="card-attr">
+                        <i class="fa-solid fa-hourglass-start" title="Temporal resolution"></i>
+                        <span class="card-attribute-value">continuous</span>
+                    </div></div>
+            </div>
+        </div>
+        <div class="card-back">
+            <div class="card-header">
+                <h3 class="card-title">pCO2 and pH Time-series from 40 Surface Buoys</h3>
+                <div class="card-subheading">Sutton et al. (2019)</div>
+            </div>
+            <div class="card-content">
+                <!-- <div class="card-data-access">
+                    <span class="card-data-access-label">Data access:</span> <a href="https://www.ncei.noaa.gov/data/oceans/ncei/ocads/metadata/0173932.html" target="_blank" rel="noopener noreferrer">https://www.ncei.noaa.gov/data/oceans/ncei/ocads/metadata/0173932.html</a>
+                </div> -->
+                <div class="card-details"><div class="card-detail">
+                        <span class="card-detail-title">Description: </span>
+                        <span class="card-detail-content">Sutton et al. (2019) established a living dataset comprising 40 individual autonomous moored surface ocean pCO2 time-series established between 2004 and 2013, 17 of them also include autonomous pH measurements. These time-series characterize a wide range of surface ocean carbonate system conditions, across a variety of environments, including 17 oceanic and 13 coastal locations, as well as 10 coral reefs. </span>
+                    </div><div class="card-detail">
+                        <span class="card-detail-title">Reference: </span>
+                        <span class="card-detail-content">Sutton, A. J., Feely, R. A., Maenner-Jones, S., Musielwicz, S., Osborne, J., Dietrich, C., Monacci, N., Cross, J., Bott, R., Kozyr, A., Andersson, A. J., Bates, N. R., Cai, W.-J., Cronin, M. F., De Carlo, E. H., Hales, B., Howden, S. D., Lee, C. M., Manzello, D. P., McPhaden, M. J., Meléndez, M., Mickett, J. B., Newton, J. A., Noakes, S. E., Noh, J. H., Olafsdottir, S. R., Salisbury, J. E., Send, U., Trull, T. W., Vandemark, D. C., and Weller, R. A.: Autonomous seawater pCO2 and pH time series from 40 surface buoys and the emergence of anthropogenic trends, Earth Syst. Sci. Data, 11, 421–439, https://doi.org/10.5194/essd-11-421-2019, 2019.</span>
+                    </div></div>
+                <div class="card-links">
+                    <div class="card-link">
+                        <a href="https://doi.org/10.5194/essd-11-421-2019" target="_blank" rel="noopener noreferrer"><i class="fas fa-book"></i> Publication</a>
+                    </div>
+                    <div class="card-link">
+                        <a href="https://www.ncei.noaa.gov/data/oceans/ncei/ocads/metadata/0173932.html" target="_blank" rel="noopener noreferrer"><i class="fa fa-download"></i> Data Access</a>
                     </div>
                 </div>  
             </div>
@@ -335,20 +661,20 @@
             </div>
         </div>
     </div>
-</div><!-- <div class="product-card" data-data-type="Harmonized" data-spatial-domains="Open ocean||Surface" data-temporal-resolution="monthly" data-spatial-resolution="1° x 1°" data-period="1990 - 2022"> -->
-<div class="product-card" data-data-type="Harmonized" data-spatial-domains="Open ocean||Surface" data-temporal-resolution="monthly" data-spatial-resolution="1° x 1°" data-period="1990 - 2022">
+</div><!-- <div class="product-card" data-data-type="Gridded surface" data-spatial-domains="Open ocean||Surface" data-temporal-resolution="decadal||climatology" data-spatial-resolution="1° x 1°" data-period="1770 - 2100"> -->
+<div class="product-card" data-data-type="Gridded surface" data-spatial-domains="Open ocean||Surface" data-temporal-resolution="decadal||climatology" data-spatial-resolution="1° x 1°" data-period="1770 - 2100">
     <div class="card-inner">
         <div class="card-front">
             <div class="card-header">
-                <h3 class="card-title">SeaFlux</h3>
-                <div class="card-subheading">Fay and Gregor et al. (2021)</div>
+                <h3 class="card-title">Surface pH and Revelle Factor</h3>
+                <div class="card-subheading">Jiang et al. (2019)</div>
             </div>
             <div class="card-content">
                 <div class="card-image">
-                    <img src="https://seaflux.readthedocs.io/en/latest/_static/seaflux_logo.png" alt="Product image">
+                    <img src="https://media.springernature.com/lw685/springer-static/image/art%3A10.1038%2Fs41598-019-55039-4/MediaObjects/41598_2019_55039_Fig6_HTML.png?as=webp" alt="Product image">
                 </div>
                 <div class="card-summary">
-                    <p>Careful consideration of flux calculation provides a resource and code to the community for independent flux calculations</p>
+                    <p>A model-observation fusion product for pH, acidity and Revelle Factor, leveraging GFDL-ESM2M and SOCATv6</p>
                 </div>
                 <div class="card-attributes"><!-- card-attribute-icon if fontawesome - and then hover text with description -->
                     <div class="card-attr">
@@ -357,7 +683,7 @@
                     </div><!-- card-attribute-icon if fontawesome - and then hover text with description -->
                     <div class="card-attr">
                         <i class="fa-solid fa-hourglass-start" title="Temporal resolution"></i>
-                        <span class="card-attribute-value">monthly</span>
+                        <span class="card-attribute-value">decadal, climatology</span>
                     </div><!-- card-attribute-icon if fontawesome - and then hover text with description -->
                     <div class="card-attr">
                         <i class="fa-solid fa-ruler-horizontal" title="Spatial resolution"></i>
@@ -365,89 +691,337 @@
                     </div><!-- card-attribute-icon if fontawesome - and then hover text with description -->
                     <div class="card-attr">
                         <i class="fa-solid fa-calendar-days" title="Period"></i>
-                        <span class="card-attribute-value">1990 - 2022</span>
+                        <span class="card-attribute-value">1770 - 2100</span>
                     </div></div>
             </div>
         </div>
         <div class="card-back">
             <div class="card-header">
-                <h3 class="card-title">SeaFlux</h3>
-                <div class="card-subheading">Fay and Gregor et al. (2021)</div>
+                <h3 class="card-title">Surface pH and Revelle Factor</h3>
+                <div class="card-subheading">Jiang et al. (2019)</div>
             </div>
             <div class="card-content">
                 <!-- <div class="card-data-access">
-                    <span class="card-data-access-label">Data access:</span> <a href="https://zenodo.org/records/8280457" target="_blank" rel="noopener noreferrer">https://zenodo.org/records/8280457</a>
+                    <span class="card-data-access-label">Data access:</span> <a href="https://www.ncei.noaa.gov/data/oceans/ncei/ocads/metadata/0206289.html " target="_blank" rel="noopener noreferrer">https://www.ncei.noaa.gov/data/oceans/ncei/ocads/metadata/0206289.html </a>
                 </div> -->
                 <div class="card-details"><div class="card-detail">
                         <span class="card-detail-title">Description: </span>
-                        <span class="card-detail-content">Harmonization of air–sea CO2 fluxes from surface pCO2 data products using a standardized approach (Gregor and Fay, 2021). This resource provides an ensemble of six pCO2 products with air-sea CO2 fluxes computed consistently. The six included products are: CMEMS-LSCEv1, CSIR-ML6, JENA-MLS, JMA-MLR, MPI-SOMFFN, and NIES-FNN. First, missing areas of pCO2 estimates (mostly high-latitude and marginal seas) are filled using a linear-regression approach, thus addressing differences in spatial coverage between the mapping products. Further, also accounts for methodological inconsistencies in flux calculations. Fluxes are calculated using three wind products (CCMPv2, ERA5, and JRA55) along with the application of a scaled gas exchange coefficient for each of the wind products. Through these steps, SeaFlux presents a product ensemble of interpolated global surface ocean pCO2 and air–sea carbon flux estimates for the years 1990–2019</span>
+                        <span class="card-detail-content">Jiang et al. (2019a) produced a high-resolution (1°×1°) data product delineating regionally varying view of global surface ocean pH, acidity, and Revelle Factor (RF) from 1770 to 2100 by amalgamating recent observational seawater CO2 data from the SOCAT database (Version 6, 1991–2018, ~23 million observations) (Bakker et al., 2016), and temporal trends at individual locations of the global surface ocean from an Earth System Model, i.e., GFDL-ESM2M (Dunne et al., 2013). The calculations were conducted under historical atmospheric CO2 levels (pre-2005) and four Representative Concentrations Pathways (post-2005) corresponding to the Intergovernmental Panel on Climate Change (IPCC)’s 5th Assessment Report, specifically RCP2.6, RCP4.5, RCP6.0, and RCP8.5. </span>
                     </div><div class="card-detail">
                         <span class="card-detail-title">Reference: </span>
-                        <span class="card-detail-content">Fay, A. R., Gregor, L., Landschützer, P., McKinley, G. A., Gruber, N., Gehlen, M., Iida, Y., Laruelle, G. G., Rödenbeck, C., Roobaert, A., and Zeng, J.: SeaFlux: harmonization of air–sea CO2 fluxes from surface pCO2 data products using a standardized approach, Earth Syst. Sci. Data, 13, 4693–4710, https://doi.org/10.5194/essd-13-4693-2021, 2021</span>
+                        <span class="card-detail-content">Jiang, L.-Q., Carter, B. R., Feely, R. A., Lauvset, S., and Olsen, A.: Surface ocean pH and buffer capacity: Past, present and future, Scientific Reports, 9(1), 18624, https://doi.org/10.1038/s41598-019-55039-4, 2019. </span>
                     </div></div>
                 <div class="card-links">
                     <div class="card-link">
-                        <a href="https://doi.org/10.5194/essd-2021-16" target="_blank" rel="noopener noreferrer"><i class="fas fa-book"></i> Publication</a>
+                        <a href="https://doi.org/10.1038/s41598-019-55039-4" target="_blank" rel="noopener noreferrer"><i class="fas fa-book"></i> Publication</a>
                     </div>
                     <div class="card-link">
-                        <a href="https://zenodo.org/records/8280457" target="_blank" rel="noopener noreferrer"><i class="fa fa-download"></i> Data Access</a>
+                        <a href="https://www.ncei.noaa.gov/data/oceans/ncei/ocads/metadata/0206289.html " target="_blank" rel="noopener noreferrer"><i class="fa fa-download"></i> Data Access</a>
                     </div>
                 </div>  
             </div>
         </div>
     </div>
-</div><!-- <div class="product-card" data-data-type="Data compilations" data-spatial-domains="Coastal||Water column" data-temporal-resolution="discrete" data-period="2003 - 2018"> -->
-<div class="product-card" data-data-type="Data compilations" data-spatial-domains="Coastal||Water column" data-temporal-resolution="discrete" data-period="2003 - 2018">
+</div><!-- <div class="product-card" data-data-type="Gridded surface" data-spatial-domains="Open ocean||Surface" data-temporal-resolution="decadal||climatology" data-spatial-resolution="1° x 1°" data-period="1750 - 2100"> -->
+<div class="product-card" data-data-type="Gridded surface" data-spatial-domains="Open ocean||Surface" data-temporal-resolution="decadal||climatology" data-spatial-resolution="1° x 1°" data-period="1750 - 2100">
     <div class="card-inner">
         <div class="card-front">
             <div class="card-header">
-                <h3 class="card-title">CODAP-NA</h3>
-                <div class="card-subheading">Jiang et al. (2021)</div>
+                <h3 class="card-title">Surface OA Indicators </h3>
+                <div class="card-subheading">Jiang et al. (2023)</div>
             </div>
             <div class="card-content">
                 <div class="card-image">
-                    <img src="https://essd.copernicus.org/articles/13/2777/2021/essd-13-2777-2021-f01-web.png" alt="Product image">
+                    <img src="https://agupubs.onlinelibrary.wiley.com/cms/asset/9184aab2-af20-4a63-9a8f-d0a99a4602bc/jame21817-fig-0008-m.jpg" alt="Product image">
                 </div>
                 <div class="card-summary">
-                    <p>Like GLODAPv2, but for the North American coastal ocean</p>
+                    <p>A model-observation fusion product for all major OA indicators, leveraging a consortium of 14 Earth System Models and 3 observational data products</p>
                 </div>
                 <div class="card-attributes"><!-- card-attribute-icon if fontawesome - and then hover text with description -->
                     <div class="card-attr">
                         <i class="fa-solid fa-globe" title="Spatial domains"></i>
-                        <span class="card-attribute-value">Coastal, Water column</span>
+                        <span class="card-attribute-value">Open ocean, Surface</span>
                     </div><!-- card-attribute-icon if fontawesome - and then hover text with description -->
                     <div class="card-attr">
                         <i class="fa-solid fa-hourglass-start" title="Temporal resolution"></i>
-                        <span class="card-attribute-value">discrete</span>
+                        <span class="card-attribute-value">decadal, climatology</span>
+                    </div><!-- card-attribute-icon if fontawesome - and then hover text with description -->
+                    <div class="card-attr">
+                        <i class="fa-solid fa-ruler-horizontal" title="Spatial resolution"></i>
+                        <span class="card-attribute-value">1° x 1°</span>
                     </div><!-- card-attribute-icon if fontawesome - and then hover text with description -->
                     <div class="card-attr">
                         <i class="fa-solid fa-calendar-days" title="Period"></i>
-                        <span class="card-attribute-value">2003 - 2018</span>
+                        <span class="card-attribute-value">1750 - 2100</span>
                     </div></div>
             </div>
         </div>
         <div class="card-back">
             <div class="card-header">
-                <h3 class="card-title">CODAP-NA</h3>
-                <div class="card-subheading">Jiang et al. (2021)</div>
+                <h3 class="card-title">Surface OA Indicators </h3>
+                <div class="card-subheading">Jiang et al. (2023)</div>
             </div>
             <div class="card-content">
                 <!-- <div class="card-data-access">
-                    <span class="card-data-access-label">Data access:</span> <a href="https://www.ncei.noaa.gov/data/oceans/ncei/ocads/metadata/0219960.html" target="_blank" rel="noopener noreferrer">https://www.ncei.noaa.gov/data/oceans/ncei/ocads/metadata/0219960.html</a>
+                    <span class="card-data-access-label">Data access:</span> <a href="https://www.ncei.noaa.gov/data/oceans/ncei/ocads/metadata/0259391.html" target="_blank" rel="noopener noreferrer">https://www.ncei.noaa.gov/data/oceans/ncei/ocads/metadata/0259391.html</a>
                 </div> -->
                 <div class="card-details"><div class="card-detail">
                         <span class="card-detail-title">Description: </span>
-                        <span class="card-detail-content">Jiang et al. (2021) synthesized two decades of discrete measurements of carbonate system variables, DO, and nutrient data from the North American continental shelves to generate the first version of Coastal Ocean Data Analysis Data Product in North America (CODAP-NA). The 2021 release encompasses 3,391 oceanographic profiles from 61 research cruises spanning the North American continental shelves from Alaska to Mexico in the west and from Canada to the Caribbean in the east. It includes 14 key variables, including temperature, salinity, DO, DIC, TA, pH, carbonate ion, fCO2, silicate, phosphate, nitrate. </span>
+                        <span class="card-detail-content">Jiang et al. (2023) developed a comprehensive model-data fusion product that delineates the trajectory of 10 OA indicators: fCO2, pH, [H+]total, [H+]free [CO32-], Ωarag, Ωcalc, DIC, TA, and RF, as well as temperature and salinity at all locations of the global surface ocean from 1750 to 2100. This product marks a significant breakthrough in OA forecasting by refining temporal trends with data from 14 Earth System Models (ESMs) within CMIP6, and by applying bias and drift corrections from three updated observational ocean carbonate system data products: SOCAT (Version 2022) (Bakker et al., 2016), GLODAPv2.2022 (Lauvset et al., 2022), and CODAP-NA (Jiang et al., 2021). This dataset offers 10-year averages on a 1° × 1° global surface ocean grid, capturing trends from preindustrial times (1750), through historical conditions (1850–2010), and projects future conditions to 2100 across five Shared Socioeconomic Pathways: SSP1-1.9, SSP1-2.6, SSP2-4.5, SSP3-7.0, and SSP5-8.5. </span>
                     </div><div class="card-detail">
                         <span class="card-detail-title">Reference: </span>
-                        <span class="card-detail-content">Jiang, L.-Q., Feely, R. A., Wanninkhof, R., Greeley, D., Barbero, L., Alin, S., Carter, B. R., Pierrot, D., Featherstone, C., Hooper, J., Melrose, C., Monacci, N., Sharp, J. D., Shellito, S., Xu, Y.-Y., Kozyr, A., Byrne, R. H., Cai, W.-J., Cross, J., Johnson, G. C., Hales, B., Langdon, C., Mathis, J., Salisbury, J., and Townsend, D. W.: Coastal Ocean Data Analysis Product in North America (CODAP-NA) – an internally consistent data product for discrete inorganic carbon, oxygen, and nutrients on the North American ocean margins, Earth Syst. Sci. Data, 13, 2777–2799, https://doi.org/10.5194/essd-13-2777-2021, 2021.</span>
+                        <span class="card-detail-content">Jiang, L., Dunne, J., Carter, B. R., Tjiputra, J. F., Terhaar, J., Sharp, J. D., Olsen, A., Alin, S., Bakker, D. C., Feely, R. A., Gattuso, J., Hogan, P., Ilyina, T., Lange, N., Lauvset, S. K., Lewis, E. R., Lovato, T., Palmieri, J., Santana‐Falcón, Y., Schwinger, J., Séférian, R., Strand, G., Swart, N., Tanhua, T., Tsujino, H., Wanninkhof, R., Watanabe, M., Yamamoto, A., and Ziehn, T.: Global surface ocean acidification indicators from 1750 to 2100, Journal of Advances in Modeling Earth Systems, 15(3), https://doi.org/10.1029/2022ms003563, 2023.</span>
                     </div></div>
                 <div class="card-links">
                     <div class="card-link">
-                        <a href="https://doi.org/10.5194/essd-13-2777-2021" target="_blank" rel="noopener noreferrer"><i class="fas fa-book"></i> Publication</a>
+                        <a href="https://doi.org/10.1029/2022MS003563" target="_blank" rel="noopener noreferrer"><i class="fas fa-book"></i> Publication</a>
                     </div>
                     <div class="card-link">
-                        <a href="https://www.ncei.noaa.gov/data/oceans/ncei/ocads/metadata/0219960.html" target="_blank" rel="noopener noreferrer"><i class="fa fa-download"></i> Data Access</a>
+                        <a href="https://www.ncei.noaa.gov/data/oceans/ncei/ocads/metadata/0259391.html" target="_blank" rel="noopener noreferrer"><i class="fa fa-download"></i> Data Access</a>
+                    </div>
+                </div>  
+            </div>
+        </div>
+    </div>
+</div><!-- <div class="product-card" data-data-type="Gridded surface" data-spatial-domains="Open ocean||Surface" data-temporal-resolution="monthly||climatology" data-spatial-resolution="1° x 1°" data-period="1998 - 2023"> -->
+<div class="product-card" data-data-type="Gridded surface" data-spatial-domains="Open ocean||Surface" data-temporal-resolution="monthly||climatology" data-spatial-resolution="1° x 1°" data-period="1998 - 2023">
+    <div class="card-inner">
+        <div class="card-front">
+            <div class="card-header">
+                <h3 class="card-title">AOML-ET</h3>
+                <div class="card-subheading">Wanninkhof et al. (2015)</div>
+            </div>
+            <div class="card-content">
+                <div class="card-image">
+                    <img src="https://agupubs.onlinelibrary.wiley.com/cms/asset/449791f9-d01c-4710-bb96-bb6bf991906f/gbc21621-fig-0010-m.jpg" alt="Product image">
+                </div>
+                <div class="card-summary">
+                    <p>Monthly global sea-air CO2 flux maps in modern era</p>
+                </div>
+                <div class="card-attributes"><!-- card-attribute-icon if fontawesome - and then hover text with description -->
+                    <div class="card-attr">
+                        <i class="fa-solid fa-globe" title="Spatial domains"></i>
+                        <span class="card-attribute-value">Open ocean, Surface</span>
+                    </div><!-- card-attribute-icon if fontawesome - and then hover text with description -->
+                    <div class="card-attr">
+                        <i class="fa-solid fa-hourglass-start" title="Temporal resolution"></i>
+                        <span class="card-attribute-value">monthly, climatology</span>
+                    </div><!-- card-attribute-icon if fontawesome - and then hover text with description -->
+                    <div class="card-attr">
+                        <i class="fa-solid fa-ruler-horizontal" title="Spatial resolution"></i>
+                        <span class="card-attribute-value">1° x 1°</span>
+                    </div><!-- card-attribute-icon if fontawesome - and then hover text with description -->
+                    <div class="card-attr">
+                        <i class="fa-solid fa-calendar-days" title="Period"></i>
+                        <span class="card-attribute-value">1998 - 2023</span>
+                    </div></div>
+            </div>
+        </div>
+        <div class="card-back">
+            <div class="card-header">
+                <h3 class="card-title">AOML-ET</h3>
+                <div class="card-subheading">Wanninkhof et al. (2015)</div>
+            </div>
+            <div class="card-content">
+                <!-- <div class="card-data-access">
+                    <span class="card-data-access-label">Data access:</span> <a href="https://www.ncei.noaa.gov/data/oceans/ncei/ocads/metadata/0298989.html" target="_blank" rel="noopener noreferrer">https://www.ncei.noaa.gov/data/oceans/ncei/ocads/metadata/0298989.html</a>
+                </div> -->
+                <div class="card-details"><div class="card-detail">
+                        <span class="card-detail-title">Description: </span>
+                        <span class="card-detail-content">Wanninkhof et al. (2025) developed a monthly global ocean data product of seawater pCO2 and sea-air CO2 fluxes, referred to as AOML-ET, using an extremely randomized trees (ET) machine learning technique. These maps are created on 1° × 1° spatial grids, providing global surface ocean coverages from 1998 to 2023. AOML-ET incorporates several predictor variables, including time, location, SST, SSS, MLD, and chlorophyll-a. The model was trained using the v2020 and v2023 releases of the SOCAT data product (No. 1). Sea-air CO2 fluxes were calculated using the air-sea CO2 partial pressure difference (∆pCO2) and a bulk gas transfer formulation incorporating windspeed. </span>
+                    </div><div class="card-detail">
+                        <span class="card-detail-title">Reference: </span>
+                        <span class="card-detail-content">Wanninkhof, R., Triñanes, J., Pierrot, D., Munro, D. R., Sweeney, C., and Fay, A. R.: Trends in sea-air CO2 fluxes and sensitivities to atmospheric forcing using an extremely randomized trees machine learning approach, Global Biogeochemical Cycles, 39, https://doi.org/10.1029/2024GB008315, 2025.</span>
+                    </div></div>
+                <div class="card-links">
+                    <div class="card-link">
+                        <a href="https://doi.org/10.1029/2024GB008315" target="_blank" rel="noopener noreferrer"><i class="fas fa-book"></i> Publication</a>
+                    </div>
+                    <div class="card-link">
+                        <a href="https://www.ncei.noaa.gov/data/oceans/ncei/ocads/metadata/0298989.html" target="_blank" rel="noopener noreferrer"><i class="fa fa-download"></i> Data Access</a>
+                    </div>
+                </div>  
+            </div>
+        </div>
+    </div>
+</div><!-- <div class="product-card" data-data-type="Gridded surface" data-spatial-domains="Coastal" data-temporal-resolution="monthly||climatology" data-spatial-resolution="1° x 1°" data-period="2002 - 2019"> -->
+<div class="product-card" data-data-type="Gridded surface" data-spatial-domains="Coastal" data-temporal-resolution="monthly||climatology" data-spatial-resolution="1° x 1°" data-period="2002 - 2019">
+    <div class="card-inner">
+        <div class="card-front">
+            <div class="card-header">
+                <h3 class="card-title">Gridded Surface OA Indicators in the Northern Caribbean Sea</h3>
+                <div class="card-subheading">Wanninkhof et al. (2020)</div>
+            </div>
+            <div class="card-content">
+                <div class="card-image">
+                    <img src="https://essd.copernicus.org/articles/12/1489/2020/essd-12-1489-2020-avatar-web.png" alt="Product image">
+                </div>
+                <div class="card-summary">
+                    <p>A 17-year record of  fCO2, TA, pH, Ωarag, and air-sea CO2 flux in the Caribbean Sea </p>
+                </div>
+                <div class="card-attributes"><!-- card-attribute-icon if fontawesome - and then hover text with description -->
+                    <div class="card-attr">
+                        <i class="fa-solid fa-globe" title="Spatial domains"></i>
+                        <span class="card-attribute-value">Coastal</span>
+                    </div><!-- card-attribute-icon if fontawesome - and then hover text with description -->
+                    <div class="card-attr">
+                        <i class="fa-solid fa-hourglass-start" title="Temporal resolution"></i>
+                        <span class="card-attribute-value">monthly, climatology</span>
+                    </div><!-- card-attribute-icon if fontawesome - and then hover text with description -->
+                    <div class="card-attr">
+                        <i class="fa-solid fa-ruler-horizontal" title="Spatial resolution"></i>
+                        <span class="card-attribute-value">1° x 1°</span>
+                    </div><!-- card-attribute-icon if fontawesome - and then hover text with description -->
+                    <div class="card-attr">
+                        <i class="fa-solid fa-calendar-days" title="Period"></i>
+                        <span class="card-attribute-value">2002 - 2019</span>
+                    </div></div>
+            </div>
+        </div>
+        <div class="card-back">
+            <div class="card-header">
+                <h3 class="card-title">Gridded Surface OA Indicators in the Northern Caribbean Sea</h3>
+                <div class="card-subheading">Wanninkhof et al. (2020)</div>
+            </div>
+            <div class="card-content">
+                <!-- <div class="card-data-access">
+                    <span class="card-data-access-label">Data access:</span> <a href="https://www.ncei.noaa.gov/data/oceans/ncei/ocads/metadata/0207749.html " target="_blank" rel="noopener noreferrer">https://www.ncei.noaa.gov/data/oceans/ncei/ocads/metadata/0207749.html </a>
+                </div> -->
+                <div class="card-details"><div class="card-detail">
+                        <span class="card-detail-title">Description: </span>
+                        <span class="card-detail-content">This dataset contains a high-quality dataset of derived products from over a million observations of surface water partial pressure/fugacity of carbon dioxide (pCO2w/fCO2w), for the Caribbean Sea, Gulf of Mexico/Gulf of America and North-West Atlantic Ocean covering the timespan from 2002-01-01 to 2019-12-30. The derived quantities include TA, acidity (pH), Ωarag and air-sea CO2 flux (Wanninkhof et al., 2020). </span>
+                    </div><div class="card-detail">
+                        <span class="card-detail-title">Reference: </span>
+                        <span class="card-detail-content">Wanninkhof, R., Pierrot, D., Sullivan, K., Barbero, L., and Triñanes, J.: A 17-year dataset of surface water fugacity of CO2 along with calculated pH, aragonite saturation state and air–sea CO2 fluxes in the northern Caribbean Sea, Earth Syst. Sci. Data, 12, 1489–1509, https://doi.org/10.5194/essd-12-1489-2020, 2020.</span>
+                    </div></div>
+                <div class="card-links">
+                    <div class="card-link">
+                        <a href="https://doi.org/10.5194/essd-12-1489-2020" target="_blank" rel="noopener noreferrer"><i class="fas fa-book"></i> Publication</a>
+                    </div>
+                    <div class="card-link">
+                        <a href="https://www.ncei.noaa.gov/data/oceans/ncei/ocads/metadata/0207749.html " target="_blank" rel="noopener noreferrer"><i class="fa fa-download"></i> Data Access</a>
+                    </div>
+                </div>  
+            </div>
+        </div>
+    </div>
+</div><!-- <div class="product-card" data-data-type="Gridded subsurface" data-spatial-domains="Open ocean||Water column" data-temporal-resolution="climatology" data-spatial-resolution="1° x 1°" data-period="1850 - 2002"> -->
+<div class="product-card" data-data-type="Gridded subsurface" data-spatial-domains="Open ocean||Water column" data-temporal-resolution="climatology" data-spatial-resolution="1° x 1°" data-period="1850 - 2002">
+    <div class="card-inner">
+        <div class="card-front">
+            <div class="card-header">
+                <h3 class="card-title">Acidification Metrics in the Ocean Interior</h3>
+                <div class="card-subheading">Fassbender et al. (2023) </div>
+            </div>
+            <div class="card-content">
+                <div class="card-image">
+                    <img src="https://agupubs.onlinelibrary.wiley.com/cms/asset/c15194d4-6cd1-4bed-a018-d654d574a917/gbc21500-fig-0001-m.jpg" alt="Product image">
+                </div>
+                <div class="card-summary">
+                    <p>Metrics of acidification in the ocean interior (to 2000 m) and the component of those changes caused by carbonate system nonlinearities</p>
+                </div>
+                <div class="card-attributes"><!-- card-attribute-icon if fontawesome - and then hover text with description -->
+                    <div class="card-attr">
+                        <i class="fa-solid fa-globe" title="Spatial domains"></i>
+                        <span class="card-attribute-value">Open ocean, Water column</span>
+                    </div><!-- card-attribute-icon if fontawesome - and then hover text with description -->
+                    <div class="card-attr">
+                        <i class="fa-solid fa-hourglass-start" title="Temporal resolution"></i>
+                        <span class="card-attribute-value">climatology</span>
+                    </div><!-- card-attribute-icon if fontawesome - and then hover text with description -->
+                    <div class="card-attr">
+                        <i class="fa-solid fa-ruler-horizontal" title="Spatial resolution"></i>
+                        <span class="card-attribute-value">1° x 1°</span>
+                    </div><!-- card-attribute-icon if fontawesome - and then hover text with description -->
+                    <div class="card-attr">
+                        <i class="fa-solid fa-calendar-days" title="Period"></i>
+                        <span class="card-attribute-value">1850 - 2002</span>
+                    </div></div>
+            </div>
+        </div>
+        <div class="card-back">
+            <div class="card-header">
+                <h3 class="card-title">Acidification Metrics in the Ocean Interior</h3>
+                <div class="card-subheading">Fassbender et al. (2023) </div>
+            </div>
+            <div class="card-content">
+                <!-- <div class="card-data-access">
+                    <span class="card-data-access-label">Data access:</span> <a href="https://www.ncei.noaa.gov/data/oceans/ncei/ocads/metadata/0290073.html" target="_blank" rel="noopener noreferrer">https://www.ncei.noaa.gov/data/oceans/ncei/ocads/metadata/0290073.html</a>
+                </div> -->
+                <div class="card-details"><div class="card-detail">
+                        <span class="card-detail-title">Description: </span>
+                        <span class="card-detail-content">Fassbender et al. (2023) generated estimates of global interior ocean changes to pH, [H+], Ωarag, pCO2, and the Revelle sensitivity factor driven by the accumulation of anthropogenic carbon (Cant) from the preindustrial period to the year 2002, and quantified the component of those changes caused by nonlinearities in the carbonate system. For each OA metric, the dataset includes year 2002 values and quasi-preindustrial values, which were estimated by subtracting Cant from the year 2002 carbonate chemistry information and recomputing each OA metric without considering any warming, circulation, or biological changes that may have occurred since the preindustrial era. </span>
+                    </div><div class="card-detail">
+                        <span class="card-detail-title">Reference: </span>
+                        <span class="card-detail-content">Fassbender, A. J., Carter, B. R., Sharp, J. D., Huang, Y., Arroyo, M. C., and Frenzel, H.: Amplified subsurface signals of ocean acidification, Global Biogeochemical Cycles, 37, e2023GB007843, https://doi.org/10.1029/2023GB007843, 2023. </span>
+                    </div></div>
+                <div class="card-links">
+                    <div class="card-link">
+                        <a href="https://doi.org/10.1029/2023GB007843" target="_blank" rel="noopener noreferrer"><i class="fas fa-book"></i> Publication</a>
+                    </div>
+                    <div class="card-link">
+                        <a href="https://www.ncei.noaa.gov/data/oceans/ncei/ocads/metadata/0290073.html" target="_blank" rel="noopener noreferrer"><i class="fa fa-download"></i> Data Access</a>
+                    </div>
+                </div>  
+            </div>
+        </div>
+    </div>
+</div><!-- <div class="product-card" data-data-type="Gridded subsurface" data-spatial-domains="Open ocean||Water column" data-temporal-resolution="climatology" data-spatial-resolution="1° x 1°" data-period="1994 - 2007"> -->
+<div class="product-card" data-data-type="Gridded subsurface" data-spatial-domains="Open ocean||Water column" data-temporal-resolution="climatology" data-spatial-resolution="1° x 1°" data-period="1994 - 2007">
+    <div class="card-inner">
+        <div class="card-front">
+            <div class="card-header">
+                <h3 class="card-title">Anthropogenic CO2 from 1994 to 2007</h3>
+                <div class="card-subheading">Gruber et al. (2019) </div>
+            </div>
+            <div class="card-content">
+                <div class="card-image">
+                    <img src="https://www.science.org/cms/10.1126/science.aau5153/asset/60bf218f-610c-4a7a-b3a4-899121c4d3d4/assets/graphic/363_1193_f1.jpeg" alt="Product image">
+                </div>
+                <div class="card-summary">
+                    <p>The oceanic sink for anthropogenic CO2 over the period 1994 to 2007</p>
+                </div>
+                <div class="card-attributes"><!-- card-attribute-icon if fontawesome - and then hover text with description -->
+                    <div class="card-attr">
+                        <i class="fa-solid fa-globe" title="Spatial domains"></i>
+                        <span class="card-attribute-value">Open ocean, Water column</span>
+                    </div><!-- card-attribute-icon if fontawesome - and then hover text with description -->
+                    <div class="card-attr">
+                        <i class="fa-solid fa-hourglass-start" title="Temporal resolution"></i>
+                        <span class="card-attribute-value">climatology</span>
+                    </div><!-- card-attribute-icon if fontawesome - and then hover text with description -->
+                    <div class="card-attr">
+                        <i class="fa-solid fa-ruler-horizontal" title="Spatial resolution"></i>
+                        <span class="card-attribute-value">1° x 1°</span>
+                    </div><!-- card-attribute-icon if fontawesome - and then hover text with description -->
+                    <div class="card-attr">
+                        <i class="fa-solid fa-calendar-days" title="Period"></i>
+                        <span class="card-attribute-value">1994 - 2007</span>
+                    </div></div>
+            </div>
+        </div>
+        <div class="card-back">
+            <div class="card-header">
+                <h3 class="card-title">Anthropogenic CO2 from 1994 to 2007</h3>
+                <div class="card-subheading">Gruber et al. (2019) </div>
+            </div>
+            <div class="card-content">
+                <!-- <div class="card-data-access">
+                    <span class="card-data-access-label">Data access:</span> <a href="https://www.ncei.noaa.gov/data/oceans/ncei/ocads/metadata/0186034.html" target="_blank" rel="noopener noreferrer">https://www.ncei.noaa.gov/data/oceans/ncei/ocads/metadata/0186034.html</a>
+                </div> -->
+                <div class="card-details"><div class="card-detail">
+                        <span class="card-detail-title">Description: </span>
+                        <span class="card-detail-content">Gruber et al. (2019a) estimated the decadal time-scale changes in the oceanic content of anthropogenic CO2 (∆Cant) between 1994 to 2007. The results were derived from the GLODAPv2.2016 product (Olsen et al., 2016), utilizing the eMLR(C*) methodology pioneered by Clement and Gruber (2018). The product is combined with the estimated amount of Cant for 1994 derived by Sabine et al. (2004) from GLODAPv1 to infer Cant for 2007. </span>
+                    </div><div class="card-detail">
+                        <span class="card-detail-title">Reference: </span>
+                        <span class="card-detail-content">Gruber, N., Clement, D., Carter, B. R., Feely, R. A., van Heuven, S., Hoppema, M., Ishii, M., Key, R. M., Kozyr, A., Lauvset, S. K., Lo Monaco, C., Mathis, J. T., Murata, A., Olsen, A., Perez, F. F., Sabine, C. L., Tanhua, T., and Wanninkhof, R.: The oceanic sink for anthropogenic CO2 from 1994 to 2007, Science, 363(6432), 1193–1199, https://doi.org/10.1126/science.aau5153, 2019. </span>
+                    </div></div>
+                <div class="card-links">
+                    <div class="card-link">
+                        <a href="https://doi.org/10.1126/science.aau5153" target="_blank" rel="noopener noreferrer"><i class="fas fa-book"></i> Publication</a>
+                    </div>
+                    <div class="card-link">
+                        <a href="https://www.ncei.noaa.gov/data/oceans/ncei/ocads/metadata/0186034.html" target="_blank" rel="noopener noreferrer"><i class="fa fa-download"></i> Data Access</a>
                     </div>
                 </div>  
             </div>
@@ -458,7 +1032,7 @@
     <div class="card-inner">
         <div class="card-front">
             <div class="card-header">
-                <h3 class="card-title">Aragonite Saturation State Climatology</h3>
+                <h3 class="card-title">Aragonite Climatology</h3>
                 <div class="card-subheading">Jiang et al. (2015) </div>
             </div>
             <div class="card-content">
@@ -489,7 +1063,7 @@
         </div>
         <div class="card-back">
             <div class="card-header">
-                <h3 class="card-title">Aragonite Saturation State Climatology</h3>
+                <h3 class="card-title">Aragonite Climatology</h3>
                 <div class="card-subheading">Jiang et al. (2015) </div>
             </div>
             <div class="card-content">
@@ -575,20 +1149,20 @@
             </div>
         </div>
     </div>
-</div><!-- <div class="product-card" data-data-type="Gridded surface" data-spatial-domains="Open ocean||Surface" data-temporal-resolution="decadal||climatology" data-spatial-resolution="1° x 1°" data-period="1770 - 2100"> -->
-<div class="product-card" data-data-type="Gridded surface" data-spatial-domains="Open ocean||Surface" data-temporal-resolution="decadal||climatology" data-spatial-resolution="1° x 1°" data-period="1770 - 2100">
+</div><!-- <div class="product-card" data-data-type="Harmonized" data-spatial-domains="Open ocean||Surface" data-temporal-resolution="monthly" data-spatial-resolution="1° x 1°" data-period="1990 - 2022"> -->
+<div class="product-card" data-data-type="Harmonized" data-spatial-domains="Open ocean||Surface" data-temporal-resolution="monthly" data-spatial-resolution="1° x 1°" data-period="1990 - 2022">
     <div class="card-inner">
         <div class="card-front">
             <div class="card-header">
-                <h3 class="card-title">Global Surface Ocean pH and Revelle Factor</h3>
-                <div class="card-subheading">Jiang et al. (2019)</div>
+                <h3 class="card-title">SeaFlux</h3>
+                <div class="card-subheading">Fay and Gregor et al. (2021)</div>
             </div>
             <div class="card-content">
                 <div class="card-image">
-                    <img src="https://media.springernature.com/lw685/springer-static/image/art%3A10.1038%2Fs41598-019-55039-4/MediaObjects/41598_2019_55039_Fig6_HTML.png?as=webp" alt="Product image">
+                    <img src="https://seaflux.readthedocs.io/en/latest/_static/seaflux_logo.png" alt="Product image">
                 </div>
                 <div class="card-summary">
-                    <p>A model-observation fusion product for pH, acidity and Revelle Factor, leveraging GFDL-ESM2M and SOCATv6</p>
+                    <p>Careful consideration of flux calculation provides a resource and code to the community for independent flux calculations</p>
                 </div>
                 <div class="card-attributes"><!-- card-attribute-icon if fontawesome - and then hover text with description -->
                     <div class="card-attr">
@@ -597,7 +1171,7 @@
                     </div><!-- card-attribute-icon if fontawesome - and then hover text with description -->
                     <div class="card-attr">
                         <i class="fa-solid fa-hourglass-start" title="Temporal resolution"></i>
-                        <span class="card-attribute-value">decadal, climatology</span>
+                        <span class="card-attribute-value">monthly</span>
                     </div><!-- card-attribute-icon if fontawesome - and then hover text with description -->
                     <div class="card-attr">
                         <i class="fa-solid fa-ruler-horizontal" title="Spatial resolution"></i>
@@ -605,93 +1179,32 @@
                     </div><!-- card-attribute-icon if fontawesome - and then hover text with description -->
                     <div class="card-attr">
                         <i class="fa-solid fa-calendar-days" title="Period"></i>
-                        <span class="card-attribute-value">1770 - 2100</span>
+                        <span class="card-attribute-value">1990 - 2022</span>
                     </div></div>
             </div>
         </div>
         <div class="card-back">
             <div class="card-header">
-                <h3 class="card-title">Global Surface Ocean pH and Revelle Factor</h3>
-                <div class="card-subheading">Jiang et al. (2019)</div>
+                <h3 class="card-title">SeaFlux</h3>
+                <div class="card-subheading">Fay and Gregor et al. (2021)</div>
             </div>
             <div class="card-content">
                 <!-- <div class="card-data-access">
-                    <span class="card-data-access-label">Data access:</span> <a href="https://www.ncei.noaa.gov/data/oceans/ncei/ocads/metadata/0206289.html " target="_blank" rel="noopener noreferrer">https://www.ncei.noaa.gov/data/oceans/ncei/ocads/metadata/0206289.html </a>
+                    <span class="card-data-access-label">Data access:</span> <a href="https://zenodo.org/records/8280457" target="_blank" rel="noopener noreferrer">https://zenodo.org/records/8280457</a>
                 </div> -->
                 <div class="card-details"><div class="card-detail">
                         <span class="card-detail-title">Description: </span>
-                        <span class="card-detail-content">Jiang et al. (2019a) produced a high-resolution (1°×1°) data product delineating regionally varying view of global surface ocean pH, acidity, and Revelle Factor (RF) from 1770 to 2100 by amalgamating recent observational seawater CO2 data from the SOCAT database (Version 6, 1991–2018, ~23 million observations) (Bakker et al., 2016), and temporal trends at individual locations of the global surface ocean from an Earth System Model, i.e., GFDL-ESM2M (Dunne et al., 2013). The calculations were conducted under historical atmospheric CO2 levels (pre-2005) and four Representative Concentrations Pathways (post-2005) corresponding to the Intergovernmental Panel on Climate Change (IPCC)’s 5th Assessment Report, specifically RCP2.6, RCP4.5, RCP6.0, and RCP8.5. </span>
+                        <span class="card-detail-content">Harmonization of air–sea CO2 fluxes from surface pCO2 data products using a standardized approach (Gregor and Fay, 2021). This resource provides an ensemble of six pCO2 products with air-sea CO2 fluxes computed consistently. The six included products are: CMEMS-LSCEv1, CSIR-ML6, JENA-MLS, JMA-MLR, MPI-SOMFFN, and NIES-FNN. First, missing areas of pCO2 estimates (mostly high-latitude and marginal seas) are filled using a linear-regression approach, thus addressing differences in spatial coverage between the mapping products. Further, also accounts for methodological inconsistencies in flux calculations. Fluxes are calculated using three wind products (CCMPv2, ERA5, and JRA55) along with the application of a scaled gas exchange coefficient for each of the wind products. Through these steps, SeaFlux presents a product ensemble of interpolated global surface ocean pCO2 and air–sea carbon flux estimates for the years 1990–2019</span>
                     </div><div class="card-detail">
                         <span class="card-detail-title">Reference: </span>
-                        <span class="card-detail-content">Jiang, L.-Q., Carter, B. R., Feely, R. A., Lauvset, S., and Olsen, A.: Surface ocean pH and buffer capacity: Past, present and future, Scientific Reports, 9(1), 18624, https://doi.org/10.1038/s41598-019-55039-4, 2019. </span>
+                        <span class="card-detail-content">Fay, A. R., Gregor, L., Landschützer, P., McKinley, G. A., Gruber, N., Gehlen, M., Iida, Y., Laruelle, G. G., Rödenbeck, C., Roobaert, A., and Zeng, J.: SeaFlux: harmonization of air–sea CO2 fluxes from surface pCO2 data products using a standardized approach, Earth Syst. Sci. Data, 13, 4693–4710, https://doi.org/10.5194/essd-13-4693-2021, 2021</span>
                     </div></div>
                 <div class="card-links">
                     <div class="card-link">
-                        <a href="https://doi.org/10.1038/s41598-019-55039-4" target="_blank" rel="noopener noreferrer"><i class="fas fa-book"></i> Publication</a>
+                        <a href="https://doi.org/10.5194/essd-2021-16" target="_blank" rel="noopener noreferrer"><i class="fas fa-book"></i> Publication</a>
                     </div>
                     <div class="card-link">
-                        <a href="https://www.ncei.noaa.gov/data/oceans/ncei/ocads/metadata/0206289.html " target="_blank" rel="noopener noreferrer"><i class="fa fa-download"></i> Data Access</a>
-                    </div>
-                </div>  
-            </div>
-        </div>
-    </div>
-</div><!-- <div class="product-card" data-data-type="Gridded surface" data-spatial-domains="Open ocean||Surface" data-temporal-resolution="decadal||climatology" data-spatial-resolution="1° x 1°" data-period="1750 - 2100"> -->
-<div class="product-card" data-data-type="Gridded surface" data-spatial-domains="Open ocean||Surface" data-temporal-resolution="decadal||climatology" data-spatial-resolution="1° x 1°" data-period="1750 - 2100">
-    <div class="card-inner">
-        <div class="card-front">
-            <div class="card-header">
-                <h3 class="card-title">Global Surface OA Indicators </h3>
-                <div class="card-subheading">Jiang et al. (2023)</div>
-            </div>
-            <div class="card-content">
-                <div class="card-image">
-                    <img src="https://agupubs.onlinelibrary.wiley.com/cms/asset/a576dee0-a9ed-43f0-a0f4-894b78276a2b/jame21817-fig-0002-m.jpg" alt="Product image">
-                </div>
-                <div class="card-summary">
-                    <p>A model-observation fusion product for all major OA indicators, leveraging a consortium of 14 Earth System Models and 3 observational data products</p>
-                </div>
-                <div class="card-attributes"><!-- card-attribute-icon if fontawesome - and then hover text with description -->
-                    <div class="card-attr">
-                        <i class="fa-solid fa-globe" title="Spatial domains"></i>
-                        <span class="card-attribute-value">Open ocean, Surface</span>
-                    </div><!-- card-attribute-icon if fontawesome - and then hover text with description -->
-                    <div class="card-attr">
-                        <i class="fa-solid fa-hourglass-start" title="Temporal resolution"></i>
-                        <span class="card-attribute-value">decadal, climatology</span>
-                    </div><!-- card-attribute-icon if fontawesome - and then hover text with description -->
-                    <div class="card-attr">
-                        <i class="fa-solid fa-ruler-horizontal" title="Spatial resolution"></i>
-                        <span class="card-attribute-value">1° x 1°</span>
-                    </div><!-- card-attribute-icon if fontawesome - and then hover text with description -->
-                    <div class="card-attr">
-                        <i class="fa-solid fa-calendar-days" title="Period"></i>
-                        <span class="card-attribute-value">1750 - 2100</span>
-                    </div></div>
-            </div>
-        </div>
-        <div class="card-back">
-            <div class="card-header">
-                <h3 class="card-title">Global Surface OA Indicators </h3>
-                <div class="card-subheading">Jiang et al. (2023)</div>
-            </div>
-            <div class="card-content">
-                <!-- <div class="card-data-access">
-                    <span class="card-data-access-label">Data access:</span> <a href="https://www.ncei.noaa.gov/data/oceans/ncei/ocads/metadata/0259391.html" target="_blank" rel="noopener noreferrer">https://www.ncei.noaa.gov/data/oceans/ncei/ocads/metadata/0259391.html</a>
-                </div> -->
-                <div class="card-details"><div class="card-detail">
-                        <span class="card-detail-title">Description: </span>
-                        <span class="card-detail-content">Jiang et al. (2023) developed a comprehensive model-data fusion product that delineates the trajectory of 10 OA indicators: fCO2, pH, [H+]total, [H+]free [CO32-], Ωarag, Ωcalc, DIC, TA, and RF, as well as temperature and salinity at all locations of the global surface ocean from 1750 to 2100. This product marks a significant breakthrough in OA forecasting by refining temporal trends with data from 14 Earth System Models (ESMs) within CMIP6, and by applying bias and drift corrections from three updated observational ocean carbonate system data products: SOCAT (Version 2022) (Bakker et al., 2016), GLODAPv2.2022 (Lauvset et al., 2022), and CODAP-NA (Jiang et al., 2021). This dataset offers 10-year averages on a 1° × 1° global surface ocean grid, capturing trends from preindustrial times (1750), through historical conditions (1850–2010), and projects future conditions to 2100 across five Shared Socioeconomic Pathways: SSP1-1.9, SSP1-2.6, SSP2-4.5, SSP3-7.0, and SSP5-8.5. </span>
-                    </div><div class="card-detail">
-                        <span class="card-detail-title">Reference: </span>
-                        <span class="card-detail-content">Jiang, L., Dunne, J., Carter, B. R., Tjiputra, J. F., Terhaar, J., Sharp, J. D., Olsen, A., Alin, S., Bakker, D. C., Feely, R. A., Gattuso, J., Hogan, P., Ilyina, T., Lange, N., Lauvset, S. K., Lewis, E. R., Lovato, T., Palmieri, J., Santana‐Falcón, Y., Schwinger, J., Séférian, R., Strand, G., Swart, N., Tanhua, T., Tsujino, H., Wanninkhof, R., Watanabe, M., Yamamoto, A., and Ziehn, T.: Global surface ocean acidification indicators from 1750 to 2100, Journal of Advances in Modeling Earth Systems, 15(3), https://doi.org/10.1029/2022ms003563, 2023.</span>
-                    </div></div>
-                <div class="card-links">
-                    <div class="card-link">
-                        <a href="https://doi.org/10.1029/2022MS003563" target="_blank" rel="noopener noreferrer"><i class="fas fa-book"></i> Publication</a>
-                    </div>
-                    <div class="card-link">
-                        <a href="https://www.ncei.noaa.gov/data/oceans/ncei/ocads/metadata/0259391.html" target="_blank" rel="noopener noreferrer"><i class="fa fa-download"></i> Data Access</a>
+                        <a href="https://zenodo.org/records/8280457" target="_blank" rel="noopener noreferrer"><i class="fa fa-download"></i> Data Access</a>
                     </div>
                 </div>  
             </div>
