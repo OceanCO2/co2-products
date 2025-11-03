@@ -196,8 +196,11 @@ body {
     text-align: center;
     background-color: #eeeeee;
     padding-top: 20px;
-    max-height: 80px;
 }
+
+.card-front .card-header {
+    max-height: 80px;
+} 
 
 .card-title {
     font-size: 1.2rem;
