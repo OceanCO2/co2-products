@@ -38,6 +38,7 @@
                 value="Gridded subsurface"> Gridded subsurface<br><input type="checkbox" class="filter-checkbox" data-filter="Data Type" data-filter-type="multi-select"
                 value="Gridded surface"> Gridded surface<br><input type="checkbox" class="filter-checkbox" data-filter="Data Type" data-filter-type="multi-select"
                 value="Harmonized"> Harmonized<br><input type="checkbox" class="filter-checkbox" data-filter="Data Type" data-filter-type="multi-select"
+                value="Model-based"> Model-based<br><input type="checkbox" class="filter-checkbox" data-filter="Data Type" data-filter-type="multi-select"
                 value="Time series"> Time series<br></div><div class="filter">
             <label>Spatial domains</label><input type="checkbox" class="filter-checkbox" data-filter="Spatial domains" data-filter-type="multi-select"
                 value="Coastal"> Coastal<br><input type="checkbox" class="filter-checkbox" data-filter="Spatial domains" data-filter-type="multi-select"
@@ -49,27 +50,30 @@
                 value="8-day"> 8-day<br><input type="checkbox" class="filter-checkbox" data-filter="Temporal resolution" data-filter-type="multi-select"
                 value="climatology"> climatology<br><input type="checkbox" class="filter-checkbox" data-filter="Temporal resolution" data-filter-type="multi-select"
                 value="continuous"> continuous<br><input type="checkbox" class="filter-checkbox" data-filter="Temporal resolution" data-filter-type="multi-select"
+                value="daily"> daily<br><input type="checkbox" class="filter-checkbox" data-filter="Temporal resolution" data-filter-type="multi-select"
                 value="decadal"> decadal<br><input type="checkbox" class="filter-checkbox" data-filter="Temporal resolution" data-filter-type="multi-select"
                 value="discrete"> discrete<br><input type="checkbox" class="filter-checkbox" data-filter="Temporal resolution" data-filter-type="multi-select"
+                value="irregular"> irregular<br><input type="checkbox" class="filter-checkbox" data-filter="Temporal resolution" data-filter-type="multi-select"
                 value="monthly"> monthly<br></div><div class="filter">
             <label>Spatial resolution</label><input type="checkbox" class="filter-checkbox" data-filter="Spatial resolution" data-filter-type="multi-select"
                 value="0.25° x 0.25°"> 0.25° x 0.25°<br><input type="checkbox" class="filter-checkbox" data-filter="Spatial resolution" data-filter-type="multi-select"
+                value="0.33°"> 0.33°<br><input type="checkbox" class="filter-checkbox" data-filter="Spatial resolution" data-filter-type="multi-select"
+                value="1.0°"> 1.0°<br><input type="checkbox" class="filter-checkbox" data-filter="Spatial resolution" data-filter-type="multi-select"
                 value="1° x 1°"> 1° x 1°<br></div></div>
     <footer class="footer">
-        <div class="website-infos">
-        <a href="https://docs.google.com/forms/d/e/1FAIpQLSdguEed1sRdgHjhP_KsgHeh_G7gHjz8qGmuTu9C7K_fK7hyUQ/viewform" target="_blank">Submit a new dataset</a>
-        <br>
-
-    </div>
+        <a class='submit' href="https://docs.google.com/forms/d/e/1FAIpQLSdguEed1sRdgHjhP_KsgHeh_G7gHjz8qGmuTu9C7K_fK7hyUQ/viewform" target="_blank">Submit a new dataset</a>
         <!-- add spacer so website copy is on bottom -->
-
+        
         <div class="github-icon">
             <a href="https://github.com/OceanCO2/co2-products" target="_blank" rel="noopener noreferrer">
                 <i class="fab fa-github"></i>
             </a>
         </div>
         <div class="web-spacer"></div>
-        <div class="web-copyright">&copy; Website by Luke Gregor (2025)</div>
+        <div class="contact-email">
+            for help, <a href="mailto:noaa.ocads@noaa.gov">noaa.ocads@noaa.gov</a>
+        </div>
+        <div class="web-copyright">&copy; Website by <a href='https://github.com/lukegre/'>Luke Gregor</a> (2025)</div>
     </footer>    
 </div>
         <div class="content">
@@ -1240,6 +1244,365 @@
                     </div>
                     <div class="card-link">
                         <a href="https://zenodo.org/records/8280457" target="_blank" rel="noopener noreferrer"><i class="fa fa-download"></i> Data Access</a>
+                    </div>
+                </div>  
+            </div>
+        </div>
+    </div>
+</div><!-- <div class="product-card" data-data-type="Model-based" data-spatial-domains="Open ocean||Coastal||Surface||Water column" data-temporal-resolution="daily||monthly" data-spatial-resolution="0.33°" data-period="1992 - 2018"> -->
+<div class="product-card" data-data-type="Model-based" data-spatial-domains="Open ocean||Coastal||Surface||Water column" data-temporal-resolution="daily||monthly" data-spatial-resolution="0.33°" data-period="1992 - 2018">
+    <div class="card-inner">
+        <div class="card-front">
+            <div class="card-header">
+                <h3 class="card-title">ECCO-Darwin</h3>
+                <div class="card-subheading">Carroll et al. (2020)</div>
+            </div>
+            <div class="card-content">
+                <div class="card-image">
+                    <img src="https://ecco-group.org/images/ecco_rotator01.jpg" alt="Product image">
+                </div>
+                <div class="card-summary">
+                    <p>Model-data synthesis product based on the Estimating the Circulation and Climate of the Ocean (ECCO) ocean state estimate. Fully-closed, physically-consistent 3-D biogeochemical budgets.</p>
+                </div>
+                <div class="card-attributes"><!-- card-attribute-icon if fontawesome - and then hover text with description -->
+                    <div class="card-attr">
+                        <i class="fa-solid fa-globe" title="Spatial domains"></i>
+                        <span class="card-attribute-value">Open ocean, Coastal, Surface, Water column</span>
+                    </div><!-- card-attribute-icon if fontawesome - and then hover text with description -->
+                    <div class="card-attr">
+                        <i class="fa-solid fa-hourglass-start" title="Temporal resolution"></i>
+                        <span class="card-attribute-value">daily, monthly</span>
+                    </div><!-- card-attribute-icon if fontawesome - and then hover text with description -->
+                    <div class="card-attr">
+                        <i class="fa-solid fa-ruler-horizontal" title="Spatial resolution"></i>
+                        <span class="card-attribute-value">0.33°</span>
+                    </div><!-- card-attribute-icon if fontawesome - and then hover text with description -->
+                    <div class="card-attr">
+                        <i class="fa-solid fa-calendar-days" title="Period"></i>
+                        <span class="card-attribute-value">1992 - 2018</span>
+                    </div></div>
+            </div>
+        </div>
+        <div class="card-back">
+            <div class="card-header">
+                <h3 class="card-title">ECCO-Darwin</h3>
+                <div class="card-subheading">Carroll et al. (2020)</div>
+            </div>
+            <div class="card-content">
+                <!-- <div class="card-data-access">
+                    <span class="card-data-access-label">Data access:</span> <a href="https://data.nas.nasa.gov/ecco/" target="_blank" rel="noopener noreferrer">https://data.nas.nasa.gov/ecco/</a>
+                </div> -->
+                <div class="card-details"><div class="card-detail">
+                        <span class="card-detail-title">Description: </span>
+                        <span class="card-detail-content">Carroll et al. (2022) used the Estimating the Circulation and Climate of the Ocean-Darwin
+(ECCO-Darwin) global-ocean biogeochemistry state estimate to generate a data-constrained DIC budget and investigate how spatiotemporal variability in advection and mixing, air-sea CO2 flux, and the biological pump have modulated the ocean sink for 1995–2018. ECCO-Darwin assimilates ocean circulation and physical tracers, including temperature, salinity, and sea ice, derived from the Estimating the Circulation and Climate of the Ocean (ECCO) LLC270 global-ocean and sea-ice data synthesis (Zhang et al., 2018). Additionally, it assimilates biogeochemical observations encompassing the cycling of carbon, nitrogen,
+phosphorus (PO 4 ), iron (Fe), silica (SiO 2 ), DO, and TA. This inclusive approach enhances
+the model’s fidelity by aligning it with a diverse array of observations. All ECCO-Darwin model output is available on the ECCO Data Portal: https://data.nas.nasa.gov/ecco/. The model code and platform-independent instructions for running ECCO-Darwin simulations can be found at: https://github.com/MITgcm-contrib/ecco_darwin.</span>
+                    </div><div class="card-detail">
+                        <span class="card-detail-title">Reference: </span>
+                        <span class="card-detail-content">Carroll, D., Menemenlis, D., Adkins, J. F., Bowman, K. W., Brix, H., & Dutkiewicz, S., et al. (2020). The ECCO-Darwin data-assimilative global ocean biogeochemistry model: Estimates of seasonal to multidecadal surface ocean pCO2 and air-sea CO2 flux. Journal of Advances in Modeling Earth Systems, 12, e2019MS001888. https://doi.org/10.1029/2019MS001888</span>
+                    </div></div>
+                <div class="card-links">
+                    <div class="card-link">
+                        <a href="https://doi.org/10.5281/zenodo.10627664" target="_blank" rel="noopener noreferrer"><i class="fas fa-book"></i> Publication</a>
+                    </div>
+                    <div class="card-link">
+                        <a href="https://data.nas.nasa.gov/ecco/" target="_blank" rel="noopener noreferrer"><i class="fa fa-download"></i> Data Access</a>
+                    </div>
+                </div>  
+            </div>
+        </div>
+    </div>
+</div><!-- <div class="product-card" data-data-type="Data compilations" data-spatial-domains="Coastal||Water column" data-temporal-resolution="discrete" data-period="2008 - 2017"> -->
+<div class="product-card" data-data-type="Data compilations" data-spatial-domains="Coastal||Water column" data-temporal-resolution="discrete" data-period="2008 - 2017">
+    <div class="card-inner">
+        <div class="card-front">
+            <div class="card-header">
+                <h3 class="card-title">Marine Inorganic Carbonate Chemistry in the Northern Gulf of Alaska</h3>
+                <div class="card-subheading">Monacci et al. (2024)</div>
+            </div>
+            <div class="card-content">
+                <div class="card-image">
+                    <img src="https://essd.copernicus.org/articles/16/647/2024/essd-16-647-2024-avatar-web.png" alt="Product image">
+                </div>
+                <div class="card-summary">
+                    <p>A synthesis of twenty cruises from 2008 to 2017 on the Gulf of Alaska (GAK) Line</p>
+                </div>
+                <div class="card-attributes"><!-- card-attribute-icon if fontawesome - and then hover text with description -->
+                    <div class="card-attr">
+                        <i class="fa-solid fa-globe" title="Spatial domains"></i>
+                        <span class="card-attribute-value">Coastal, Water column</span>
+                    </div><!-- card-attribute-icon if fontawesome - and then hover text with description -->
+                    <div class="card-attr">
+                        <i class="fa-solid fa-hourglass-start" title="Temporal resolution"></i>
+                        <span class="card-attribute-value">discrete</span>
+                    </div><!-- card-attribute-icon if fontawesome - and then hover text with description -->
+                    <div class="card-attr">
+                        <i class="fa-solid fa-calendar-days" title="Period"></i>
+                        <span class="card-attribute-value">2008 - 2017</span>
+                    </div></div>
+            </div>
+        </div>
+        <div class="card-back">
+            <div class="card-header">
+                <h3 class="card-title">Marine Inorganic Carbonate Chemistry in the Northern Gulf of Alaska</h3>
+                <div class="card-subheading">Monacci et al. (2024)</div>
+            </div>
+            <div class="card-content">
+                <!-- <div class="card-data-access">
+                    <span class="card-data-access-label">Data access:</span> <a href="https://doi.org/10.25921/x9sg-9b08" target="_blank" rel="noopener noreferrer">https://doi.org/10.25921/x9sg-9b08</a>
+                </div> -->
+                <div class="card-details"><div class="card-detail">
+                        <span class="card-detail-title">Description: </span>
+                        <span class="card-detail-content">Monacci et al. (2023) compiled a data product of discrete seawater samples collected each May and September over a 10-year period from 2008 to 2017 along the long-term hydrographic line in the Gulf of Alaska (GAK Line). Samples were collected from a sampling rosette on a profiling CTD. Data variables include profiled seawater temperature, salinity, and DO. Discrete sample variables include DO (i.e., Winkler titrations), macronutrients (nitrate, nitrite, phosphate, silicic acid), DIC, and TA. All carbonate system variables were analyzed at the Ocean Acidification Research Center (OARC) at the University of Alaska Fairbanks (UAF). The repeat hydrographic cruises were funded by the Alaska Ocean Observing System (AOOS), the Exxon Valdez Oil Spill Trustee Council (EVOS), Gulf Watch Alaska, and the North Pacific Research Board (NPRB) and were mostly conducted aboard the United States Fish and Wildlife Service (USFWS) R/V Tiĝlax̂.</span>
+                    </div><div class="card-detail">
+                        <span class="card-detail-title">Reference: </span>
+                        <span class="card-detail-content">Monacci, N. M., Cross, J. N., Evans, W., Mathis, J. T., and Wang, H.: A decade of marine inorganic carbon chemistry observations in the northern Gulf of Alaska – insights into an environment in transition, Earth Syst. Sci. Data, 16, 647–665, https://doi.org/10.5194/essd-16-647-2024, 2024.</span>
+                    </div></div>
+                <div class="card-links">
+                    <div class="card-link">
+                        <a href="https://doi.org/10.5194/essd-16-647-2024" target="_blank" rel="noopener noreferrer"><i class="fas fa-book"></i> Publication</a>
+                    </div>
+                    <div class="card-link">
+                        <a href="https://doi.org/10.25921/x9sg-9b08" target="_blank" rel="noopener noreferrer"><i class="fa fa-download"></i> Data Access</a>
+                    </div>
+                </div>  
+            </div>
+        </div>
+    </div>
+</div><!-- <div class="product-card" data-data-type="Model-based" data-spatial-domains="Open ocean||Surface||Water column" data-temporal-resolution="irregular" data-spatial-resolution="1.0°" data-period="1750-2500"> -->
+<div class="product-card" data-data-type="Model-based" data-spatial-domains="Open ocean||Surface||Water column" data-temporal-resolution="irregular" data-spatial-resolution="1.0°" data-period="1750-2500">
+    <div class="card-inner">
+        <div class="card-front">
+            <div class="card-header">
+                <h3 class="card-title">Tracer-based Rapid Anthropogenic Carbon Estimation (TRACE) gridded Canth</h3>
+                <div class="card-subheading">Carter et al. (2025)</div>
+            </div>
+            <div class="card-content">
+                <div class="card-image">
+                    <img src="https://essd.copernicus.org/articles/17/3073/2025/essd-17-3073-2025-avatar-web.png" alt="Product image">
+                </div>
+                <div class="card-summary">
+                    <p>New methods for rapidly estimating anthropogenic carbon from temperature, salinity, and date are presented.  The methods are then used with SSPs to estimate anthropogenic carbon in the ocean globally from 1750 to 2500.</p>
+                </div>
+                <div class="card-attributes"><!-- card-attribute-icon if fontawesome - and then hover text with description -->
+                    <div class="card-attr">
+                        <i class="fa-solid fa-globe" title="Spatial domains"></i>
+                        <span class="card-attribute-value">Open ocean, Surface, Water column</span>
+                    </div><!-- card-attribute-icon if fontawesome - and then hover text with description -->
+                    <div class="card-attr">
+                        <i class="fa-solid fa-hourglass-start" title="Temporal resolution"></i>
+                        <span class="card-attribute-value">irregular</span>
+                    </div><!-- card-attribute-icon if fontawesome - and then hover text with description -->
+                    <div class="card-attr">
+                        <i class="fa-solid fa-ruler-horizontal" title="Spatial resolution"></i>
+                        <span class="card-attribute-value">1.0°</span>
+                    </div><!-- card-attribute-icon if fontawesome - and then hover text with description -->
+                    <div class="card-attr">
+                        <i class="fa-solid fa-calendar-days" title="Period"></i>
+                        <span class="card-attribute-value">1750-2500</span>
+                    </div></div>
+            </div>
+        </div>
+        <div class="card-back">
+            <div class="card-header">
+                <h3 class="card-title">Tracer-based Rapid Anthropogenic Carbon Estimation (TRACE) gridded Canth</h3>
+                <div class="card-subheading">Carter et al. (2025)</div>
+            </div>
+            <div class="card-content">
+                <!-- <div class="card-data-access">
+                    <span class="card-data-access-label">Data access:</span> <a href="https://zenodo.org/records/15692788" target="_blank" rel="noopener noreferrer">https://zenodo.org/records/15692788</a>
+                </div> -->
+                <div class="card-details"><div class="card-detail">
+                        <span class="card-detail-title">Description: </span>
+                        <span class="card-detail-content">Here, we make modifications to the transit time distribution approach for Canth estimation that render the method more accessible. We also release software (BRCScienceProducts, 2025) called “Tracer-based Rapid Anthropogenic Carbon Estimation version 1” (TRACEv1) that allows users – with one line of code – to obtain Canth and water mass age estimates throughout the global open ocean from user-supplied values of geographic location, pressure, salinity, temperature, and the estimate year. We use this code to generate a data product of global gridded open-ocean Canth distributions (TRACEv1_GGCanth; Carter, 2025) that ranges from the preindustrial era through 2500 under a range of Shared Socioeconomic Pathways (SSPs, or atmospheric CO2 concentration pathways). We estimated the skill of these estimates by reconstructing Canth in models with known distributions of Canth and transient tracers and by conducting perturbation tests. In the model-based reconstruction test, TRACEv1 reproduces the global ocean Canth inventory to within ±10 % in 1980 and 2014. We discuss implications and limitations of the projected Canth distributions and highlight ways that the estimation strategy might be improved. One finding is that the ocean will continue to increase its net Canth inventory at least through 2500 due to deep-ocean ventilation, even with the SSP in which intense mitigation successfully decreases atmospheric Canth by ∼60 % in 2500 relative to the 2024 concentration. A notable limitation of this and similar projections made with TRACEv1 is that ongoing and potential future warming and changing oceanic circulation patterns with climate change are not captured by the method. The data products generated by this research are available as MATLAB code (https://doi.org/10.5281/zenodo.15692788, BRCScienceProducts, 2025) and a spatially and temporally gridded data product (https://doi.org/10.5281/zenodo.15692788, BRCScienceProducts, 2025).</span>
+                    </div><div class="card-detail">
+                        <span class="card-detail-title">Reference: </span>
+                        <span class="card-detail-content">Carter, B. R., Schwinger, J., Sonnerup, R., Fassbender, A. J., Sharp, J. D., Dias, L. M., & Sandborn, D. E. (2025). Tracer-based Rapid Anthropogenic Carbon Estimation (TRACE). Earth System Science Data, 17(6), 3073-3088.</span>
+                    </div></div>
+                <div class="card-links">
+                    <div class="card-link">
+                        <a href="https://doi.org/10.5194/essd-17-3073-2025" target="_blank" rel="noopener noreferrer"><i class="fas fa-book"></i> Publication</a>
+                    </div>
+                    <div class="card-link">
+                        <a href="https://zenodo.org/records/15692788" target="_blank" rel="noopener noreferrer"><i class="fa fa-download"></i> Data Access</a>
+                    </div>
+                </div>  
+            </div>
+        </div>
+    </div>
+</div><!-- <div class="product-card" data-data-type="Model-based" data-spatial-domains="Open ocean||Water column" data-temporal-resolution="climatology" data-spatial-resolution="1.0°"> -->
+<div class="product-card" data-data-type="Model-based" data-spatial-domains="Open ocean||Water column" data-temporal-resolution="climatology" data-spatial-resolution="1.0°">
+    <div class="card-inner">
+        <div class="card-front">
+            <div class="card-header">
+                <h3 class="card-title">Preformed properties for marine organic matter and carbonate mineral cycling quantification</h3>
+                <div class="card-subheading">Carter et al. (2021)</div>
+            </div>
+            <div class="card-content">
+                <div class="card-image">
+                    <img src="https://agupubs.onlinelibrary.wiley.com/cms/asset/a70dc130-3967-4e0c-bab1-fa5967af0a63/gbc21075-fig-0003-m.jpg" alt="Product image">
+                </div>
+                <div class="card-summary">
+                    <p>
+We have updated global preformed biogeochemical property estimates and provided the estimates for analysis and model validation
+</p>
+                </div>
+                <div class="card-attributes"><!-- card-attribute-icon if fontawesome - and then hover text with description -->
+                    <div class="card-attr">
+                        <i class="fa-solid fa-globe" title="Spatial domains"></i>
+                        <span class="card-attribute-value">Open ocean, Water column</span>
+                    </div><!-- card-attribute-icon if fontawesome - and then hover text with description -->
+                    <div class="card-attr">
+                        <i class="fa-solid fa-hourglass-start" title="Temporal resolution"></i>
+                        <span class="card-attribute-value">climatology</span>
+                    </div><!-- card-attribute-icon if fontawesome - and then hover text with description -->
+                    <div class="card-attr">
+                        <i class="fa-solid fa-ruler-horizontal" title="Spatial resolution"></i>
+                        <span class="card-attribute-value">1.0°</span>
+                    </div></div>
+            </div>
+        </div>
+        <div class="card-back">
+            <div class="card-header">
+                <h3 class="card-title">Preformed properties for marine organic matter and carbonate mineral cycling quantification</h3>
+                <div class="card-subheading">Carter et al. (2021)</div>
+            </div>
+            <div class="card-content">
+                <!-- <div class="card-data-access">
+                    <span class="card-data-access-label">Data access:</span> <a href="https://github.com/BRCScienceProducts/PreformedPropertyEstimates" target="_blank" rel="noopener noreferrer">https://github.com/BRCScienceProducts/PreformedPropertyEstimates</a>
+                </div> -->
+                <div class="card-details"><div class="card-detail">
+                        <span class="card-detail-title">Description: </span>
+                        <span class="card-detail-content">We estimate preformed ocean phosphate, nitrate, oxygen, silicate, and alkalinity by combining a reconstruction of ventilation pathways in the ocean interior with estimates of submixed layer properties. These new preformed property estimates are intended to aid biogeochemical cycling studies and validation of modeled preformed property distributions and are available online. Analyses of net property accumulations (observed minus preformed properties) indicate net remineralization ratios in the ocean interior of [1 P]: [14.1 ± 0.6 N]: [−141 ± 12 O2]: [95 ± 25 Si]: [89 ± 9 TA]. These ratios imply that the interior ocean stores 1,300 (±230) PgC through organic matter remineralization and 540 (±60) PgC through carbonate mineral dissolution and that apparent oxygen utilization can overestimate the interior ocean oxygen consumption by ~25%. Further, only 4 (±1%) and 46 (±5%) of the total alkalinity accumulated from carbonate mineral dissolution are found in seawater that is supersaturated with respect to the aragonite and calcite mineral forms of calcium carbonate, respectively. These small excess alkalinity inventories are due to smaller volumes of the supersaturated water masses and shorter ventilation timescales, as carbonate mineral dissolution rates appear nearly independent of depth and saturation state.</span>
+                    </div><div class="card-detail">
+                        <span class="card-detail-title">Reference: </span>
+                        <span class="card-detail-content">Carter, B. R., Feely, R. A., Lauvset, S. K., Olsen, A., DeVries, T., & Sonnerup, R. (2021). Preformed properties for marine organic matter and carbonate mineral cycling quantification. Global Biogeochemical Cycles, 35(1), e2020GB006623.</span>
+                    </div></div>
+                <div class="card-links">
+                    <div class="card-link">
+                        <a href="https://zenodo.org/records/3745002" target="_blank" rel="noopener noreferrer"><i class="fas fa-book"></i> Publication</a>
+                    </div>
+                    <div class="card-link">
+                        <a href="https://github.com/BRCScienceProducts/PreformedPropertyEstimates" target="_blank" rel="noopener noreferrer"><i class="fa fa-download"></i> Data Access</a>
+                    </div>
+                </div>  
+            </div>
+        </div>
+    </div>
+</div><!-- <div class="product-card" data-data-type="Gridded surface" data-spatial-domains="Open ocean||Coastal||Surface" data-temporal-resolution="monthly||climatology" data-spatial-resolution="0.25° x 0.25°"> -->
+<div class="product-card" data-data-type="Gridded surface" data-spatial-domains="Open ocean||Coastal||Surface" data-temporal-resolution="monthly||climatology" data-spatial-resolution="0.25° x 0.25°">
+    <div class="card-inner">
+        <div class="card-front">
+            <div class="card-header">
+                <h3 class="card-title">MPI-ULB-SOM-FFN</h3>
+                <div class="card-subheading">Landschützer et al. (2020) </div>
+            </div>
+            <div class="card-content">
+                <div class="card-image">
+                    <img src="https://essd.copernicus.org/articles/12/2537/2020/essd-12-2537-2020-avatar-web.png" alt="Product image">
+                </div>
+                <div class="card-summary">
+                    <p>Monthly gridded pCO2 without adjusting for a specific reference year, high-resolution coastal ocean coverage. </p>
+                </div>
+                <div class="card-attributes"><!-- card-attribute-icon if fontawesome - and then hover text with description -->
+                    <div class="card-attr">
+                        <i class="fa-solid fa-globe" title="Spatial domains"></i>
+                        <span class="card-attribute-value">Open ocean, Coastal, Surface</span>
+                    </div><!-- card-attribute-icon if fontawesome - and then hover text with description -->
+                    <div class="card-attr">
+                        <i class="fa-solid fa-hourglass-start" title="Temporal resolution"></i>
+                        <span class="card-attribute-value">monthly, climatology</span>
+                    </div><!-- card-attribute-icon if fontawesome - and then hover text with description -->
+                    <div class="card-attr">
+                        <i class="fa-solid fa-ruler-horizontal" title="Spatial resolution"></i>
+                        <span class="card-attribute-value">0.25° x 0.25°</span>
+                    </div></div>
+            </div>
+        </div>
+        <div class="card-back">
+            <div class="card-header">
+                <h3 class="card-title">MPI-ULB-SOM-FFN</h3>
+                <div class="card-subheading">Landschützer et al. (2020) </div>
+            </div>
+            <div class="card-content">
+                <!-- <div class="card-data-access">
+                    <span class="card-data-access-label">Data access:</span> <a href="https://www.ncei.noaa.gov/access/ocean-carbon-acidification-data-system/oceans/MPI-ULB-SOM_FFN_clim.html" target="_blank" rel="noopener noreferrer">https://www.ncei.noaa.gov/access/ocean-carbon-acidification-data-system/oceans/MPI-ULB-SOM_FFN_clim.html</a>
+                </div> -->
+                <div class="card-details"><div class="card-detail">
+                        <span class="card-detail-title">Description: </span>
+                        <span class="card-detail-content">Landschützer et al. (2020a) created a uniform pCO2 climatology combining open and coastal oceans. It is a monthly gridded global surface ocean pCO2 data product without adjusting for a specific reference year. Developed on a higher-resolution 0.25° × 0.25° global surface-ocean grid, this product is the result of combining two neural network-based pCO2 products: the open ocean product described below (i.e., Landschützer et al., 2016) and the coastal product created by Laruelle et al. (2017). Consequently, it represents coastal zones better. Data collected between 1998 and 2015 from the SOCAT database (Version 5) were used to create this data product. </span>
+                    </div><div class="card-detail">
+                        <span class="card-detail-title">Reference: </span>
+                        <span class="card-detail-content">Landschützer, P., Laruelle, G. G., Roobaert, A., and Regnier, P.: A uniform pCO2 climatology combining open and coastal oceans, Earth Syst. Sci. Data, 12, 2537–2553, https://doi.org/10.5194/essd-12-2537-2020, 2020. </span>
+                    </div></div>
+                <div class="card-links">
+                    <div class="card-link">
+                        <a href="https://doi.org/10.5194/essd-12-2537-2020" target="_blank" rel="noopener noreferrer"><i class="fas fa-book"></i> Publication</a>
+                    </div>
+                    <div class="card-link">
+                        <a href="https://www.ncei.noaa.gov/access/ocean-carbon-acidification-data-system/oceans/MPI-ULB-SOM_FFN_clim.html" target="_blank" rel="noopener noreferrer"><i class="fa fa-download"></i> Data Access</a>
+                    </div>
+                </div>  
+            </div>
+        </div>
+    </div>
+</div><!-- <div class="product-card" data-data-type="Gridded surface" data-spatial-domains="Open ocean" data-temporal-resolution="monthly||climatology" data-spatial-resolution="1° x 1°" data-period="1982 - 2025"> -->
+<div class="product-card" data-data-type="Gridded surface" data-spatial-domains="Open ocean" data-temporal-resolution="monthly||climatology" data-spatial-resolution="1° x 1°" data-period="1982 - 2025">
+    <div class="card-inner">
+        <div class="card-front">
+            <div class="card-header">
+                <h3 class="card-title">VLIZ-SOM-FFN</h3>
+                <div class="card-subheading">Landschützer et al. (2016) </div>
+            </div>
+            <div class="card-content">
+                <div class="card-image">
+                    <img src="https://agupubs.onlinelibrary.wiley.com/cms/asset/f242e604-e083-487f-88bd-ab5324b0b4ba/gbc20472-fig-0004-m.jpg" alt="Product image">
+                </div>
+                <div class="card-summary">
+                    <p>Monthly gridded pCO2 from 1982 through near present</p>
+                </div>
+                <div class="card-attributes"><!-- card-attribute-icon if fontawesome - and then hover text with description -->
+                    <div class="card-attr">
+                        <i class="fa-solid fa-globe" title="Spatial domains"></i>
+                        <span class="card-attribute-value">Open ocean</span>
+                    </div><!-- card-attribute-icon if fontawesome - and then hover text with description -->
+                    <div class="card-attr">
+                        <i class="fa-solid fa-hourglass-start" title="Temporal resolution"></i>
+                        <span class="card-attribute-value">monthly, climatology</span>
+                    </div><!-- card-attribute-icon if fontawesome - and then hover text with description -->
+                    <div class="card-attr">
+                        <i class="fa-solid fa-ruler-horizontal" title="Spatial resolution"></i>
+                        <span class="card-attribute-value">1° x 1°</span>
+                    </div><!-- card-attribute-icon if fontawesome - and then hover text with description -->
+                    <div class="card-attr">
+                        <i class="fa-solid fa-calendar-days" title="Period"></i>
+                        <span class="card-attribute-value">1982 - 2025</span>
+                    </div></div>
+            </div>
+        </div>
+        <div class="card-back">
+            <div class="card-header">
+                <h3 class="card-title">VLIZ-SOM-FFN</h3>
+                <div class="card-subheading">Landschützer et al. (2016) </div>
+            </div>
+            <div class="card-content">
+                <!-- <div class="card-data-access">
+                    <span class="card-data-access-label">Data access:</span> <a href="https://www.ncei.noaa.gov/data/oceans/ ncei/ocads/metadata/0160558.html" target="_blank" rel="noopener noreferrer">https://www.ncei.noaa.gov/data/oceans/ ncei/ocads/metadata/0160558.html</a>
+                </div> -->
+                <div class="card-details"><div class="card-detail">
+                        <span class="card-detail-title">Description: </span>
+                        <span class="card-detail-content">Landschützer et al. (2016) employed the Self-Organizing-Map Feed-Forward Network (SOM-FFN) neural network method (Landschützer et al., 2013) to map sea surface pCO2 from SOCAT (see No. 1 above) (Bakker et al., 2014) to generate monthly pCO2 fields on a 1° × 1° global surface ocean grid, covering the period from 1982 to near present. It is based on the gridded pCO2 measurements from SOCAT and is updated regularly. The creation of the pCO2 fields involve a two-step neural network approach, which has been extensively detailed and validated in previous works by Landschützer et al. (2013, 2014, 2016). In the initial step, the global ocean is clustered into biogeochemical provinces, and subsequently, the non-linear relationship between CO2 driver variables and gridded data from SOCAT (Bakker et al., 2016) is reconstructed. Air-sea CO2 fluxes are also computed based on the air-sea pCO2 difference, utilizing a bulk gas transfer formulation as described by Landschützer et al. (2013, 2014, 2016). </span>
+                    </div><div class="card-detail">
+                        <span class="card-detail-title">Reference: </span>
+                        <span class="card-detail-content">Landschützer, P., Gruber, N., and Bakker, D. C. E.: Decadal variations and trends of the Global Ocean Carbon Sink, Global Biogeochemical Cycles, 30(10), 1396–1417. https://doi.org/10.1002/2015gb005359, 2016. </span>
+                    </div></div>
+                <div class="card-links">
+                    <div class="card-link">
+                        <a href="https://doi.org/10.1002/2015gb005359" target="_blank" rel="noopener noreferrer"><i class="fas fa-book"></i> Publication</a>
+                    </div>
+                    <div class="card-link">
+                        <a href="https://www.ncei.noaa.gov/data/oceans/ ncei/ocads/metadata/0160558.html" target="_blank" rel="noopener noreferrer"><i class="fa fa-download"></i> Data Access</a>
                     </div>
                 </div>  
             </div>
