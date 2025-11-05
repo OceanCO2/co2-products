@@ -19,7 +19,7 @@ class Config(BaseSettings):
     # website settings
     WEBSITE_TITLE: str = "Ocean CO2 Products"
     WEBSITE_DESCRIPTION: str = "Ocean carbon products from Jiang et al. (2025)"
-    WEBSITE_COPY: str = "&copy; Website by <a href='https://github.com/lukegre/'>Luke Gregor</a> (2025)"
+    WEBSITE_COPY: str = "&copy; Website by <a href='https://github.com/lukegre/' target='_blank'>Luke Gregor</a> (2025)"
 
     # Filter settings
     DATA_FILTERS: tuple[str, ...] = (

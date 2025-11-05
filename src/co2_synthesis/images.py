@@ -44,7 +44,7 @@ def process_images_in_df(
                 target_size_mb=target_size_mb,
                 overwrite=overwrite
             )
-            processed_path = processed_path.relative_to(processed_path.parents[1])
+            processed_path = processed_path.relative_to(cfg.ROOT)
             
         except Exception as e:
             logger.warning(f"Error processing image for {product_name} from {url}: {e}")
