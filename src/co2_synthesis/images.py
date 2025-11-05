@@ -9,7 +9,7 @@ In this script there are tools to:
 import io
 import re
 import requests
-from PIL import Image
+from PIL import Image, ImageChops
 from pathlib import Path
 import pandas as pd
 from loguru import logger
@@ -18,11 +18,10 @@ from . import cfg
 
 def process_images_in_df(
         df: pd.DataFrame, 
-        name_column: str="Product name",
-        image_url_column: str="Image URL", 
+        name_column: str="card-title",
+        image_url_column: str="card-image", 
         save_dir=cfg.ROOT / "docs/images/", 
-        target_pixel_size: tuple[int, int]=(1200, 800), 
-        target_size_mb: float=0.5, 
+        target_size_mb: float=0.4, 
         overwrite: bool=False
     ) -> pd.DataFrame:
     """Process images for all rows in a dataframe given an image URL column."""
@@ -30,7 +29,7 @@ def process_images_in_df(
 
     save_dir = save_dir.relative_to(cfg.ROOT)
 
-    for index, row in df.iterrows():
+    for _, row in df.iterrows():
         url = row[image_url_column]
         product_name = row[name_column]
         # create a safe filename using pathlib
@@ -41,10 +40,9 @@ def process_images_in_df(
         try:
             processed_path = process_image_from_url(
                 url,
-                target_pixel_size,
-                target_size_mb,
-                save_path,
-                overwrite
+                save_path=save_path,
+                target_size_mb=target_size_mb,
+                overwrite=overwrite
             )
             processed_path = processed_path.relative_to(processed_path.parents[1])
             
@@ -57,28 +55,26 @@ def process_images_in_df(
     return df
 
 
-def process_image_from_url(url: str, target_pixel_size: tuple[int, int], target_size_mb: float, save_path: Path, overwrite: bool = False) -> Path:
+def process_image_from_url(url: str, save_path: Path, target_size_mb: float=0.3, overwrite: bool = False) -> Path:
     """Download, resize, and save an image from a URL."""
 
     if save_path.exists() and not overwrite:
         return save_path
     
     # Step 1: Download the image
-    image_buffer = download_image(url)
-    # Step 2: Resize to pixel dimensions
-    image_buffer = resize_image_to_pixels(image_buffer, target_pixel_size)
+    image = download_image(url)
     # Step 3: Resize to target size in MB
-    image_buffer = resize_image_to_mb(image_buffer, target_size_mb)
+    image_trimmed = trim_image(image)
+    image_downsized = resize_image_to_mb(image_trimmed, target_size_mb)
     # Step 4: Save to disk
-    with open(save_path, 'wb') as f:
-        f.write(image_buffer.getbuffer())
+    image_downsized.save(save_path, format="png")
     logger.debug(f"Processed image for URL {url} saved to {save_path}")
 
     return save_path
 
 
-def download_image(url: str) -> io.BytesIO:
-    """Download an image from a URL and return it as a BytesIO object."""
+def download_image(url: str) -> Image.Image:
+    """Download an image from a URL and return it as a PIL Image object."""
     headers = {
         "User-Agent": "Mozilla/5.0",
     }
@@ -88,38 +84,48 @@ def download_image(url: str) -> io.BytesIO:
 
     response = s.get(url)
     response.raise_for_status()
-    return io.BytesIO(response.content)
+    bytes = io.BytesIO(response.content)
+    image = Image.open(bytes)
+    return image
 
 
-def resize_image_to_pixels(image_buffer: io.BytesIO, target_size: tuple[int, int]) -> io.BytesIO:
+def resize_image_to_pixels(image: Image.Image, target_size: tuple[float, float]) -> Image.Image:
     """Resize the image to fit within the target pixel dimensions."""
-    image = Image.open(image_buffer)
-
+    image = image.copy()
     # the thumbnail method maintains aspect ratio
     image.thumbnail(target_size)
 
-    output_buffer = io.BytesIO()
-    image.save(output_buffer, format=image.format)
-    output_buffer.seek(0)
-    return output_buffer
+    return image
 
 
-def resize_image_to_mb(image_buffer: io.BytesIO, target_size_mb: float) -> io.BytesIO:
+def resize_image_to_mb(image: Image.Image, target_size_mb: float) -> Image.Image:
     """Resize the image to be under the target size in megabytes."""
     target_size_bytes = target_size_mb * 1024 * 1024
-    image = Image.open(image_buffer)
+    image = image.copy()
 
-    quality = 100
     output_buffer = io.BytesIO()
-    image.save(output_buffer, format=image.format, quality=quality)
-    
-    while output_buffer.tell() > target_size_bytes and quality > 10:
-        quality -= 5
+    image.save(output_buffer, format="png")
+
+    while output_buffer.tell() > target_size_bytes:
+        new_dims = tuple([int(dim * 0.9) for dim in image.size])
         output_buffer = io.BytesIO()
-        image.save(output_buffer, format=image.format, quality=quality)
+        image = resize_image_to_pixels(image, new_dims)
+        image.save(output_buffer, format="png")
 
     output_buffer.seek(0)
-    return output_buffer
+    image = Image.open(output_buffer)
+    return image
+
+
+def trim_image(im:Image.Image) -> Image.Image:
+    bg = Image.new(im.mode, im.size, im.getpixel((0,0)))
+    diff = ImageChops.difference(im, bg)
+    diff = ImageChops.add(diff, diff, 2.0, -100)
+    bbox = diff.getbbox()
+    if bbox:
+        return im.crop(bbox)
+    else:
+        return im  # no contents found
 
 
 def get_final_url(doi_link):

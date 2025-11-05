@@ -10,7 +10,7 @@ from .images import process_images_in_df
 from loguru import logger
 
 
-def generate_page_main(google_sheet_url: str):
+def generate_page_main(google_sheet_url: str, overwrite_images: bool = False):
     static_dir = cfg.ROOT / 'static'
     template_dir = static_dir / 'templates'
 
@@ -24,7 +24,7 @@ def generate_page_main(google_sheet_url: str):
         df, 
         name_column="card-title", 
         image_url_column="card-image", 
-        overwrite=False, 
+        overwrite=overwrite_images, 
         target_size_mb=0.3)
     logger.debug(f"Retrieved {len(df)} rows from Google Sheet.\n{df.T}")
 
@@ -107,4 +107,3 @@ def process_product_row(product_row: pd.Series) -> dict:
     data['data-attrs'] = ' '.join([f'{k}="{v}"' for k, v in data_attrs.items()])
 
     return data
-

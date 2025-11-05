@@ -3,57 +3,50 @@
     <div class="card-inner">
         <div class="card-front">
             <div class="card-header">
-                <h3 class="card-title">{{ p['card-title'] }}</h3>
+                <h3>{{ p['card-title'] }}</h3>
                 <div class="card-subheading">{{ p['card-subheading'] }}</div>
             </div>
-            <div class="card-content">
-                <div class="card-image">
-                    <img loading="lazy" src="{{ p['card-image'] }}" alt="Product image">
+            <div class="card-image">
+                <img loading="lazy" src="{{ p['card-image'] }}" alt="Product image">
+            </div>
+            <div class="card-summary">
+                {{ p['card-summary'] }}
+            </div>
+            <div class="card-attributes">
+                {%- for attr in p['card-attribute'] -%}
+                {%- if attr['value'] -%}
+                <!-- card-attribute-icon if fontawesome - and then hover text with description -->
+                <div class="card-attr">
+                    <i class="{{ attr['icon']|safe }}" title="{{ attr['label'] }}"></i>
+                    <span class="card-attribute-value">{{ attr['value'] }}</span>
                 </div>
-                <div class="card-summary">
-                    <p>{{ p['card-summary'] }}</p>
-                </div>
-                <div class="card-attributes">
-                    {%- for attr in p['card-attribute'] -%}
-                    {%- if attr['value'] -%}
-                    <!-- card-attribute-icon if fontawesome - and then hover text with description -->
-                    <div class="card-attr">
-                        <i class="{{ attr['icon']|safe }}" title="{{ attr['label'] }}"></i>
-                        <span class="card-attribute-value">{{ attr['value'] }}</span>
-                    </div>
-                    {%- endif -%}
-                    {%- endfor -%}
-                </div>
+                {%- endif -%}
+                {%- endfor -%}
             </div>
         </div>
         <div class="card-back">
             <div class="card-header">
-                <h3 class="card-title">{{ p['card-title'] }}</h3>
+                <h3>{{ p['card-title'] }}</h3>
                 <div class="card-subheading">{{ p['card-subheading'] }}</div>
             </div>
-            <div class="card-content">
-                <!-- <div class="card-data-access">
-                    <span class="card-data-access-label">Data access:</span> <a href="{{ p['card-data-access'] }}" target="_blank" rel="noopener noreferrer">{{ p['card-data-access'] }}</a>
-                </div> -->
-                <div class="card-details">
-                    {%- for detail in p['card-detail'] -%}
-                    {%- if detail['content'] -%}
-                    <div class="card-detail">
-                        <span class="card-detail-title">{{ detail['title'] }}: </span>
-                        <span class="card-detail-content">{{ detail['content'] }}</span>
-                    </div>
-                    {%- endif -%}
-                    {%- endfor -%}
+            <div class="card-details">
+                {%- for detail in p['card-detail'] -%}
+                {%- if detail['content'] -%}
+                <div class="card-detail">
+                    <span class="card-detail-title">{{ detail['title'] }}: </span>
+                    <span class="card-detail-content">{{ detail['content'] }}</span>
                 </div>
-                <div class="card-links">
-                    <div class="card-link">
-                        <a href="{{ p['card-citation-link'] }}" target="_blank" rel="noopener noreferrer"><i class="fas fa-book"></i> Publication</a>
-                    </div>
-                    <div class="card-link">
-                        <a href="{{ p['card-data-access'] }}" target="_blank" rel="noopener noreferrer"><i class="fa fa-download"></i> Data Access</a>
-                    </div>
-                </div>  
+                {%- endif -%}
+                {%- endfor -%}
             </div>
+            <div class="card-links">
+                <div class="card-link">
+                    <a href="{{ p['card-citation-link'] }}" target="_blank" rel="noopener noreferrer"><i class="fas fa-book"></i> Publication</a>
+                </div>
+                <div class="card-link">
+                    <a href="{{ p['card-data-access'] }}" target="_blank" rel="noopener noreferrer"><i class="fa fa-download"></i> Data Access</a>
+                </div>
+            </div>  
         </div>
     </div>
 </div>
