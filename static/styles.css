@@ -1,13 +1,26 @@
+:root{
+    --primary-color: hwb(208 0% 7% / 0.793);
+    --primary-color-text: rgb(255, 255, 255);
+    --primary-color-text-secondary: #ffffffa3;
+    
+    --background-color-sidebar: #ffffff;
+    
+    --background-color-content: #f8f9fa;
+    --card-header-background: #eeeeee;
+    --card-text-color-dark: #333333;
+    --card-text-color-light: #666666;
+}
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f8f9fa;
+    background-color: var(--background-color-content);
     min-width: 390px;
 }
 .banner {
-    background-color: hwb(211 29% 15%);
-    color: white;
+    background-color: var(--primary-color);
+    color: var(--primary-color-text);
     text-align: left;
     padding: 20px;
     margin-bottom: 0px;
@@ -28,7 +41,7 @@ body {
 .banner p {
     margin: 5px 0 0 0;
     font-size: 1.1rem;
-    color: #ffffffa3;
+    color: var(--primary-color-text-secondary);
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
@@ -44,7 +57,7 @@ body {
 }
 
 .fa-github{
-    color: white;
+    color: var(--primary-color-text);
     text-decoration: none;
     font-size: 3rem;
     padding-bottom: 10px;
@@ -55,18 +68,18 @@ body {
 }
 
 .contact-email a{
-    color: #ffffff;
+    color: var(--primary-color-text);
 }
 
 .web-copyright{
-    color: #ffffffa3;
+    color: var(--primary-color-text-secondary);
     font-size: 0.7rem;
     margin-bottom: 5px; /* Add small space above icon */
     text-align: right;
     text-decoration: none;
 }
 .web-copyright a{
-    color: #ffffffa3;
+    color: var(--primary-color-text-secondary);
 }
 
 .container {
@@ -76,7 +89,7 @@ body {
 .sidebar {
     min-width: 240px;
     max-width: 300px;
-    background-color: #fff;
+    background-color: var(--background-color-sidebar);
     box-shadow: 2px 0 5px rgba(0,0,0,0.1);
     /* overflow-y: auto; */
     position: sticky;
@@ -146,7 +159,7 @@ body {
 .card-front,
 .card-back {
     border-radius: 8px;
-    background-color: #fff;
+    background-color: var(--background-color-sidebar);
     box-shadow: 0 4px 6px rgba(0,0,0,0.2);
     position: absolute;
     overflow: hidden;
@@ -160,12 +173,7 @@ body {
     box-sizing: border-box;
 }
 
-.card-front {
-    background-color: #fff;
-}
-
 .card-back {
-    background-color: #fff;
     transform: rotateY(180deg);
 }
 
@@ -194,7 +202,7 @@ body {
 .card-header {
     width: 100%;
     text-align: center;
-    background-color: #eeeeee;
+    background-color: var(--card-header-background);
     padding-top: 20px;
 }
 
@@ -210,7 +218,7 @@ body {
 
 .card-subheading {
     font-size: 1rem;
-    color: #999;
+    color: var(--card-text-color-light);
     margin-bottom: 10px;
 }
 .card-image {
@@ -241,9 +249,8 @@ body {
     align-items: flex-end;
     gap: 4px;
     font-size: smaller;
-    color: #555;
+    color: var(--card-text-color-dark);
     padding: 10px;
-    background-color: #fff;
 }
 
 .card-links{
@@ -263,7 +270,7 @@ body {
 
 .card-link a {
     text-decoration: none;
-    color: #007bff;
+    color: var(--primary-color);
 }
 
 .card-summary {
@@ -272,14 +279,14 @@ body {
     display: flex;
     float: left;
     text-align: left;
-    color: #333;
+    color: var(--card-text-color-dark);
 }
 
 .card-data-access{
     margin-top: 10px;
     font-size: 0.9rem;
     text-align: left;
-    color: #333;
+    color: var(--card-text-color-dark);
 }
 .card-data-access-label{
     font-weight: bold;
@@ -300,7 +307,7 @@ body {
 .card-detail{
     font-size: 0.9rem;
     text-align: left;
-    color: #555;
+    color: var(--card-text-color-dark);
     /* compute max height */
     /* overflow-y: auto; */
     padding-top: 10px;
@@ -320,8 +327,8 @@ body {
     left: 0; /* Add this */
     width: 100%;
     min-height: 130px;
-    background-color: hwb(211 29% 15%);
-    color: white;
+    background-color: var(--primary-color);
+    color: var(--primary-color-text);
     padding-top: 10px;
     padding-bottom: 10px;
     font-size: 0.8rem;
@@ -334,7 +341,7 @@ body {
 }
 
 .footer .submit{
-    color: white;
+    color: var(--primary-color-text);
     text-decoration: underline;
     font-size: 1.1rem;
     margin-bottom: 20px;
@@ -366,8 +373,8 @@ body {
     #toggle-filters-btn {
         width: 100%;
         padding: 12px;
-        background-color: hwb(211 29% 15%);
-        color: white;
+        background-color: var(--primary-color);
+        color: var(--primary-color-text);
         border: none;
         border-radius: 4px;
         font-size: 1rem;
@@ -379,7 +386,7 @@ body {
     }
 
     #toggle-filters-btn:hover {
-        background-color: hwb(211 29% 25%);
+        background-color: var(--primary-color);
     }
 
     /* Hide sidebar by default on mobile */

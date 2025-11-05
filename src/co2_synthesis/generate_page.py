@@ -6,6 +6,7 @@ from jinja2 import Environment, FileSystemLoader
 from .google_sheet import get_sheet_data, download_sheet_as_excel
 from .config import cfg
 from .filters import create_filters
+from .images import process_images_in_df
 from loguru import logger
 
 
@@ -19,6 +20,12 @@ def generate_page_main(google_sheet_url: str):
     logger.debug(f"Fetching data from Google Sheet: {google_sheet_url}")
     df = get_sheet_data(google_sheet_url, reader='pandas', index_col=0, skiprows=1)
     df = get_valid_products_only(df)
+    df = process_images_in_df(
+        df, 
+        name_column="card-title", 
+        image_url_column="card-image", 
+        overwrite=False, 
+        target_size_mb=0.3)
     logger.debug(f"Retrieved {len(df)} rows from Google Sheet.\n{df.T}")
 
     products = list(df.apply(process_product_row, axis=1))
