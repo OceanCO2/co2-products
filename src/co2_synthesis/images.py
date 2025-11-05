@@ -27,8 +27,6 @@ def process_images_in_df(
     """Process images for all rows in a dataframe given an image URL column."""
     processed_image_paths = []
 
-    save_dir = save_dir.relative_to(cfg.ROOT)
-
     for _, row in df.iterrows():
         url = row[image_url_column]
         product_name = row[name_column]
@@ -38,13 +36,15 @@ def process_images_in_df(
         save_path.parent.mkdir(parents=True, exist_ok=True)
 
         try:
+            logger.debug(f"Processing image for {product_name} from {url}")
             processed_path = process_image_from_url(
                 url,
                 save_path=save_path,
                 target_size_mb=target_size_mb,
                 overwrite=overwrite
             )
-            processed_path = processed_path.relative_to(cfg.ROOT)
+            relative_to = cfg.ROOT / "docs/" if cfg.LOCAL_BUILD else cfg.ROOT
+            processed_path = processed_path.relative_to(relative_to)
             
         except Exception as e:
             logger.warning(f"Error processing image for {product_name} from {url}: {e}")
