@@ -43,7 +43,8 @@ def process_images_in_df(
                 target_size_mb=target_size_mb,
                 overwrite=overwrite
             )
-            relative_to = cfg.ROOT / "docs/" if cfg.LOCAL_BUILD else cfg.ROOT
+
+            relative_to = cfg.ROOT / "docs/"
             processed_path = processed_path.relative_to(relative_to)
             
         except Exception as e:
