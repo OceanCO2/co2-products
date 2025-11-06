@@ -12,6 +12,8 @@ class Config(BaseSettings):
     
     GOOGLE_SHEET_ID: str
     GOOGLE_TAB_ID: str
+    GOOGLE_SHEET_SKIPROWS: int = 1
+    GOOGLE_SHEET_INDEXCOL: int = 0
 
     GITHUB_REPO: str = 'https://github.com/OceanCO2/co2-products'
     SUBMISSION_FORM: str = "https://docs.google.com/forms/d/e/1FAIpQLSdguEed1sRdgHjhP_KsgHeh_G7gHjz8qGmuTu9C7K_fK7hyUQ/viewform"
@@ -20,7 +22,8 @@ class Config(BaseSettings):
     # website settings
     WEBSITE_TITLE: str = "Ocean CO2 Products"
     WEBSITE_DESCRIPTION: str = "Ocean carbon products from Jiang et al. (2025)"
-    WEBSITE_COPY: str = "&copy; Website by <a href='https://github.com/lukegre/' target='_blank'>Luke Gregor</a> (2025)"
+    WEBSITE_IMAGE_MB: float = 0.3  # target max image size in MB
+    WEBSITE_COLOR: str = "#0095ff"  # primary color for website
 
     # Filter settings
     DATA_FILTERS: tuple[str, ...] = (

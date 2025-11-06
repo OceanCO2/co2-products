@@ -1,10 +1,3 @@
-<!-- 
- 'Temporal resolution': {'options': ['climatology', 'monthly', '8-daily'], 'type': 'multi-select'},
- 'Spatial resolution': {'options': ['0.25', '1.0'], 'type': 'multi-select'},
- 'Period': {'type': 'date-range', 'min_max': [1982, 2024], 'default': [1982, 2022]},
- 'Spatial domains': {'options': ['Surface', 'Open Ocean'], 'type': 'multi-select'}
--->
-
 <div class="sidebar">
     <h2>Filters</h2>
     <div class="sidebar-filters"> {%- for name, f in filters.items() -%}
@@ -40,6 +33,6 @@
         <div class="contact-email">
             for help, <a href="mailto:{{ cfg.CONTACT_EMAIL }}">{{ cfg.CONTACT_EMAIL }}</a>
         </div>
-        <div class="web-copyright">{{ cfg.WEBSITE_COPY }}</div>
+        <div class="web-copyright">&copy; Website by <a href='https://github.com/lukegre/' target='_blank'>Luke Gregor</a> (2025)</div>
     </footer>    
 </div>

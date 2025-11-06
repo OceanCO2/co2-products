@@ -10,7 +10,7 @@ from .google_sheet import get_url_from_sheet_id_and_gid
 def main():
     """Main CLI entry point."""
     parser = argparse.ArgumentParser(
-        description="Generate static web page for ocean CO2 products synthesis"
+        description="Generate static web page for data products"
     )
     parser.add_argument(
         "--version",

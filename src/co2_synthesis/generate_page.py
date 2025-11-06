@@ -18,34 +18,39 @@ def generate_page_main(google_sheet_url: str, overwrite_images: bool = False):
     output_dir.mkdir(exist_ok=True)  # create if doesn't exist
 
     logger.info(f"Fetching data from Google Sheet: {google_sheet_url}")
-    df = get_sheet_data(google_sheet_url, reader='pandas', index_col=0, skiprows=1)
+    df = get_sheet_data(google_sheet_url, reader='pandas', index_col=cfg.GOOGLE_SHEET_INDEXCOL, skiprows=cfg.GOOGLE_SHEET_SKIPROWS)
     df = get_valid_products_only(df)
     df = process_images_in_df(
         df, 
         name_column="card-title", 
         image_url_column="card-image", 
         overwrite=overwrite_images, 
-        target_size_mb=0.3)
+        target_size_mb=cfg.WEBSITE_IMAGE_MB)
     logger.info(f"Retrieved {len(df)} rows from Google Sheet.\n{df.T}")
 
     products = list(df.apply(process_product_row, axis=1))
     filters = create_filters(products)
+
+    render_jinja_template(template_dir, 'template.html', output_dir / 'index.html', products=products, filters=filters, cfg=cfg)
+    render_jinja_template(static_dir, "styles.css", output_dir / 'styles.css', cfg=cfg)
     
-    jinja2_env = Environment(loader=FileSystemLoader(template_dir))
-    template = jinja2_env.get_template('template.html')
-
-    html = template.render(products=products, filters=filters, cfg=cfg)
-
-    with open(output_dir / 'index.html', 'w') as f:
-        f.write(html)
+    # Copy static files
+    for file in ['scripts.js']:
+        shutil.copy(static_dir / file, output_dir / file)
 
     download_sheet_as_excel(google_sheet_url, output_dir / 'data.xlsx')
     logger.info("Downloaded Google Sheet as Excel file for backup.")
 
-    # Copy static files
-    for file in ['styles.css', 'scripts.js']:
-        shutil.copy(static_dir / file, output_dir / file)
 
+def render_jinja_template(template_dir, template_file, output_path, **kwargs):
+
+    jinja2_env = Environment(loader=FileSystemLoader(template_dir))
+    template = jinja2_env.get_template(template_file)
+
+    html = template.render(**kwargs)
+
+    with open(output_path, 'w') as f:
+        f.write(html)
 
 def get_valid_products_only(products: pd.DataFrame) -> pd.DataFrame:
     """

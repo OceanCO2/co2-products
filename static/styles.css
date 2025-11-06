@@ -1,5 +1,5 @@
 :root{
-    --primary-color: hwb(208 0% 7% / 0.793);
+    --primary-color: {{ cfg.WEBSITE_COLOR }};
     --primary-color-text: rgb(255, 255, 255);
     --primary-color-text-secondary: #ffffffa3;
     
