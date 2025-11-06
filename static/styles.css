@@ -7,7 +7,7 @@
     
     --background-color-content: #f8f9fa;
     --card-header-background: #eeeeee;
-    --card-text-color-dark: #333333;
+    --card-text-color-dark: #555555;
     --card-text-color-light: #999999;
 }
 
@@ -24,10 +24,7 @@ body {
     text-align: left;
     padding: 20px;
     margin-bottom: 0px;
-    /* --- NEW FLEXBOX LAYOUT --- */
     display: flex; 
-    /* flex: 1; */
-    /* min-width: 0; */
     overflow: hidden;
     align-items: center; /* Vertically center items */
     justify-content: space-between; /* Push title and web-info to ends */
@@ -83,7 +80,6 @@ body {
     max-width: 300px;
     background-color: var(--background-color-sidebar);
     box-shadow: 2px 0 5px rgba(0,0,0,0.1);
-    /* overflow-y: auto; */
     position: sticky;
     top: 0;
     height: 100vh;
@@ -251,10 +247,9 @@ body {
 .card-summary {
     font-size: 0.9rem;
     flex: 1;
-    vertical-align: top;
-    text-align: left;
-    margin: 20px 30px;
+    margin: 5px 30px 0px 30px;
     color: var(--card-text-color-dark);
+    overflow: hidden;
 }
 
 .card-data-access{

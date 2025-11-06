@@ -1,4 +1,3 @@
-<!-- <div class="product-card" {{ p['data-attrs'] }}> -->
 <div class="product-card" {{ p['data-attrs']|safe }}>
     <div class="card-inner">
         <div class="card-front">
@@ -15,7 +14,6 @@
             <div class="card-attributes">
                 {%- for attr in p['card-attribute'] -%}
                 {%- if attr['value'] -%}
-                <!-- card-attribute-icon if fontawesome - and then hover text with description -->
                 <div class="card-attr">
                     <i class="{{ attr['icon']|safe }}" title="{{ attr['label'] }}"></i>
                     <span class="card-attribute-value">{{ attr['value'] }}</span>
