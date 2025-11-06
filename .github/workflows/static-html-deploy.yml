@@ -2,13 +2,16 @@
 name: Deploy static content to Pages
 
 on:
-  # Runs on pushes targeting the default branch
+  # (A) Runs on pushes that touch docs (for manual edits by humans)
   push:
     paths:
       - docs/**
-
-  # Allows you to run this workflow manually from the Actions tab
+  # (B) Manual button
   workflow_dispatch:
+  # (C) Chained trigger: when either source build workflow finishes successfully
+  workflow_run:
+    workflows: ["Build HTML manually", "Build HTML triggered by Google Sheets"]
+    types: [completed]
 
 # Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
 permissions:
@@ -25,19 +28,27 @@ concurrency:
 jobs:
   # Single deploy job since we're just deploying
   deploy:
+    # Run only if:
+    #  - workflow_run finished successfully OR
+    #  - push/manual dispatch NOT created by the auto-commit message
+    if: >
+      ${{ (github.event_name == 'workflow_run' && github.event.workflow_run.conclusion == 'success') ||
+      (github.event_name != 'workflow_run' && !(github.event_name == 'push' && contains(github.event.head_commit.message, 'ci: Auto-update files from Google Sheet trigger'))) }}
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
+      - name: Checkout docs revision
         uses: actions/checkout@v4
+        with:
+          # For workflow_run use the exact commit SHA that produced docs; else default
+          ref: ${{ github.event_name == 'workflow_run' && github.event.workflow_run.head_sha || '' }}
       - name: Setup Pages
         uses: actions/configure-pages@v5
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          # Only docs
           path: './docs/'
       - name: Deploy to GitHub Pages
         id: deployment
