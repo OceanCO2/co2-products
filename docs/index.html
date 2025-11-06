@@ -23,14 +23,7 @@
                 <i class="fas fa-filter"></i> Show Filters
             </button>
         </div>
-        <!-- 
- 'Temporal resolution': {'options': ['climatology', 'monthly', '8-daily'], 'type': 'multi-select'},
- 'Spatial resolution': {'options': ['0.25', '1.0'], 'type': 'multi-select'},
- 'Period': {'type': 'date-range', 'min_max': [1982, 2024], 'default': [1982, 2022]},
- 'Spatial domains': {'options': ['Surface', 'Open Ocean'], 'type': 'multi-select'}
--->
-
-<div class="sidebar">
+        <div class="sidebar">
     <h2>Filters</h2>
     <div class="sidebar-filters"><div class="filter">
             <label>Data Type</label><input type="checkbox" class="filter-checkbox" data-filter="Data Type" data-filter-type="multi-select"
@@ -54,7 +47,8 @@
                 value="decadal"> decadal<br><input type="checkbox" class="filter-checkbox" data-filter="Temporal resolution" data-filter-type="multi-select"
                 value="discrete"> discrete<br><input type="checkbox" class="filter-checkbox" data-filter="Temporal resolution" data-filter-type="multi-select"
                 value="irregular"> irregular<br><input type="checkbox" class="filter-checkbox" data-filter="Temporal resolution" data-filter-type="multi-select"
-                value="monthly"> monthly<br></div><div class="filter">
+                value="monthly"> monthly<br><input type="checkbox" class="filter-checkbox" data-filter="Temporal resolution" data-filter-type="multi-select"
+                value="sub-annual"> sub-annual<br></div><div class="filter">
             <label>Spatial resolution</label><input type="checkbox" class="filter-checkbox" data-filter="Spatial resolution" data-filter-type="multi-select"
                 value="0.25° x 0.25°"> 0.25° x 0.25°<br><input type="checkbox" class="filter-checkbox" data-filter="Spatial resolution" data-filter-type="multi-select"
                 value="0.33° x 0.33°"> 0.33° x 0.33°<br><input type="checkbox" class="filter-checkbox" data-filter="Spatial resolution" data-filter-type="multi-select"
@@ -76,8 +70,7 @@
     </footer>    
 </div>
         <div class="content">
-            <div class="products"><!-- <div class="product-card" data-data-type="Data compilations" data-spatial-domains="Open ocean||Coastal ocean||Surface" data-period="1960 - 2025"> -->
-<div class="product-card" data-data-type="Data compilations" data-spatial-domains="Open ocean||Coastal ocean||Surface" data-period="1960 - 2025">
+            <div class="products"><div class="product-card" data-data-type="Data compilations" data-spatial-domains="Open ocean||Coastal ocean||Surface" data-period="1960 - 2025">
     <div class="card-inner">
         <div class="card-front">
             <div class="card-header">
@@ -90,12 +83,10 @@
             <div class="card-summary">
                 The largest collection of surface ocean carbon observations
             </div>
-            <div class="card-attributes"><!-- card-attribute-icon if fontawesome - and then hover text with description -->
-                <div class="card-attr">
+            <div class="card-attributes"><div class="card-attr">
                     <i class="fa-solid fa-globe" title="Spatial domains"></i>
                     <span class="card-attribute-value">Open ocean, Coastal ocean, Surface</span>
-                </div><!-- card-attribute-icon if fontawesome - and then hover text with description -->
-                <div class="card-attr">
+                </div><div class="card-attr">
                     <i class="fa-solid fa-calendar-days" title="Period"></i>
                     <span class="card-attribute-value">1960 - 2025</span>
                 </div></div>
@@ -122,8 +113,7 @@
             </div>  
         </div>
     </div>
-</div><!-- <div class="product-card" data-data-type="Data compilations" data-spatial-domains="Open ocean||Surface"> -->
-<div class="product-card" data-data-type="Data compilations" data-spatial-domains="Open ocean||Surface">
+</div><div class="product-card" data-data-type="Data compilations" data-spatial-domains="Open ocean||Surface">
     <div class="card-inner">
         <div class="card-front">
             <div class="card-header">
@@ -136,8 +126,7 @@
             <div class="card-summary">
                 The LDEO database reports pCO2 exclusively from equilibrator-CO2 analyzer systems
             </div>
-            <div class="card-attributes"><!-- card-attribute-icon if fontawesome - and then hover text with description -->
-                <div class="card-attr">
+            <div class="card-attributes"><div class="card-attr">
                     <i class="fa-solid fa-globe" title="Spatial domains"></i>
                     <span class="card-attribute-value">Open ocean, Surface</span>
                 </div></div>
@@ -164,8 +153,7 @@
             </div>  
         </div>
     </div>
-</div><!-- <div class="product-card" data-data-type="Data compilations" data-spatial-domains="Open ocean||Water column" data-period="1960 - 2024"> -->
-<div class="product-card" data-data-type="Data compilations" data-spatial-domains="Open ocean||Water column" data-period="1960 - 2024">
+</div><div class="product-card" data-data-type="Data compilations" data-spatial-domains="Open ocean||Water column" data-period="1960 - 2024">
     <div class="card-inner">
         <div class="card-front">
             <div class="card-header">
@@ -178,12 +166,10 @@
             <div class="card-summary">
                 Adjustments are applied by comparing data in the deep ocean (>2000 m) using a crossover and inversion method as described by Johnson et al. (2001).
             </div>
-            <div class="card-attributes"><!-- card-attribute-icon if fontawesome - and then hover text with description -->
-                <div class="card-attr">
+            <div class="card-attributes"><div class="card-attr">
                     <i class="fa-solid fa-globe" title="Spatial domains"></i>
                     <span class="card-attribute-value">Open ocean, Water column</span>
-                </div><!-- card-attribute-icon if fontawesome - and then hover text with description -->
-                <div class="card-attr">
+                </div><div class="card-attr">
                     <i class="fa-solid fa-calendar-days" title="Period"></i>
                     <span class="card-attribute-value">1960 - 2024</span>
                 </div></div>
@@ -210,8 +196,7 @@
             </div>  
         </div>
     </div>
-</div><!-- <div class="product-card" data-data-type="Data compilations" data-spatial-domains="Open ocean||Water column"> -->
-<div class="product-card" data-data-type="Data compilations" data-spatial-domains="Open ocean||Water column">
+</div><div class="product-card" data-data-type="Data compilations" data-spatial-domains="Open ocean||Water column">
     <div class="card-inner">
         <div class="card-front">
             <div class="card-header">
@@ -224,8 +209,7 @@
             <div class="card-summary">
                 Similar to GLODAPv2, with no adjustments
             </div>
-            <div class="card-attributes"><!-- card-attribute-icon if fontawesome - and then hover text with description -->
-                <div class="card-attr">
+            <div class="card-attributes"><div class="card-attr">
                     <i class="fa-solid fa-globe" title="Spatial domains"></i>
                     <span class="card-attribute-value">Open ocean, Water column</span>
                 </div></div>
@@ -252,8 +236,7 @@
             </div>  
         </div>
     </div>
-</div><!-- <div class="product-card" data-data-type="Data compilations" data-spatial-domains="Open ocean||Coastal ocean||Surface||Water column||Regional" data-period="1993-2022"> -->
-<div class="product-card" data-data-type="Data compilations" data-spatial-domains="Open ocean||Coastal ocean||Surface||Water column||Regional" data-period="1993-2022">
+</div><div class="product-card" data-data-type="Data compilations" data-spatial-domains="Open ocean||Coastal ocean||Surface||Water column||Regional" data-period="1993-2022">
     <div class="card-inner">
         <div class="card-front">
             <div class="card-header">
@@ -266,12 +249,10 @@
             <div class="card-summary">
                 A compilation of cruises from multiple French initiatives
             </div>
-            <div class="card-attributes"><!-- card-attribute-icon if fontawesome - and then hover text with description -->
-                <div class="card-attr">
+            <div class="card-attributes"><div class="card-attr">
                     <i class="fa-solid fa-globe" title="Spatial domains"></i>
                     <span class="card-attribute-value">Open ocean, Coastal ocean, Surface, Water column, Regional</span>
-                </div><!-- card-attribute-icon if fontawesome - and then hover text with description -->
-                <div class="card-attr">
+                </div><div class="card-attr">
                     <i class="fa-solid fa-calendar-days" title="Period"></i>
                     <span class="card-attribute-value">1993-2022</span>
                 </div></div>
@@ -298,8 +279,7 @@
             </div>  
         </div>
     </div>
-</div><!-- <div class="product-card" data-data-type="Data compilations" data-spatial-domains="Coastal ocean||Water column" data-period="2003 - 2018"> -->
-<div class="product-card" data-data-type="Data compilations" data-spatial-domains="Coastal ocean||Water column" data-period="2003 - 2018">
+</div><div class="product-card" data-data-type="Data compilations" data-spatial-domains="Coastal ocean||Water column" data-period="2003 - 2018">
     <div class="card-inner">
         <div class="card-front">
             <div class="card-header">
@@ -312,12 +292,10 @@
             <div class="card-summary">
                 Like GLODAPv2, but for the North American coastal ocean
             </div>
-            <div class="card-attributes"><!-- card-attribute-icon if fontawesome - and then hover text with description -->
-                <div class="card-attr">
+            <div class="card-attributes"><div class="card-attr">
                     <i class="fa-solid fa-globe" title="Spatial domains"></i>
                     <span class="card-attribute-value">Coastal ocean, Water column</span>
-                </div><!-- card-attribute-icon if fontawesome - and then hover text with description -->
-                <div class="card-attr">
+                </div><div class="card-attr">
                     <i class="fa-solid fa-calendar-days" title="Period"></i>
                     <span class="card-attribute-value">2003 - 2018</span>
                 </div></div>
@@ -344,8 +322,7 @@
             </div>  
         </div>
     </div>
-</div><!-- <div class="product-card" data-data-type="Data compilations" data-spatial-domains="Coastal ocean||Water column" data-temporal-resolution="discrete" data-period="2008 - 2017"> -->
-<div class="product-card" data-data-type="Data compilations" data-spatial-domains="Coastal ocean||Water column" data-temporal-resolution="discrete" data-period="2008 - 2017">
+</div><div class="product-card" data-data-type="Data compilations" data-spatial-domains="Coastal ocean||Water column" data-temporal-resolution="discrete" data-period="2008 - 2017">
     <div class="card-inner">
         <div class="card-front">
             <div class="card-header">
@@ -358,16 +335,13 @@
             <div class="card-summary">
                 A synthesis of twenty cruises from 2008 to 2017 on the Gulf of Alaska (GAK) Line
             </div>
-            <div class="card-attributes"><!-- card-attribute-icon if fontawesome - and then hover text with description -->
-                <div class="card-attr">
+            <div class="card-attributes"><div class="card-attr">
                     <i class="fa-solid fa-globe" title="Spatial domains"></i>
                     <span class="card-attribute-value">Coastal ocean, Water column</span>
-                </div><!-- card-attribute-icon if fontawesome - and then hover text with description -->
-                <div class="card-attr">
+                </div><div class="card-attr">
                     <i class="fa-solid fa-hourglass-start" title="Temporal resolution"></i>
                     <span class="card-attribute-value">discrete</span>
-                </div><!-- card-attribute-icon if fontawesome - and then hover text with description -->
-                <div class="card-attr">
+                </div><div class="card-attr">
                     <i class="fa-solid fa-calendar-days" title="Period"></i>
                     <span class="card-attribute-value">2008 - 2017</span>
                 </div></div>
@@ -394,8 +368,7 @@
             </div>  
         </div>
     </div>
-</div><!-- <div class="product-card" data-data-type="Data compilations" data-spatial-domains="Coastal ocean||Water column"> -->
-<div class="product-card" data-data-type="Data compilations" data-spatial-domains="Coastal ocean||Water column">
+</div><div class="product-card" data-data-type="Data compilations" data-spatial-domains="Coastal ocean||Water column">
     <div class="card-inner">
         <div class="card-front">
             <div class="card-header">
@@ -408,8 +381,7 @@
             <div class="card-summary">
                 A data compilation and multi-stressor (OA, hypoxia, temperature) data product based on cruises from 2002 to 2018 in the southern Salish Sea and Washington coast. 
             </div>
-            <div class="card-attributes"><!-- card-attribute-icon if fontawesome - and then hover text with description -->
-                <div class="card-attr">
+            <div class="card-attributes"><div class="card-attr">
                     <i class="fa-solid fa-globe" title="Spatial domains"></i>
                     <span class="card-attribute-value">Coastal ocean, Water column</span>
                 </div></div>
@@ -436,8 +408,7 @@
             </div>  
         </div>
     </div>
-</div><!-- <div class="product-card" data-data-type="Time series" data-spatial-domains="Open ocean||Coastal ocean||Surface"> -->
-<div class="product-card" data-data-type="Time series" data-spatial-domains="Open ocean||Coastal ocean||Surface">
+</div><div class="product-card" data-data-type="Time series" data-spatial-domains="Open ocean||Coastal ocean||Surface">
     <div class="card-inner">
         <div class="card-front">
             <div class="card-header">
@@ -450,8 +421,7 @@
             <div class="card-summary">
                 Based on 40 moored surface pCO2 time-series, with 17 of them containing pH
             </div>
-            <div class="card-attributes"><!-- card-attribute-icon if fontawesome - and then hover text with description -->
-                <div class="card-attr">
+            <div class="card-attributes"><div class="card-attr">
                     <i class="fa-solid fa-globe" title="Spatial domains"></i>
                     <span class="card-attribute-value">Open ocean, Coastal ocean, Surface</span>
                 </div></div>
@@ -478,8 +448,7 @@
             </div>  
         </div>
     </div>
-</div><!-- <div class="product-card" data-data-type="Time series" data-spatial-domains="Coastal ocean" data-temporal-resolution="discrete"> -->
-<div class="product-card" data-data-type="Time series" data-spatial-domains="Coastal ocean" data-temporal-resolution="discrete">
+</div><div class="product-card" data-data-type="Time series" data-spatial-domains="Coastal ocean" data-temporal-resolution="discrete">
     <div class="card-inner">
         <div class="card-front">
             <div class="card-header">
@@ -492,12 +461,10 @@
             <div class="card-summary">
                 Carbonate chemistry at a coastal site of the Bay of Villefranche, France
             </div>
-            <div class="card-attributes"><!-- card-attribute-icon if fontawesome - and then hover text with description -->
-                <div class="card-attr">
+            <div class="card-attributes"><div class="card-attr">
                     <i class="fa-solid fa-globe" title="Spatial domains"></i>
                     <span class="card-attribute-value">Coastal ocean</span>
-                </div><!-- card-attribute-icon if fontawesome - and then hover text with description -->
-                <div class="card-attr">
+                </div><div class="card-attr">
                     <i class="fa-solid fa-hourglass-start" title="Temporal resolution"></i>
                     <span class="card-attribute-value">discrete</span>
                 </div></div>
@@ -524,8 +491,7 @@
             </div>  
         </div>
     </div>
-</div><!-- <div class="product-card" data-data-type="Time series" data-spatial-domains="Coastal ocean" data-temporal-resolution="continuous||discrete"> -->
-<div class="product-card" data-data-type="Time series" data-spatial-domains="Coastal ocean" data-temporal-resolution="continuous||discrete">
+</div><div class="product-card" data-data-type="Time series" data-spatial-domains="Coastal ocean" data-temporal-resolution="continuous||discrete">
     <div class="card-inner">
         <div class="card-front">
             <div class="card-header">
@@ -538,12 +504,10 @@
             <div class="card-summary">
                 Carbonate chemistry at a coastal site of Kongsfjorden, Spitsbergen
             </div>
-            <div class="card-attributes"><!-- card-attribute-icon if fontawesome - and then hover text with description -->
-                <div class="card-attr">
+            <div class="card-attributes"><div class="card-attr">
                     <i class="fa-solid fa-globe" title="Spatial domains"></i>
                     <span class="card-attribute-value">Coastal ocean</span>
-                </div><!-- card-attribute-icon if fontawesome - and then hover text with description -->
-                <div class="card-attr">
+                </div><div class="card-attr">
                     <i class="fa-solid fa-hourglass-start" title="Temporal resolution"></i>
                     <span class="card-attribute-value">continuous, discrete</span>
                 </div></div>
@@ -570,8 +534,7 @@
             </div>  
         </div>
     </div>
-</div><!-- <div class="product-card" data-data-type="Gridded surface" data-spatial-domains="Open ocean||Surface" data-temporal-resolution="monthly" data-spatial-resolution="1° x 1°" data-period="1982 - 2020"> -->
-<div class="product-card" data-data-type="Gridded surface" data-spatial-domains="Open ocean||Surface" data-temporal-resolution="monthly" data-spatial-resolution="1° x 1°" data-period="1982 - 2020">
+</div><div class="product-card" data-data-type="Gridded surface" data-spatial-domains="Open ocean||Surface" data-temporal-resolution="monthly" data-spatial-resolution="1° x 1°" data-period="1982 - 2020">
     <div class="card-inner">
         <div class="card-front">
             <div class="card-header">
@@ -584,20 +547,16 @@
             <div class="card-summary">
                 Various ML methods produce different results when data is sparse, but all still achieving roughly the same uncertainty
             </div>
-            <div class="card-attributes"><!-- card-attribute-icon if fontawesome - and then hover text with description -->
-                <div class="card-attr">
+            <div class="card-attributes"><div class="card-attr">
                     <i class="fa-solid fa-globe" title="Spatial domains"></i>
                     <span class="card-attribute-value">Open ocean, Surface</span>
-                </div><!-- card-attribute-icon if fontawesome - and then hover text with description -->
-                <div class="card-attr">
+                </div><div class="card-attr">
                     <i class="fa-solid fa-hourglass-start" title="Temporal resolution"></i>
                     <span class="card-attribute-value">monthly</span>
-                </div><!-- card-attribute-icon if fontawesome - and then hover text with description -->
-                <div class="card-attr">
+                </div><div class="card-attr">
                     <i class="fa-solid fa-ruler-horizontal" title="Spatial resolution"></i>
                     <span class="card-attribute-value">1° x 1°</span>
-                </div><!-- card-attribute-icon if fontawesome - and then hover text with description -->
-                <div class="card-attr">
+                </div><div class="card-attr">
                     <i class="fa-solid fa-calendar-days" title="Period"></i>
                     <span class="card-attribute-value">1982 - 2020</span>
                 </div></div>
@@ -624,8 +583,7 @@
             </div>  
         </div>
     </div>
-</div><!-- <div class="product-card" data-data-type="Gridded surface" data-spatial-domains="Open ocean||Surface" data-temporal-resolution="monthly" data-spatial-resolution="1° x 1°" data-period="1982 - 2022"> -->
-<div class="product-card" data-data-type="Gridded surface" data-spatial-domains="Open ocean||Surface" data-temporal-resolution="monthly" data-spatial-resolution="1° x 1°" data-period="1982 - 2022">
+</div><div class="product-card" data-data-type="Gridded surface" data-spatial-domains="Open ocean||Surface" data-temporal-resolution="monthly" data-spatial-resolution="1° x 1°" data-period="1982 - 2022">
     <div class="card-inner">
         <div class="card-front">
             <div class="card-header">
@@ -638,20 +596,16 @@
             <div class="card-summary">
                 Temporal trends of DIC, TA, pCO2, pH, Ωarag, and Ωcalc
             </div>
-            <div class="card-attributes"><!-- card-attribute-icon if fontawesome - and then hover text with description -->
-                <div class="card-attr">
+            <div class="card-attributes"><div class="card-attr">
                     <i class="fa-solid fa-globe" title="Spatial domains"></i>
                     <span class="card-attribute-value">Open ocean, Surface</span>
-                </div><!-- card-attribute-icon if fontawesome - and then hover text with description -->
-                <div class="card-attr">
+                </div><div class="card-attr">
                     <i class="fa-solid fa-hourglass-start" title="Temporal resolution"></i>
                     <span class="card-attribute-value">monthly</span>
-                </div><!-- card-attribute-icon if fontawesome - and then hover text with description -->
-                <div class="card-attr">
+                </div><div class="card-attr">
                     <i class="fa-solid fa-ruler-horizontal" title="Spatial resolution"></i>
                     <span class="card-attribute-value">1° x 1°</span>
-                </div><!-- card-attribute-icon if fontawesome - and then hover text with description -->
-                <div class="card-attr">
+                </div><div class="card-attr">
                     <i class="fa-solid fa-calendar-days" title="Period"></i>
                     <span class="card-attribute-value">1982 - 2022</span>
                 </div></div>
@@ -678,8 +632,7 @@
             </div>  
         </div>
     </div>
-</div><!-- <div class="product-card" data-data-type="Gridded surface" data-spatial-domains="Open ocean||Surface" data-temporal-resolution="8-day" data-spatial-resolution="0.25° x 0.25°" data-period="1982 - 2023"> -->
-<div class="product-card" data-data-type="Gridded surface" data-spatial-domains="Open ocean||Surface" data-temporal-resolution="8-day" data-spatial-resolution="0.25° x 0.25°" data-period="1982 - 2023">
+</div><div class="product-card" data-data-type="Gridded surface" data-spatial-domains="Open ocean||Surface" data-temporal-resolution="8-day" data-spatial-resolution="0.25° x 0.25°" data-period="1982 - 2023">
     <div class="card-inner">
         <div class="card-front">
             <div class="card-header">
@@ -692,20 +645,16 @@
             <div class="card-summary">
                 Highlighting fine-scale and short-term variability of the ocean carbon sink
             </div>
-            <div class="card-attributes"><!-- card-attribute-icon if fontawesome - and then hover text with description -->
-                <div class="card-attr">
+            <div class="card-attributes"><div class="card-attr">
                     <i class="fa-solid fa-globe" title="Spatial domains"></i>
                     <span class="card-attribute-value">Open ocean, Surface</span>
-                </div><!-- card-attribute-icon if fontawesome - and then hover text with description -->
-                <div class="card-attr">
+                </div><div class="card-attr">
                     <i class="fa-solid fa-hourglass-start" title="Temporal resolution"></i>
                     <span class="card-attribute-value">8-day</span>
-                </div><!-- card-attribute-icon if fontawesome - and then hover text with description -->
-                <div class="card-attr">
+                </div><div class="card-attr">
                     <i class="fa-solid fa-ruler-horizontal" title="Spatial resolution"></i>
                     <span class="card-attribute-value">0.25° x 0.25°</span>
-                </div><!-- card-attribute-icon if fontawesome - and then hover text with description -->
-                <div class="card-attr">
+                </div><div class="card-attr">
                     <i class="fa-solid fa-calendar-days" title="Period"></i>
                     <span class="card-attribute-value">1982 - 2023</span>
                 </div></div>
@@ -732,8 +681,7 @@
             </div>  
         </div>
     </div>
-</div><!-- <div class="product-card" data-data-type="Gridded surface" data-spatial-domains="Open ocean" data-temporal-resolution="monthly" data-spatial-resolution="1° x 1°" data-period="1985-2019"> -->
-<div class="product-card" data-data-type="Gridded surface" data-spatial-domains="Open ocean" data-temporal-resolution="monthly" data-spatial-resolution="1° x 1°" data-period="1985-2019">
+</div><div class="product-card" data-data-type="Gridded surface" data-spatial-domains="Open ocean" data-temporal-resolution="monthly" data-spatial-resolution="1° x 1°" data-period="1985-2019">
     <div class="card-inner">
         <div class="card-front">
             <div class="card-header">
@@ -746,20 +694,16 @@
             <div class="card-summary">
                 Air-sea fluxes of CO2 with adjusted skin temperature effect
             </div>
-            <div class="card-attributes"><!-- card-attribute-icon if fontawesome - and then hover text with description -->
-                <div class="card-attr">
+            <div class="card-attributes"><div class="card-attr">
                     <i class="fa-solid fa-globe" title="Spatial domains"></i>
                     <span class="card-attribute-value">Open ocean</span>
-                </div><!-- card-attribute-icon if fontawesome - and then hover text with description -->
-                <div class="card-attr">
+                </div><div class="card-attr">
                     <i class="fa-solid fa-hourglass-start" title="Temporal resolution"></i>
                     <span class="card-attribute-value">monthly</span>
-                </div><!-- card-attribute-icon if fontawesome - and then hover text with description -->
-                <div class="card-attr">
+                </div><div class="card-attr">
                     <i class="fa-solid fa-ruler-horizontal" title="Spatial resolution"></i>
                     <span class="card-attribute-value">1° x 1°</span>
-                </div><!-- card-attribute-icon if fontawesome - and then hover text with description -->
-                <div class="card-attr">
+                </div><div class="card-attr">
                     <i class="fa-solid fa-calendar-days" title="Period"></i>
                     <span class="card-attribute-value">1985-2019</span>
                 </div></div>
@@ -786,8 +730,7 @@
             </div>  
         </div>
     </div>
-</div><!-- <div class="product-card" data-data-type="Gridded surface" data-spatial-domains="Open ocean||Surface" data-temporal-resolution="decadal||climatology" data-spatial-resolution="1° x 1°" data-period="1770 - 2100"> -->
-<div class="product-card" data-data-type="Gridded surface" data-spatial-domains="Open ocean||Surface" data-temporal-resolution="decadal||climatology" data-spatial-resolution="1° x 1°" data-period="1770 - 2100">
+</div><div class="product-card" data-data-type="Gridded surface" data-spatial-domains="Open ocean||Surface" data-temporal-resolution="decadal||climatology" data-spatial-resolution="1° x 1°" data-period="1770 - 2100">
     <div class="card-inner">
         <div class="card-front">
             <div class="card-header">
@@ -800,20 +743,16 @@
             <div class="card-summary">
                 A model-observation fusion product for pH, acidity and Revelle Factor, leveraging GFDL-ESM2M and SOCATv6
             </div>
-            <div class="card-attributes"><!-- card-attribute-icon if fontawesome - and then hover text with description -->
-                <div class="card-attr">
+            <div class="card-attributes"><div class="card-attr">
                     <i class="fa-solid fa-globe" title="Spatial domains"></i>
                     <span class="card-attribute-value">Open ocean, Surface</span>
-                </div><!-- card-attribute-icon if fontawesome - and then hover text with description -->
-                <div class="card-attr">
+                </div><div class="card-attr">
                     <i class="fa-solid fa-hourglass-start" title="Temporal resolution"></i>
                     <span class="card-attribute-value">decadal, climatology</span>
-                </div><!-- card-attribute-icon if fontawesome - and then hover text with description -->
-                <div class="card-attr">
+                </div><div class="card-attr">
                     <i class="fa-solid fa-ruler-horizontal" title="Spatial resolution"></i>
                     <span class="card-attribute-value">1° x 1°</span>
-                </div><!-- card-attribute-icon if fontawesome - and then hover text with description -->
-                <div class="card-attr">
+                </div><div class="card-attr">
                     <i class="fa-solid fa-calendar-days" title="Period"></i>
                     <span class="card-attribute-value">1770 - 2100</span>
                 </div></div>
@@ -840,8 +779,7 @@
             </div>  
         </div>
     </div>
-</div><!-- <div class="product-card" data-data-type="Gridded surface" data-spatial-domains="Open ocean||Surface" data-temporal-resolution="decadal||climatology" data-spatial-resolution="1° x 1°" data-period="1750 - 2100"> -->
-<div class="product-card" data-data-type="Gridded surface" data-spatial-domains="Open ocean||Surface" data-temporal-resolution="decadal||climatology" data-spatial-resolution="1° x 1°" data-period="1750 - 2100">
+</div><div class="product-card" data-data-type="Gridded surface" data-spatial-domains="Open ocean||Surface" data-temporal-resolution="decadal||climatology" data-spatial-resolution="1° x 1°" data-period="1750 - 2100">
     <div class="card-inner">
         <div class="card-front">
             <div class="card-header">
@@ -854,20 +792,16 @@
             <div class="card-summary">
                 A model-observation fusion product for all major OA indicators, leveraging a consortium of 14 Earth System Models and 3 observational data products
             </div>
-            <div class="card-attributes"><!-- card-attribute-icon if fontawesome - and then hover text with description -->
-                <div class="card-attr">
+            <div class="card-attributes"><div class="card-attr">
                     <i class="fa-solid fa-globe" title="Spatial domains"></i>
                     <span class="card-attribute-value">Open ocean, Surface</span>
-                </div><!-- card-attribute-icon if fontawesome - and then hover text with description -->
-                <div class="card-attr">
+                </div><div class="card-attr">
                     <i class="fa-solid fa-hourglass-start" title="Temporal resolution"></i>
                     <span class="card-attribute-value">decadal, climatology</span>
-                </div><!-- card-attribute-icon if fontawesome - and then hover text with description -->
-                <div class="card-attr">
+                </div><div class="card-attr">
                     <i class="fa-solid fa-ruler-horizontal" title="Spatial resolution"></i>
                     <span class="card-attribute-value">1° x 1°</span>
-                </div><!-- card-attribute-icon if fontawesome - and then hover text with description -->
-                <div class="card-attr">
+                </div><div class="card-attr">
                     <i class="fa-solid fa-calendar-days" title="Period"></i>
                     <span class="card-attribute-value">1750 - 2100</span>
                 </div></div>
@@ -894,8 +828,7 @@
             </div>  
         </div>
     </div>
-</div><!-- <div class="product-card" data-data-type="Gridded surface" data-spatial-domains="Open ocean||Surface" data-temporal-resolution="monthly||climatology" data-spatial-resolution="1° x 1°" data-period="1998 - 2023"> -->
-<div class="product-card" data-data-type="Gridded surface" data-spatial-domains="Open ocean||Surface" data-temporal-resolution="monthly||climatology" data-spatial-resolution="1° x 1°" data-period="1998 - 2023">
+</div><div class="product-card" data-data-type="Gridded surface" data-spatial-domains="Open ocean||Surface" data-temporal-resolution="monthly||climatology" data-spatial-resolution="1° x 1°" data-period="1998 - 2023">
     <div class="card-inner">
         <div class="card-front">
             <div class="card-header">
@@ -908,20 +841,16 @@
             <div class="card-summary">
                 Monthly global sea-air CO2 flux maps in modern era
             </div>
-            <div class="card-attributes"><!-- card-attribute-icon if fontawesome - and then hover text with description -->
-                <div class="card-attr">
+            <div class="card-attributes"><div class="card-attr">
                     <i class="fa-solid fa-globe" title="Spatial domains"></i>
                     <span class="card-attribute-value">Open ocean, Surface</span>
-                </div><!-- card-attribute-icon if fontawesome - and then hover text with description -->
-                <div class="card-attr">
+                </div><div class="card-attr">
                     <i class="fa-solid fa-hourglass-start" title="Temporal resolution"></i>
                     <span class="card-attribute-value">monthly, climatology</span>
-                </div><!-- card-attribute-icon if fontawesome - and then hover text with description -->
-                <div class="card-attr">
+                </div><div class="card-attr">
                     <i class="fa-solid fa-ruler-horizontal" title="Spatial resolution"></i>
                     <span class="card-attribute-value">1° x 1°</span>
-                </div><!-- card-attribute-icon if fontawesome - and then hover text with description -->
-                <div class="card-attr">
+                </div><div class="card-attr">
                     <i class="fa-solid fa-calendar-days" title="Period"></i>
                     <span class="card-attribute-value">1998 - 2023</span>
                 </div></div>
@@ -948,8 +877,7 @@
             </div>  
         </div>
     </div>
-</div><!-- <div class="product-card" data-data-type="Gridded surface" data-spatial-domains="Coastal ocean" data-temporal-resolution="monthly||climatology" data-spatial-resolution="1° x 1°" data-period="2002 - 2019"> -->
-<div class="product-card" data-data-type="Gridded surface" data-spatial-domains="Coastal ocean" data-temporal-resolution="monthly||climatology" data-spatial-resolution="1° x 1°" data-period="2002 - 2019">
+</div><div class="product-card" data-data-type="Gridded surface" data-spatial-domains="Coastal ocean" data-temporal-resolution="monthly||climatology" data-spatial-resolution="1° x 1°" data-period="2002 - 2019">
     <div class="card-inner">
         <div class="card-front">
             <div class="card-header">
@@ -962,20 +890,16 @@
             <div class="card-summary">
                 A 17-year record of  fCO2, TA, pH, Ωarag, and air-sea CO2 flux in the Caribbean Sea 
             </div>
-            <div class="card-attributes"><!-- card-attribute-icon if fontawesome - and then hover text with description -->
-                <div class="card-attr">
+            <div class="card-attributes"><div class="card-attr">
                     <i class="fa-solid fa-globe" title="Spatial domains"></i>
                     <span class="card-attribute-value">Coastal ocean </span>
-                </div><!-- card-attribute-icon if fontawesome - and then hover text with description -->
-                <div class="card-attr">
+                </div><div class="card-attr">
                     <i class="fa-solid fa-hourglass-start" title="Temporal resolution"></i>
                     <span class="card-attribute-value">monthly, climatology</span>
-                </div><!-- card-attribute-icon if fontawesome - and then hover text with description -->
-                <div class="card-attr">
+                </div><div class="card-attr">
                     <i class="fa-solid fa-ruler-horizontal" title="Spatial resolution"></i>
                     <span class="card-attribute-value">1° x 1°</span>
-                </div><!-- card-attribute-icon if fontawesome - and then hover text with description -->
-                <div class="card-attr">
+                </div><div class="card-attr">
                     <i class="fa-solid fa-calendar-days" title="Period"></i>
                     <span class="card-attribute-value">2002 - 2019</span>
                 </div></div>
@@ -1002,8 +926,7 @@
             </div>  
         </div>
     </div>
-</div><!-- <div class="product-card" data-data-type="Gridded surface" data-spatial-domains="Open ocean||Coastal ocean||Surface" data-temporal-resolution="monthly||climatology" data-spatial-resolution="0.25° x 0.25°"> -->
-<div class="product-card" data-data-type="Gridded surface" data-spatial-domains="Open ocean||Coastal ocean||Surface" data-temporal-resolution="monthly||climatology" data-spatial-resolution="0.25° x 0.25°">
+</div><div class="product-card" data-data-type="Gridded surface" data-spatial-domains="Open ocean||Coastal ocean||Surface" data-temporal-resolution="monthly||climatology" data-spatial-resolution="0.25° x 0.25°">
     <div class="card-inner">
         <div class="card-front">
             <div class="card-header">
@@ -1016,16 +939,13 @@
             <div class="card-summary">
                 Monthly gridded pCO2 without adjusting for a specific reference year, high-resolution coastal ocean coverage. 
             </div>
-            <div class="card-attributes"><!-- card-attribute-icon if fontawesome - and then hover text with description -->
-                <div class="card-attr">
+            <div class="card-attributes"><div class="card-attr">
                     <i class="fa-solid fa-globe" title="Spatial domains"></i>
                     <span class="card-attribute-value">Open ocean, Coastal ocean, Surface</span>
-                </div><!-- card-attribute-icon if fontawesome - and then hover text with description -->
-                <div class="card-attr">
+                </div><div class="card-attr">
                     <i class="fa-solid fa-hourglass-start" title="Temporal resolution"></i>
                     <span class="card-attribute-value">monthly, climatology</span>
-                </div><!-- card-attribute-icon if fontawesome - and then hover text with description -->
-                <div class="card-attr">
+                </div><div class="card-attr">
                     <i class="fa-solid fa-ruler-horizontal" title="Spatial resolution"></i>
                     <span class="card-attribute-value">0.25° x 0.25°</span>
                 </div></div>
@@ -1052,8 +972,7 @@
             </div>  
         </div>
     </div>
-</div><!-- <div class="product-card" data-data-type="Gridded surface" data-spatial-domains="Open ocean" data-temporal-resolution="monthly||climatology" data-spatial-resolution="1° x 1°" data-period="1982 - 2025"> -->
-<div class="product-card" data-data-type="Gridded surface" data-spatial-domains="Open ocean" data-temporal-resolution="monthly||climatology" data-spatial-resolution="1° x 1°" data-period="1982 - 2025">
+</div><div class="product-card" data-data-type="Gridded surface" data-spatial-domains="Open ocean" data-temporal-resolution="monthly||climatology" data-spatial-resolution="1° x 1°" data-period="1982 - 2025">
     <div class="card-inner">
         <div class="card-front">
             <div class="card-header">
@@ -1066,20 +985,16 @@
             <div class="card-summary">
                 Monthly gridded pCO2 from 1982 through near present
             </div>
-            <div class="card-attributes"><!-- card-attribute-icon if fontawesome - and then hover text with description -->
-                <div class="card-attr">
+            <div class="card-attributes"><div class="card-attr">
                     <i class="fa-solid fa-globe" title="Spatial domains"></i>
                     <span class="card-attribute-value">Open ocean</span>
-                </div><!-- card-attribute-icon if fontawesome - and then hover text with description -->
-                <div class="card-attr">
+                </div><div class="card-attr">
                     <i class="fa-solid fa-hourglass-start" title="Temporal resolution"></i>
                     <span class="card-attribute-value">monthly, climatology</span>
-                </div><!-- card-attribute-icon if fontawesome - and then hover text with description -->
-                <div class="card-attr">
+                </div><div class="card-attr">
                     <i class="fa-solid fa-ruler-horizontal" title="Spatial resolution"></i>
                     <span class="card-attribute-value">1° x 1°</span>
-                </div><!-- card-attribute-icon if fontawesome - and then hover text with description -->
-                <div class="card-attr">
+                </div><div class="card-attr">
                     <i class="fa-solid fa-calendar-days" title="Period"></i>
                     <span class="card-attribute-value">1982 - 2025</span>
                 </div></div>
@@ -1106,8 +1021,7 @@
             </div>  
         </div>
     </div>
-</div><!-- <div class="product-card" data-data-type="Gridded surface" data-spatial-domains="Coastal ocean||Surface||Regional" data-temporal-resolution="monthly" data-spatial-resolution="0.25° x 0.25°" data-period="1998 - 2024"> -->
-<div class="product-card" data-data-type="Gridded surface" data-spatial-domains="Coastal ocean||Surface||Regional" data-temporal-resolution="monthly" data-spatial-resolution="0.25° x 0.25°" data-period="1998 - 2024">
+</div><div class="product-card" data-data-type="Gridded surface" data-spatial-domains="Coastal ocean||Surface||Regional" data-temporal-resolution="monthly" data-spatial-resolution="0.25° x 0.25°" data-period="1998 - 2024">
     <div class="card-inner">
         <div class="card-front">
             <div class="card-header">
@@ -1120,20 +1034,16 @@
             <div class="card-summary">
                 Temporal trends of OA indicators and estimated uncertainties across 11 U.S. Large Marine Ecosystems (LMEs), with monthly coverage from 1998–2024.
             </div>
-            <div class="card-attributes"><!-- card-attribute-icon if fontawesome - and then hover text with description -->
-                <div class="card-attr">
+            <div class="card-attributes"><div class="card-attr">
                     <i class="fa-solid fa-globe" title="Spatial domains"></i>
                     <span class="card-attribute-value">Coastal ocean, Surface, Regional</span>
-                </div><!-- card-attribute-icon if fontawesome - and then hover text with description -->
-                <div class="card-attr">
+                </div><div class="card-attr">
                     <i class="fa-solid fa-hourglass-start" title="Temporal resolution"></i>
                     <span class="card-attribute-value">monthly</span>
-                </div><!-- card-attribute-icon if fontawesome - and then hover text with description -->
-                <div class="card-attr">
+                </div><div class="card-attr">
                     <i class="fa-solid fa-ruler-horizontal" title="Spatial resolution"></i>
                     <span class="card-attribute-value">0.25° x 0.25°</span>
-                </div><!-- card-attribute-icon if fontawesome - and then hover text with description -->
-                <div class="card-attr">
+                </div><div class="card-attr">
                     <i class="fa-solid fa-calendar-days" title="Period"></i>
                     <span class="card-attribute-value">1998 - 2024</span>
                 </div></div>
@@ -1160,8 +1070,7 @@
             </div>  
         </div>
     </div>
-</div><!-- <div class="product-card" data-data-type="Gridded surface" data-spatial-domains="Open ocean||Coastal ocean||Surface" data-temporal-resolution="monthly||climatology" data-spatial-resolution="1° x 1°" data-period="1985 - 2019"> -->
-<div class="product-card" data-data-type="Gridded surface" data-spatial-domains="Open ocean||Coastal ocean||Surface" data-temporal-resolution="monthly||climatology" data-spatial-resolution="1° x 1°" data-period="1985 - 2019">
+</div><div class="product-card" data-data-type="Gridded surface" data-spatial-domains="Open ocean||Coastal ocean||Surface" data-temporal-resolution="monthly||climatology" data-spatial-resolution="1° x 1°" data-period="1985 - 2019">
     <div class="card-inner">
         <div class="card-front">
             <div class="card-header">
@@ -1174,20 +1083,16 @@
             <div class="card-summary">
                 seamless reconstruction from coastal to open ocean
             </div>
-            <div class="card-attributes"><!-- card-attribute-icon if fontawesome - and then hover text with description -->
-                <div class="card-attr">
+            <div class="card-attributes"><div class="card-attr">
                     <i class="fa-solid fa-globe" title="Spatial domains"></i>
                     <span class="card-attribute-value">Open ocean, Coastal ocean, Surface</span>
-                </div><!-- card-attribute-icon if fontawesome - and then hover text with description -->
-                <div class="card-attr">
+                </div><div class="card-attr">
                     <i class="fa-solid fa-hourglass-start" title="Temporal resolution"></i>
                     <span class="card-attribute-value">monthly, climatology</span>
-                </div><!-- card-attribute-icon if fontawesome - and then hover text with description -->
-                <div class="card-attr">
+                </div><div class="card-attr">
                     <i class="fa-solid fa-ruler-horizontal" title="Spatial resolution"></i>
                     <span class="card-attribute-value">1° x 1°</span>
-                </div><!-- card-attribute-icon if fontawesome - and then hover text with description -->
-                <div class="card-attr">
+                </div><div class="card-attr">
                     <i class="fa-solid fa-calendar-days" title="Period"></i>
                     <span class="card-attribute-value">1985 - 2019</span>
                 </div></div>
@@ -1214,8 +1119,7 @@
             </div>  
         </div>
     </div>
-</div><!-- <div class="product-card" data-data-type="Gridded surface" data-spatial-domains="Open ocean||Coastal ocean||Surface" data-temporal-resolution="monthly||climatology" data-spatial-resolution="0.25° x 0.25°" data-period="1985 - 2025"> -->
-<div class="product-card" data-data-type="Gridded surface" data-spatial-domains="Open ocean||Coastal ocean||Surface" data-temporal-resolution="monthly||climatology" data-spatial-resolution="0.25° x 0.25°" data-period="1985 - 2025">
+</div><div class="product-card" data-data-type="Gridded surface" data-spatial-domains="Open ocean||Coastal ocean||Surface" data-temporal-resolution="monthly||climatology" data-spatial-resolution="0.25° x 0.25°" data-period="1985 - 2025">
     <div class="card-inner">
         <div class="card-front">
             <div class="card-header">
@@ -1228,20 +1132,16 @@
             <div class="card-summary">
                 Yearly extension of time-series & monthly reconstruction at low latency
             </div>
-            <div class="card-attributes"><!-- card-attribute-icon if fontawesome - and then hover text with description -->
-                <div class="card-attr">
+            <div class="card-attributes"><div class="card-attr">
                     <i class="fa-solid fa-globe" title="Spatial domains"></i>
                     <span class="card-attribute-value">Open ocean, Coastal ocean, Surface</span>
-                </div><!-- card-attribute-icon if fontawesome - and then hover text with description -->
-                <div class="card-attr">
+                </div><div class="card-attr">
                     <i class="fa-solid fa-hourglass-start" title="Temporal resolution"></i>
                     <span class="card-attribute-value">monthly, climatology</span>
-                </div><!-- card-attribute-icon if fontawesome - and then hover text with description -->
-                <div class="card-attr">
+                </div><div class="card-attr">
                     <i class="fa-solid fa-ruler-horizontal" title="Spatial resolution"></i>
                     <span class="card-attribute-value">0.25° x 0.25°</span>
-                </div><!-- card-attribute-icon if fontawesome - and then hover text with description -->
-                <div class="card-attr">
+                </div><div class="card-attr">
                     <i class="fa-solid fa-calendar-days" title="Period"></i>
                     <span class="card-attribute-value">1985 - 2025</span>
                 </div></div>
@@ -1268,8 +1168,7 @@
             </div>  
         </div>
     </div>
-</div><!-- <div class="product-card" data-data-type="Gridded surface" data-spatial-domains="Open ocean||Surface" data-temporal-resolution="monthly" data-spatial-resolution="1° x 1°" data-period="1992 - 2024"> -->
-<div class="product-card" data-data-type="Gridded surface" data-spatial-domains="Open ocean||Surface" data-temporal-resolution="monthly" data-spatial-resolution="1° x 1°" data-period="1992 - 2024">
+</div><div class="product-card" data-data-type="Gridded surface" data-spatial-domains="Open ocean||Surface" data-temporal-resolution="monthly" data-spatial-resolution="1° x 1°" data-period="1992 - 2024">
     <div class="card-inner">
         <div class="card-front">
             <div class="card-header">
@@ -1282,20 +1181,16 @@
             <div class="card-summary">
                 ML-based selection of predictors considering regional differences of pCO2 drivers
             </div>
-            <div class="card-attributes"><!-- card-attribute-icon if fontawesome - and then hover text with description -->
-                <div class="card-attr">
+            <div class="card-attributes"><div class="card-attr">
                     <i class="fa-solid fa-globe" title="Spatial domains"></i>
                     <span class="card-attribute-value">Open ocean, Surface</span>
-                </div><!-- card-attribute-icon if fontawesome - and then hover text with description -->
-                <div class="card-attr">
+                </div><div class="card-attr">
                     <i class="fa-solid fa-hourglass-start" title="Temporal resolution"></i>
                     <span class="card-attribute-value">monthly</span>
-                </div><!-- card-attribute-icon if fontawesome - and then hover text with description -->
-                <div class="card-attr">
+                </div><div class="card-attr">
                     <i class="fa-solid fa-ruler-horizontal" title="Spatial resolution"></i>
                     <span class="card-attribute-value">1° x 1°</span>
-                </div><!-- card-attribute-icon if fontawesome - and then hover text with description -->
-                <div class="card-attr">
+                </div><div class="card-attr">
                     <i class="fa-solid fa-calendar-days" title="Period"></i>
                     <span class="card-attribute-value">1992 - 2024</span>
                 </div></div>
@@ -1322,8 +1217,7 @@
             </div>  
         </div>
     </div>
-</div><!-- <div class="product-card" data-data-type="Gridded surface" data-spatial-domains="Open ocean||Surface" data-temporal-resolution="monthly" data-spatial-resolution="1° x 1°" data-period="1990-2023"> -->
-<div class="product-card" data-data-type="Gridded surface" data-spatial-domains="Open ocean||Surface" data-temporal-resolution="monthly" data-spatial-resolution="1° x 1°" data-period="1990-2023">
+</div><div class="product-card" data-data-type="Gridded surface" data-spatial-domains="Open ocean||Surface" data-temporal-resolution="monthly" data-spatial-resolution="1° x 1°" data-period="1990-2023">
     <div class="card-inner">
         <div class="card-front">
             <div class="card-header">
@@ -1336,20 +1230,16 @@
             <div class="card-summary">
                 Temporal trends of DIC, TA, pCO2, air-sea CO2 flux, pH, and Ωarag.
             </div>
-            <div class="card-attributes"><!-- card-attribute-icon if fontawesome - and then hover text with description -->
-                <div class="card-attr">
+            <div class="card-attributes"><div class="card-attr">
                     <i class="fa-solid fa-globe" title="Spatial domains"></i>
                     <span class="card-attribute-value">Open ocean, Surface</span>
-                </div><!-- card-attribute-icon if fontawesome - and then hover text with description -->
-                <div class="card-attr">
+                </div><div class="card-attr">
                     <i class="fa-solid fa-hourglass-start" title="Temporal resolution"></i>
                     <span class="card-attribute-value">monthly</span>
-                </div><!-- card-attribute-icon if fontawesome - and then hover text with description -->
-                <div class="card-attr">
+                </div><div class="card-attr">
                     <i class="fa-solid fa-ruler-horizontal" title="Spatial resolution"></i>
                     <span class="card-attribute-value">1° x 1°</span>
-                </div><!-- card-attribute-icon if fontawesome - and then hover text with description -->
-                <div class="card-attr">
+                </div><div class="card-attr">
                     <i class="fa-solid fa-calendar-days" title="Period"></i>
                     <span class="card-attribute-value">1990-2023</span>
                 </div></div>
@@ -1376,8 +1266,7 @@
             </div>  
         </div>
     </div>
-</div><!-- <div class="product-card" data-data-type="Gridded surface" data-spatial-domains="Coastal ocean" data-temporal-resolution="continuous||monthly" data-spatial-resolution="0.25° x 0.25°" data-period="1982-2020"> -->
-<div class="product-card" data-data-type="Gridded surface" data-spatial-domains="Coastal ocean" data-temporal-resolution="continuous||monthly" data-spatial-resolution="0.25° x 0.25°" data-period="1982-2020">
+</div><div class="product-card" data-data-type="Gridded surface" data-spatial-domains="Coastal ocean" data-temporal-resolution="continuous||monthly" data-spatial-resolution="0.25° x 0.25°" data-period="1982-2020">
     <div class="card-inner">
         <div class="card-front">
             <div class="card-header">
@@ -1390,20 +1279,16 @@
             <div class="card-summary">
                 Global temporal trends of coastal pCO2 and air-sea CO2 fluxes based on SOCATv2022 with data collected from 1982–2020
             </div>
-            <div class="card-attributes"><!-- card-attribute-icon if fontawesome - and then hover text with description -->
-                <div class="card-attr">
+            <div class="card-attributes"><div class="card-attr">
                     <i class="fa-solid fa-globe" title="Spatial domains"></i>
                     <span class="card-attribute-value">Coastal ocean</span>
-                </div><!-- card-attribute-icon if fontawesome - and then hover text with description -->
-                <div class="card-attr">
+                </div><div class="card-attr">
                     <i class="fa-solid fa-hourglass-start" title="Temporal resolution"></i>
                     <span class="card-attribute-value">continuous, monthly</span>
-                </div><!-- card-attribute-icon if fontawesome - and then hover text with description -->
-                <div class="card-attr">
+                </div><div class="card-attr">
                     <i class="fa-solid fa-ruler-horizontal" title="Spatial resolution"></i>
                     <span class="card-attribute-value">0.25° x 0.25°</span>
-                </div><!-- card-attribute-icon if fontawesome - and then hover text with description -->
-                <div class="card-attr">
+                </div><div class="card-attr">
                     <i class="fa-solid fa-calendar-days" title="Period"></i>
                     <span class="card-attribute-value">1982-2020</span>
                 </div></div>
@@ -1430,8 +1315,7 @@
             </div>  
         </div>
     </div>
-</div><!-- <div class="product-card" data-data-type="Gridded subsurface" data-spatial-domains="Open ocean||Water column" data-temporal-resolution="climatology" data-spatial-resolution="1° x 1°" data-period="2002"> -->
-<div class="product-card" data-data-type="Gridded subsurface" data-spatial-domains="Open ocean||Water column" data-temporal-resolution="climatology" data-spatial-resolution="1° x 1°" data-period="2002">
+</div><div class="product-card" data-data-type="Gridded subsurface" data-spatial-domains="Open ocean||Water column" data-temporal-resolution="climatology" data-spatial-resolution="1° x 1°" data-period="2002">
     <div class="card-inner">
         <div class="card-front">
             <div class="card-header">
@@ -1444,20 +1328,16 @@
             <div class="card-summary">
                 Ocean interior climatology for multiple variables from surface to the bottom of the ocean (referenced to year 2002)
             </div>
-            <div class="card-attributes"><!-- card-attribute-icon if fontawesome - and then hover text with description -->
-                <div class="card-attr">
+            <div class="card-attributes"><div class="card-attr">
                     <i class="fa-solid fa-globe" title="Spatial domains"></i>
                     <span class="card-attribute-value">Open ocean, Water column</span>
-                </div><!-- card-attribute-icon if fontawesome - and then hover text with description -->
-                <div class="card-attr">
+                </div><div class="card-attr">
                     <i class="fa-solid fa-hourglass-start" title="Temporal resolution"></i>
                     <span class="card-attribute-value">climatology</span>
-                </div><!-- card-attribute-icon if fontawesome - and then hover text with description -->
-                <div class="card-attr">
+                </div><div class="card-attr">
                     <i class="fa-solid fa-ruler-horizontal" title="Spatial resolution"></i>
                     <span class="card-attribute-value">1° x 1°</span>
-                </div><!-- card-attribute-icon if fontawesome - and then hover text with description -->
-                <div class="card-attr">
+                </div><div class="card-attr">
                     <i class="fa-solid fa-calendar-days" title="Period"></i>
                     <span class="card-attribute-value">2002</span>
                 </div></div>
@@ -1484,8 +1364,7 @@
             </div>  
         </div>
     </div>
-</div><!-- <div class="product-card" data-data-type="Gridded subsurface" data-spatial-domains="Open ocean||Water column" data-temporal-resolution="climatology" data-spatial-resolution="1° x 1°" data-period="1850 - 2002"> -->
-<div class="product-card" data-data-type="Gridded subsurface" data-spatial-domains="Open ocean||Water column" data-temporal-resolution="climatology" data-spatial-resolution="1° x 1°" data-period="1850 - 2002">
+</div><div class="product-card" data-data-type="Gridded subsurface" data-spatial-domains="Open ocean||Water column" data-temporal-resolution="climatology" data-spatial-resolution="1° x 1°" data-period="1850 - 2002">
     <div class="card-inner">
         <div class="card-front">
             <div class="card-header">
@@ -1498,20 +1377,16 @@
             <div class="card-summary">
                 Metrics of acidification in the ocean interior (to 2000 m) and the component of those changes caused by carbonate system nonlinearities
             </div>
-            <div class="card-attributes"><!-- card-attribute-icon if fontawesome - and then hover text with description -->
-                <div class="card-attr">
+            <div class="card-attributes"><div class="card-attr">
                     <i class="fa-solid fa-globe" title="Spatial domains"></i>
                     <span class="card-attribute-value">Open ocean, Water column</span>
-                </div><!-- card-attribute-icon if fontawesome - and then hover text with description -->
-                <div class="card-attr">
+                </div><div class="card-attr">
                     <i class="fa-solid fa-hourglass-start" title="Temporal resolution"></i>
                     <span class="card-attribute-value">climatology</span>
-                </div><!-- card-attribute-icon if fontawesome - and then hover text with description -->
-                <div class="card-attr">
+                </div><div class="card-attr">
                     <i class="fa-solid fa-ruler-horizontal" title="Spatial resolution"></i>
                     <span class="card-attribute-value">1° x 1°</span>
-                </div><!-- card-attribute-icon if fontawesome - and then hover text with description -->
-                <div class="card-attr">
+                </div><div class="card-attr">
                     <i class="fa-solid fa-calendar-days" title="Period"></i>
                     <span class="card-attribute-value">1850 - 2002</span>
                 </div></div>
@@ -1538,8 +1413,7 @@
             </div>  
         </div>
     </div>
-</div><!-- <div class="product-card" data-data-type="Gridded subsurface" data-spatial-domains="Open ocean||Water column" data-temporal-resolution="climatology" data-spatial-resolution="1° x 1°" data-period="1994 - 2007"> -->
-<div class="product-card" data-data-type="Gridded subsurface" data-spatial-domains="Open ocean||Water column" data-temporal-resolution="climatology" data-spatial-resolution="1° x 1°" data-period="1994 - 2007">
+</div><div class="product-card" data-data-type="Gridded subsurface" data-spatial-domains="Open ocean||Water column" data-temporal-resolution="climatology" data-spatial-resolution="1° x 1°" data-period="1994 - 2007">
     <div class="card-inner">
         <div class="card-front">
             <div class="card-header">
@@ -1552,20 +1426,16 @@
             <div class="card-summary">
                 The oceanic sink for anthropogenic CO2 over the period 1994 to 2007
             </div>
-            <div class="card-attributes"><!-- card-attribute-icon if fontawesome - and then hover text with description -->
-                <div class="card-attr">
+            <div class="card-attributes"><div class="card-attr">
                     <i class="fa-solid fa-globe" title="Spatial domains"></i>
                     <span class="card-attribute-value">Open ocean, Water column</span>
-                </div><!-- card-attribute-icon if fontawesome - and then hover text with description -->
-                <div class="card-attr">
+                </div><div class="card-attr">
                     <i class="fa-solid fa-hourglass-start" title="Temporal resolution"></i>
                     <span class="card-attribute-value">climatology</span>
-                </div><!-- card-attribute-icon if fontawesome - and then hover text with description -->
-                <div class="card-attr">
+                </div><div class="card-attr">
                     <i class="fa-solid fa-ruler-horizontal" title="Spatial resolution"></i>
                     <span class="card-attribute-value">1° x 1°</span>
-                </div><!-- card-attribute-icon if fontawesome - and then hover text with description -->
-                <div class="card-attr">
+                </div><div class="card-attr">
                     <i class="fa-solid fa-calendar-days" title="Period"></i>
                     <span class="card-attribute-value">1994 - 2007</span>
                 </div></div>
@@ -1592,8 +1462,7 @@
             </div>  
         </div>
     </div>
-</div><!-- <div class="product-card" data-data-type="Gridded subsurface" data-spatial-domains="Open ocean||Water column" data-temporal-resolution="climatology" data-spatial-resolution="1° x 1°" data-period="2000"> -->
-<div class="product-card" data-data-type="Gridded subsurface" data-spatial-domains="Open ocean||Water column" data-temporal-resolution="climatology" data-spatial-resolution="1° x 1°" data-period="2000">
+</div><div class="product-card" data-data-type="Gridded subsurface" data-spatial-domains="Open ocean||Water column" data-temporal-resolution="climatology" data-spatial-resolution="1° x 1°" data-period="2000">
     <div class="card-inner">
         <div class="card-front">
             <div class="card-header">
@@ -1606,20 +1475,16 @@
             <div class="card-summary">
                 Ocean interior climatology for (Ωarag) from surface to 4000 m (referenced to year 2000)
             </div>
-            <div class="card-attributes"><!-- card-attribute-icon if fontawesome - and then hover text with description -->
-                <div class="card-attr">
+            <div class="card-attributes"><div class="card-attr">
                     <i class="fa-solid fa-globe" title="Spatial domains"></i>
                     <span class="card-attribute-value">Open ocean, Water column</span>
-                </div><!-- card-attribute-icon if fontawesome - and then hover text with description -->
-                <div class="card-attr">
+                </div><div class="card-attr">
                     <i class="fa-solid fa-hourglass-start" title="Temporal resolution"></i>
                     <span class="card-attribute-value">climatology</span>
-                </div><!-- card-attribute-icon if fontawesome - and then hover text with description -->
-                <div class="card-attr">
+                </div><div class="card-attr">
                     <i class="fa-solid fa-ruler-horizontal" title="Spatial resolution"></i>
                     <span class="card-attribute-value">1° x 1°</span>
-                </div><!-- card-attribute-icon if fontawesome - and then hover text with description -->
-                <div class="card-attr">
+                </div><div class="card-attr">
                     <i class="fa-solid fa-calendar-days" title="Period"></i>
                     <span class="card-attribute-value">2000</span>
                 </div></div>
@@ -1646,8 +1511,7 @@
             </div>  
         </div>
     </div>
-</div><!-- <div class="product-card" data-data-type="Gridded subsurface" data-spatial-domains="Coastal ocean||Water column" data-temporal-resolution="climatology" data-spatial-resolution="1° x 1°" data-period="2010"> -->
-<div class="product-card" data-data-type="Gridded subsurface" data-spatial-domains="Coastal ocean||Water column" data-temporal-resolution="climatology" data-spatial-resolution="1° x 1°" data-period="2010">
+</div><div class="product-card" data-data-type="Gridded subsurface" data-spatial-domains="Coastal ocean||Water column" data-temporal-resolution="climatology" data-spatial-resolution="1° x 1°" data-period="2010">
     <div class="card-inner">
         <div class="card-front">
             <div class="card-header">
@@ -1660,20 +1524,16 @@
             <div class="card-summary">
                 The first discrete bottle based climatology in the North American ocean margins
             </div>
-            <div class="card-attributes"><!-- card-attribute-icon if fontawesome - and then hover text with description -->
-                <div class="card-attr">
+            <div class="card-attributes"><div class="card-attr">
                     <i class="fa-solid fa-globe" title="Spatial domains"></i>
                     <span class="card-attribute-value">Coastal ocean, Water column</span>
-                </div><!-- card-attribute-icon if fontawesome - and then hover text with description -->
-                <div class="card-attr">
+                </div><div class="card-attr">
                     <i class="fa-solid fa-hourglass-start" title="Temporal resolution"></i>
                     <span class="card-attribute-value">climatology</span>
-                </div><!-- card-attribute-icon if fontawesome - and then hover text with description -->
-                <div class="card-attr">
+                </div><div class="card-attr">
                     <i class="fa-solid fa-ruler-horizontal" title="Spatial resolution"></i>
                     <span class="card-attribute-value">1° x 1°</span>
-                </div><!-- card-attribute-icon if fontawesome - and then hover text with description -->
-                <div class="card-attr">
+                </div><div class="card-attr">
                     <i class="fa-solid fa-calendar-days" title="Period"></i>
                     <span class="card-attribute-value">2010</span>
                 </div></div>
@@ -1700,8 +1560,7 @@
             </div>  
         </div>
     </div>
-</div><!-- <div class="product-card" data-data-type="Gridded subsurface" data-spatial-domains="Open ocean" data-temporal-resolution="monthly||climatology" data-spatial-resolution="1° x 1°" data-period="2010"> -->
-<div class="product-card" data-data-type="Gridded subsurface" data-spatial-domains="Open ocean" data-temporal-resolution="monthly||climatology" data-spatial-resolution="1° x 1°" data-period="2010">
+</div><div class="product-card" data-data-type="Gridded subsurface" data-spatial-domains="Open ocean" data-temporal-resolution="monthly||climatology" data-spatial-resolution="1° x 1°" data-period="2010">
     <div class="card-inner">
         <div class="card-front">
             <div class="card-header">
@@ -1714,20 +1573,16 @@
             <div class="card-summary">
                 Seasonal variability of DIC in the interior ocean from surface to 2000 m
             </div>
-            <div class="card-attributes"><!-- card-attribute-icon if fontawesome - and then hover text with description -->
-                <div class="card-attr">
+            <div class="card-attributes"><div class="card-attr">
                     <i class="fa-solid fa-globe" title="Spatial domains"></i>
                     <span class="card-attribute-value">Open ocean</span>
-                </div><!-- card-attribute-icon if fontawesome - and then hover text with description -->
-                <div class="card-attr">
+                </div><div class="card-attr">
                     <i class="fa-solid fa-hourglass-start" title="Temporal resolution"></i>
                     <span class="card-attribute-value">monthly, climatology</span>
-                </div><!-- card-attribute-icon if fontawesome - and then hover text with description -->
-                <div class="card-attr">
+                </div><div class="card-attr">
                     <i class="fa-solid fa-ruler-horizontal" title="Spatial resolution"></i>
                     <span class="card-attribute-value">1° x 1°</span>
-                </div><!-- card-attribute-icon if fontawesome - and then hover text with description -->
-                <div class="card-attr">
+                </div><div class="card-attr">
                     <i class="fa-solid fa-calendar-days" title="Period"></i>
                     <span class="card-attribute-value">2010</span>
                 </div></div>
@@ -1754,8 +1609,7 @@
             </div>  
         </div>
     </div>
-</div><!-- <div class="product-card" data-data-type="Gridded subsurface" data-spatial-domains="Open ocean" data-temporal-resolution="monthly" data-spatial-resolution="1° x 1°" data-period="2004-2020"> -->
-<div class="product-card" data-data-type="Gridded subsurface" data-spatial-domains="Open ocean" data-temporal-resolution="monthly" data-spatial-resolution="1° x 1°" data-period="2004-2020">
+</div><div class="product-card" data-data-type="Gridded subsurface" data-spatial-domains="Open ocean" data-temporal-resolution="monthly" data-spatial-resolution="1° x 1°" data-period="2004-2020">
     <div class="card-inner">
         <div class="card-front">
             <div class="card-header">
@@ -1768,20 +1622,16 @@
             <div class="card-summary">
                 Temporal trends and interannual variability of DIC in the interior ocean from surface to 1500 m
             </div>
-            <div class="card-attributes"><!-- card-attribute-icon if fontawesome - and then hover text with description -->
-                <div class="card-attr">
+            <div class="card-attributes"><div class="card-attr">
                     <i class="fa-solid fa-globe" title="Spatial domains"></i>
                     <span class="card-attribute-value">Open ocean</span>
-                </div><!-- card-attribute-icon if fontawesome - and then hover text with description -->
-                <div class="card-attr">
+                </div><div class="card-attr">
                     <i class="fa-solid fa-hourglass-start" title="Temporal resolution"></i>
                     <span class="card-attribute-value">monthly</span>
-                </div><!-- card-attribute-icon if fontawesome - and then hover text with description -->
-                <div class="card-attr">
+                </div><div class="card-attr">
                     <i class="fa-solid fa-ruler-horizontal" title="Spatial resolution"></i>
                     <span class="card-attribute-value">1° x 1°</span>
-                </div><!-- card-attribute-icon if fontawesome - and then hover text with description -->
-                <div class="card-attr">
+                </div><div class="card-attr">
                     <i class="fa-solid fa-calendar-days" title="Period"></i>
                     <span class="card-attribute-value">2004-2020</span>
                 </div></div>
@@ -1808,8 +1658,7 @@
             </div>  
         </div>
     </div>
-</div><!-- <div class="product-card" data-data-type="Gridded subsurface" data-spatial-domains="Open ocean||Water column" data-temporal-resolution="monthly" data-spatial-resolution="1° x 1°" data-period="1992 - 2020"> -->
-<div class="product-card" data-data-type="Gridded subsurface" data-spatial-domains="Open ocean||Water column" data-temporal-resolution="monthly" data-spatial-resolution="1° x 1°" data-period="1992 - 2020">
+</div><div class="product-card" data-data-type="Gridded subsurface" data-spatial-domains="Open ocean||Water column" data-temporal-resolution="monthly" data-spatial-resolution="1° x 1°" data-period="1992 - 2020">
     <div class="card-inner">
         <div class="card-front">
             <div class="card-header">
@@ -1822,20 +1671,16 @@
             <div class="card-summary">
                 Temporal variability of pH in the interior ocean from surface to 2000 m over 3 decades
             </div>
-            <div class="card-attributes"><!-- card-attribute-icon if fontawesome - and then hover text with description -->
-                <div class="card-attr">
+            <div class="card-attributes"><div class="card-attr">
                     <i class="fa-solid fa-globe" title="Spatial domains"></i>
                     <span class="card-attribute-value">Open ocean, Water column</span>
-                </div><!-- card-attribute-icon if fontawesome - and then hover text with description -->
-                <div class="card-attr">
+                </div><div class="card-attr">
                     <i class="fa-solid fa-hourglass-start" title="Temporal resolution"></i>
                     <span class="card-attribute-value">monthly</span>
-                </div><!-- card-attribute-icon if fontawesome - and then hover text with description -->
-                <div class="card-attr">
+                </div><div class="card-attr">
                     <i class="fa-solid fa-ruler-horizontal" title="Spatial resolution"></i>
                     <span class="card-attribute-value">1° x 1°</span>
-                </div><!-- card-attribute-icon if fontawesome - and then hover text with description -->
-                <div class="card-attr">
+                </div><div class="card-attr">
                     <i class="fa-solid fa-calendar-days" title="Period"></i>
                     <span class="card-attribute-value">1992 - 2020</span>
                 </div></div>
@@ -1862,8 +1707,7 @@
             </div>  
         </div>
     </div>
-</div><!-- <div class="product-card" data-data-type="Harmonized" data-spatial-domains="Open ocean||Surface" data-temporal-resolution="monthly" data-spatial-resolution="1° x 1°" data-period="1990 - 2022"> -->
-<div class="product-card" data-data-type="Harmonized" data-spatial-domains="Open ocean||Surface" data-temporal-resolution="monthly" data-spatial-resolution="1° x 1°" data-period="1990 - 2022">
+</div><div class="product-card" data-data-type="Harmonized" data-spatial-domains="Open ocean||Surface" data-temporal-resolution="monthly" data-spatial-resolution="1° x 1°" data-period="1990 - 2022">
     <div class="card-inner">
         <div class="card-front">
             <div class="card-header">
@@ -1876,20 +1720,16 @@
             <div class="card-summary">
                 Careful consideration of flux calculation provides a resource and code to the community for independent flux calculations
             </div>
-            <div class="card-attributes"><!-- card-attribute-icon if fontawesome - and then hover text with description -->
-                <div class="card-attr">
+            <div class="card-attributes"><div class="card-attr">
                     <i class="fa-solid fa-globe" title="Spatial domains"></i>
                     <span class="card-attribute-value">Open ocean, Surface</span>
-                </div><!-- card-attribute-icon if fontawesome - and then hover text with description -->
-                <div class="card-attr">
+                </div><div class="card-attr">
                     <i class="fa-solid fa-hourglass-start" title="Temporal resolution"></i>
                     <span class="card-attribute-value">monthly</span>
-                </div><!-- card-attribute-icon if fontawesome - and then hover text with description -->
-                <div class="card-attr">
+                </div><div class="card-attr">
                     <i class="fa-solid fa-ruler-horizontal" title="Spatial resolution"></i>
                     <span class="card-attribute-value">1° x 1°</span>
-                </div><!-- card-attribute-icon if fontawesome - and then hover text with description -->
-                <div class="card-attr">
+                </div><div class="card-attr">
                     <i class="fa-solid fa-calendar-days" title="Period"></i>
                     <span class="card-attribute-value">1990 - 2022</span>
                 </div></div>
@@ -1916,8 +1756,7 @@
             </div>  
         </div>
     </div>
-</div><!-- <div class="product-card" data-data-type="Model-based" data-spatial-domains="Open ocean||Coastal ocean||Surface||Water column" data-temporal-resolution="daily||monthly" data-spatial-resolution="0.33° x 0.33°" data-period="1992 - 2018"> -->
-<div class="product-card" data-data-type="Model-based" data-spatial-domains="Open ocean||Coastal ocean||Surface||Water column" data-temporal-resolution="daily||monthly" data-spatial-resolution="0.33° x 0.33°" data-period="1992 - 2018">
+</div><div class="product-card" data-data-type="Model-based" data-spatial-domains="Open ocean||Coastal ocean||Surface||Water column" data-temporal-resolution="daily||monthly" data-spatial-resolution="0.33° x 0.33°" data-period="1992 - 2018">
     <div class="card-inner">
         <div class="card-front">
             <div class="card-header">
@@ -1930,20 +1769,16 @@
             <div class="card-summary">
                 Model-data synthesis product based on the Estimating the Circulation and Climate of the Ocean (ECCO) ocean state estimate. Fully-closed, physically-consistent 3-D biogeochemical budgets.
             </div>
-            <div class="card-attributes"><!-- card-attribute-icon if fontawesome - and then hover text with description -->
-                <div class="card-attr">
+            <div class="card-attributes"><div class="card-attr">
                     <i class="fa-solid fa-globe" title="Spatial domains"></i>
                     <span class="card-attribute-value">Open ocean, Coastal ocean, Surface, Water column</span>
-                </div><!-- card-attribute-icon if fontawesome - and then hover text with description -->
-                <div class="card-attr">
+                </div><div class="card-attr">
                     <i class="fa-solid fa-hourglass-start" title="Temporal resolution"></i>
                     <span class="card-attribute-value">daily, monthly</span>
-                </div><!-- card-attribute-icon if fontawesome - and then hover text with description -->
-                <div class="card-attr">
+                </div><div class="card-attr">
                     <i class="fa-solid fa-ruler-horizontal" title="Spatial resolution"></i>
                     <span class="card-attribute-value">0.33° x 0.33°</span>
-                </div><!-- card-attribute-icon if fontawesome - and then hover text with description -->
-                <div class="card-attr">
+                </div><div class="card-attr">
                     <i class="fa-solid fa-calendar-days" title="Period"></i>
                     <span class="card-attribute-value">1992 - 2018</span>
                 </div></div>
@@ -1970,8 +1805,7 @@
             </div>  
         </div>
     </div>
-</div><!-- <div class="product-card" data-data-type="Model-based" data-spatial-domains="Open ocean||Surface||Water column" data-temporal-resolution="irregular" data-spatial-resolution="1° x 1°" data-period="1750-2500"> -->
-<div class="product-card" data-data-type="Model-based" data-spatial-domains="Open ocean||Surface||Water column" data-temporal-resolution="irregular" data-spatial-resolution="1° x 1°" data-period="1750-2500">
+</div><div class="product-card" data-data-type="Model-based" data-spatial-domains="Open ocean||Surface||Water column" data-temporal-resolution="irregular" data-spatial-resolution="1° x 1°" data-period="1750-2500">
     <div class="card-inner">
         <div class="card-front">
             <div class="card-header">
@@ -1984,20 +1818,16 @@
             <div class="card-summary">
                 New methods for rapidly estimating anthropogenic carbon from temperature, salinity, and date are presented.  The methods are then used with SSPs to estimate anthropogenic carbon in the ocean globally from 1750 to 2500.
             </div>
-            <div class="card-attributes"><!-- card-attribute-icon if fontawesome - and then hover text with description -->
-                <div class="card-attr">
+            <div class="card-attributes"><div class="card-attr">
                     <i class="fa-solid fa-globe" title="Spatial domains"></i>
                     <span class="card-attribute-value">Open ocean, Surface, Water column</span>
-                </div><!-- card-attribute-icon if fontawesome - and then hover text with description -->
-                <div class="card-attr">
+                </div><div class="card-attr">
                     <i class="fa-solid fa-hourglass-start" title="Temporal resolution"></i>
                     <span class="card-attribute-value">irregular</span>
-                </div><!-- card-attribute-icon if fontawesome - and then hover text with description -->
-                <div class="card-attr">
+                </div><div class="card-attr">
                     <i class="fa-solid fa-ruler-horizontal" title="Spatial resolution"></i>
                     <span class="card-attribute-value">1° x 1°</span>
-                </div><!-- card-attribute-icon if fontawesome - and then hover text with description -->
-                <div class="card-attr">
+                </div><div class="card-attr">
                     <i class="fa-solid fa-calendar-days" title="Period"></i>
                     <span class="card-attribute-value">1750-2500</span>
                 </div></div>
@@ -2024,8 +1854,7 @@
             </div>  
         </div>
     </div>
-</div><!-- <div class="product-card" data-data-type="Model-based" data-spatial-domains="Open ocean||Water column" data-temporal-resolution="climatology" data-spatial-resolution="1° x 1°"> -->
-<div class="product-card" data-data-type="Model-based" data-spatial-domains="Open ocean||Water column" data-temporal-resolution="climatology" data-spatial-resolution="1° x 1°">
+</div><div class="product-card" data-data-type="Model-based" data-spatial-domains="Open ocean||Water column" data-temporal-resolution="climatology" data-spatial-resolution="1° x 1°">
     <div class="card-inner">
         <div class="card-front">
             <div class="card-header">
@@ -2038,16 +1867,13 @@
             <div class="card-summary">
                 We have updated global preformed biogeochemical property estimates and provided the estimates for analysis and model validation
             </div>
-            <div class="card-attributes"><!-- card-attribute-icon if fontawesome - and then hover text with description -->
-                <div class="card-attr">
+            <div class="card-attributes"><div class="card-attr">
                     <i class="fa-solid fa-globe" title="Spatial domains"></i>
                     <span class="card-attribute-value">Open ocean, Water column</span>
-                </div><!-- card-attribute-icon if fontawesome - and then hover text with description -->
-                <div class="card-attr">
+                </div><div class="card-attr">
                     <i class="fa-solid fa-hourglass-start" title="Temporal resolution"></i>
                     <span class="card-attribute-value">climatology</span>
-                </div><!-- card-attribute-icon if fontawesome - and then hover text with description -->
-                <div class="card-attr">
+                </div><div class="card-attr">
                     <i class="fa-solid fa-ruler-horizontal" title="Spatial resolution"></i>
                     <span class="card-attribute-value">1° x 1°</span>
                 </div></div>
@@ -2070,6 +1896,52 @@
                 </div>
                 <div class="card-link">
                     <a href="https://github.com/BRCScienceProducts/PreformedPropertyEstimates" target="_blank" rel="noopener noreferrer"><i class="fa fa-download"></i> Data Access</a>
+                </div>
+            </div>  
+        </div>
+    </div>
+</div><div class="product-card" data-data-type="Data compilations" data-spatial-domains="Open ocean||Water column||Regional" data-temporal-resolution="irregular||sub-annual" data-period="1990 - 2019">
+    <div class="card-inner">
+        <div class="card-front">
+            <div class="card-header">
+                <h3>Line P Marine Carbonate Chemistry Compilation</h3>
+                <div class="card-subheading">Franco et al., (2021)</div>
+            </div>
+            <div class="card-image">
+                <img loading="lazy" src="images/line_p_marine_carbonate_chemistry_compilation.png" alt="Product image">
+            </div>
+            <div class="card-summary">
+                A compilation of fifty-five Line P cruises containing discrete DIC and TA profiles at five stations in the Northeast Pacific Ocean. Sampled approximately three times per year from 1990 to 2019
+            </div>
+            <div class="card-attributes"><div class="card-attr">
+                    <i class="fa-solid fa-globe" title="Spatial domains"></i>
+                    <span class="card-attribute-value">Open ocean, Water column, Regional</span>
+                </div><div class="card-attr">
+                    <i class="fa-solid fa-hourglass-start" title="Temporal resolution"></i>
+                    <span class="card-attribute-value">irregular, sub-annual</span>
+                </div><div class="card-attr">
+                    <i class="fa-solid fa-calendar-days" title="Period"></i>
+                    <span class="card-attribute-value">1990 - 2019</span>
+                </div></div>
+        </div>
+        <div class="card-back">
+            <div class="card-header">
+                <h3>Line P Marine Carbonate Chemistry Compilation</h3>
+                <div class="card-subheading">Franco et al., (2021)</div>
+            </div>
+            <div class="card-details"><div class="card-detail">
+                    <span class="card-detail-title">Description: </span>
+                    <span class="card-detail-content">This dataset contains marine carbonate system measurements collected during 55 Line P cruises from 1990 to 2019 in the subarctic Northeast Pacific. The dataset contains quality-controlled, discrete profiles of dissolved inorganic carbon (DIC), total alkalinity (TA), temperature, salinity, dissolved oxygen and nutrients. From a total of 27 hydrographic time-series stations, only the five major stations where DIC and TA are routinely sampled were included in this compilation. Cruises were conducted approximately three times per year, typically in February, May/June and August/September. Each vertical profile was individually inspected and contrasted with the whole pool of data relative to salinity, density, and oxygen to detect and flag poor quality data following the World Ocean Circulation Experiment (WOCE) quality control convention. The recommended cruise-specific adjustments from the Pacific Ocean Interior Carbon (PACIFICA) data synthesis were applied. The Line P carbonate chemistry timeseries is maintained by Fisheries and Oceans Canada and continues to the present day. Data are available and continuously updated in the Line P repository, which can be publicly accessed after generating an account at https://waterproperties.ca. </span>
+                </div><div class="card-detail">
+                    <span class="card-detail-title">Reference: </span>
+                    <span class="card-detail-content">Franco, A. C., Ianson, D., Ross, T., Hamme, R. C., Monahan, A. H., Christian, J. R., Davelaar, M., Johnson, W. K., Miller, L. A., Robert, M., and Tortell, P. D. 2021. Anthropogenic and climatic contributions to observed carbon system trends in the northeast Pacific. Global Biogeochemical Cycles, 35(7). https://doi.org/10.1029/2020GB006829</span>
+                </div></div>
+            <div class="card-links">
+                <div class="card-link">
+                    <a href="https://doi.org/10.1029/2020GB006829" target="_blank" rel="noopener noreferrer"><i class="fas fa-book"></i> Publication</a>
+                </div>
+                <div class="card-link">
+                    <a href="https://www.ncei.noaa.gov/data/oceans/ncei/ocads/metadata/0234342.html" target="_blank" rel="noopener noreferrer"><i class="fa fa-download"></i> Data Access</a>
                 </div>
             </div>  
         </div>
