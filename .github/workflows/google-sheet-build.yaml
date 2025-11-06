@@ -1,4 +1,4 @@
-name: google-sheet-update-trigger
+name: Build HTML triggered by Google Sheets
 
 # 1. This is the trigger section
 on:
