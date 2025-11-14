@@ -1,5 +1,9 @@
 <div class="sidebar">
     <h2>Filters</h2>
+    <div id="product-counter"></div>
+    <div class="search-container">
+        <input type="text" id="searchInput" placeholder="Search products..." autocomplete="off">
+    </div>
     <div class="sidebar-filters"> {%- for name, f in filters.items() -%}
         {%- set filter_id = name|lower|replace(' ', '-') -%}
         <div class="filter">

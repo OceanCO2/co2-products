@@ -1,5 +1,5 @@
 :root{
-    --primary-color: {{ cfg.WEBSITE_COLOR }};
+    --primary-color: #0095ff;
     --primary-color-text: rgb(255, 255, 255);
     --primary-color-text-secondary: #ffffffa3;
     
@@ -77,9 +77,9 @@ body {
 
 .sidebar {
     min-width: 240px;
-    max-width: 300px;
+    max-width: 250px;
     background-color: var(--background-color-sidebar);
-    box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
     position: sticky;
     top: 0;
     height: 100vh;
@@ -96,10 +96,52 @@ body {
 .sidebar h2 {
     padding: 0px 20px;
     margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+.search-container {
+    margin: 15px 20px;
+    position: relative;
+}
+
+#searchInput {
+    padding: 12px 20px;
+    font-size: 16px;
+    border: 2px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+#searchInput:focus {
+    outline: none;
+    border-color: var(--primary-color);
+}
+
+#product-counter {
+    margin-left: 20px;
+    top: 50%;
+    color: #aaa;
+    font-size: 14px;
+    text-align: left;
+    pointer-events: none;
+}
+
+.product-card.hidden {
+    display: none !important;
+}
+
+.search-highlight {
+    background-color: #ffeb3b;
+    font-weight: bold;
+    padding: 2px 0;
 }
 
 .filter {
     margin-bottom: 20px;
+    padding-right: 30px;
+    min-width: 43%;
+    display: inline-table;
 }
 
 .filter label {
@@ -132,17 +174,19 @@ body {
     min-width: 300px;
 }
 
-.card-inner {
-    transition: transform 0.6s;
-    transform-style: preserve-3d;
+.product-card .card-inner {
     position: relative;
     width: 100%;
     height: 100%;
+    transform-style: preserve-3d;
+    transition-property: transform;
+    transition-duration: 0.5s;
+    transition-delay: 0.1s;
+    transition-timing-function: ease-in-out;
 }
 
-.product-card:hover .card-inner {
+.product-card .card-inner:hover {
     transform: rotateY(180deg);
-    transition: transform 0.6s 0.3s;
 }
 
 .card-front,

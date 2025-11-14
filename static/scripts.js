@@ -119,6 +119,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
                 card.style.display = isVisible ? '' : 'none';
             });
+
+            // Update counter after filtering
+            updateCounter();
         }
 
         filterInputs.forEach(input => {
@@ -158,3 +161,131 @@ document.addEventListener('DOMContentLoaded', () => {
         console.error("Could not find the toggle button or the sidebar element.");
     }
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+    const searchInput = document.getElementById('searchInput');
+    const searchCount = document.getElementById('searchResults');
+    
+    if (!searchInput) return;
+    
+    // Get all cards (adjust selector based on your card class)
+    const cards = document.querySelectorAll('.product-card');
+    
+    // Store original HTML for each card
+    const originalHTML = new Map();
+    cards.forEach(card => {
+        originalHTML.set(card, card.innerHTML);
+    });
+    
+    searchInput.addEventListener('input', function(e) {
+        const query = normalizeText(e.target.value.toLowerCase().trim());
+        
+        cards.forEach(card => {
+            // Restore original HTML
+            card.innerHTML = originalHTML.get(card);
+            
+            if (query === '') {
+                // Show all cards when search is empty
+                card.classList.remove('hidden');
+            } else {
+                // Get all searchable text in the card
+                const cardText = normalizeText(card.textContent.toLowerCase());
+                
+                if (cardText.includes(query)) {
+                    card.classList.remove('hidden');
+                    highlightText(card, query);
+                } else {
+                    card.classList.add('hidden');
+                }
+            }
+        });
+
+        // Update the general counter after search
+        updateCounter();
+    });
+    
+    function highlightText(element, query) {
+        const normalizedQuery = normalizeText(query);
+        
+        function highlightNode(node) {
+            if (node.nodeType === Node.TEXT_NODE) {
+                const text = node.nodeValue;
+                const normalizedText = normalizeText(text.toLowerCase());
+                
+                // Find matches in normalized text
+                const matches = [];
+                let index = normalizedText.indexOf(normalizedQuery);
+                while (index !== -1) {
+                    matches.push(index);
+                    index = normalizedText.indexOf(normalizedQuery, index + 1);
+                }
+                
+                if (matches.length > 0) {
+                    const fragments = [];
+                    let lastIndex = 0;
+                    
+                    matches.forEach(matchIndex => {
+                        // Add text before match
+                        if (matchIndex > lastIndex) {
+                            fragments.push({
+                                text: text.substring(lastIndex, matchIndex),
+                                highlight: false
+                            });
+                        }
+                        
+                        // Add matched text (with original accents)
+                        fragments.push({
+                            text: text.substring(matchIndex, matchIndex + normalizedQuery.length),
+                            highlight: true
+                        });
+                        
+                        lastIndex = matchIndex + normalizedQuery.length;
+                    });
+                    
+                    // Add remaining text
+                    if (lastIndex < text.length) {
+                        fragments.push({
+                            text: text.substring(lastIndex),
+                            highlight: false
+                        });
+                    }
+                    
+                    // Create new HTML
+                    const wrapper = document.createElement('span');
+                    fragments.forEach(fragment => {
+                        if (fragment.highlight) {
+                            const span = document.createElement('span');
+                            span.className = 'search-highlight';
+                            span.textContent = fragment.text;
+                            wrapper.appendChild(span);
+                        } else {
+                            wrapper.appendChild(document.createTextNode(fragment.text));
+                        }
+                    });
+                    
+                    node.parentNode.replaceChild(wrapper, node);
+                }
+            } else if (node.nodeType === Node.ELEMENT_NODE && 
+                       node.nodeName !== 'SCRIPT' && 
+                       node.nodeName !== 'STYLE') {
+                Array.from(node.childNodes).forEach(child => highlightNode(child));
+            }
+        }
+        
+        highlightNode(element);
+    }
+
+    function normalizeText(text) {
+        return text.normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+    }
+
+});
+
+// Function to update the counter
+function updateCounter() {
+    const counterDiv = document.getElementById('product-counter');
+    const totalCards = document.querySelectorAll('.product-card').length;
+    const visibleCards = document.querySelectorAll('.product-card:not([style*="display: none"]):not(.hidden)').length;
+    counterDiv.textContent = `Showing ${visibleCards} of ${totalCards} products`;
+}
+
