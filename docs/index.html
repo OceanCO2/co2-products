@@ -39,6 +39,7 @@
                 value="Time series"> Time series<br></div><div class="filter">
             <label>Spatial domains</label><input type="checkbox" class="filter-checkbox" data-filter="Spatial domains" data-filter-type="multi-select"
                 value="Coastal ocean"> Coastal ocean<br><input type="checkbox" class="filter-checkbox" data-filter="Spatial domains" data-filter-type="multi-select"
+                value="Major estuaries"> Major estuaries<br><input type="checkbox" class="filter-checkbox" data-filter="Spatial domains" data-filter-type="multi-select"
                 value="Open ocean"> Open ocean<br><input type="checkbox" class="filter-checkbox" data-filter="Spatial domains" data-filter-type="multi-select"
                 value="Regional"> Regional<br><input type="checkbox" class="filter-checkbox" data-filter="Spatial domains" data-filter-type="multi-select"
                 value="Surface"> Surface<br><input type="checkbox" class="filter-checkbox" data-filter="Spatial domains" data-filter-type="multi-select"
@@ -52,6 +53,7 @@
                 value="discrete"> discrete<br><input type="checkbox" class="filter-checkbox" data-filter="Temporal resolution" data-filter-type="multi-select"
                 value="irregular"> irregular<br><input type="checkbox" class="filter-checkbox" data-filter="Temporal resolution" data-filter-type="multi-select"
                 value="monthly"> monthly<br><input type="checkbox" class="filter-checkbox" data-filter="Temporal resolution" data-filter-type="multi-select"
+                value="seasonal"> seasonal<br><input type="checkbox" class="filter-checkbox" data-filter="Temporal resolution" data-filter-type="multi-select"
                 value="sub-annual"> sub-annual<br><input type="checkbox" class="filter-checkbox" data-filter="Temporal resolution" data-filter-type="multi-select"
                 value="yearly"> yearly<br></div><div class="filter">
             <label>Spatial resolution</label><input type="checkbox" class="filter-checkbox" data-filter="Spatial resolution" data-filter-type="multi-select"
@@ -59,7 +61,8 @@
                 value="0.25° x 0.25°"> 0.25° x 0.25°<br><input type="checkbox" class="filter-checkbox" data-filter="Spatial resolution" data-filter-type="multi-select"
                 value="0.33° x 0.33°"> 0.33° x 0.33°<br><input type="checkbox" class="filter-checkbox" data-filter="Spatial resolution" data-filter-type="multi-select"
                 value="1° x 1°"> 1° x 1°<br><input type="checkbox" class="filter-checkbox" data-filter="Spatial resolution" data-filter-type="multi-select"
-                value="2° x 2°"> 2° x 2°<br></div></div>
+                value="2° x 2°"> 2° x 2°<br><input type="checkbox" class="filter-checkbox" data-filter="Spatial resolution" data-filter-type="multi-select"
+                value="<0.25° station spacing"> <0.25° station spacing<br></div></div>
     <footer class="footer">
         <a class='submit' href="https://docs.google.com/forms/d/e/1FAIpQLSdguEed1sRdgHjhP_KsgHeh_G7gHjz8qGmuTu9C7K_fK7hyUQ/viewform" target="_blank">Submit a new dataset</a>
         <!-- add spacer so website copy is on bottom -->
@@ -577,38 +580,44 @@
             </div>  
         </div>
     </div>
-</div><div class="product-card" data-data-type="Data compilations" data-spatial-domains="Coastal ocean||Water column" data-temporal-resolution="discrete">
+</div><div class="product-card" data-data-type="Data compilations" data-spatial-domains="Coastal ocean||Major estuaries||Water column" data-temporal-resolution="seasonal" data-spatial-resolution="<0.25° station spacing" data-period="2008–2024">
     <div class="card-inner">
         <div class="card-front">
             <div class="card-header">
-                <h3>Salish Sea Multi-stressor Data Product</h3>
-                <div class="card-subheading">Alin et al. (2024)</div>
+                <h3>Salish Cruise Data Package</h3>
+                <div class="card-subheading">Alin et al. (2025a)</div>
             </div>
             <div class="card-image">
-                <img loading="lazy" src="images/salish_sea_multi-stressor_data_product.png" alt="Product image">
+                <img loading="lazy" src="images/salish_cruise_data_package.png" alt="Product image">
             </div>
             <div class="card-summary">
-                A data compilation and multi-stressor (OA, hypoxia, temperature) data product based on cruises from 2002 to 2018 in the southern Salish Sea and Washington coast. 
+                A QCed compilation of cruise datasets from 2008 to 2024 in the southern Salish Sea and northern Washington coast. 
             </div>
             <div class="card-attributes"><div class="card-attr">
                     <i class="fa-solid fa-globe" title="Spatial domains"></i>
-                    <span class="card-attribute-value">Coastal ocean, Water column</span>
+                    <span class="card-attribute-value">Coastal ocean, Major estuaries, Water column</span>
                 </div><div class="card-attr">
                     <i class="fa-solid fa-hourglass-start" title="Temporal resolution"></i>
-                    <span class="card-attribute-value">discrete</span>
+                    <span class="card-attribute-value">seasonal</span>
+                </div><div class="card-attr">
+                    <i class="fa-solid fa-ruler-horizontal" title="Spatial resolution"></i>
+                    <span class="card-attribute-value"><0.25° station spacing</span>
+                </div><div class="card-attr">
+                    <i class="fa-solid fa-calendar-days" title="Period"></i>
+                    <span class="card-attribute-value">2008–2024</span>
                 </div></div>
         </div>
         <div class="card-back">
             <div class="card-header">
-                <h3>Salish Sea Multi-stressor Data Product</h3>
-                <div class="card-subheading">Alin et al. (2024)</div>
+                <h3>Salish Cruise Data Package</h3>
+                <div class="card-subheading">Alin et al. (2025a)</div>
             </div>
             <div class="card-details"><div class="card-detail">
                     <span class="card-detail-title">Description: </span>
-                    <span class="card-detail-content">Alin et al. (2024a) compiled data from 35 individual cruise data sets that sampled marine waters of the southern Salish Sea and northern Washington coast (United States) from 2008 to 2018. Ongoing seasonal sampling occurred during April, July, and September for Puget Sound cruises has occurred since 2014 and most frequently during May and October for Sound-to-Sea cruises, which sample from Puget Sound through the Strait of Juan de Fuca to the northern Washington coast. The Salish cruise data package contains observations from a total of 715 oceanographic profiles, with > 7490 sensor measurements of temperature, salinity, and DO; ≥ 6070 measurements of discrete DO and nutrient (nitrate, phosphate, silicate, ammonium, nitrite) samples; and ≥ 4462 measurements of inorganic carbonate system variables (DIC and TA). A follow-on data product based on the Salish cruise data package, which only included the 3971 samples with complete information for temperature, salinity, DO, nutrients, DIC, and TA, is also available (Alin et al., 2023). This product additionally provides the most commonly used calculated carbonate system variables: pH (total scale), fCO2, pCO2, Ωarag, and Ωcalc. </span>
+                    <span class="card-detail-content">Alin et al. (2025a) compiled data from 61 individual cruise data sets that sampled marine waters of the southern Salish Sea and northern Washington coast (United States) from 2008 to 2024. Ongoing seasonal sampling occurred during April, July, and September for Puget Sound cruises has occurred since 2014 and most frequently during May and October for Sound-to-Sea cruises, which sample from Puget Sound through the Strait of Juan de Fuca to the northern Washington coast. The Salish cruise data package contains observations from a oceanographic water column profiles, with CTD sensor measurements of temperature, salinity, and oxygen; as well as discrete measurements of oxygen, nutrient, and inorganic carbonate content. </span>
                 </div><div class="card-detail">
                     <span class="card-detail-title">Reference: </span>
-                    <span class="card-detail-content">Alin, S. R., Newton, J. A., Feely, R. A., Greeley, D., Curry, B., Herndon, J., and Warner, M.: A decade-long cruise time series (2008–2018) of physical and biogeochemical conditions in the southern Salish Sea, North America, Earth Syst. Sci. Data, 16, 837–865, https://doi.org/10.5194/essd-16-837-2024, 2024. </span>
+                    <span class="card-detail-content">Alin, S.R., J.A. Newton, R.A. Feely, B. Curry, D. Greeley, J. Herndon, and M. Warner (2024a). A decade-long cruise time-series (2008–2018) of physical and biogeochemical conditions in the southern Salish Sea, North America. Earth System Science Data, 16, 837–865, https://doi.org/10.5194/essd-16-837-2024</span>
                 </div></div>
             <div class="card-links">
                 <div class="card-link">
@@ -616,6 +625,55 @@
                 </div>
                 <div class="card-link">
                     <a href="https://www.ncei.noaa.gov/access/ocean-carbon-acidification-data-system/oceans/SalishCruise_DataPackage.html" target="_blank" rel="noopener noreferrer"><i class="fa fa-download"></i> Data Access</a>
+                </div>
+            </div>  
+        </div>
+    </div>
+</div><div class="product-card" data-data-type="Data compilations" data-spatial-domains="Coastal ocean||Major estuaries||Water column" data-temporal-resolution="seasonal" data-spatial-resolution="<0.25° station spacing" data-period="2008–2024">
+    <div class="card-inner">
+        <div class="card-front">
+            <div class="card-header">
+                <h3>Salish Cruise Multi-stressor Data Product</h3>
+                <div class="card-subheading">Alin et al. (2025b)</div>
+            </div>
+            <div class="card-image">
+                <img loading="lazy" src="images/salish_cruise_multi-stressor_data_product.png" alt="Product image">
+            </div>
+            <div class="card-summary">
+                A multi-stressor (ocean acidification, hypoxia, marine heatwaves) data product based on cruises from 2008 to 2024 in the southern Salish Sea and northern Washington coast (USA). 
+            </div>
+            <div class="card-attributes"><div class="card-attr">
+                    <i class="fa-solid fa-globe" title="Spatial domains"></i>
+                    <span class="card-attribute-value">Coastal ocean, Major estuaries, Water column</span>
+                </div><div class="card-attr">
+                    <i class="fa-solid fa-hourglass-start" title="Temporal resolution"></i>
+                    <span class="card-attribute-value">seasonal</span>
+                </div><div class="card-attr">
+                    <i class="fa-solid fa-ruler-horizontal" title="Spatial resolution"></i>
+                    <span class="card-attribute-value"><0.25° station spacing</span>
+                </div><div class="card-attr">
+                    <i class="fa-solid fa-calendar-days" title="Period"></i>
+                    <span class="card-attribute-value">2008–2024</span>
+                </div></div>
+        </div>
+        <div class="card-back">
+            <div class="card-header">
+                <h3>Salish Cruise Multi-stressor Data Product</h3>
+                <div class="card-subheading">Alin et al. (2025b)</div>
+            </div>
+            <div class="card-details"><div class="card-detail">
+                    <span class="card-detail-title">Description: </span>
+                    <span class="card-detail-content">Alin et al. (2024a) compiled data from 35 individual cruise data sets that sampled marine waters of the southern Salish Sea and northern Washington coast (United States) from 2008 to 2018. Ongoing seasonal sampling occurred during April, July, and September for Puget Sound cruises has occurred since 2014 and most frequently during May and October for Sound-to-Sea cruises, which sample from Puget Sound through the Strait of Juan de Fuca to the northern Washington coast. The Salish cruise data package contains observations from a total of 715 oceanographic profiles, with > 7490 sensor measurements of temperature, salinity, and DO; ≥ 6070 measurements of discrete DO and nutrient (nitrate, phosphate, silicate, ammonium, nitrite) samples; and ≥ 4462 measurements of inorganic carbonate system variables (DIC and TA). A follow-on data product based on the Salish cruise data package, which only included the 3971 samples with complete information for temperature, salinity, DO, nutrients, DIC, and TA, is also available (Alin et al., 2023). This product additionally provides the most commonly used calculated carbonate system variables: pH (total scale), fCO2, pCO2, Ωarag, and Ωcalc. </span>
+                </div><div class="card-detail">
+                    <span class="card-detail-title">Reference: </span>
+                    <span class="card-detail-content">Alin, S.R., J.A. Newton, R.A. Feely, S. Siedlecki, and D. Greeley (2024b). Seasonality and response of ocean acidification and hypoxia to major environmental anomalies in the southern Salish Sea, North America (2014–2018). Biogeosciences, 21, 1639–1673, https://doi.org/10.5194/bg-21-1639-2024</span>
+                </div></div>
+            <div class="card-links">
+                <div class="card-link">
+                    <a href="https://doi.org/10.5194/bg-21-1639-2024" target="_blank" rel="noopener noreferrer"><i class="fas fa-book"></i> Publication</a>
+                </div>
+                <div class="card-link">
+                    <a href="https://www.ncei.noaa.gov/access/ocean-carbon-acidification-data-system/oceans/SalishCruises_DataProduct.html" target="_blank" rel="noopener noreferrer"><i class="fa fa-download"></i> Data Access</a>
                 </div>
             </div>  
         </div>
