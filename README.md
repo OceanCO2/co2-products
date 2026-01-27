@@ -1,6 +1,8 @@
 # Web page for Ocean CO2 Products
 
-*from publication by Jiang et al. (2025)*
+*from publication by Jiang et al. (2026)*
+
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.18384592.svg)](https://doi.org/10.5281/zenodo.18384592)
 
 This repository creates a static web page of different data products with a filter functionality. 
 It is designed to be as low-maintenance as possible, and thus, the data lives in a Google Sheet document.
