@@ -45,6 +45,7 @@
                 value="Surface"> Surface<br><input type="checkbox" class="filter-checkbox" data-filter="Spatial domains" data-filter-type="multi-select"
                 value="Water column"> Water column<br></div><div class="filter">
             <label>Temporal resolution</label><input type="checkbox" class="filter-checkbox" data-filter="Temporal resolution" data-filter-type="multi-select"
+                value="12-month climatology referenced to 2013; linear trend 2003–2021"> 12-month climatology referenced to 2013; linear trend 2003–2021<br><input type="checkbox" class="filter-checkbox" data-filter="Temporal resolution" data-filter-type="multi-select"
                 value="8-day"> 8-day<br><input type="checkbox" class="filter-checkbox" data-filter="Temporal resolution" data-filter-type="multi-select"
                 value="bi-monthly"> bi-monthly<br><input type="checkbox" class="filter-checkbox" data-filter="Temporal resolution" data-filter-type="multi-select"
                 value="climatology"> climatology<br><input type="checkbox" class="filter-checkbox" data-filter="Temporal resolution" data-filter-type="multi-select"
@@ -1040,6 +1041,8 @@
             </div>
             <div class="card-summary">
                 The pilot includes biogeochemical data from 12 fixed ship-based time-series programs
+<<<<<<< HEAD
+=======
             </div>
             <div class="card-attributes"><div class="card-attr">
                     <i class="fa-solid fa-globe" title="Spatial domains"></i>
@@ -1128,6 +1131,265 @@
                 <img loading="lazy" src="images/takahashi__fco2___flux_climatology.png" alt="Product image">
             </div>
             <div class="card-summary">
+                Does not use proxy variables for extrapolation. Only produced as monthly climatology.
+            </div>
+            <div class="card-attributes"><div class="card-attr">
+                    <i class="fa-solid fa-globe" title="Spatial domains"></i>
+                    <span class="card-attribute-value">Open ocean</span>
+                </div><div class="card-attr">
+                    <i class="fa-solid fa-hourglass-start" title="Temporal resolution"></i>
+                    <span class="card-attribute-value">monthly</span>
+                </div><div class="card-attr">
+                    <i class="fa-solid fa-ruler-horizontal" title="Spatial resolution"></i>
+                    <span class="card-attribute-value">1° x 1°</span>
+                </div><div class="card-attr">
+                    <i class="fa-solid fa-calendar-days" title="Period"></i>
+                    <span class="card-attribute-value">2010</span>
+                </div></div>
+        </div>
+        <div class="card-back">
+            <div class="card-header">
+                <h3>Takahashi ΔfCO2 & Flux Climatology</h3>
+                <div class="card-subheading">Fay et al. (2024)</div>
+            </div>
+            <div class="card-details"><div class="card-detail">
+                    <span class="card-detail-title">Description: </span>
+                    <span class="card-detail-content">Following on previous climatologies published by the late Taro Takahashi in 1997 and 2009, Fay et al. (2024) created a legacy climatology using his methodology and the updated SOCAT database of observations. This product provides 12 months of delta fCO2 values and corresponding fluxes for a base year of 2010 at 4° × 5° resolution subsequently subgridded
+to 1° × 1° resolution and near-global coverage. This climatology represents the mean of ocean conditions over the last four decades and is distinctive relative to many other mechanistic machine learning approaches in that it interpolates in time and space using only the available fCO2 data and a surface water advection scheme rather than using proxy variables for gap filling. It uses the median of observations to determine a reference year of 2010 and fluxes are provided using air-sea partial pressure differences and inputs from the SeaFlux product (Fay et al., 2021).</span>
+                </div><div class="card-detail">
+                    <span class="card-detail-title">Reference: </span>
+                    <span class="card-detail-content">Fay, A. R., Munro, D. R., McKinley, G. A., Pierrot, D., Sutherland, S. C., Sweeney, C., and Wanninkhof, R. 2024. Updated climatological mean ΔfCO2 and net sea–air CO2 flux over the global open ocean regions, Earth Syst. Sci. Data, 16, 2123–2139, https://doi.org/10.5194/essd-16-2123-2024.</span>
+                </div></div>
+            <div class="card-links">
+                <div class="card-link">
+                    <a href="https://doi.org/10.5194/essd-16-2123-2024" target="_blank" rel="noopener noreferrer"><i class="fas fa-book"></i> Publication</a>
+                </div>
+                <div class="card-link">
+                    <a href="https://doi.org/10.25921/295g-sn13" target="_blank" rel="noopener noreferrer"><i class="fa fa-download"></i> Data Access</a>
+                </div>
+            </div>  
+        </div>
+    </div>
+</div><div class="product-card" data-data-type="Gridded surface" data-spatial-domains="Open ocean||Coastal ocean||Surface" data-temporal-resolution="monthly||climatology" data-spatial-resolution="0.25° x 0.25°">
+    <div class="card-inner">
+        <div class="card-front">
+            <div class="card-header">
+                <h3>MPI-ULB-SOM-FFN</h3>
+                <div class="card-subheading">Landschützer et al. (2020) </div>
+            </div>
+            <div class="card-image">
+                <img loading="lazy" src="images/mpi-ulb-som-ffn.png" alt="Product image">
+            </div>
+            <div class="card-summary">
+                Monthly gridded pCO2 without adjusting for a specific reference year, high-resolution coastal ocean coverage. 
+            </div>
+            <div class="card-attributes"><div class="card-attr">
+                    <i class="fa-solid fa-globe" title="Spatial domains"></i>
+                    <span class="card-attribute-value">Open ocean, Coastal ocean, Surface</span>
+                </div><div class="card-attr">
+                    <i class="fa-solid fa-hourglass-start" title="Temporal resolution"></i>
+                    <span class="card-attribute-value">monthly, climatology</span>
+                </div><div class="card-attr">
+                    <i class="fa-solid fa-ruler-horizontal" title="Spatial resolution"></i>
+                    <span class="card-attribute-value">0.25° x 0.25°</span>
+                </div></div>
+        </div>
+        <div class="card-back">
+            <div class="card-header">
+                <h3>MPI-ULB-SOM-FFN</h3>
+                <div class="card-subheading">Landschützer et al. (2020) </div>
+            </div>
+            <div class="card-details"><div class="card-detail">
+                    <span class="card-detail-title">Description: </span>
+                    <span class="card-detail-content">Landschützer et al. (2020a) created a uniform pCO2 climatology combining open and coastal oceans. It is a monthly gridded global surface ocean pCO2 data product without adjusting for a specific reference year. Developed on a higher-resolution 0.25° × 0.25° global surface-ocean grid, this product is the result of combining two neural network-based pCO2 products: the open ocean product described below (i.e., Landschützer et al., 2016) and the coastal product created by Laruelle et al. (2017). Consequently, it represents coastal zones better. Data collected between 1998 and 2015 from the SOCAT database (Version 5) were used to create this data product. </span>
+                </div><div class="card-detail">
+                    <span class="card-detail-title">Reference: </span>
+                    <span class="card-detail-content">Landschützer, P., Laruelle, G. G., Roobaert, A., and Regnier, P.: A uniform pCO2 climatology combining open and coastal oceans, Earth Syst. Sci. Data, 12, 2537–2553, https://doi.org/10.5194/essd-12-2537-2020, 2020. </span>
+                </div></div>
+            <div class="card-links">
+                <div class="card-link">
+                    <a href="https://doi.org/10.5194/essd-12-2537-2020" target="_blank" rel="noopener noreferrer"><i class="fas fa-book"></i> Publication</a>
+                </div>
+                <div class="card-link">
+                    <a href="https://www.ncei.noaa.gov/access/ocean-carbon-acidification-data-system/oceans/MPI-ULB-SOM_FFN_clim.html" target="_blank" rel="noopener noreferrer"><i class="fa fa-download"></i> Data Access</a>
+                </div>
+            </div>  
+        </div>
+    </div>
+</div><div class="product-card" data-data-type="Gridded surface" data-spatial-domains="Open ocean" data-temporal-resolution="monthly||climatology" data-spatial-resolution="1° x 1°" data-period="1982 - 2025">
+    <div class="card-inner">
+        <div class="card-front">
+            <div class="card-header">
+                <h3>VLIZ-SOM-FFN</h3>
+                <div class="card-subheading">Landschützer et al. (2016) </div>
+            </div>
+            <div class="card-image">
+                <img loading="lazy" src="images/vliz-som-ffn.png" alt="Product image">
+            </div>
+            <div class="card-summary">
+                Monthly gridded pCO2 from 1982 through near present
+            </div>
+            <div class="card-attributes"><div class="card-attr">
+                    <i class="fa-solid fa-globe" title="Spatial domains"></i>
+                    <span class="card-attribute-value">Open ocean</span>
+                </div><div class="card-attr">
+                    <i class="fa-solid fa-hourglass-start" title="Temporal resolution"></i>
+                    <span class="card-attribute-value">monthly, climatology</span>
+                </div><div class="card-attr">
+                    <i class="fa-solid fa-ruler-horizontal" title="Spatial resolution"></i>
+                    <span class="card-attribute-value">1° x 1°</span>
+                </div><div class="card-attr">
+                    <i class="fa-solid fa-calendar-days" title="Period"></i>
+                    <span class="card-attribute-value">1982 - 2025</span>
+                </div></div>
+        </div>
+        <div class="card-back">
+            <div class="card-header">
+                <h3>VLIZ-SOM-FFN</h3>
+                <div class="card-subheading">Landschützer et al. (2016) </div>
+            </div>
+            <div class="card-details"><div class="card-detail">
+                    <span class="card-detail-title">Description: </span>
+                    <span class="card-detail-content">Landschützer et al. (2016) employed the Self-Organizing-Map Feed-Forward Network (SOM-FFN) neural network method (Landschützer et al., 2013) to map sea surface pCO2 from SOCAT (see No. 1 above) (Bakker et al., 2014) to generate monthly pCO2 fields on a 1° × 1° global surface ocean grid, covering the period from 1982 to near present. It is based on the gridded pCO2 measurements from SOCAT and is updated regularly. The creation of the pCO2 fields involve a two-step neural network approach, which has been extensively detailed and validated in previous works by Landschützer et al. (2013, 2014, 2016). In the initial step, the global ocean is clustered into biogeochemical provinces, and subsequently, the non-linear relationship between CO2 driver variables and gridded data from SOCAT (Bakker et al., 2016) is reconstructed. Air-sea CO2 fluxes are also computed based on the air-sea pCO2 difference, utilizing a bulk gas transfer formulation as described by Landschützer et al. (2013, 2014, 2016). </span>
+                </div><div class="card-detail">
+                    <span class="card-detail-title">Reference: </span>
+                    <span class="card-detail-content">Landschützer, P., Gruber, N., and Bakker, D. C. E.: Decadal variations and trends of the Global Ocean Carbon Sink, Global Biogeochemical Cycles, 30(10), 1396–1417. https://doi.org/10.1002/2015gb005359, 2016. </span>
+                </div></div>
+            <div class="card-links">
+                <div class="card-link">
+                    <a href="https://doi.org/10.1002/2015gb005359" target="_blank" rel="noopener noreferrer"><i class="fas fa-book"></i> Publication</a>
+                </div>
+                <div class="card-link">
+                    <a href="https://www.ncei.noaa.gov/data/oceans/ncei/ocads/metadata/0160558.html" target="_blank" rel="noopener noreferrer"><i class="fa fa-download"></i> Data Access</a>
+                </div>
+            </div>  
+        </div>
+    </div>
+</div><div class="product-card" data-data-type="Gridded surface" data-spatial-domains="Open ocean||Surface" data-temporal-resolution="monthly" data-spatial-resolution="1° x 1°" data-period="1990-2023">
+    <div class="card-inner">
+        <div class="card-front">
+            <div class="card-header">
+                <h3>JMA-MLR</h3>
+                <div class="card-subheading">Iida et al. (2021)</div>
+            </div>
+            <div class="card-image">
+                <img loading="lazy" src="images/jma-mlr.png" alt="Product image">
+            </div>
+            <div class="card-summary">
+                Temporal trends of DIC, TA, pCO2, air-sea CO2 flux, pH, and Ωarag.
+>>>>>>> cc77d1d87f1790fd71a99a03bc81ef48bbe38e95
+            </div>
+            <div class="card-attributes"><div class="card-attr">
+                    <i class="fa-solid fa-globe" title="Spatial domains"></i>
+                    <span class="card-attribute-value">Open ocean, Coastal ocean, Water column</span>
+                </div><div class="card-attr">
+                    <i class="fa-solid fa-hourglass-start" title="Temporal resolution"></i>
+                    <span class="card-attribute-value">irregular</span>
+                </div><div class="card-attr">
+                    <i class="fa-solid fa-calendar-days" title="Period"></i>
+<<<<<<< HEAD
+                    <span class="card-attribute-value">1983 - 2021</span>
+=======
+                    <span class="card-attribute-value">1990-2023</span>
+>>>>>>> cc77d1d87f1790fd71a99a03bc81ef48bbe38e95
+                </div></div>
+        </div>
+        <div class="card-back">
+            <div class="card-header">
+<<<<<<< HEAD
+                <h3>SPOTS</h3>
+                <div class="card-subheading">Lange et al., (2024)</div>
+            </div>
+            <div class="card-details"><div class="card-detail">
+                    <span class="card-detail-title">Description: </span>
+                    <span class="card-detail-content">The Synthesis Product for Ocean Time-Series (SPOTS) is a ship-based biogeochemical pilot, aiming at regularly providing high quality data from fixed time-series stations with consistent format and semantics (Lange et al., 2024a). The pilot includes data from 12 fixed ship-based time-series programs with a focus on the Global Ocean Observing System’s biogeochemical essential ocean variables. These stations represent unique marine environments across a variety of spatiotemporal resolutions and ranges, with data from 1983 to 2021.</span>
+                </div><div class="card-detail">
+                    <span class="card-detail-title">Reference: </span>
+                    <span class="card-detail-content">Lange, N., Fiedler, B., Álvarez, M., Benoit-Cattin, A., Benway, H., Buttigieg, P. L., Coppola, L., Currie, K., Flecha, S., Gerlach, D. S., Honda, M., Huertas, I. E., Lauvset, S. K., Muller-Karger, F., Körtzinger, A., O'Brien, K. M., Ólafsdóttir, S. R., Pacheco, F. C., Rueda-Roa, D., Skjelvan, I., Wakita, M., White, A., and Tanhua, T.: Synthesis Product for Ocean Time Series (SPOTS) – a ship-based biogeochemical pilot, Earth Syst. Sci. Data, 16, 1901–1931, https://doi.org/10.5194/essd-16-1901-2024, 2024.</span>
+                </div></div>
+            <div class="card-links">
+                <div class="card-link">
+                    <a href="https://doi.org/10.5194/essd-16-1901-2024" target="_blank" rel="noopener noreferrer"><i class="fas fa-book"></i> Publication</a>
+                </div>
+                <div class="card-link">
+                    <a href="https://www.bco-dmo.org/dataset/896862" target="_blank" rel="noopener noreferrer"><i class="fa fa-download"></i> Data Access</a>
+=======
+                <h3>JMA-MLR</h3>
+                <div class="card-subheading">Iida et al. (2021)</div>
+            </div>
+            <div class="card-details"><div class="card-detail">
+                    <span class="card-detail-title">Description: </span>
+                    <span class="card-detail-content">Iida et al. (2021) developed a monthly data product for inorganic carbonate variables on a 1° × 1° global surface ocean grid for the period 1993?2018. Variables include DIC, TA, pCO2, sea-air CO2 flux, pH, and Ωarag. They leveraged data products such as SOCAT.v2019 (Bakker et al., 2016) and GLODAPv2.2019 (Olsen et al., 2019), as well as satellite-based variables, including sea-surface dynamic height (SSDH), mixed layer depth (MLD), and chlorophyll-a. The product is updated annually using the latest SOCAT and GLODAPv2 data.</span>
+                </div><div class="card-detail">
+                    <span class="card-detail-title">Reference: </span>
+                    <span class="card-detail-content">Iida, Y., Takatani, Y., Kojima, A., and Ishii, M. 2021. Global trends of ocean CO2 sink and ocean acidification: An obsevation-based reconstruction of surface ocean inorganic carbon variables, J. Oceanogr. 77, 323-358, https://doi.org/10.1007/s10872-020-00571-5</span>
+                </div></div>
+            <div class="card-links">
+                <div class="card-link">
+                    <a href="https://doi.org/10.1007/s10872-020-00571-5" target="_blank" rel="noopener noreferrer"><i class="fas fa-book"></i> Publication</a>
+                </div>
+                <div class="card-link">
+                    <a href="https://doi.org/10.1007/s10872-020-00571-5" target="_blank" rel="noopener noreferrer"><i class="fa fa-download"></i> Data Access</a>
+>>>>>>> cc77d1d87f1790fd71a99a03bc81ef48bbe38e95
+                </div>
+            </div>  
+        </div>
+    </div>
+</div><div class="product-card" data-data-type="Time series" data-spatial-domains="Open ocean||Coastal ocean||Surface" data-temporal-resolution="continuous">
+    <div class="card-inner">
+        <div class="card-front">
+            <div class="card-header">
+                <h3>pCO2 and pH Time-series from 40 Surface Buoys</h3>
+                <div class="card-subheading">Sutton et al. (2019)</div>
+            </div>
+            <div class="card-image">
+                <img loading="lazy" src="images/pco2_and_ph_time-series_from_40_surface_buoys.png" alt="Product image">
+            </div>
+            <div class="card-summary">
+                Based on 40 moored surface pCO2 time-series, with 17 of them containing pH
+            </div>
+            <div class="card-attributes"><div class="card-attr">
+                    <i class="fa-solid fa-globe" title="Spatial domains"></i>
+                    <span class="card-attribute-value">Open ocean, Coastal ocean, Surface</span>
+                </div><div class="card-attr">
+                    <i class="fa-solid fa-hourglass-start" title="Temporal resolution"></i>
+                    <span class="card-attribute-value">continuous</span>
+                </div></div>
+        </div>
+        <div class="card-back">
+            <div class="card-header">
+                <h3>pCO2 and pH Time-series from 40 Surface Buoys</h3>
+                <div class="card-subheading">Sutton et al. (2019)</div>
+            </div>
+            <div class="card-details"><div class="card-detail">
+                    <span class="card-detail-title">Description: </span>
+                    <span class="card-detail-content">Sutton et al. (2019) established a living dataset comprising 40 individual autonomous moored surface ocean pCO2 time-series established between 2004 and 2013, 17 of them also include autonomous pH measurements. These time-series characterize a wide range of surface ocean carbonate system conditions, across a variety of environments, including 17 oceanic and 13 coastal locations, as well as 10 coral reefs. </span>
+                </div><div class="card-detail">
+                    <span class="card-detail-title">Reference: </span>
+                    <span class="card-detail-content">Sutton, A. J., Feely, R. A., Maenner-Jones, S., Musielwicz, S., Osborne, J., Dietrich, C., Monacci, N., Cross, J., Bott, R., Kozyr, A., Andersson, A. J., Bates, N. R., Cai, W.-J., Cronin, M. F., De Carlo, E. H., Hales, B., Howden, S. D., Lee, C. M., Manzello, D. P., McPhaden, M. J., Meléndez, M., Mickett, J. B., Newton, J. A., Noakes, S. E., Noh, J. H., Olafsdottir, S. R., Salisbury, J. E., Send, U., Trull, T. W., Vandemark, D. C., and Weller, R. A.: Autonomous seawater pCO2 and pH time series from 40 surface buoys and the emergence of anthropogenic trends, Earth Syst. Sci. Data, 11, 421–439, https://doi.org/10.5194/essd-11-421-2019, 2019.</span>
+                </div></div>
+            <div class="card-links">
+                <div class="card-link">
+                    <a href="https://doi.org/10.5194/essd-11-421-2019" target="_blank" rel="noopener noreferrer"><i class="fas fa-book"></i> Publication</a>
+                </div>
+                <div class="card-link">
+                    <a href="https://www.ncei.noaa.gov/access/ocean-carbon-acidification-data-system/oceans/Moorings/ndp097.html" target="_blank" rel="noopener noreferrer"><i class="fa fa-download"></i> Data Access</a>
+                </div>
+            </div>  
+        </div>
+    </div>
+</div><div class="product-card" data-data-type="Gridded surface" data-spatial-domains="Open ocean" data-temporal-resolution="monthly" data-spatial-resolution="1° x 1°" data-period="2010">
+    <div class="card-inner">
+        <div class="card-front">
+            <div class="card-header">
+                <h3>Takahashi ΔfCO2 & Flux Climatology</h3>
+                <div class="card-subheading">Fay et al. (2024)</div>
+            </div>
+            <div class="card-image">
+                <img loading="lazy" src="images/takahashi__fco2___flux_climatology.png" alt="Product image">
+            </div>
+            <div class="card-summary">
+<<<<<<< HEAD
                 Does not use proxy variables for extrapolation. Only produced as monthly climatology.
             </div>
             <div class="card-attributes"><div class="card-attr">
@@ -1371,6 +1633,8 @@ to 1° × 1° resolution and near-global coverage. This climatology represents t
                 <img loading="lazy" src="images/oceansoda-ethzv2.png" alt="Product image">
             </div>
             <div class="card-summary">
+=======
+>>>>>>> cc77d1d87f1790fd71a99a03bc81ef48bbe38e95
                 Highlighting fine-scale and short-term variability of the ocean carbon sink
             </div>
             <div class="card-attributes"><div class="card-attr">
@@ -1417,6 +1681,7 @@ to 1° × 1° resolution and near-global coverage. This climatology represents t
                 <div class="card-subheading">Gloege et al. (2022)</div>
             </div>
             <div class="card-image">
+<<<<<<< HEAD
                 <img loading="lazy" src="images/ldeo-hpd_fco2.png" alt="Product image">
             </div>
             <div class="card-summary">
@@ -1552,6 +1817,722 @@ to 1° × 1° resolution and near-global coverage. This climatology represents t
                 </div>
                 <div class="card-link">
                     <a href="https://zenodo.org/records/13941548" target="_blank" rel="noopener noreferrer"><i class="fa fa-download"></i> Data Access</a>
+                </div>
+            </div>  
+        </div>
+    </div>
+</div><div class="product-card" data-data-type="Gridded surface" data-spatial-domains="Open ocean||Coastal ocean||Surface" data-temporal-resolution="monthly||climatology" data-spatial-resolution="1° x 1°" data-period="1985 - 2019">
+    <div class="card-inner">
+        <div class="card-front">
+            <div class="card-header">
+                <h3>CMEMS-LSCEv1</h3>
+                <div class="card-subheading">Chau et al. (2022)</div>
+            </div>
+            <div class="card-image">
+                <img loading="lazy" src="images/cmems-lscev1.png" alt="Product image">
+            </div>
+            <div class="card-summary">
+                seamless reconstruction from coastal to open ocean
+            </div>
+            <div class="card-attributes"><div class="card-attr">
+                    <i class="fa-solid fa-globe" title="Spatial domains"></i>
+                    <span class="card-attribute-value">Open ocean, Coastal ocean, Surface</span>
+                </div><div class="card-attr">
+                    <i class="fa-solid fa-hourglass-start" title="Temporal resolution"></i>
+                    <span class="card-attribute-value">monthly, climatology</span>
+                </div><div class="card-attr">
+                    <i class="fa-solid fa-ruler-horizontal" title="Spatial resolution"></i>
+                    <span class="card-attribute-value">1° x 1°</span>
+                </div><div class="card-attr">
+                    <i class="fa-solid fa-calendar-days" title="Period"></i>
+                    <span class="card-attribute-value">1985 - 2019</span>
+                </div></div>
+        </div>
+        <div class="card-back">
+            <div class="card-header">
+                <h3>CMEMS-LSCEv1</h3>
+                <div class="card-subheading">Chau et al. (2022)</div>
+            </div>
+            <div class="card-details"><div class="card-detail">
+                    <span class="card-detail-title">Description: </span>
+                    <span class="card-detail-content">Monthly surface ocean pCO2 and air–sea CO2 fluxes on a 1° × 1° grid in both the open ocean and coastal seas from 1985–2019 were reconstructed by Chau et al., (2022). CMEMS-LSCE is short for Copernicus Marine Environment Monitoring Service - Laboratoire des Sciences du Climat et de l’Environnement. This product is generated from an ensemble-based reconstruction of pCO2 maps trained with gridded data from SOCATv2020 (Bakker et al., 2016). Sea-surface pCO2 values (converted from the original fCO2 values in SOCATv2020) were regressed against a set of predictors with non-linear functions, i.e., feed-forward neural network (FFNN) models. The predictors include: sea-surface height (SSH), SST, SSS, MLD, chlorophyll a (Chl-a), atmospheric CO2 mole fraction (xCO2), and geographical coordinates (longitudes and latitudes). </span>
+                </div><div class="card-detail">
+                    <span class="card-detail-title">Reference: </span>
+                    <span class="card-detail-content">Chau, T.-T.-T., Gehlen, M., and Chevallier, F.: A seamless ensemble-based reconstruction of surface ocean pCO2 and air–sea CO2 fluxes over the global coastal and open oceans. Biogeosciences, 19(4), 1087–1109,  https://doi.org/10.5194/bg-19-1087-2022, 2022.</span>
+                </div></div>
+            <div class="card-links">
+                <div class="card-link">
+                    <a href="https://doi.org/10.5194/bg-19-1087-2022" target="_blank" rel="noopener noreferrer"><i class="fas fa-book"></i> Publication</a>
+                </div>
+                <div class="card-link">
+                    <a href="https://data.ipsl.fr/catalog/srv/eng/catalog.search#/metadata/a2f0891b-763a-49e9-af1b-78ed78b16982" target="_blank" rel="noopener noreferrer"><i class="fa fa-download"></i> Data Access</a>
+                </div>
+            </div>  
+        </div>
+    </div>
+</div><div class="product-card" data-data-type="Gridded surface" data-spatial-domains="Open ocean||Coastal ocean||Surface" data-temporal-resolution="monthly||climatology" data-spatial-resolution="0.25° x 0.25°" data-period="1985 - 2025">
+    <div class="card-inner">
+        <div class="card-front">
+            <div class="card-header">
+                <h3>CMEMS-LSCEv2</h3>
+                <div class="card-subheading">Chau et al. (2024)</div>
+            </div>
+            <div class="card-image">
+                <img loading="lazy" src="images/cmems-lscev2.png" alt="Product image">
+            </div>
+            <div class="card-summary">
+                Yearly extension of time-series & monthly reconstruction at low latency
+            </div>
+            <div class="card-attributes"><div class="card-attr">
+                    <i class="fa-solid fa-globe" title="Spatial domains"></i>
+                    <span class="card-attribute-value">Open ocean, Coastal ocean, Surface</span>
+                </div><div class="card-attr">
+                    <i class="fa-solid fa-hourglass-start" title="Temporal resolution"></i>
+                    <span class="card-attribute-value">monthly, climatology</span>
+                </div><div class="card-attr">
+                    <i class="fa-solid fa-ruler-horizontal" title="Spatial resolution"></i>
+                    <span class="card-attribute-value">0.25° x 0.25°</span>
+                </div><div class="card-attr">
+                    <i class="fa-solid fa-calendar-days" title="Period"></i>
+                    <span class="card-attribute-value">1985 - 2025</span>
+                </div></div>
+        </div>
+        <div class="card-back">
+            <div class="card-header">
+                <h3>CMEMS-LSCEv2</h3>
+                <div class="card-subheading">Chau et al. (2024)</div>
+            </div>
+            <div class="card-details"><div class="card-detail">
+                    <span class="card-detail-title">Description: </span>
+                    <span class="card-detail-content">CMEMS-LSCEv2 corresponds to the latest version of the CMEMS-LSCE FFNN. It uses the same ensemble-based reconstruction method for pCO2 maps as CMEMS-LSCEv1.  Improvements include downscaling the spatial resolution to 0.25° × 0.25° and reproducing additional surface ocean carbonate system variables on a global grid from 1985 onwards (Chau et al., 2024a). The additional surface ocean carbonate system variables are: pCO2, DIC, TA, pH, Ωarag, and Ωcalc. Surface ocean pCO2 is reconstructed based on an ensemble of neural network models mapping gridded observation-based data provided by SOCATv2022 (Bakker et al., 2016). Surface ocean TA is estimated with a multiple linear regression approach (Carter et al., 2016, 2017). The remaining carbonate variables are calculated from pCO2 and TA using a MATLAB version of CO2SYS (Lewis and Wallace, 1998; Van Heuven et al., 2011). The CMEMS-LSCE product is updated yearly for surface ocean pCO2, air-sea fluxes, and the carbonate system variables. Updates are phased with release of the SOCAT database. For surface ocean pCO2 and air-sea fluxes the temporal coverage is extended to the present date with a latency of 1 month (Chau et al., 2024b). </span>
+                </div><div class="card-detail">
+                    <span class="card-detail-title">Reference: </span>
+                    <span class="card-detail-content">Chau, T.-T.-T., Gehlen, M., Metzl, N., and Chevallier, F.: CMEMS-LSCE: a global, 0.25°, monthly reconstruction of the surface ocean carbonate system, Earth Syst. Sci. Data, 16, 121–160, https://doi.org/10.5194/essd-16-121-2024, 2024. </span>
+                </div></div>
+            <div class="card-links">
+                <div class="card-link">
+                    <a href="https://doi.org/10.5194/essd-16-121-2024" target="_blank" rel="noopener noreferrer"><i class="fas fa-book"></i> Publication</a>
+                </div>
+                <div class="card-link">
+                    <a href="https://doi.org/10.48670/moi-00047" target="_blank" rel="noopener noreferrer"><i class="fa fa-download"></i> Data Access</a>
+                </div>
+            </div>  
+        </div>
+    </div>
+</div><div class="product-card" data-data-type="Gridded surface" data-spatial-domains="Open ocean" data-temporal-resolution="daily" data-spatial-resolution="2.5° x 2°" data-period="1957-2020">
+    <div class="card-inner">
+        <div class="card-front">
+            <div class="card-header">
+                <h3>CarboScope (Jena-MLS)</h3>
+                <div class="card-subheading">Rödenbeck et al. (2022)</div>
+            </div>
+            <div class="card-image">
+                <img loading="lazy" src="images/carboscope__jena-mls_.png" alt="Product image">
+            </div>
+            <div class="card-summary">
+                Variability of pCO2 and air–sea CO2 fluxes since 1957, sensitivities to SST and wind speed variations
+=======
+                <img loading="lazy" src="https://agupubs.onlinelibrary.wiley.com/cms/asset/5a2e5698-13ed-46e3-8271-d27e47d72dbc/jame21511-fig-0001-m.png" alt="Product image">
+            </div>
+            <div class="card-summary">
+                Temporal evolution of surface ocean fCO2 and air–sea CO2 exchange
+>>>>>>> cc77d1d87f1790fd71a99a03bc81ef48bbe38e95
+            </div>
+            <div class="card-attributes"><div class="card-attr">
+                    <i class="fa-solid fa-globe" title="Spatial domains"></i>
+                    <span class="card-attribute-value">Open ocean</span>
+                </div><div class="card-attr">
+                    <i class="fa-solid fa-hourglass-start" title="Temporal resolution"></i>
+                    <span class="card-attribute-value">daily</span>
+                </div><div class="card-attr">
+                    <i class="fa-solid fa-ruler-horizontal" title="Spatial resolution"></i>
+                    <span class="card-attribute-value">2.5° x 2°</span>
+                </div><div class="card-attr">
+                    <i class="fa-solid fa-calendar-days" title="Period"></i>
+                    <span class="card-attribute-value">1957-2020</span>
+                </div></div>
+        </div>
+        <div class="card-back">
+            <div class="card-header">
+                <h3>CarboScope (Jena-MLS)</h3>
+                <div class="card-subheading">Rödenbeck et al. (2022)</div>
+            </div>
+            <div class="card-details"><div class="card-detail">
+                    <span class="card-detail-title">Description: </span>
+                    <span class="card-detail-content">The Jena Mixed-Layer Scheme (within the CarboScope family of data-based estimates of carbon-cycle variability) is based on observed sea surface pCO2 from SOCAT (see above No. 1) (Bakker et al., 2014). It provides daily global fields of pCO2 and air–sea CO2 fluxes from 1957 to the year before present, on a resolution of 2.5° × 2° degrees. In the original method (Rödenbeck et al., 2013), a diagnostic model of the carbon balance in the ocean mixed layer is being fitted to the pCO2 data, by adjusting the ocean-interior sources and sinks of carbon of the mixed layer. The multi-decadal trend is derived from the data-based Ocean Circulation Inverse Model (OCIM) estimate provided by DeVries (2022b). Since a later extension described in Rödenbeck et al. (2022), the variability in the ocean-interior sources and sinks is first regressed against variability in SST and wind speed. The regression step is followed by a correction step with explicit temporal variability, to also represent data variability not yet represented by the predictors of the regression. The CarboScope product is updated yearly.    </span>
+                </div><div class="card-detail">
+                    <span class="card-detail-title">Reference: </span>
+                    <span class="card-detail-content">Rödenbeck, Christian, DeVries, T., Hauck, J., Le Quéré, C., & Keeling, R. F.: Data-based estimates of interannual sea-air CO2 flux variations 1957-2020 and their relation to environmental drivers, Biogeosciences, 19(10), 2627–2652,  https://doi.org/10.5194/bg-19-2627-2022, 2022.  </span>
+                </div></div>
+            <div class="card-links">
+                <div class="card-link">
+                    <a href="https://doi.org/10.5194/bg-19-2627-2022" target="_blank" rel="noopener noreferrer"><i class="fas fa-book"></i> Publication</a>
+                </div>
+                <div class="card-link">
+                    <a href="https://www.bgc-jena.mpg.de/CarboScope/" target="_blank" rel="noopener noreferrer"><i class="fa fa-download"></i> Data Access</a>
+                </div>
+            </div>  
+        </div>
+    </div>
+</div><div class="product-card" data-data-type="Gridded surface" data-spatial-domains="Open ocean" data-temporal-resolution="monthly" data-spatial-resolution="1° x 1°" data-period="1985-2019">
+    <div class="card-inner">
+        <div class="card-front">
+            <div class="card-header">
+                <h3>UoEX-Watson</h3>
+                <div class="card-subheading">Watson et al (2020)</div>
+            </div>
+            <div class="card-image">
+                <img loading="lazy" src="images/uoex-watson.png" alt="Product image">
+            </div>
+            <div class="card-summary">
+                Air-sea fluxes of CO2 with adjusted skin temperature effect
+            </div>
+            <div class="card-attributes"><div class="card-attr">
+                    <i class="fa-solid fa-globe" title="Spatial domains"></i>
+                    <span class="card-attribute-value">Open ocean</span>
+                </div><div class="card-attr">
+                    <i class="fa-solid fa-hourglass-start" title="Temporal resolution"></i>
+                    <span class="card-attribute-value">monthly</span>
+                </div><div class="card-attr">
+                    <i class="fa-solid fa-ruler-horizontal" title="Spatial resolution"></i>
+                    <span class="card-attribute-value">1° x 1°</span>
+                </div><div class="card-attr">
+                    <i class="fa-solid fa-calendar-days" title="Period"></i>
+<<<<<<< HEAD
+                    <span class="card-attribute-value">1985-2019</span>
+=======
+                    <span class="card-attribute-value">1982-2018</span>
+>>>>>>> cc77d1d87f1790fd71a99a03bc81ef48bbe38e95
+                </div></div>
+        </div>
+        <div class="card-back">
+            <div class="card-header">
+<<<<<<< HEAD
+                <h3>UoEX-Watson</h3>
+                <div class="card-subheading">Watson et al (2020)</div>
+            </div>
+            <div class="card-details"><div class="card-detail">
+                    <span class="card-detail-title">Description: </span>
+                    <span class="card-detail-content">This is a gridded estimate of the atmosphere-ocean flux of CO2.  It takes into account near-surface temperature and salinity deviations due to the surface "skin effect", and small deviations in temperature caused by sampling below the actual surface of the ocean, which most estimates ignore. The result is a substantially larger estimate of net flux into the ocean than most other products. Apart from the surface correction, the SOM-FFN neural net interpolation method developed by Landschutzer et al is followed.</span>
+                </div><div class="card-detail">
+                    <span class="card-detail-title">Reference: </span>
+                    <span class="card-detail-content">Watson, A. J., Schuster, U., Shutler, J. D., Holding, T., Ashton, I. G., Landschützer, P., Woolf, D., and Goddijn-Murphy, L.: Revised estimates of ocean-atmosphere CO2 flux are consistent with ocean carbon inventory, Nature Communications, 11(1), 1–6, https://doi.org/10.1038/s41467-020-18203-3, 2020.</span>
+                </div></div>
+            <div class="card-links">
+                <div class="card-link">
+                    <a href="https://doi.org/10.1038/s41467-020-18203-3" target="_blank" rel="noopener noreferrer"><i class="fas fa-book"></i> Publication</a>
+                </div>
+                <div class="card-link">
+                    <a href="https://www.ncei.noaa.gov/data/oceans/ncei/ocads/data/0301544/" target="_blank" rel="noopener noreferrer"><i class="fa fa-download"></i> Data Access</a>
+                </div>
+            </div>  
+        </div>
+    </div>
+</div><div class="product-card" data-data-type="Gridded surface" data-spatial-domains="Open ocean||Surface" data-temporal-resolution="monthly" data-spatial-resolution="1° x 1°" data-period="1982 - 2024">
+    <div class="card-inner">
+        <div class="card-front">
+            <div class="card-header">
+                <h3>NIES-ML3</h3>
+                <div class="card-subheading">Zeng et al. (2022)</div>
+            </div>
+            <div class="card-image">
+                <img loading="lazy" src="images/nies-ml3.png" alt="Product image">
+            </div>
+            <div class="card-summary">
+                Three machine learning methods were used to simulate surface ocean CO2 trends and construct monthly CO2 maps. 
+            </div>
+            <div class="card-attributes"><div class="card-attr">
+                    <i class="fa-solid fa-globe" title="Spatial domains"></i>
+                    <span class="card-attribute-value">Open ocean, Surface</span>
+                </div><div class="card-attr">
+                    <i class="fa-solid fa-hourglass-start" title="Temporal resolution"></i>
+                    <span class="card-attribute-value">monthly</span>
+                </div><div class="card-attr">
+                    <i class="fa-solid fa-ruler-horizontal" title="Spatial resolution"></i>
+                    <span class="card-attribute-value">1° x 1°</span>
+                </div><div class="card-attr">
+                    <i class="fa-solid fa-calendar-days" title="Period"></i>
+                    <span class="card-attribute-value">1982 - 2024</span>
+                </div></div>
+        </div>
+        <div class="card-back">
+            <div class="card-header">
+                <h3>NIES-ML3</h3>
+                <div class="card-subheading">Zeng et al. (2022)</div>
+            </div>
+            <div class="card-details"><div class="card-detail">
+                    <span class="card-detail-title">Description: </span>
+                    <span class="card-detail-content">A feed forward neural network (NN), a random forest (RF) and a gradient boost machine (GB) were used to simulate the time variant trends of the surface ocean CO2 and construct monthly global surface ocean CO2 maps. The trends of ocean CO2 were estimated from the annual increase rate of atmospheric CO2 first and then corrected by using the NN, RF and GB with a leave-one-year-out validation method. Including different machine learning methods has the advantages of preventing over fitting by inter-comparison and reducing hot-spot by using the ensemble of their results.    </span>
+                </div><div class="card-detail">
+                    <span class="card-detail-title">Reference: </span>
+                    <span class="card-detail-content">Zeng, J., Iida, Y., Matsunaga, T., and Shirai, T. 2022. Surface ocean CO2 concentration and air-sea flux estimate by machine learning with modelled variable trends. Front. Mar. Sci. 9, 989233. https://doi.org/10.3389/fmars.2022.989233</span>
+                </div></div>
+            <div class="card-links">
+                <div class="card-link">
+                    <a href="https://doi.org/10.3389/fmars.2022.989233" target="_blank" rel="noopener noreferrer"><i class="fas fa-book"></i> Publication</a>
+                </div>
+                <div class="card-link">
+                    <a href="https://www.nies.go.jp/doi/10.17595/20220311.001-e.html" target="_blank" rel="noopener noreferrer"><i class="fa fa-download"></i> Data Access</a>
+                </div>
+            </div>  
+        </div>
+    </div>
+</div><div class="product-card" data-data-type="Gridded surface" data-spatial-domains="Open ocean||Surface" data-temporal-resolution="monthly" data-spatial-resolution="1° x 1°" data-period="1982 - 2020">
+    <div class="card-inner">
+        <div class="card-front">
+            <div class="card-header">
+                <h3>CSIR-ML6</h3>
+                <div class="card-subheading">Gregor et al. (2019)</div>
+            </div>
+            <div class="card-image">
+                <img loading="lazy" src="images/csir-ml6.png" alt="Product image">
+            </div>
+            <div class="card-summary">
+                Various ML methods produce different results when data is sparse, but all still achieving roughly the same uncertainty
+            </div>
+            <div class="card-attributes"><div class="card-attr">
+                    <i class="fa-solid fa-globe" title="Spatial domains"></i>
+                    <span class="card-attribute-value">Open ocean, Surface</span>
+                </div><div class="card-attr">
+                    <i class="fa-solid fa-hourglass-start" title="Temporal resolution"></i>
+                    <span class="card-attribute-value">monthly</span>
+                </div><div class="card-attr">
+                    <i class="fa-solid fa-ruler-horizontal" title="Spatial resolution"></i>
+                    <span class="card-attribute-value">1° x 1°</span>
+                </div><div class="card-attr">
+                    <i class="fa-solid fa-calendar-days" title="Period"></i>
+                    <span class="card-attribute-value">1982 - 2020</span>
+                </div></div>
+        </div>
+        <div class="card-back">
+            <div class="card-header">
+                <h3>CSIR-ML6</h3>
+                <div class="card-subheading">Gregor et al. (2019)</div>
+            </div>
+            <div class="card-details"><div class="card-detail">
+                    <span class="card-detail-title">Description: </span>
+                    <span class="card-detail-content">Provides monthly 1° × 1° estimates of surface pCO2 (Gregor et al., 2019a). The approach uses the conceptual two-step approach of clustering and performing regressions for each cluster as Landschützer et al. (2016). CSIR-ML6 investigates the efficacy of various machine learning (ML) methods in estimating surface pCO2, namely, feed-forward neural networks (FFNN), extremely randomized trees (ERT), gradient boosting machines (GBM), and support vector regression (SVR). It is found that the ensemble of all but the ERT method resulted in the best estimate, highlighting the fact that various ML methods do not produce the same outcome, particularly when data is sparse. Further, the variance between ensemble members can inform us about regions where uncertainty may be large due to methodological differences. Despite this, all methods achieve roughly the same uncertainty – a barrier, or wall beyond which the community has yet to overcome.</span>
+                </div><div class="card-detail">
+                    <span class="card-detail-title">Reference: </span>
+                    <span class="card-detail-content">Gregor, L., Lebehot, A. D., Kok, S., and Scheel Monteiro, P. M.: A comparative assessment of the uncertainties of global surface ocean CO2 estimates using a machine-learning ensemble (CSIR-ML6 version 2019a) – have we hit the wall?, Geosci. Model Dev., 12, 5113–5136, https://doi.org/10.5194/gmd-12-5113-2019, 2019.</span>
+                </div></div>
+            <div class="card-links">
+                <div class="card-link">
+                    <a href="https://doi.org/10.5194/gmd-12-5113-2019" target="_blank" rel="noopener noreferrer"><i class="fas fa-book"></i> Publication</a>
+                </div>
+                <div class="card-link">
+                    <a href="https://www.ncei.noaa.gov/data/oceans/ncei/ocads/metadata/0206205.html" target="_blank" rel="noopener noreferrer"><i class="fa fa-download"></i> Data Access</a>
+                </div>
+            </div>  
+        </div>
+    </div>
+</div><div class="product-card" data-data-type="Gridded surface" data-spatial-domains="Open ocean||Surface" data-temporal-resolution="monthly" data-spatial-resolution="1° x 1°" data-period="1992 - 2024">
+    <div class="card-inner">
+        <div class="card-front">
+            <div class="card-header">
+                <h3>Stepwise-FFNN</h3>
+                <div class="card-subheading">Zhong et al. (2022)</div>
+            </div>
+            <div class="card-image">
+                <img loading="lazy" src="images/stepwise-ffnn.png" alt="Product image">
+            </div>
+            <div class="card-summary">
+                ML-based selection of predictors considering regional differences of pCO2 drivers
+            </div>
+            <div class="card-attributes"><div class="card-attr">
+                    <i class="fa-solid fa-globe" title="Spatial domains"></i>
+                    <span class="card-attribute-value">Open ocean, Surface</span>
+                </div><div class="card-attr">
+                    <i class="fa-solid fa-hourglass-start" title="Temporal resolution"></i>
+                    <span class="card-attribute-value">monthly</span>
+                </div><div class="card-attr">
+                    <i class="fa-solid fa-ruler-horizontal" title="Spatial resolution"></i>
+                    <span class="card-attribute-value">1° x 1°</span>
+                </div><div class="card-attr">
+                    <i class="fa-solid fa-calendar-days" title="Period"></i>
+                    <span class="card-attribute-value">1992 - 2024</span>
+                </div></div>
+        </div>
+        <div class="card-back">
+            <div class="card-header">
+                <h3>Stepwise-FFNN</h3>
+                <div class="card-subheading">Zhong et al. (2022)</div>
+            </div>
+            <div class="card-details"><div class="card-detail">
+                    <span class="card-detail-title">Description: </span>
+                    <span class="card-detail-content">A monthly global 1° × 1° surface ocean pCO2 product from January 1992 to December 2024, constructed by combining the stepwise regression algorithm and a feed-forward neural network (FFNN) to select predictors of pCO2 based on the mean absolute error in each of the 11 biogeochemical provinces defined by the self-organizing map (SOM) method. </span>
+                </div><div class="card-detail">
+                    <span class="card-detail-title">Reference: </span>
+                    <span class="card-detail-content">Zhong, G., Li, X., Song, J., Qu, B., Wang, F., Wang, Y., ... & Duan, L. 2022. Reconstruction of global surface ocean pCO2 using region-specific predictors based on a stepwise FFNN regression algorithm, Biogeosciences, 19, 845-859, https://doi.org/10.5194/bg-19-845-2022.</span>
+                </div></div>
+            <div class="card-links">
+                <div class="card-link">
+                    <a href=" http://doi.org/10.12157/IOCAS.20250814.001" target="_blank" rel="noopener noreferrer"><i class="fas fa-book"></i> Publication</a>
+                </div>
+                <div class="card-link">
+                    <a href=" http://doi.org/10.12157/IOCAS.20250814.001" target="_blank" rel="noopener noreferrer"><i class="fa fa-download"></i> Data Access</a>
+=======
+                <h3>LDEO-HPD fCO2</h3>
+                <div class="card-subheading">Gloege et al. (2022)</div>
+            </div>
+            <div class="card-details"><div class="card-detail">
+                    <span class="card-detail-title">Description: </span>
+                    <span class="card-detail-content">The LDEO Hybrid Physics Data (LDEO-HPD) estimates the temporal evolution of surface ocean fCO2 and air–sea CO2 exchange, utilizing the strengths of observations and global ocean biogeochemical models (GOBMs) (Gloege et al., 2022). GOBMs are internally consistent, mechanistic representations of the ocean circulation and carbon cycle, and have long been the standard for making spatiotemporally resolved estimates of air–sea CO2 fluxes. However, there is often a bias between the modeled fCO2 and available surface ocean measurements (Fay and McKinley 2021). The LDEO-HPD approach trains an eXtreme Gradient Boosting (XGB) algorithm to learn a non-linear relationship between model-data fCO2 mismatch and observed predictor variables: sea surface temperature (SST), sea surface salinity (SSS), chlorophyll concentration, mixed layer depth). The GOBM fCO2 is then corrected with the predicted model-data misfit to estimate real-world fCO2 for the observation period (Gloege et al., 2022). This results in reconstructed monthly surface ocean fCO2 and air–sea CO2 fluxes on a 1° × 1° grid in the open ocean beginning in 1982. </span>
+                </div><div class="card-detail">
+                    <span class="card-detail-title">Reference: </span>
+                    <span class="card-detail-content">Gloege, L., Yan, M., Zheng, T., and McKinley, G. A.: Improved quantification of ocean carbon uptake by using machine learning to merge global models and pCO2 data, Journal of Advances in Modeling Earth Systems, 14(2),  https://doi.org/10.1029/2021ms002620, 2022. </span>
+                </div></div>
+            <div class="card-links">
+                <div class="card-link">
+                    <a href="https://doi.org/10.1029/2021ms002620" target="_blank" rel="noopener noreferrer"><i class="fas fa-book"></i> Publication</a>
+                </div>
+                <div class="card-link">
+                    <a href="https://zenodo.org/records/4760205" target="_blank" rel="noopener noreferrer"><i class="fa fa-download"></i> Data Access</a>
+>>>>>>> cc77d1d87f1790fd71a99a03bc81ef48bbe38e95
+                </div>
+            </div>  
+        </div>
+    </div>
+</div><div class="product-card" data-data-type="Gridded surface" data-spatial-domains="Open ocean||Surface" data-temporal-resolution="monthly||climatology" data-spatial-resolution="1° x 1°" data-period="1998 - 2023">
+    <div class="card-inner">
+        <div class="card-front">
+            <div class="card-header">
+                <h3>AOML-ET</h3>
+                <div class="card-subheading">Wanninkhof et al. (2015)</div>
+            </div>
+            <div class="card-image">
+                <img loading="lazy" src="images/aoml-et.png" alt="Product image">
+            </div>
+            <div class="card-summary">
+                Monthly global sea-air CO2 flux maps in modern era
+            </div>
+            <div class="card-attributes"><div class="card-attr">
+                    <i class="fa-solid fa-globe" title="Spatial domains"></i>
+                    <span class="card-attribute-value">Open ocean, Surface</span>
+                </div><div class="card-attr">
+                    <i class="fa-solid fa-hourglass-start" title="Temporal resolution"></i>
+                    <span class="card-attribute-value">monthly, climatology</span>
+                </div><div class="card-attr">
+                    <i class="fa-solid fa-ruler-horizontal" title="Spatial resolution"></i>
+                    <span class="card-attribute-value">1° x 1°</span>
+                </div><div class="card-attr">
+                    <i class="fa-solid fa-calendar-days" title="Period"></i>
+                    <span class="card-attribute-value">1998 - 2023</span>
+                </div></div>
+        </div>
+        <div class="card-back">
+            <div class="card-header">
+                <h3>AOML-ET</h3>
+                <div class="card-subheading">Wanninkhof et al. (2015)</div>
+            </div>
+            <div class="card-details"><div class="card-detail">
+                    <span class="card-detail-title">Description: </span>
+                    <span class="card-detail-content">Wanninkhof et al. (2025) developed a monthly global ocean data product of seawater pCO2 and sea-air CO2 fluxes, referred to as AOML-ET, using an extremely randomized trees (ET) machine learning technique. These maps are created on 1° × 1° spatial grids, providing global surface ocean coverages from 1998 to 2023. AOML-ET incorporates several predictor variables, including time, location, SST, SSS, MLD, and chlorophyll-a. The model was trained using the v2020 and v2023 releases of the SOCAT data product (No. 1). Sea-air CO2 fluxes were calculated using the air-sea CO2 partial pressure difference (∆pCO2) and a bulk gas transfer formulation incorporating windspeed. </span>
+                </div><div class="card-detail">
+                    <span class="card-detail-title">Reference: </span>
+                    <span class="card-detail-content">Wanninkhof, R., Triñanes, J., Pierrot, D., Munro, D. R., Sweeney, C., and Fay, A. R.: Trends in sea-air CO2 fluxes and sensitivities to atmospheric forcing using an extremely randomized trees machine learning approach, Global Biogeochemical Cycles, 39, https://doi.org/10.1029/2024GB008315, 2025.</span>
+                </div></div>
+            <div class="card-links">
+                <div class="card-link">
+                    <a href="https://doi.org/10.1029/2024GB008315" target="_blank" rel="noopener noreferrer"><i class="fas fa-book"></i> Publication</a>
+                </div>
+                <div class="card-link">
+                    <a href="https://www.ncei.noaa.gov/data/oceans/ncei/ocads/metadata/0298989.html" target="_blank" rel="noopener noreferrer"><i class="fa fa-download"></i> Data Access</a>
+                </div>
+            </div>  
+        </div>
+    </div>
+</div><div class="product-card" data-data-type="Gridded surface" data-spatial-domains="Coastal ocean" data-temporal-resolution="monthly" data-spatial-resolution="0.25° x 0.25°" data-period="1982-2020">
+    <div class="card-inner">
+        <div class="card-front">
+            <div class="card-header">
+                <h3>ULB-SOM-FFN-Coastalv2.1</h3>
+                <div class="card-subheading">Roobaert et al. (2024)</div>
+            </div>
+            <div class="card-image">
+                <img loading="lazy" src="images/ulb-som-ffn-coastalv2_1.png" alt="Product image">
+            </div>
+            <div class="card-summary">
+                Global temporal trends of coastal pCO2 and air-sea CO2 fluxes based on SOCATv2022 with data collected from 1982–2020
+            </div>
+            <div class="card-attributes"><div class="card-attr">
+                    <i class="fa-solid fa-globe" title="Spatial domains"></i>
+                    <span class="card-attribute-value">Coastal ocean</span>
+                </div><div class="card-attr">
+                    <i class="fa-solid fa-hourglass-start" title="Temporal resolution"></i>
+                    <span class="card-attribute-value">monthly</span>
+                </div><div class="card-attr">
+                    <i class="fa-solid fa-ruler-horizontal" title="Spatial resolution"></i>
+                    <span class="card-attribute-value">0.25° x 0.25°</span>
+                </div><div class="card-attr">
+                    <i class="fa-solid fa-calendar-days" title="Period"></i>
+                    <span class="card-attribute-value">1982-2020</span>
+                </div></div>
+        </div>
+        <div class="card-back">
+            <div class="card-header">
+                <h3>ULB-SOM-FFN-Coastalv2.1</h3>
+                <div class="card-subheading">Roobaert et al. (2024)</div>
+            </div>
+            <div class="card-details"><div class="card-detail">
+                    <span class="card-detail-title">Description: </span>
+                    <span class="card-detail-content">Roobaert et al. (2024) present high-resolution (0.25° × 0.25° grid) monthly maps showing the distribution of sea surface pCO2 across the global coastal oceans, spanning from 1982 to 2020. This product (ULB-SOM-FFN-coastalv2.1) builds upon the work by Laruelle et al. (2017), incorporating a two-step methodology that utilizes Self Organizing Maps (SOM) and Feed Forward Networks (FFN). This updated product now captures temporal variability, enabling the assessment of interannual variability and long-term trends in coastal air-sea CO2 exchange, unlike the product by Laruelle et al. (2017), which only offers a climatology for a short period (1998-2015). The enhancements include additional environmental predictors and an expanded dataset for training and validation, featuring approximately 18 million direct coastal observations from the SOCAT database, specifically the SOCATv2022 release (Bakker et al., 2016). The product is available at OCADS: https://www.ncei.noaa.gov/data/oceans/ncei/ocads/metadata/0279118.html (Roobaert et al., 2023).</span>
+                </div><div class="card-detail">
+                    <span class="card-detail-title">Reference: </span>
+                    <span class="card-detail-content">Roobaert, A., Regnier, P., Landschützer, P., and Laruelle, G. G.: A novel sea surface pCO2-product for the global coastal ocean resolving trends over 1982–2020, Earth System Science Data, 16(1), 421–441, https://doi.org/10.5194/essd-16-421-2024, 2024.</span>
+                </div></div>
+            <div class="card-links">
+                <div class="card-link">
+                    <a href="https://doi.org/10.5194/essd-16-421-2024" target="_blank" rel="noopener noreferrer"><i class="fas fa-book"></i> Publication</a>
+                </div>
+                <div class="card-link">
+                    <a href="https://doi.org/10.25921/4sde-p068" target="_blank" rel="noopener noreferrer"><i class="fa fa-download"></i> Data Access</a>
+                </div>
+            </div>  
+        </div>
+    </div>
+</div><div class="product-card" data-data-type="Gridded surface" data-spatial-domains="Coastal ocean||Surface||Regional" data-temporal-resolution="monthly" data-spatial-resolution="0.25° x 0.25°" data-period="1998 - 2024">
+    <div class="card-inner">
+        <div class="card-front">
+            <div class="card-header">
+                <h3>RFR-LME</h3>
+                <div class="card-subheading">Sharp et al. (2024)</div>
+            </div>
+            <div class="card-image">
+                <img loading="lazy" src="images/rfr-lme.png" alt="Product image">
+            </div>
+            <div class="card-summary">
+                Temporal trends of OA indicators and estimated uncertainties across 11 U.S. Large Marine Ecosystems (LMEs), with monthly coverage from 1998–2024.
+            </div>
+            <div class="card-attributes"><div class="card-attr">
+                    <i class="fa-solid fa-globe" title="Spatial domains"></i>
+                    <span class="card-attribute-value">Coastal ocean, Surface, Regional</span>
+                </div><div class="card-attr">
+                    <i class="fa-solid fa-hourglass-start" title="Temporal resolution"></i>
+                    <span class="card-attribute-value">monthly</span>
+                </div><div class="card-attr">
+                    <i class="fa-solid fa-ruler-horizontal" title="Spatial resolution"></i>
+                    <span class="card-attribute-value">0.25° x 0.25°</span>
+                </div><div class="card-attr">
+                    <i class="fa-solid fa-calendar-days" title="Period"></i>
+                    <span class="card-attribute-value">1998 - 2024</span>
+                </div></div>
+        </div>
+        <div class="card-back">
+            <div class="card-header">
+                <h3>RFR-LME</h3>
+                <div class="card-subheading">Sharp et al. (2024)</div>
+            </div>
+            <div class="card-details"><div class="card-detail">
+                    <span class="card-detail-title">Description: </span>
+                    <span class="card-detail-content">A data product delineating the temporal trends of ocean acidification indicators mapped on a 0.25°× 0.25° spatial grid, across eleven U.S. Large Marine Ecosystems (LMEs), with monthly coverage from 1998–2024. The method combines Gaussian Mixture Models to categorize the data into environmentally similar subregions, Random Forest Regressions (RFRs) for the spatial and temporal extrapolation of observational fCO2 data, and regressions to estimate total alkalinity (Carter et al. 2021) to provide a second carbonate system constraint for the computation of multiple ocean acidification indicators.</span>
+                </div><div class="card-detail">
+                    <span class="card-detail-title">Reference: </span>
+                    <span class="card-detail-content">Sharp, J. D., Jiang, L.-Q., Carter, B. R., Lavin, P. D., Yoo, H., and Cross, S. L., 2024. A mapped dataset of surface ocean acidification indicators in large marine ecosystems of the United States, Sci. Data, 11, 715,  https://doi.org/10.1038/s41597-024-03530-7.</span>
+                </div></div>
+            <div class="card-links">
+                <div class="card-link">
+                    <a href="https://doi.org/10.1038/s41597-024-03530-7" target="_blank" rel="noopener noreferrer"><i class="fas fa-book"></i> Publication</a>
+                </div>
+                <div class="card-link">
+                    <a href="https://www.ncei.noaa.gov/data/oceans/ncei/ocads/metadata/0287551.html" target="_blank" rel="noopener noreferrer"><i class="fa fa-download"></i> Data Access</a>
+                </div>
+            </div>  
+        </div>
+    </div>
+</div><div class="product-card" data-data-type="Gridded surface" data-spatial-domains="Coastal ocean" data-temporal-resolution="monthly" data-spatial-resolution="0.25° x 0.25°" data-period="1993-2021">
+    <div class="card-inner">
+        <div class="card-front">
+            <div class="card-header">
+                <h3>ReCAD-NAACOM-pCO2</h3>
+                <div class="card-subheading">Wu et al. (2025)</div>
+            </div>
+            <div class="card-image">
+                <img loading="lazy" src="images/recad-naacom-pco2.png" alt="Product image">
+            </div>
+            <div class="card-summary">
+                 Sea surface pCO2 in the North American Atlantic Coastal Ocean
+Margins (NAACOM)
+            </div>
+            <div class="card-attributes"><div class="card-attr">
+                    <i class="fa-solid fa-globe" title="Spatial domains"></i>
+                    <span class="card-attribute-value">Coastal ocean</span>
+                </div><div class="card-attr">
+                    <i class="fa-solid fa-hourglass-start" title="Temporal resolution"></i>
+                    <span class="card-attribute-value">monthly</span>
+                </div><div class="card-attr">
+                    <i class="fa-solid fa-ruler-horizontal" title="Spatial resolution"></i>
+                    <span class="card-attribute-value">0.25° x 0.25°</span>
+                </div><div class="card-attr">
+                    <i class="fa-solid fa-calendar-days" title="Period"></i>
+                    <span class="card-attribute-value">1993-2021</span>
+                </div></div>
+        </div>
+        <div class="card-back">
+            <div class="card-header">
+                <h3>ReCAD-NAACOM-pCO2</h3>
+                <div class="card-subheading">Wu et al. (2025)</div>
+            </div>
+            <div class="card-details"><div class="card-detail">
+                    <span class="card-detail-title">Description: </span>
+                    <span class="card-detail-content">Wu et al. (2025) developed a reconstructed pCO2 product for the North American Atlantic Coastal Ocean Margins (NAACOM), spanning from the Gulf of Mexico/Gulf of America to the Grand Banks, called the Reconstructed Coastal Acidification Database-pCO2 (ReCAD-NAACOM-pCO2). This product employed a two-step approach combining random forest regression and linear regression to generate monthly pCO2 data at 0.25° spatial resolution from 1993–2021. The model was trained using SOCAT v2023 observations as ground-truth values, incorporating various satellite-derived and reanalysis environmental variables known to influence sea surface pCO2. </span>
+                </div><div class="card-detail">
+                    <span class="card-detail-title">Reference: </span>
+                    <span class="card-detail-content">Wu, Z., Lu, W., Roobaert, A., Song, L., Yan, X.-H., and Cai, W.-J.: A machine-learning reconstruction of sea surface pCO2 in the North American Atlantic Coastal Ocean Margin from 1993 to 2021, Earth Syst. Sci. Data. https://doi.org/10.5194/essd-17-43-2025, 2025. </span>
+                </div></div>
+            <div class="card-links">
+                <div class="card-link">
+                    <a href="https://doi.org/10.5194/essd-17-43-2025" target="_blank" rel="noopener noreferrer"><i class="fas fa-book"></i> Publication</a>
+                </div>
+                <div class="card-link">
+                    <a href="https://doi.org/10.5281/zenodo.11500974" target="_blank" rel="noopener noreferrer"><i class="fa fa-download"></i> Data Access</a>
+                </div>
+            </div>  
+        </div>
+    </div>
+</div><div class="product-card" data-data-type="Gridded surface" data-spatial-domains="Coastal ocean" data-temporal-resolution="monthly||climatology" data-spatial-resolution="1° x 1°" data-period="2002 - 2019">
+    <div class="card-inner">
+        <div class="card-front">
+            <div class="card-header">
+                <h3>Gridded Surface OA Indicators in the Northern Caribbean Sea</h3>
+                <div class="card-subheading">Wanninkhof et al. (2020)</div>
+            </div>
+            <div class="card-image">
+                <img loading="lazy" src="images/gridded_surface_oa_indicators_in_the_northern_caribbean_sea.png" alt="Product image">
+            </div>
+            <div class="card-summary">
+                A 17-year record of  fCO2, TA, pH, Ωarag, and air-sea CO2 flux in the Caribbean Sea 
+            </div>
+            <div class="card-attributes"><div class="card-attr">
+                    <i class="fa-solid fa-globe" title="Spatial domains"></i>
+                    <span class="card-attribute-value">Coastal ocean </span>
+                </div><div class="card-attr">
+                    <i class="fa-solid fa-hourglass-start" title="Temporal resolution"></i>
+                    <span class="card-attribute-value">monthly, climatology</span>
+                </div><div class="card-attr">
+                    <i class="fa-solid fa-ruler-horizontal" title="Spatial resolution"></i>
+                    <span class="card-attribute-value">1° x 1°</span>
+                </div><div class="card-attr">
+                    <i class="fa-solid fa-calendar-days" title="Period"></i>
+                    <span class="card-attribute-value">2002 - 2019</span>
+                </div></div>
+        </div>
+        <div class="card-back">
+            <div class="card-header">
+                <h3>Gridded Surface OA Indicators in the Northern Caribbean Sea</h3>
+                <div class="card-subheading">Wanninkhof et al. (2020)</div>
+            </div>
+            <div class="card-details"><div class="card-detail">
+                    <span class="card-detail-title">Description: </span>
+                    <span class="card-detail-content">This dataset contains a high-quality dataset of derived products from over a million observations of surface water partial pressure/fugacity of carbon dioxide (pCO2w/fCO2w), for the Caribbean Sea, Gulf of Mexico/Gulf of America and North-West Atlantic Ocean covering the timespan from 2002-01-01 to 2019-12-30. The derived quantities include TA, acidity (pH), Ωarag and air-sea CO2 flux (Wanninkhof et al., 2020). </span>
+                </div><div class="card-detail">
+                    <span class="card-detail-title">Reference: </span>
+                    <span class="card-detail-content">Wanninkhof, R., Pierrot, D., Sullivan, K., Barbero, L., and Triñanes, J.: A 17-year dataset of surface water fugacity of CO2 along with calculated pH, aragonite saturation state and air–sea CO2 fluxes in the northern Caribbean Sea, Earth Syst. Sci. Data, 12, 1489–1509, https://doi.org/10.5194/essd-12-1489-2020, 2020.</span>
+                </div></div>
+            <div class="card-links">
+                <div class="card-link">
+                    <a href="https://doi.org/10.5194/essd-12-1489-2020" target="_blank" rel="noopener noreferrer"><i class="fas fa-book"></i> Publication</a>
+                </div>
+                <div class="card-link">
+                    <a href="https://www.ncei.noaa.gov/data/oceans/ncei/ocads/metadata/0207749.html " target="_blank" rel="noopener noreferrer"><i class="fa fa-download"></i> Data Access</a>
+                </div>
+            </div>  
+        </div>
+    </div>
+</div><div class="product-card" data-data-type="Gridded surface" data-spatial-domains="Regional||Surface" data-temporal-resolution="monthly" data-spatial-resolution="0.088° x 0.088°" data-period="2014-2020">
+    <div class="card-inner">
+        <div class="card-front">
+            <div class="card-header">
+                <h3>OA Data in the Gulf of Mexico/Gulf of America and Wider Caribbean</h3>
+                <div class="card-subheading">van Hooidonk (2022)</div>
+            </div>
+            <div class="card-image">
+                <img loading="lazy" src="images/oa_data_in_the_gulf_of_mexico_gulf_of_america_and_wider_caribbean.png" alt="Product image">
+            </div>
+            <div class="card-summary">
+                https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Aomlogo.svg/330px-Aomlogo.svg.png
+            </div>
+            <div class="card-attributes"><div class="card-attr">
+                    <i class="fa-solid fa-globe" title="Spatial domains"></i>
+                    <span class="card-attribute-value">Regional, Surface</span>
+                </div><div class="card-attr">
+                    <i class="fa-solid fa-hourglass-start" title="Temporal resolution"></i>
+                    <span class="card-attribute-value">monthly</span>
+                </div><div class="card-attr">
+                    <i class="fa-solid fa-ruler-horizontal" title="Spatial resolution"></i>
+                    <span class="card-attribute-value">0.088° x 0.088°</span>
+                </div><div class="card-attr">
+                    <i class="fa-solid fa-calendar-days" title="Period"></i>
+                    <span class="card-attribute-value">2014-2020</span>
+                </div></div>
+        </div>
+        <div class="card-back">
+            <div class="card-header">
+                <h3>OA Data in the Gulf of Mexico/Gulf of America and Wider Caribbean</h3>
+                <div class="card-subheading">van Hooidonk (2022)</div>
+            </div>
+            <div class="card-details"><div class="card-detail">
+                    <span class="card-detail-title">Description: </span>
+                    <span class="card-detail-content">The Acidification, Climate, and Coral Reef Ecosystems Team (ACCRETE) Lab within AOML’s Ocean Chemistry and Ecosystems Division (OCED) developed a data product for tracking OA in the Caribbean and Gulf of Mexico/Gulf of America from 2014 to 2020 (van Hooidonk, 2022). Utilizing satellite imagery and a data-assimilative hybrid model, the tool maps key indicators of the water's carbonate system, including pCO2, TA, pH, Ωarag, and Ωcalc. This innovation builds upon an update to the experimental OA Product Suite (OAPS) developed by NOAA's Coral Reef Watch. </span>
+                </div><div class="card-detail">
+                    <span class="card-detail-title">Reference: </span>
+                    <span class="card-detail-content">van Hooidonk, R.: Modeled ocean acidification data in the Gulf of Mexico and wider Caribbean using satellites and climate model data for the Ocean Acidification Products for the Gulf of Mexico and East Coast project from 2014-01-01 to 2020-12-31 (NCEI Accession 0245950), NOAA National Centers for Environmental Information, Dataset, https://doi.org/10.25921/tt1c-dx53, 2022.</span>
+                </div></div>
+            <div class="card-links">
+                <div class="card-link">
+                    <a href="https://doi.org/10.25921/tt1c-dx53" target="_blank" rel="noopener noreferrer"><i class="fas fa-book"></i> Publication</a>
+                </div>
+                <div class="card-link">
+                    <a href="https://www.ncei.noaa.gov/data/oceans/ncei/ocads/metadata/0245950.html" target="_blank" rel="noopener noreferrer"><i class="fa fa-download"></i> Data Access</a>
+                </div>
+            </div>  
+        </div>
+    </div>
+</div><div class="product-card" data-data-type="Gridded surface" data-spatial-domains="Regional" data-temporal-resolution="monthly||climatology" data-spatial-resolution="0.10° x 0.05°" data-period="2003-2021">
+    <div class="card-inner">
+        <div class="card-front">
+            <div class="card-header">
+                <h3>pCO2 Climatology of the Baltic Sea</h3>
+                <div class="card-subheading">Bittig et al. (2024)</div>
+            </div>
+            <div class="card-image">
+                <img loading="lazy" src="images/pco2_climatology_of_the_baltic_sea.png" alt="Product image">
+            </div>
+            <div class="card-summary">
+                Does not use proxy variables for extrapolation. Spatial scales adjust locally to data density
+            </div>
+            <div class="card-attributes"><div class="card-attr">
+                    <i class="fa-solid fa-globe" title="Spatial domains"></i>
+                    <span class="card-attribute-value">Regional</span>
+                </div><div class="card-attr">
+                    <i class="fa-solid fa-hourglass-start" title="Temporal resolution"></i>
+                    <span class="card-attribute-value">monthly, climatology</span>
+                </div><div class="card-attr">
+                    <i class="fa-solid fa-ruler-horizontal" title="Spatial resolution"></i>
+                    <span class="card-attribute-value">0.10° x 0.05°</span>
+                </div><div class="card-attr">
+                    <i class="fa-solid fa-calendar-days" title="Period"></i>
+                    <span class="card-attribute-value">2003-2021</span>
+                </div></div>
+        </div>
+        <div class="card-back">
+            <div class="card-header">
+                <h3>pCO2 Climatology of the Baltic Sea</h3>
+                <div class="card-subheading">Bittig et al. (2024)</div>
+            </div>
+            <div class="card-details"><div class="card-detail">
+                    <span class="card-detail-title">Description: </span>
+                    <span class="card-detail-content">Bittig et al. (2024) used biogeochemical model output to inform the mapping of sea surface pCO2 observations in the Baltic Sea and to build a mean monthly climatology for the period 2003 to 2021, with spatial resolutions of 0.10° × 0.05° (approximately 3 nautical miles in both directions). In a first step, spatial patterns of variability were extracted from 20 years of model surface pCO2 data by an EOF analysis. These spatial patterns were then used to map surface pCO2 observations from SOCAT (see above No. 1) (Bakker et al., 2014) onto the Baltic Sea domain. By using an ensemble approach with varying number of EOF patterns, the spatial scales of the mapping were locally adjusted based on the observation’s data density. Mapped monthly fields of pCO2 from 2003–2021 were combined for the product into a mean monthly climatology and a spatially-resolved linear trend. </span>
+                </div><div class="card-detail">
+                    <span class="card-detail-title">Reference: </span>
+                    <span class="card-detail-content">Bittig, H.C., Jacobs, E., Neumann, T., and Rehder, G.: A regional pCO2 climatology of the Baltic Sea from in situ pCO2 observations and a model-based extrapolation approach, Earth Syst. Sci. Data, 16(2), 753–773, https://doi.org/10.5194/essd-16-753-2024, 2024.</span>
+                </div></div>
+            <div class="card-links">
+                <div class="card-link">
+                    <a href="https://doi.org/10.5194/essd-16-753-2024" target="_blank" rel="noopener noreferrer"><i class="fas fa-book"></i> Publication</a>
+                </div>
+                <div class="card-link">
+                    <a href="https://doi.org/10.1594/PANGAEA.961119 " target="_blank" rel="noopener noreferrer"><i class="fa fa-download"></i> Data Access</a>
                 </div>
             </div>  
         </div>
@@ -1948,7 +2929,7 @@ to 1° × 1° resolution and near-global coverage. This climatology represents t
             </div>  
         </div>
     </div>
-</div><div class="product-card" data-data-type="Gridded surface" data-spatial-domains="Coastal ocean" data-temporal-resolution="monthly" data-spatial-resolution="0.25° x 0.25°" data-period="1982-2020">
+</div><div class="product-card" data-data-type="Gridded surface" data-spatial-domains="Coastal ocean" data-temporal-resolution="continuous||monthly" data-spatial-resolution="0.25° x 0.25°" data-period="1982-2020">
     <div class="card-inner">
         <div class="card-front">
             <div class="card-header">
@@ -1966,7 +2947,7 @@ to 1° × 1° resolution and near-global coverage. This climatology represents t
                     <span class="card-attribute-value">Coastal ocean</span>
                 </div><div class="card-attr">
                     <i class="fa-solid fa-hourglass-start" title="Temporal resolution"></i>
-                    <span class="card-attribute-value">monthly</span>
+                    <span class="card-attribute-value">continuous, monthly</span>
                 </div><div class="card-attr">
                     <i class="fa-solid fa-ruler-horizontal" title="Spatial resolution"></i>
                     <span class="card-attribute-value">0.25° x 0.25°</span>
@@ -2194,7 +3175,7 @@ Margins (NAACOM)
             </div>  
         </div>
     </div>
-</div><div class="product-card" data-data-type="Gridded surface" data-spatial-domains="Regional" data-temporal-resolution="monthly||climatology" data-spatial-resolution="0.10° x 0.05°" data-period="2003-2021">
+</div><div class="product-card" data-data-type="Gridded surface" data-spatial-domains="Regional" data-temporal-resolution="12-month climatology referenced to 2013; linear trend 2003–2021" data-spatial-resolution="0.10° x 0.05°" data-period="2003-2021">
     <div class="card-inner">
         <div class="card-front">
             <div class="card-header">
@@ -2212,7 +3193,7 @@ Margins (NAACOM)
                     <span class="card-attribute-value">Regional</span>
                 </div><div class="card-attr">
                     <i class="fa-solid fa-hourglass-start" title="Temporal resolution"></i>
-                    <span class="card-attribute-value">monthly, climatology</span>
+                    <span class="card-attribute-value">12-month climatology referenced to 2013; linear trend 2003–2021</span>
                 </div><div class="card-attr">
                     <i class="fa-solid fa-ruler-horizontal" title="Spatial resolution"></i>
                     <span class="card-attribute-value">0.10° x 0.05°</span>
@@ -2885,7 +3866,11 @@ Margins (NAACOM)
                 <div class="card-subheading">Carter et al. (2021)</div>
             </div>
             <div class="card-image">
+<<<<<<< HEAD
                 <img loading="lazy" src="images/preformed_ta_and_other_biogeochemical_properties_.png" alt="Product image">
+=======
+                <img loading="lazy" src="https://agupubs.onlinelibrary.wiley.com/cms/asset/a70dc130-3967-4e0c-bab1-fa5967af0a63/gbc21075-fig-0003-m.jpg" alt="Product image">
+>>>>>>> cc77d1d87f1790fd71a99a03bc81ef48bbe38e95
             </div>
             <div class="card-summary">
                 We have updated global preformed biogeochemical property estimates and provided the estimates for analysis and model validation
@@ -3320,7 +4305,11 @@ Margins (NAACOM)
                 <div class="card-subheading">Jiang et al. (2023)</div>
             </div>
             <div class="card-image">
+<<<<<<< HEAD
                 <img loading="lazy" src="images/surface_oa_indicators_.png" alt="Product image">
+=======
+                <img loading="lazy" src="https://agupubs.onlinelibrary.wiley.com/cms/asset/9184aab2-af20-4a63-9a8f-d0a99a4602bc/jame21817-fig-0008-m.jpg" alt="Product image">
+>>>>>>> cc77d1d87f1790fd71a99a03bc81ef48bbe38e95
             </div>
             <div class="card-summary">
                 A model-observation fusion product for all major OA indicators, leveraging a consortium of 14 Earth System Models and 3 observational data products
