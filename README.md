@@ -1,6 +1,6 @@
 # Web page for Ocean CO2 Products
 
-*from publication by Jiang et al. (2026)*
+*from publication by [Jiang et al. (2026)](https://doi.org/10.5194/essd-18-1405-2026)*
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.18384592.svg)](https://doi.org/10.5281/zenodo.18384592)
 
@@ -9,6 +9,9 @@ It is designed to be as low-maintenance as possible, and thus, the data lives in
 The Google Sheet is populated by a Google Form. 
 Cards have a front and back side with an image, summary, and attributes on the front, and details, citation, and data access on the back. 
 
+## Update the web page
+
+Go to the [Actions Page](https://github.com/OceanCO2/co2-products/actions/workflows/manual-build.yaml) and click "Run Workflow" (only visible to repo members). 
 
 ## Configuration
 ### 1. Set up the repository
