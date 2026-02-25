@@ -1,6 +1,6 @@
 <div class="product-card" {{ p['data-attrs']|safe }}>
     <div class="card-inner">
-        <div class="card-front">
+        <div class="card-front" role="button" tabindex="0" aria-label="Open details for {{ p['card-title'] }}">
             <div class="card-header">
                 <h3>{{ p['card-title'] }}</h3>
                 <div class="card-subheading">{{ p['card-subheading'] }}</div>

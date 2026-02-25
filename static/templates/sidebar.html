@@ -10,8 +10,10 @@
             <label>{{ name }}</label>
             {%- if f.type == 'multi-select' -%}
             {%- for opt in f.options -%}
-            <input type="checkbox" class="filter-checkbox" data-filter="{{ name }}" data-filter-type="{{ f.type }}"
-                value="{{ opt }}"> {{ opt }}<br>
+            <label class="filter-option" for="{{ filter_id }}-{{ loop.index0 }}">
+                <input type="checkbox" id="{{ filter_id }}-{{ loop.index0 }}" class="filter-checkbox" data-filter="{{ name }}" data-filter-type="{{ f.type }}"
+                    value="{{ opt }}"> {{ opt }}
+            </label>
             {%- endfor -%}
             {%- elif f.type == 'date-range' -%}
             <input type="number" class="filter-range-min" id="{{ filter_id }}-min" data-filter="{{ name }}"

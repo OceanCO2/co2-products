@@ -281,6 +281,182 @@ document.addEventListener('DOMContentLoaded', function() {
 
 });
 
+document.addEventListener('DOMContentLoaded', function () {
+    const pageBody = document.body;
+    const productQueryKey = 'product';
+    let modalOverlay = null;
+    let modalBody = null;
+    let modalTitle = null;
+    let modalSubtitle = null;
+
+    function slugifyProductTitle(title) {
+        return (title || '')
+            .toLowerCase()
+            .trim()
+            .replace(/[^a-z0-9\s-]/g, '')
+            .replace(/\s+/g, '-')
+            .replace(/-+/g, '-');
+    }
+
+    function getCardSlug(card) {
+        const title = card.querySelector('.card-front .card-header h3')?.textContent?.trim() || '';
+        return slugifyProductTitle(title);
+    }
+
+    function updateModalUrl(slug) {
+        const url = new URL(window.location.href);
+        if (slug) {
+            url.searchParams.set(productQueryKey, slug);
+        } else {
+            url.searchParams.delete(productQueryKey);
+        }
+        window.history.replaceState({}, '', url.toString());
+    }
+
+    function ensureModal() {
+        if (modalOverlay) return;
+
+        modalOverlay = document.createElement('div');
+        modalOverlay.className = 'details-modal-overlay';
+        modalOverlay.innerHTML = `
+            <div class="details-modal" role="dialog" aria-modal="true" aria-label="Dataset details">
+                <div class="details-modal-header">
+                    <div>
+                        <h3 class="details-modal-title"></h3>
+                        <p class="details-modal-subtitle"></p>
+                    </div>
+                    <button type="button" class="details-modal-close" data-close-details-modal aria-label="Close details">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+                <div class="details-modal-body"></div>
+            </div>
+        `;
+
+        pageBody.appendChild(modalOverlay);
+        modalBody = modalOverlay.querySelector('.details-modal-body');
+        modalTitle = modalOverlay.querySelector('.details-modal-title');
+        modalSubtitle = modalOverlay.querySelector('.details-modal-subtitle');
+    }
+
+    function closeDetailsModal() {
+        if (!modalOverlay) return;
+        modalOverlay.classList.remove('active');
+        pageBody.classList.remove('no-scroll');
+        updateModalUrl(null);
+    }
+
+    function openDetailsModal(card) {
+        ensureModal();
+
+        const cardBack = card.querySelector('.card-back');
+        if (!cardBack || !modalBody) return;
+
+        const title = card.querySelector('.card-front .card-header h3')?.textContent?.trim() || 'Details';
+        const subtitle = card.querySelector('.card-front .card-subheading')?.textContent?.trim() || '';
+
+        modalTitle.textContent = title;
+        modalSubtitle.textContent = subtitle;
+        modalSubtitle.style.display = subtitle ? '' : 'none';
+
+        modalBody.innerHTML = '';
+        const imageClone = card.querySelector('.card-front .card-image')?.cloneNode(true);
+        const summaryClone = card.querySelector('.card-front .card-summary')?.cloneNode(true);
+        const attributesClone = card.querySelector('.card-front .card-attributes')?.cloneNode(true);
+        const detailsClone = cardBack.querySelector('.card-details')?.cloneNode(true);
+        const linksClone = cardBack.querySelector('.card-links')?.cloneNode(true);
+
+        const content = document.createElement('div');
+        content.className = 'details-modal-content';
+
+        if (imageClone || summaryClone || attributesClone) {
+            const overview = document.createElement('section');
+            overview.className = 'details-modal-section details-modal-overview';
+            if (imageClone) overview.appendChild(imageClone);
+            if (summaryClone) overview.appendChild(summaryClone);
+            if (attributesClone) overview.appendChild(attributesClone);
+            content.appendChild(overview);
+        }
+
+        if (detailsClone) {
+            const detailsSection = document.createElement('section');
+            detailsSection.className = 'details-modal-section';
+
+            if (linksClone) {
+                detailsClone.insertBefore(linksClone, detailsClone.firstChild);
+            }
+
+            detailsSection.appendChild(detailsClone);
+            content.appendChild(detailsSection);
+        } else if (linksClone) {
+            const linksSection = document.createElement('section');
+            linksSection.className = 'details-modal-section';
+            linksSection.appendChild(linksClone);
+            content.appendChild(linksSection);
+        }
+
+        modalBody.appendChild(content);
+
+        modalOverlay.classList.add('active');
+        pageBody.classList.add('no-scroll');
+        updateModalUrl(getCardSlug(card));
+    }
+
+    function openModalFromUrl() {
+        const params = new URLSearchParams(window.location.search);
+        const requestedSlug = params.get(productQueryKey);
+        if (!requestedSlug) return;
+
+        const cards = document.querySelectorAll('.product-card');
+        const targetCard = Array.from(cards).find(card => getCardSlug(card) === requestedSlug);
+        if (targetCard) {
+            openDetailsModal(targetCard);
+        }
+    }
+
+    document.addEventListener('click', function (event) {
+        if (event.target.closest('[data-close-details-modal]')) {
+            closeDetailsModal();
+            return;
+        }
+
+        if (modalOverlay && event.target === modalOverlay) {
+            closeDetailsModal();
+            return;
+        }
+
+        const detailsTrigger = event.target.closest('.card-open-details');
+        const frontCard = event.target.closest('.card-front');
+
+        if (detailsTrigger) {
+            event.preventDefault();
+            const card = detailsTrigger.closest('.product-card');
+            if (card) openDetailsModal(card);
+            return;
+        }
+
+        if (frontCard && !event.target.closest('a, button, input, label')) {
+            const card = frontCard.closest('.product-card');
+            if (card) openDetailsModal(card);
+        }
+    });
+
+    document.addEventListener('keydown', function (event) {
+        if (event.key === 'Escape') {
+            closeDetailsModal();
+            return;
+        }
+
+        if ((event.key === 'Enter' || event.key === ' ') && event.target.classList.contains('card-front')) {
+            event.preventDefault();
+            const card = event.target.closest('.product-card');
+            if (card) openDetailsModal(card);
+        }
+    });
+
+    openModalFromUrl();
+});
+
 // Function to update the counter
 function updateCounter() {
     const counterDiv = document.getElementById('product-counter');
