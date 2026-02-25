@@ -11,7 +11,14 @@
     <header class="banner">
         <div class="page-title">
             <h1>{{ cfg.WEBSITE_TITLE }}</h1>
-            <p>{{ cfg.WEBSITE_DESCRIPTION }}</p>
+            <p>
+                {%- if 'Jiang et al. (2025)' in cfg.WEBSITE_DESCRIPTION -%}
+                {{ cfg.WEBSITE_DESCRIPTION|replace('Jiang et al. (2025)', '')|trim }}
+                {%- else -%}
+                {{ cfg.WEBSITE_DESCRIPTION }}
+                {%- endif -%}
+                <a class="subheader-publication-chip" href="https://essd.copernicus.org/articles/18/1405/2026/" target="_blank" rel="noopener noreferrer">Jiang et al. (2025)</a>
+            </p>
         </div>
         <div class="web-page-info">
             <!-- add github icon and link -->

@@ -64,6 +64,24 @@ body {
     max-width: 70ch;
 }
 
+.subheader-publication-chip {
+    display: inline-flex;
+    align-items: center;
+    margin-left: 6px;
+    padding: 3px 10px;
+    border: 1px solid rgba(255, 255, 255, 0.45);
+    border-radius: 999px;
+    color: var(--primary-color-text);
+    text-decoration: none;
+    font-size: 0.84rem;
+    line-height: 1.2;
+    white-space: nowrap;
+}
+
+.subheader-publication-chip:hover {
+    background: rgba(255, 255, 255, 0.16);
+}
+
 .fa-github {
     color: var(--primary-color-text);
     text-decoration: none;
