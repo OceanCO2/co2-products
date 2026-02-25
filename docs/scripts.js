@@ -283,10 +283,35 @@ document.addEventListener('DOMContentLoaded', function() {
 
 document.addEventListener('DOMContentLoaded', function () {
     const pageBody = document.body;
+    const productQueryKey = 'product';
     let modalOverlay = null;
     let modalBody = null;
     let modalTitle = null;
     let modalSubtitle = null;
+
+    function slugifyProductTitle(title) {
+        return (title || '')
+            .toLowerCase()
+            .trim()
+            .replace(/[^a-z0-9\s-]/g, '')
+            .replace(/\s+/g, '-')
+            .replace(/-+/g, '-');
+    }
+
+    function getCardSlug(card) {
+        const title = card.querySelector('.card-front .card-header h3')?.textContent?.trim() || '';
+        return slugifyProductTitle(title);
+    }
+
+    function updateModalUrl(slug) {
+        const url = new URL(window.location.href);
+        if (slug) {
+            url.searchParams.set(productQueryKey, slug);
+        } else {
+            url.searchParams.delete(productQueryKey);
+        }
+        window.history.replaceState({}, '', url.toString());
+    }
 
     function ensureModal() {
         if (modalOverlay) return;
@@ -318,6 +343,7 @@ document.addEventListener('DOMContentLoaded', function () {
         if (!modalOverlay) return;
         modalOverlay.classList.remove('active');
         pageBody.classList.remove('no-scroll');
+        updateModalUrl(null);
     }
 
     function openDetailsModal(card) {
@@ -373,6 +399,19 @@ document.addEventListener('DOMContentLoaded', function () {
 
         modalOverlay.classList.add('active');
         pageBody.classList.add('no-scroll');
+        updateModalUrl(getCardSlug(card));
+    }
+
+    function openModalFromUrl() {
+        const params = new URLSearchParams(window.location.search);
+        const requestedSlug = params.get(productQueryKey);
+        if (!requestedSlug) return;
+
+        const cards = document.querySelectorAll('.product-card');
+        const targetCard = Array.from(cards).find(card => getCardSlug(card) === requestedSlug);
+        if (targetCard) {
+            openDetailsModal(targetCard);
+        }
     }
 
     document.addEventListener('click', function (event) {
@@ -414,6 +453,8 @@ document.addEventListener('DOMContentLoaded', function () {
             if (card) openDetailsModal(card);
         }
     });
+
+    openModalFromUrl();
 });
 
 // Function to update the counter
