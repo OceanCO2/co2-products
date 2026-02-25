@@ -5,10 +5,10 @@ on:
     inputs:
       spreadsheet_id:
         # set the value when manually triggering the workflow
-        description: 'Google Sheet ID'
+        description: 'Google Sheet ID (leave blank to use default secret)'
         required: false
       spreadsheet_tab_id:
-        description: 'Google Sheet Tab ID'
+        description: 'Google Sheet Tab ID (leave blank to use default secret)'
         required: false
 
 jobs:
