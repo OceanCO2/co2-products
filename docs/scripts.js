@@ -352,18 +352,21 @@ document.addEventListener('DOMContentLoaded', function () {
             content.appendChild(overview);
         }
 
-        if (linksClone) {
+        if (detailsClone) {
+            const detailsSection = document.createElement('section');
+            detailsSection.className = 'details-modal-section';
+
+            if (linksClone) {
+                detailsClone.insertBefore(linksClone, detailsClone.firstChild);
+            }
+
+            detailsSection.appendChild(detailsClone);
+            content.appendChild(detailsSection);
+        } else if (linksClone) {
             const linksSection = document.createElement('section');
             linksSection.className = 'details-modal-section';
             linksSection.appendChild(linksClone);
             content.appendChild(linksSection);
-        }
-
-        if (detailsClone) {
-            const detailsSection = document.createElement('section');
-            detailsSection.className = 'details-modal-section';
-            detailsSection.appendChild(detailsClone);
-            content.appendChild(detailsSection);
         }
 
         modalBody.appendChild(content);

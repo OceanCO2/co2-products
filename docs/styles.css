@@ -13,7 +13,7 @@
     --surface-muted: #f8fafc;
     --border-color: #d9e2ec;
 
-    --card-header-background: #f2f6fb;
+    --card-header-background: #ffffff;
     --card-text-color-dark: #1f2d3d;
     --card-text-color-light: #5a6b7c;
 
@@ -329,6 +329,7 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 180px;
+    background-color: #ffffff;
 }
 
 .card-image img {
@@ -369,7 +370,7 @@ body {
     align-items: center;
     gap: 4px;
     padding: 2px 6px;
-    background: var(--surface-muted);
+    background: #ffffff;
     border: 1px solid var(--border-color);
     border-radius: 999px;
     font-size: 0.74rem;
@@ -497,7 +498,7 @@ body.no-scroll {
 }
 
 .details-modal-section {
-    background: var(--surface-muted);
+    background: #ffffff;
     border: 1px solid var(--border-color);
     border-radius: var(--radius-md);
     padding: 8px;
@@ -524,11 +525,23 @@ body.no-scroll {
 }
 
 .details-modal-body .card-details {
-    padding: 8px 8px 4px;
+    padding: 8px;
 }
 
 .details-modal-body .card-links {
     padding: 8px;
+}
+
+.details-modal-body .card-details > .card-links {
+    padding: 0 0 6px;
+    margin: 0 0 4px;
+    justify-content: flex-start;
+    gap: 6px;
+}
+
+.details-modal-body .card-details > .card-links .card-link a {
+    padding: 5px 8px;
+    font-size: 0.8rem;
 }
 
 .footer {
