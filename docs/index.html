@@ -30,44 +30,108 @@
         <input type="text" id="searchInput" placeholder="Search products..." autocomplete="off">
     </div>
     <div class="sidebar-filters"><div class="filter">
-            <label>Data Type</label><input type="checkbox" class="filter-checkbox" data-filter="Data Type" data-filter-type="multi-select"
-                value="Data compilations"> Data compilations<br><input type="checkbox" class="filter-checkbox" data-filter="Data Type" data-filter-type="multi-select"
-                value="Gridded subsurface"> Gridded subsurface<br><input type="checkbox" class="filter-checkbox" data-filter="Data Type" data-filter-type="multi-select"
-                value="Gridded surface"> Gridded surface<br><input type="checkbox" class="filter-checkbox" data-filter="Data Type" data-filter-type="multi-select"
-                value="Harmonized"> Harmonized<br><input type="checkbox" class="filter-checkbox" data-filter="Data Type" data-filter-type="multi-select"
-                value="Model-based"> Model-based<br><input type="checkbox" class="filter-checkbox" data-filter="Data Type" data-filter-type="multi-select"
-                value="Time series"> Time series<br></div><div class="filter">
-            <label>Spatial domains</label><input type="checkbox" class="filter-checkbox" data-filter="Spatial domains" data-filter-type="multi-select"
-                value="Coastal ocean"> Coastal ocean<br><input type="checkbox" class="filter-checkbox" data-filter="Spatial domains" data-filter-type="multi-select"
-                value="Estuaries"> Estuaries<br><input type="checkbox" class="filter-checkbox" data-filter="Spatial domains" data-filter-type="multi-select"
-                value="Open ocean"> Open ocean<br><input type="checkbox" class="filter-checkbox" data-filter="Spatial domains" data-filter-type="multi-select"
-                value="Regional"> Regional<br><input type="checkbox" class="filter-checkbox" data-filter="Spatial domains" data-filter-type="multi-select"
-                value="Surface"> Surface<br><input type="checkbox" class="filter-checkbox" data-filter="Spatial domains" data-filter-type="multi-select"
-                value="Water column"> Water column<br></div><div class="filter">
-            <label>Temporal resolution</label><input type="checkbox" class="filter-checkbox" data-filter="Temporal resolution" data-filter-type="multi-select"
-                value="8-day"> 8-day<br><input type="checkbox" class="filter-checkbox" data-filter="Temporal resolution" data-filter-type="multi-select"
-                value="bi-monthly"> bi-monthly<br><input type="checkbox" class="filter-checkbox" data-filter="Temporal resolution" data-filter-type="multi-select"
-                value="climatology"> climatology<br><input type="checkbox" class="filter-checkbox" data-filter="Temporal resolution" data-filter-type="multi-select"
-                value="continuous"> continuous<br><input type="checkbox" class="filter-checkbox" data-filter="Temporal resolution" data-filter-type="multi-select"
-                value="daily"> daily<br><input type="checkbox" class="filter-checkbox" data-filter="Temporal resolution" data-filter-type="multi-select"
-                value="decadal"> decadal<br><input type="checkbox" class="filter-checkbox" data-filter="Temporal resolution" data-filter-type="multi-select"
-                value="discrete"> discrete<br><input type="checkbox" class="filter-checkbox" data-filter="Temporal resolution" data-filter-type="multi-select"
-                value="irregular"> irregular<br><input type="checkbox" class="filter-checkbox" data-filter="Temporal resolution" data-filter-type="multi-select"
-                value="monthly"> monthly<br><input type="checkbox" class="filter-checkbox" data-filter="Temporal resolution" data-filter-type="multi-select"
-                value="seasonal"> seasonal<br><input type="checkbox" class="filter-checkbox" data-filter="Temporal resolution" data-filter-type="multi-select"
-                value="sub-annual"> sub-annual<br><input type="checkbox" class="filter-checkbox" data-filter="Temporal resolution" data-filter-type="multi-select"
-                value="yearly"> yearly<br></div><div class="filter">
-            <label>Spatial resolution</label><input type="checkbox" class="filter-checkbox" data-filter="Spatial resolution" data-filter-type="multi-select"
-                value="0.083° x 0.083°"> 0.083° x 0.083°<br><input type="checkbox" class="filter-checkbox" data-filter="Spatial resolution" data-filter-type="multi-select"
-                value="0.088° x 0.088°"> 0.088° x 0.088°<br><input type="checkbox" class="filter-checkbox" data-filter="Spatial resolution" data-filter-type="multi-select"
-                value="0.10° x 0.05°"> 0.10° x 0.05°<br><input type="checkbox" class="filter-checkbox" data-filter="Spatial resolution" data-filter-type="multi-select"
-                value="0.25° x 0.25°"> 0.25° x 0.25°<br><input type="checkbox" class="filter-checkbox" data-filter="Spatial resolution" data-filter-type="multi-select"
-                value="0.33° x 0.33°"> 0.33° x 0.33°<br><input type="checkbox" class="filter-checkbox" data-filter="Spatial resolution" data-filter-type="multi-select"
-                value="1° x 1°"> 1° x 1°<br><input type="checkbox" class="filter-checkbox" data-filter="Spatial resolution" data-filter-type="multi-select"
-                value="2.5° x 2°"> 2.5° x 2°<br><input type="checkbox" class="filter-checkbox" data-filter="Spatial resolution" data-filter-type="multi-select"
-                value="2° x 2°"> 2° x 2°<br></div></div>
+            <label>Data Type</label><label class="filter-option" for="data-type-0">
+                <input type="checkbox" id="data-type-0" class="filter-checkbox" data-filter="Data Type" data-filter-type="multi-select"
+                    value="Data compilations"> Data compilations
+            </label><label class="filter-option" for="data-type-1">
+                <input type="checkbox" id="data-type-1" class="filter-checkbox" data-filter="Data Type" data-filter-type="multi-select"
+                    value="Gridded subsurface"> Gridded subsurface
+            </label><label class="filter-option" for="data-type-2">
+                <input type="checkbox" id="data-type-2" class="filter-checkbox" data-filter="Data Type" data-filter-type="multi-select"
+                    value="Gridded surface"> Gridded surface
+            </label><label class="filter-option" for="data-type-3">
+                <input type="checkbox" id="data-type-3" class="filter-checkbox" data-filter="Data Type" data-filter-type="multi-select"
+                    value="Harmonized"> Harmonized
+            </label><label class="filter-option" for="data-type-4">
+                <input type="checkbox" id="data-type-4" class="filter-checkbox" data-filter="Data Type" data-filter-type="multi-select"
+                    value="Model-based"> Model-based
+            </label><label class="filter-option" for="data-type-5">
+                <input type="checkbox" id="data-type-5" class="filter-checkbox" data-filter="Data Type" data-filter-type="multi-select"
+                    value="Time series"> Time series
+            </label></div><div class="filter">
+            <label>Spatial domains</label><label class="filter-option" for="spatial-domains-0">
+                <input type="checkbox" id="spatial-domains-0" class="filter-checkbox" data-filter="Spatial domains" data-filter-type="multi-select"
+                    value="Coastal ocean"> Coastal ocean
+            </label><label class="filter-option" for="spatial-domains-1">
+                <input type="checkbox" id="spatial-domains-1" class="filter-checkbox" data-filter="Spatial domains" data-filter-type="multi-select"
+                    value="Estuaries"> Estuaries
+            </label><label class="filter-option" for="spatial-domains-2">
+                <input type="checkbox" id="spatial-domains-2" class="filter-checkbox" data-filter="Spatial domains" data-filter-type="multi-select"
+                    value="Open ocean"> Open ocean
+            </label><label class="filter-option" for="spatial-domains-3">
+                <input type="checkbox" id="spatial-domains-3" class="filter-checkbox" data-filter="Spatial domains" data-filter-type="multi-select"
+                    value="Regional"> Regional
+            </label><label class="filter-option" for="spatial-domains-4">
+                <input type="checkbox" id="spatial-domains-4" class="filter-checkbox" data-filter="Spatial domains" data-filter-type="multi-select"
+                    value="Surface"> Surface
+            </label><label class="filter-option" for="spatial-domains-5">
+                <input type="checkbox" id="spatial-domains-5" class="filter-checkbox" data-filter="Spatial domains" data-filter-type="multi-select"
+                    value="Water column"> Water column
+            </label></div><div class="filter">
+            <label>Temporal resolution</label><label class="filter-option" for="temporal-resolution-0">
+                <input type="checkbox" id="temporal-resolution-0" class="filter-checkbox" data-filter="Temporal resolution" data-filter-type="multi-select"
+                    value="8-day"> 8-day
+            </label><label class="filter-option" for="temporal-resolution-1">
+                <input type="checkbox" id="temporal-resolution-1" class="filter-checkbox" data-filter="Temporal resolution" data-filter-type="multi-select"
+                    value="bi-monthly"> bi-monthly
+            </label><label class="filter-option" for="temporal-resolution-2">
+                <input type="checkbox" id="temporal-resolution-2" class="filter-checkbox" data-filter="Temporal resolution" data-filter-type="multi-select"
+                    value="climatology"> climatology
+            </label><label class="filter-option" for="temporal-resolution-3">
+                <input type="checkbox" id="temporal-resolution-3" class="filter-checkbox" data-filter="Temporal resolution" data-filter-type="multi-select"
+                    value="continuous"> continuous
+            </label><label class="filter-option" for="temporal-resolution-4">
+                <input type="checkbox" id="temporal-resolution-4" class="filter-checkbox" data-filter="Temporal resolution" data-filter-type="multi-select"
+                    value="daily"> daily
+            </label><label class="filter-option" for="temporal-resolution-5">
+                <input type="checkbox" id="temporal-resolution-5" class="filter-checkbox" data-filter="Temporal resolution" data-filter-type="multi-select"
+                    value="decadal"> decadal
+            </label><label class="filter-option" for="temporal-resolution-6">
+                <input type="checkbox" id="temporal-resolution-6" class="filter-checkbox" data-filter="Temporal resolution" data-filter-type="multi-select"
+                    value="discrete"> discrete
+            </label><label class="filter-option" for="temporal-resolution-7">
+                <input type="checkbox" id="temporal-resolution-7" class="filter-checkbox" data-filter="Temporal resolution" data-filter-type="multi-select"
+                    value="irregular"> irregular
+            </label><label class="filter-option" for="temporal-resolution-8">
+                <input type="checkbox" id="temporal-resolution-8" class="filter-checkbox" data-filter="Temporal resolution" data-filter-type="multi-select"
+                    value="monthly"> monthly
+            </label><label class="filter-option" for="temporal-resolution-9">
+                <input type="checkbox" id="temporal-resolution-9" class="filter-checkbox" data-filter="Temporal resolution" data-filter-type="multi-select"
+                    value="seasonal"> seasonal
+            </label><label class="filter-option" for="temporal-resolution-10">
+                <input type="checkbox" id="temporal-resolution-10" class="filter-checkbox" data-filter="Temporal resolution" data-filter-type="multi-select"
+                    value="sub-annual"> sub-annual
+            </label><label class="filter-option" for="temporal-resolution-11">
+                <input type="checkbox" id="temporal-resolution-11" class="filter-checkbox" data-filter="Temporal resolution" data-filter-type="multi-select"
+                    value="yearly"> yearly
+            </label></div><div class="filter">
+            <label>Spatial resolution</label><label class="filter-option" for="spatial-resolution-0">
+                <input type="checkbox" id="spatial-resolution-0" class="filter-checkbox" data-filter="Spatial resolution" data-filter-type="multi-select"
+                    value="0.083° x 0.083°"> 0.083° x 0.083°
+            </label><label class="filter-option" for="spatial-resolution-1">
+                <input type="checkbox" id="spatial-resolution-1" class="filter-checkbox" data-filter="Spatial resolution" data-filter-type="multi-select"
+                    value="0.088° x 0.088°"> 0.088° x 0.088°
+            </label><label class="filter-option" for="spatial-resolution-2">
+                <input type="checkbox" id="spatial-resolution-2" class="filter-checkbox" data-filter="Spatial resolution" data-filter-type="multi-select"
+                    value="0.10° x 0.05°"> 0.10° x 0.05°
+            </label><label class="filter-option" for="spatial-resolution-3">
+                <input type="checkbox" id="spatial-resolution-3" class="filter-checkbox" data-filter="Spatial resolution" data-filter-type="multi-select"
+                    value="0.25° x 0.25°"> 0.25° x 0.25°
+            </label><label class="filter-option" for="spatial-resolution-4">
+                <input type="checkbox" id="spatial-resolution-4" class="filter-checkbox" data-filter="Spatial resolution" data-filter-type="multi-select"
+                    value="0.33° x 0.33°"> 0.33° x 0.33°
+            </label><label class="filter-option" for="spatial-resolution-5">
+                <input type="checkbox" id="spatial-resolution-5" class="filter-checkbox" data-filter="Spatial resolution" data-filter-type="multi-select"
+                    value="1° x 1°"> 1° x 1°
+            </label><label class="filter-option" for="spatial-resolution-6">
+                <input type="checkbox" id="spatial-resolution-6" class="filter-checkbox" data-filter="Spatial resolution" data-filter-type="multi-select"
+                    value="2.5° x 2°"> 2.5° x 2°
+            </label><label class="filter-option" for="spatial-resolution-7">
+                <input type="checkbox" id="spatial-resolution-7" class="filter-checkbox" data-filter="Spatial resolution" data-filter-type="multi-select"
+                    value="2° x 2°"> 2° x 2°
+            </label></div></div>
     <footer class="footer">
-        <a class='submit' href="https://docs.google.com/forms/d/e/1FAIpQLSeNP4JO0QeNak7F5cYL_r7yKzxQCRsZi7bkP7kYD4G_chdBBg/viewform" target="_blank">Submit a new dataset</a>
+        <a class='submit' href="https://docs.google.com/forms/d/e/1FAIpQLSdguEed1sRdgHjhP_KsgHeh_G7gHjz8qGmuTu9C7K_fK7hyUQ/viewform" target="_blank">Submit a new dataset</a>
         <!-- add spacer so website copy is on bottom -->
         
         <div class="github-icon">
@@ -85,7 +149,7 @@
         <div class="content">
             <div class="products"><div class="product-card" data-data-type="Data compilations" data-spatial-domains="Open ocean||Coastal ocean||Surface" data-temporal-resolution="continuous" data-period="1957 - 2025">
     <div class="card-inner">
-        <div class="card-front">
+        <div class="card-front" role="button" tabindex="0" aria-label="Open details for SOCAT">
             <div class="card-header">
                 <h3>SOCAT</h3>
                 <div class="card-subheading">Bakker et al. (2016)</div>
@@ -131,7 +195,7 @@
     </div>
 </div><div class="product-card" data-data-type="Data compilations" data-spatial-domains="Open ocean||Surface" data-temporal-resolution="continuous">
     <div class="card-inner">
-        <div class="card-front">
+        <div class="card-front" role="button" tabindex="0" aria-label="Open details for LDEO Surface pCO2 Database">
             <div class="card-header">
                 <h3>LDEO Surface pCO2 Database</h3>
                 <div class="card-subheading">Takahashi et a. (2009)</div>
@@ -174,7 +238,7 @@
     </div>
 </div><div class="product-card" data-data-type="Data compilations" data-spatial-domains="Open ocean||Water column" data-temporal-resolution="discrete" data-period="1960 - 2024">
     <div class="card-inner">
-        <div class="card-front">
+        <div class="card-front" role="button" tabindex="0" aria-label="Open details for GLODAPv2">
             <div class="card-header">
                 <h3>GLODAPv2</h3>
                 <div class="card-subheading">Lauvset et al. (2024)</div>
@@ -220,7 +284,7 @@
     </div>
 </div><div class="product-card" data-data-type="Data compilations" data-spatial-domains="Open ocean||Water column" data-temporal-resolution="irregular" data-period="1967-2025">
     <div class="card-inner">
-        <div class="card-front">
+        <div class="card-front" role="button" tabindex="0" aria-label="Open details for Quality Edited Hydrographic Data">
             <div class="card-header">
                 <h3>Quality Edited Hydrographic Data</h3>
                 <div class="card-subheading">Swift et al. (2026)</div>
@@ -249,7 +313,7 @@
             </div>
             <div class="card-details"><div class="card-detail">
                     <span class="card-detail-title">Description: </span>
-                    <span class="card-detail-content">Similar to GLODAPv2, with no adjustments</span>
+                    <span class="card-detail-content">The collection contains ocean basin spanning vertical section data from the WOCE Hydrographic Program, CLIVAR Repeat Hydrography, GO-SHIP and other programs with similar intent and high quality standards. Many of the sections have been occupied multiple times. The data values for measured parameters are identical those available from the CLIVAR and Carbon Hydrographic Data Office (CCHDO), but the files have been vetted and groomed for improved readability and consistency, and assembled in sensible geographic order. Data are organized by ocean region, section name, and year. On occasion, a data file is replaced with a preferred version or new transects are added to the collection.</span>
                 </div><div class="card-detail">
                     <span class="card-detail-title">Reference: </span>
                     <span class="card-detail-content">Swift, James H. and Barna, A.  (2026). Quality Edited Vertical Ocean Section and Gridded Hydrographic Data. UC San Diego Library Digital Collections. Dataset. https://doi.org/10.6075/J0K074P0</span>
@@ -266,7 +330,7 @@
     </div>
 </div><div class="product-card" data-data-type="Data compilations" data-spatial-domains="Open ocean||Water column" data-temporal-resolution="discrete">
     <div class="card-inner">
-        <div class="card-front">
+        <div class="card-front" role="button" tabindex="0" aria-label="Open details for World Ocean Database">
             <div class="card-header">
                 <h3>World Ocean Database</h3>
                 <div class="card-subheading">Mishonov et al. (2024)</div>
@@ -309,7 +373,7 @@
     </div>
 </div><div class="product-card" data-data-type="Data compilations" data-spatial-domains="Open ocean||Coastal ocean||Surface||Water column" data-temporal-resolution="discrete" data-period="1993-2022">
     <div class="card-inner">
-        <div class="card-front">
+        <div class="card-front" role="button" tabindex="0" aria-label="Open details for SNAPO-CO2">
             <div class="card-header">
                 <h3>SNAPO-CO2</h3>
                 <div class="card-subheading">Metzl et al (2024)</div>
@@ -355,7 +419,7 @@
     </div>
 </div><div class="product-card" data-data-type="Data compilations" data-spatial-domains="Coastal ocean||Water column" data-temporal-resolution="discrete" data-period="2003 - 2018">
     <div class="card-inner">
-        <div class="card-front">
+        <div class="card-front" role="button" tabindex="0" aria-label="Open details for CODAP-NA">
             <div class="card-header">
                 <h3>CODAP-NA</h3>
                 <div class="card-subheading">Jiang et al. (2021)</div>
@@ -401,7 +465,7 @@
     </div>
 </div><div class="product-card" data-data-type="Data compilations" data-spatial-domains="Coastal ocean||Water column" data-temporal-resolution="irregular">
     <div class="card-inner">
-        <div class="card-front">
+        <div class="card-front" role="button" tabindex="0" aria-label="Open details for AZMP Carbon">
             <div class="card-header">
                 <h3>AZMP Carbon</h3>
                 <div class="card-subheading">Gibb et al. (2023)</div>
@@ -444,7 +508,7 @@
     </div>
 </div><div class="product-card" data-data-type="Data compilations" data-spatial-domains="Regional||Coastal ocean||Surface||Water column" data-temporal-resolution="irregular||daily" data-period="1949-2022">
     <div class="card-inner">
-        <div class="card-front">
+        <div class="card-front" role="button" tabindex="0" aria-label="Open details for MOCHA">
             <div class="card-header">
                 <h3>MOCHA</h3>
                 <div class="card-subheading">Kennedy et al., 2023</div>
@@ -490,7 +554,7 @@
     </div>
 </div><div class="product-card" data-data-type="Data compilations" data-spatial-domains="Open ocean||Coastal ocean||Surface||Water column||Regional" data-temporal-resolution="irregular||discrete" data-period="1976-2018">
     <div class="card-inner">
-        <div class="card-front">
+        <div class="card-front" role="button" tabindex="0" aria-label="Open details for ARIOS">
             <div class="card-header">
                 <h3>ARIOS</h3>
                 <div class="card-subheading">Padin et al. (2020)</div>
@@ -536,7 +600,7 @@
     </div>
 </div><div class="product-card" data-data-type="Data compilations" data-spatial-domains="Coastal ocean||Water column" data-temporal-resolution="discrete" data-period="2008 - 2017">
     <div class="card-inner">
-        <div class="card-front">
+        <div class="card-front" role="button" tabindex="0" aria-label="Open details for Marine Inorganic Carbonate Chemistry in the Northern Gulf of Alaska">
             <div class="card-header">
                 <h3>Marine Inorganic Carbonate Chemistry in the Northern Gulf of Alaska</h3>
                 <div class="card-subheading">Monacci et al. (2024)</div>
@@ -582,7 +646,7 @@
     </div>
 </div><div class="product-card" data-data-type="Data compilations" data-spatial-domains="Regional||Coastal ocean||Surface" data-temporal-resolution="irregular||bi-monthly">
     <div class="card-inner">
-        <div class="card-front">
+        <div class="card-front" role="button" tabindex="0" aria-label="Open details for Coral Reef Carbonate Chemistry Off the Florida Keys">
             <div class="card-header">
                 <h3>Coral Reef Carbonate Chemistry Off the Florida Keys</h3>
                 <div class="card-subheading">Palacio-Castro et al. (2023)</div>
@@ -625,7 +689,7 @@
     </div>
 </div><div class="product-card" data-data-type="Data compilations" data-spatial-domains="Coastal ocean||Estuaries||Water column" data-temporal-resolution="seasonal||discrete||continuous" data-period="2008–2024">
     <div class="card-inner">
-        <div class="card-front">
+        <div class="card-front" role="button" tabindex="0" aria-label="Open details for Salish Cruise Data Package">
             <div class="card-header">
                 <h3>Salish Cruise Data Package</h3>
                 <div class="card-subheading">Alin et al. (2025a)</div>
@@ -671,7 +735,7 @@
     </div>
 </div><div class="product-card" data-data-type="Data compilations" data-spatial-domains="Coastal ocean||Estuaries||Water column" data-temporal-resolution="seasonal||discrete||continuous" data-period="2008–2024">
     <div class="card-inner">
-        <div class="card-front">
+        <div class="card-front" role="button" tabindex="0" aria-label="Open details for Salish Cruise Multi-stressor Data Product">
             <div class="card-header">
                 <h3>Salish Cruise Multi-stressor Data Product</h3>
                 <div class="card-subheading">Alin et al. (2025b)</div>
@@ -717,7 +781,7 @@
     </div>
 </div><div class="product-card" data-data-type="Data compilations" data-spatial-domains="Open ocean||Water column||Regional" data-temporal-resolution="irregular||sub-annual||discrete" data-period="1990 - 2019">
     <div class="card-inner">
-        <div class="card-front">
+        <div class="card-front" role="button" tabindex="0" aria-label="Open details for Line P Marine Carbonate Chemistry Compilation">
             <div class="card-header">
                 <h3>Line P Marine Carbonate Chemistry Compilation</h3>
                 <div class="card-subheading">Franco et al., (2021)</div>
@@ -763,7 +827,7 @@
     </div>
 </div><div class="product-card" data-data-type="Data compilations" data-spatial-domains="Open ocean" data-temporal-resolution="climatology" data-period="2005">
     <div class="card-inner">
-        <div class="card-front">
+        <div class="card-front" role="button" tabindex="0" aria-label="Open details for Anthropogenic Carbon in the Arctic Ocean">
             <div class="card-header">
                 <h3>Anthropogenic Carbon in the Arctic Ocean</h3>
                 <div class="card-subheading">Terhaar et al. (2020)</div>
@@ -809,7 +873,7 @@
     </div>
 </div><div class="product-card" data-data-type="Time series" data-spatial-domains="Open ocean" data-temporal-resolution="monthly" data-period="1988-2025">
     <div class="card-inner">
-        <div class="card-front">
+        <div class="card-front" role="button" tabindex="0" aria-label="Open details for BATS">
             <div class="card-header">
                 <h3>BATS</h3>
                 <div class="card-subheading">Bates and Johnson (2023)</div>
@@ -855,7 +919,7 @@
     </div>
 </div><div class="product-card" data-data-type="Time series" data-spatial-domains="Open ocean||Water column" data-temporal-resolution="monthly" data-period="1988-2025">
     <div class="card-inner">
-        <div class="card-front">
+        <div class="card-front" role="button" tabindex="0" aria-label="Open details for HOT">
             <div class="card-header">
                 <h3>HOT</h3>
                 <div class="card-subheading">Dore et al. (2009)</div>
@@ -901,7 +965,7 @@
     </div>
 </div><div class="product-card" data-data-type="Time series" data-spatial-domains="Open ocean" data-temporal-resolution="irregular">
     <div class="card-inner">
-        <div class="card-front">
+        <div class="card-front" role="button" tabindex="0" aria-label="Open details for ESTOC">
             <div class="card-header">
                 <h3>ESTOC</h3>
                 <div class="card-subheading">González-Dávila and Santana-Casiano (2023)</div>
@@ -944,7 +1008,7 @@
     </div>
 </div><div class="product-card" data-data-type="Time series" data-spatial-domains="Coastal ocean" data-temporal-resolution="discrete">
     <div class="card-inner">
-        <div class="card-front">
+        <div class="card-front" role="button" tabindex="0" aria-label="Open details for Point B Time-series">
             <div class="card-header">
                 <h3>Point B Time-series</h3>
                 <div class="card-subheading">Kapsenberg et al. (2017)</div>
@@ -987,7 +1051,7 @@
     </div>
 </div><div class="product-card" data-data-type="Time series" data-spatial-domains="Coastal ocean" data-temporal-resolution="continuous||discrete">
     <div class="card-inner">
-        <div class="card-front">
+        <div class="card-front" role="button" tabindex="0" aria-label="Open details for Ny-Ålesund Time-series">
             <div class="card-header">
                 <h3>Ny-Ålesund Time-series</h3>
                 <div class="card-subheading">Gattuso et al. (2023)</div>
@@ -1030,7 +1094,7 @@
     </div>
 </div><div class="product-card" data-data-type="Time series" data-spatial-domains="Open ocean||Coastal ocean||Water column" data-temporal-resolution="irregular" data-period="1983 - 2021">
     <div class="card-inner">
-        <div class="card-front">
+        <div class="card-front" role="button" tabindex="0" aria-label="Open details for SPOTS">
             <div class="card-header">
                 <h3>SPOTS</h3>
                 <div class="card-subheading">Lange et al., (2024)</div>
@@ -1076,7 +1140,7 @@
     </div>
 </div><div class="product-card" data-data-type="Time series" data-spatial-domains="Open ocean||Coastal ocean||Surface" data-temporal-resolution="continuous">
     <div class="card-inner">
-        <div class="card-front">
+        <div class="card-front" role="button" tabindex="0" aria-label="Open details for pCO2 and pH Time-series from 40 Surface Buoys">
             <div class="card-header">
                 <h3>pCO2 and pH Time-series from 40 Surface Buoys</h3>
                 <div class="card-subheading">Sutton et al. (2019)</div>
@@ -1119,7 +1183,7 @@
     </div>
 </div><div class="product-card" data-data-type="Gridded surface" data-spatial-domains="Open ocean" data-temporal-resolution="monthly" data-spatial-resolution="1° x 1°" data-period="2010">
     <div class="card-inner">
-        <div class="card-front">
+        <div class="card-front" role="button" tabindex="0" aria-label="Open details for Takahashi ΔfCO2 & Flux Climatology">
             <div class="card-header">
                 <h3>Takahashi ΔfCO2 & Flux Climatology</h3>
                 <div class="card-subheading">Fay et al. (2024)</div>
@@ -1169,7 +1233,7 @@ to 1° × 1° resolution and near-global coverage. This climatology represents t
     </div>
 </div><div class="product-card" data-data-type="Gridded surface" data-spatial-domains="Open ocean||Coastal ocean||Surface" data-temporal-resolution="monthly||climatology" data-spatial-resolution="0.25° x 0.25°">
     <div class="card-inner">
-        <div class="card-front">
+        <div class="card-front" role="button" tabindex="0" aria-label="Open details for MPI-ULB-SOM-FFN">
             <div class="card-header">
                 <h3>MPI-ULB-SOM-FFN</h3>
                 <div class="card-subheading">Landschützer et al. (2020) </div>
@@ -1215,7 +1279,7 @@ to 1° × 1° resolution and near-global coverage. This climatology represents t
     </div>
 </div><div class="product-card" data-data-type="Gridded surface" data-spatial-domains="Open ocean" data-temporal-resolution="monthly||climatology" data-spatial-resolution="1° x 1°" data-period="1982 - 2025">
     <div class="card-inner">
-        <div class="card-front">
+        <div class="card-front" role="button" tabindex="0" aria-label="Open details for VLIZ-SOM-FFN">
             <div class="card-header">
                 <h3>VLIZ-SOM-FFN</h3>
                 <div class="card-subheading">Landschützer et al. (2016) </div>
@@ -1264,7 +1328,7 @@ to 1° × 1° resolution and near-global coverage. This climatology represents t
     </div>
 </div><div class="product-card" data-data-type="Gridded surface" data-spatial-domains="Open ocean||Surface" data-temporal-resolution="monthly" data-spatial-resolution="1° x 1°" data-period="1990-2023">
     <div class="card-inner">
-        <div class="card-front">
+        <div class="card-front" role="button" tabindex="0" aria-label="Open details for JMA-MLR">
             <div class="card-header">
                 <h3>JMA-MLR</h3>
                 <div class="card-subheading">Iida et al. (2021)</div>
@@ -1313,7 +1377,7 @@ to 1° × 1° resolution and near-global coverage. This climatology represents t
     </div>
 </div><div class="product-card" data-data-type="Gridded surface" data-spatial-domains="Open ocean||Surface" data-temporal-resolution="monthly" data-spatial-resolution="1° x 1°" data-period="1982 - 2022">
     <div class="card-inner">
-        <div class="card-front">
+        <div class="card-front" role="button" tabindex="0" aria-label="Open details for OceanSODA-ETHZv1">
             <div class="card-header">
                 <h3>OceanSODA-ETHZv1</h3>
                 <div class="card-subheading">Gregor and Gruber (2021)</div>
@@ -1362,7 +1426,7 @@ to 1° × 1° resolution and near-global coverage. This climatology represents t
     </div>
 </div><div class="product-card" data-data-type="Gridded surface" data-spatial-domains="Open ocean||Surface" data-temporal-resolution="8-day" data-spatial-resolution="0.25° x 0.25°" data-period="1982 - 2023">
     <div class="card-inner">
-        <div class="card-front">
+        <div class="card-front" role="button" tabindex="0" aria-label="Open details for OceanSODA-ETHZv2">
             <div class="card-header">
                 <h3>OceanSODA-ETHZv2</h3>
                 <div class="card-subheading">Gregor et al. (2024)</div>
@@ -1411,7 +1475,7 @@ to 1° × 1° resolution and near-global coverage. This climatology represents t
     </div>
 </div><div class="product-card" data-data-type="Gridded surface" data-spatial-domains="Open ocean||Surface" data-temporal-resolution="monthly" data-spatial-resolution="1° x 1°" data-period="1982-2018">
     <div class="card-inner">
-        <div class="card-front">
+        <div class="card-front" role="button" tabindex="0" aria-label="Open details for LDEO-HPD fCO2">
             <div class="card-header">
                 <h3>LDEO-HPD fCO2</h3>
                 <div class="card-subheading">Gloege et al. (2022)</div>
@@ -1460,7 +1524,7 @@ to 1° × 1° resolution and near-global coverage. This climatology represents t
     </div>
 </div><div class="product-card" data-data-type="Gridded surface" data-spatial-domains="Open ocean" data-temporal-resolution="monthly" data-spatial-resolution="1° x 1°" data-period="1959-2023">
     <div class="card-inner">
-        <div class="card-front">
+        <div class="card-front" role="button" tabindex="0" aria-label="Open details for LDEO-HPD fCO2, with Extended Temporal Coverage">
             <div class="card-header">
                 <h3>LDEO-HPD fCO2, with Extended Temporal Coverage</h3>
                 <div class="card-subheading">Gloege et al. (2022), Bennington et al. (2022)</div>
@@ -1509,7 +1573,7 @@ to 1° × 1° resolution and near-global coverage. This climatology represents t
     </div>
 </div><div class="product-card" data-data-type="Gridded surface" data-spatial-domains="Open ocean" data-temporal-resolution="monthly" data-spatial-resolution="1° x 1°" data-period="1982-2023">
     <div class="card-inner">
-        <div class="card-front">
+        <div class="card-front" role="button" tabindex="0" aria-label="Open details for LDEO fCO2 - Residual Method">
             <div class="card-header">
                 <h3>LDEO fCO2 - Residual Method</h3>
                 <div class="card-subheading">Bennington et al. (2022)</div>
@@ -1558,7 +1622,7 @@ to 1° × 1° resolution and near-global coverage. This climatology represents t
     </div>
 </div><div class="product-card" data-data-type="Gridded surface" data-spatial-domains="Open ocean||Coastal ocean||Surface" data-temporal-resolution="monthly||climatology" data-spatial-resolution="1° x 1°" data-period="1985 - 2019">
     <div class="card-inner">
-        <div class="card-front">
+        <div class="card-front" role="button" tabindex="0" aria-label="Open details for CMEMS-LSCEv1">
             <div class="card-header">
                 <h3>CMEMS-LSCEv1</h3>
                 <div class="card-subheading">Chau et al. (2022)</div>
@@ -1607,7 +1671,7 @@ to 1° × 1° resolution and near-global coverage. This climatology represents t
     </div>
 </div><div class="product-card" data-data-type="Gridded surface" data-spatial-domains="Open ocean||Coastal ocean||Surface" data-temporal-resolution="monthly||climatology" data-spatial-resolution="0.25° x 0.25°" data-period="1985 - 2025">
     <div class="card-inner">
-        <div class="card-front">
+        <div class="card-front" role="button" tabindex="0" aria-label="Open details for CMEMS-LSCEv2">
             <div class="card-header">
                 <h3>CMEMS-LSCEv2</h3>
                 <div class="card-subheading">Chau et al. (2024)</div>
@@ -1656,7 +1720,7 @@ to 1° × 1° resolution and near-global coverage. This climatology represents t
     </div>
 </div><div class="product-card" data-data-type="Gridded surface" data-spatial-domains="Open ocean" data-temporal-resolution="daily" data-spatial-resolution="2.5° x 2°" data-period="1957-2020">
     <div class="card-inner">
-        <div class="card-front">
+        <div class="card-front" role="button" tabindex="0" aria-label="Open details for CarboScope (Jena-MLS)">
             <div class="card-header">
                 <h3>CarboScope (Jena-MLS)</h3>
                 <div class="card-subheading">Rödenbeck et al. (2022)</div>
@@ -1705,7 +1769,7 @@ to 1° × 1° resolution and near-global coverage. This climatology represents t
     </div>
 </div><div class="product-card" data-data-type="Gridded surface" data-spatial-domains="Open ocean" data-temporal-resolution="monthly" data-spatial-resolution="1° x 1°" data-period="1985-2019">
     <div class="card-inner">
-        <div class="card-front">
+        <div class="card-front" role="button" tabindex="0" aria-label="Open details for UoEX-Watson">
             <div class="card-header">
                 <h3>UoEX-Watson</h3>
                 <div class="card-subheading">Watson et al (2020)</div>
@@ -1754,7 +1818,7 @@ to 1° × 1° resolution and near-global coverage. This climatology represents t
     </div>
 </div><div class="product-card" data-data-type="Gridded surface" data-spatial-domains="Open ocean||Surface" data-temporal-resolution="monthly" data-spatial-resolution="1° x 1°" data-period="1982 - 2024">
     <div class="card-inner">
-        <div class="card-front">
+        <div class="card-front" role="button" tabindex="0" aria-label="Open details for NIES-ML3">
             <div class="card-header">
                 <h3>NIES-ML3</h3>
                 <div class="card-subheading">Zeng et al. (2022)</div>
@@ -1803,7 +1867,7 @@ to 1° × 1° resolution and near-global coverage. This climatology represents t
     </div>
 </div><div class="product-card" data-data-type="Gridded surface" data-spatial-domains="Open ocean||Surface" data-temporal-resolution="monthly" data-spatial-resolution="1° x 1°" data-period="1982 - 2020">
     <div class="card-inner">
-        <div class="card-front">
+        <div class="card-front" role="button" tabindex="0" aria-label="Open details for CSIR-ML6">
             <div class="card-header">
                 <h3>CSIR-ML6</h3>
                 <div class="card-subheading">Gregor et al. (2019)</div>
@@ -1852,7 +1916,7 @@ to 1° × 1° resolution and near-global coverage. This climatology represents t
     </div>
 </div><div class="product-card" data-data-type="Gridded surface" data-spatial-domains="Open ocean||Surface" data-temporal-resolution="monthly" data-spatial-resolution="1° x 1°" data-period="1992 - 2024">
     <div class="card-inner">
-        <div class="card-front">
+        <div class="card-front" role="button" tabindex="0" aria-label="Open details for Stepwise-FFNN">
             <div class="card-header">
                 <h3>Stepwise-FFNN</h3>
                 <div class="card-subheading">Zhong et al. (2022)</div>
@@ -1901,7 +1965,7 @@ to 1° × 1° resolution and near-global coverage. This climatology represents t
     </div>
 </div><div class="product-card" data-data-type="Gridded surface" data-spatial-domains="Open ocean||Surface" data-temporal-resolution="monthly||climatology" data-spatial-resolution="1° x 1°" data-period="1998 - 2023">
     <div class="card-inner">
-        <div class="card-front">
+        <div class="card-front" role="button" tabindex="0" aria-label="Open details for AOML-ET">
             <div class="card-header">
                 <h3>AOML-ET</h3>
                 <div class="card-subheading">Wanninkhof et al. (2015)</div>
@@ -1950,7 +2014,7 @@ to 1° × 1° resolution and near-global coverage. This climatology represents t
     </div>
 </div><div class="product-card" data-data-type="Gridded surface" data-spatial-domains="Coastal ocean" data-temporal-resolution="monthly" data-spatial-resolution="0.25° x 0.25°" data-period="1982-2020">
     <div class="card-inner">
-        <div class="card-front">
+        <div class="card-front" role="button" tabindex="0" aria-label="Open details for ULB-SOM-FFN-Coastalv2.1">
             <div class="card-header">
                 <h3>ULB-SOM-FFN-Coastalv2.1</h3>
                 <div class="card-subheading">Roobaert et al. (2024)</div>
@@ -1999,7 +2063,7 @@ to 1° × 1° resolution and near-global coverage. This climatology represents t
     </div>
 </div><div class="product-card" data-data-type="Gridded surface" data-spatial-domains="Coastal ocean||Surface||Regional" data-temporal-resolution="monthly" data-spatial-resolution="0.25° x 0.25°" data-period="1998 - 2024">
     <div class="card-inner">
-        <div class="card-front">
+        <div class="card-front" role="button" tabindex="0" aria-label="Open details for RFR-LME">
             <div class="card-header">
                 <h3>RFR-LME</h3>
                 <div class="card-subheading">Sharp et al. (2024)</div>
@@ -2048,7 +2112,7 @@ to 1° × 1° resolution and near-global coverage. This climatology represents t
     </div>
 </div><div class="product-card" data-data-type="Gridded surface" data-spatial-domains="Coastal ocean" data-temporal-resolution="monthly" data-spatial-resolution="0.25° x 0.25°" data-period="1993-2021">
     <div class="card-inner">
-        <div class="card-front">
+        <div class="card-front" role="button" tabindex="0" aria-label="Open details for ReCAD-NAACOM-pCO2">
             <div class="card-header">
                 <h3>ReCAD-NAACOM-pCO2</h3>
                 <div class="card-subheading">Wu et al. (2025)</div>
@@ -2098,7 +2162,7 @@ Margins (NAACOM)
     </div>
 </div><div class="product-card" data-data-type="Gridded surface" data-spatial-domains="Coastal ocean" data-temporal-resolution="monthly||climatology" data-spatial-resolution="1° x 1°" data-period="2002 - 2019">
     <div class="card-inner">
-        <div class="card-front">
+        <div class="card-front" role="button" tabindex="0" aria-label="Open details for Gridded Surface OA Indicators in the Northern Caribbean Sea">
             <div class="card-header">
                 <h3>Gridded Surface OA Indicators in the Northern Caribbean Sea</h3>
                 <div class="card-subheading">Wanninkhof et al. (2020)</div>
@@ -2147,7 +2211,7 @@ Margins (NAACOM)
     </div>
 </div><div class="product-card" data-data-type="Gridded surface" data-spatial-domains="Regional||Surface" data-temporal-resolution="monthly" data-spatial-resolution="0.088° x 0.088°" data-period="2014-2020">
     <div class="card-inner">
-        <div class="card-front">
+        <div class="card-front" role="button" tabindex="0" aria-label="Open details for OA Data in the Gulf of Mexico/Gulf of America and Wider Caribbean">
             <div class="card-header">
                 <h3>OA Data in the Gulf of Mexico/Gulf of America and Wider Caribbean</h3>
                 <div class="card-subheading">van Hooidonk (2022)</div>
@@ -2196,7 +2260,7 @@ Margins (NAACOM)
     </div>
 </div><div class="product-card" data-data-type="Gridded surface" data-spatial-domains="Regional" data-temporal-resolution="monthly||climatology" data-spatial-resolution="0.10° x 0.05°" data-period="2003-2021">
     <div class="card-inner">
-        <div class="card-front">
+        <div class="card-front" role="button" tabindex="0" aria-label="Open details for pCO2 Climatology of the Baltic Sea">
             <div class="card-header">
                 <h3>pCO2 Climatology of the Baltic Sea</h3>
                 <div class="card-subheading">Bittig et al. (2024)</div>
@@ -2245,7 +2309,7 @@ Margins (NAACOM)
     </div>
 </div><div class="product-card" data-data-type="Gridded surface" data-spatial-domains="Regional" data-temporal-resolution="monthly" data-spatial-resolution="0.083° x 0.083°" data-period="2015">
     <div class="card-inner">
-        <div class="card-front">
+        <div class="card-front" role="button" tabindex="0" aria-label="Open details for INCOIS-ReML">
             <div class="card-header">
                 <h3>INCOIS-ReML</h3>
                 <div class="card-subheading">Joshi et al. (2024)</div>
@@ -2294,7 +2358,7 @@ Margins (NAACOM)
     </div>
 </div><div class="product-card" data-data-type="Gridded surface" data-spatial-domains="Regional" data-temporal-resolution="monthly" data-spatial-resolution="0.083° x 0.083°" data-period="1993-2020">
     <div class="card-inner">
-        <div class="card-front">
+        <div class="card-front" role="button" tabindex="0" aria-label="Open details for INCOIS_TA">
             <div class="card-header">
                 <h3>INCOIS_TA</h3>
                 <div class="card-subheading">Joshi et al. (2025)</div>
@@ -2343,7 +2407,7 @@ Margins (NAACOM)
     </div>
 </div><div class="product-card" data-data-type="Gridded subsurface" data-spatial-domains="Open ocean||Water column" data-temporal-resolution="climatology" data-spatial-resolution="1° x 1°" data-period="2002">
     <div class="card-inner">
-        <div class="card-front">
+        <div class="card-front" role="button" tabindex="0" aria-label="Open details for GLODAPv2 Climatology">
             <div class="card-header">
                 <h3>GLODAPv2 Climatology</h3>
                 <div class="card-subheading">Lauvset et al. (2016)</div>
@@ -2392,7 +2456,7 @@ Margins (NAACOM)
     </div>
 </div><div class="product-card" data-data-type="Gridded subsurface" data-spatial-domains="Open ocean||Water column" data-temporal-resolution="climatology" data-spatial-resolution="1° x 1°" data-period="2000">
     <div class="card-inner">
-        <div class="card-front">
+        <div class="card-front" role="button" tabindex="0" aria-label="Open details for Aragonite Saturation Climatology">
             <div class="card-header">
                 <h3>Aragonite Saturation Climatology</h3>
                 <div class="card-subheading">Jiang et al. (2015) </div>
@@ -2441,7 +2505,7 @@ Margins (NAACOM)
     </div>
 </div><div class="product-card" data-data-type="Gridded subsurface" data-spatial-domains="Open ocean" data-temporal-resolution="monthly||climatology" data-spatial-resolution="1° x 1°" data-period="2010">
     <div class="card-inner">
-        <div class="card-front">
+        <div class="card-front" role="button" tabindex="0" aria-label="Open details for MOBO-DIC (Version 2020)">
             <div class="card-header">
                 <h3>MOBO-DIC (Version 2020)</h3>
                 <div class="card-subheading">Keppler et al., 2020</div>
@@ -2490,7 +2554,7 @@ Margins (NAACOM)
     </div>
 </div><div class="product-card" data-data-type="Gridded subsurface" data-spatial-domains="Open ocean" data-temporal-resolution="monthly" data-spatial-resolution="1° x 1°" data-period="2004-2020">
     <div class="card-inner">
-        <div class="card-front">
+        <div class="card-front" role="button" tabindex="0" aria-label="Open details for MOBO-DIC (Version 2023)">
             <div class="card-header">
                 <h3>MOBO-DIC (Version 2023)</h3>
                 <div class="card-subheading">Keppler et al. (2023)</div>
@@ -2539,7 +2603,7 @@ Margins (NAACOM)
     </div>
 </div><div class="product-card" data-data-type="Gridded subsurface" data-spatial-domains="Open ocean||Water column" data-temporal-resolution="monthly||climatology" data-spatial-resolution="1° x 1°">
     <div class="card-inner">
-        <div class="card-front">
+        <div class="card-front" role="button" tabindex="0" aria-label="Open details for Monthly Interior Ocean TA Climatology">
             <div class="card-header">
                 <h3>Monthly Interior Ocean TA Climatology</h3>
                 <div class="card-subheading">Broullon et al., (2019)</div>
@@ -2585,7 +2649,7 @@ Margins (NAACOM)
     </div>
 </div><div class="product-card" data-data-type="Gridded subsurface" data-spatial-domains="Open ocean||Water column" data-temporal-resolution="monthly" data-spatial-resolution="1° x 1°" data-period="1995">
     <div class="card-inner">
-        <div class="card-front">
+        <div class="card-front" role="button" tabindex="0" aria-label="Open details for Monthly Interior Ocean DIC Climatology">
             <div class="card-header">
                 <h3>Monthly Interior Ocean DIC Climatology</h3>
                 <div class="card-subheading">Broullón et al., (2020)</div>
@@ -2634,7 +2698,7 @@ Margins (NAACOM)
     </div>
 </div><div class="product-card" data-data-type="Gridded subsurface" data-spatial-domains="Open ocean||Water column" data-temporal-resolution="climatology" data-spatial-resolution="1° x 1°" data-period="1850 - 2002">
     <div class="card-inner">
-        <div class="card-front">
+        <div class="card-front" role="button" tabindex="0" aria-label="Open details for Acidification Metrics in the Ocean Interior">
             <div class="card-header">
                 <h3>Acidification Metrics in the Ocean Interior</h3>
                 <div class="card-subheading">Fassbender et al. (2023) </div>
@@ -2683,7 +2747,7 @@ Margins (NAACOM)
     </div>
 </div><div class="product-card" data-data-type="Gridded subsurface" data-spatial-domains="Open ocean||Water column" data-temporal-resolution="decadal" data-spatial-resolution="1° x 1°" data-period="1800 - 2014">
     <div class="card-inner">
-        <div class="card-front">
+        <div class="card-front" role="button" tabindex="0" aria-label="Open details for Ocean Interior Acidification over the Industrial Era">
             <div class="card-header">
                 <h3>Ocean Interior Acidification over the Industrial Era</h3>
                 <div class="card-subheading">Müller et al. (2024)</div>
@@ -2732,7 +2796,7 @@ Margins (NAACOM)
     </div>
 </div><div class="product-card" data-data-type="Gridded subsurface" data-spatial-domains="Open ocean||Water column" data-temporal-resolution="climatology" data-spatial-resolution="1° x 1°" data-period="1994 - 2007">
     <div class="card-inner">
-        <div class="card-front">
+        <div class="card-front" role="button" tabindex="0" aria-label="Open details for Anthropogenic CO2 from 1994 to 2007">
             <div class="card-header">
                 <h3>Anthropogenic CO2 from 1994 to 2007</h3>
                 <div class="card-subheading">Gruber et al. (2019) </div>
@@ -2781,7 +2845,7 @@ Margins (NAACOM)
     </div>
 </div><div class="product-card" data-data-type="Gridded subsurface" data-spatial-domains="Open ocean||Water column" data-temporal-resolution="decadal" data-spatial-resolution="1° x 1°" data-period="1994 - 2014">
     <div class="card-inner">
-        <div class="card-front">
+        <div class="card-front" role="button" tabindex="0" aria-label="Open details for Decadal Trends in Anthropogenic CO2 from 1994 to 2014">
             <div class="card-header">
                 <h3>Decadal Trends in Anthropogenic CO2 from 1994 to 2014</h3>
                 <div class="card-subheading">Müller et al. (2023)</div>
@@ -2830,7 +2894,7 @@ Margins (NAACOM)
     </div>
 </div><div class="product-card" data-data-type="Gridded subsurface" data-spatial-domains="Open ocean||Surface||Water column" data-temporal-resolution="irregular" data-spatial-resolution="1° x 1°" data-period="1750-2500">
     <div class="card-inner">
-        <div class="card-front">
+        <div class="card-front" role="button" tabindex="0" aria-label="Open details for Anthropogenic carbon from 1750 to 2500 (TRACE)">
             <div class="card-header">
                 <h3>Anthropogenic carbon from 1750 to 2500 (TRACE)</h3>
                 <div class="card-subheading">Carter et al. (2025)</div>
@@ -2879,7 +2943,7 @@ Margins (NAACOM)
     </div>
 </div><div class="product-card" data-data-type="Gridded subsurface" data-spatial-domains="Open ocean||Water column" data-temporal-resolution="climatology" data-spatial-resolution="1° x 1°">
     <div class="card-inner">
-        <div class="card-front">
+        <div class="card-front" role="button" tabindex="0" aria-label="Open details for Preformed TA and other biogeochemical properties ">
             <div class="card-header">
                 <h3>Preformed TA and other biogeochemical properties </h3>
                 <div class="card-subheading">Carter et al. (2021)</div>
@@ -2925,7 +2989,7 @@ Margins (NAACOM)
     </div>
 </div><div class="product-card" data-data-type="Gridded subsurface" data-spatial-domains="Open ocean||Water column" data-temporal-resolution="monthly" data-spatial-resolution="1° x 1°" data-period="1992 - 2020">
     <div class="card-inner">
-        <div class="card-front">
+        <div class="card-front" role="button" tabindex="0" aria-label="Open details for Monthly Interior Ocean pH Climatology">
             <div class="card-header">
                 <h3>Monthly Interior Ocean pH Climatology</h3>
                 <div class="card-subheading">Zhong et al. (2025)</div>
@@ -2974,7 +3038,7 @@ Margins (NAACOM)
     </div>
 </div><div class="product-card" data-data-type="Gridded subsurface" data-spatial-domains="Coastal ocean||Water column" data-temporal-resolution="climatology" data-spatial-resolution="1° x 1°" data-period="2010">
     <div class="card-inner">
-        <div class="card-front">
+        <div class="card-front" role="button" tabindex="0" aria-label="Open details for CODAP-NA Climatology">
             <div class="card-header">
                 <h3>CODAP-NA Climatology</h3>
                 <div class="card-subheading">Jiang et al. (2024)</div>
@@ -3023,7 +3087,7 @@ Margins (NAACOM)
     </div>
 </div><div class="product-card" data-data-type="Harmonized" data-spatial-domains="Open ocean||Surface" data-temporal-resolution="monthly" data-spatial-resolution="1° x 1°" data-period="1990 - 2022">
     <div class="card-inner">
-        <div class="card-front">
+        <div class="card-front" role="button" tabindex="0" aria-label="Open details for SeaFlux">
             <div class="card-header">
                 <h3>SeaFlux</h3>
                 <div class="card-subheading">Fay and Gregor et al. (2021)</div>
@@ -3072,7 +3136,7 @@ Margins (NAACOM)
     </div>
 </div><div class="product-card" data-data-type="Harmonized" data-spatial-domains="Open ocean||Coastal ocean" data-temporal-resolution="monthly" data-spatial-resolution="1° x 1°" data-period="1985-2018">
     <div class="card-inner">
-        <div class="card-front">
+        <div class="card-front" role="button" tabindex="0" aria-label="Open details for RECCAP2">
             <div class="card-header">
                 <h3>RECCAP2</h3>
                 <div class="card-subheading">DeVries et al. (2023)</div>
@@ -3121,7 +3185,7 @@ Margins (NAACOM)
     </div>
 </div><div class="product-card" data-data-type="Harmonized" data-spatial-domains="Open ocean||Coastal ocean||Surface||Water column" data-temporal-resolution="monthly" data-spatial-resolution="1° x 1°" data-period="1959-2024">
     <div class="card-inner">
-        <div class="card-front">
+        <div class="card-front" role="button" tabindex="0" aria-label="Open details for Global Carbon Budget">
             <div class="card-header">
                 <h3>Global Carbon Budget</h3>
                 <div class="card-subheading">Friedlingstein et al. (2025)</div>
@@ -3170,7 +3234,7 @@ Margins (NAACOM)
     </div>
 </div><div class="product-card" data-data-type="Model-based" data-spatial-domains="Open ocean||Surface" data-temporal-resolution="yearly" data-period="1959 - 2016">
     <div class="card-inner">
-        <div class="card-front">
+        <div class="card-front" role="button" tabindex="0" aria-label="Open details for Decadal Trends in the Ocean Carbon Sink">
             <div class="card-header">
                 <h3>Decadal Trends in the Ocean Carbon Sink</h3>
                 <div class="card-subheading">DeVries et al. (2019)</div>
@@ -3216,7 +3280,7 @@ Margins (NAACOM)
     </div>
 </div><div class="product-card" data-data-type="Model-based" data-spatial-domains="Open ocean||Coastal ocean||Surface||Water column" data-temporal-resolution="daily||monthly" data-spatial-resolution="0.33° x 0.33°" data-period="1992 - 2018">
     <div class="card-inner">
-        <div class="card-front">
+        <div class="card-front" role="button" tabindex="0" aria-label="Open details for ECCO-Darwin">
             <div class="card-header">
                 <h3>ECCO-Darwin</h3>
                 <div class="card-subheading">Carroll et al. (2020)</div>
@@ -3265,7 +3329,7 @@ Margins (NAACOM)
     </div>
 </div><div class="product-card" data-data-type="Model-based" data-spatial-domains="Open ocean||Surface" data-temporal-resolution="decadal||climatology" data-spatial-resolution="1° x 1°" data-period="1770 - 2100">
     <div class="card-inner">
-        <div class="card-front">
+        <div class="card-front" role="button" tabindex="0" aria-label="Open details for Surface pH and Revelle Factor">
             <div class="card-header">
                 <h3>Surface pH and Revelle Factor</h3>
                 <div class="card-subheading">Jiang et al. (2019)</div>
@@ -3314,7 +3378,7 @@ Margins (NAACOM)
     </div>
 </div><div class="product-card" data-data-type="Model-based" data-spatial-domains="Open ocean||Surface" data-temporal-resolution="decadal||climatology" data-spatial-resolution="1° x 1°" data-period="1750 - 2100">
     <div class="card-inner">
-        <div class="card-front">
+        <div class="card-front" role="button" tabindex="0" aria-label="Open details for Surface OA Indicators ">
             <div class="card-header">
                 <h3>Surface OA Indicators </h3>
                 <div class="card-subheading">Jiang et al. (2023)</div>
@@ -3363,7 +3427,7 @@ Margins (NAACOM)
     </div>
 </div><div class="product-card" data-data-type="Model-based" data-spatial-domains="Open ocean||Regional" data-temporal-resolution="yearly" data-period="1850-2100">
     <div class="card-inner">
-        <div class="card-front">
+        <div class="card-front" role="button" tabindex="0" aria-label="Open details for Simulated and Constrained Southern Ocean Carbon Sink">
             <div class="card-header">
                 <h3>Simulated and Constrained Southern Ocean Carbon Sink</h3>
                 <div class="card-subheading">Terhaar et al. (2021)</div>
@@ -3409,7 +3473,7 @@ Margins (NAACOM)
     </div>
 </div><div class="product-card" data-data-type="Model-based" data-spatial-domains="Open ocean" data-temporal-resolution="yearly" data-period="1850-2100">
     <div class="card-inner">
-        <div class="card-front">
+        <div class="card-front" role="button" tabindex="0" aria-label="Open details for Simulated and Constrained Global Ocean Carbon Sink">
             <div class="card-header">
                 <h3>Simulated and Constrained Global Ocean Carbon Sink</h3>
                 <div class="card-subheading">Terhaar et al., (2022)</div>
@@ -3455,7 +3519,7 @@ Margins (NAACOM)
     </div>
 </div><div class="product-card" data-data-type="Model-based" data-spatial-domains="Open ocean" data-temporal-resolution="yearly" data-period="1959-2022">
     <div class="card-inner">
-        <div class="card-front">
+        <div class="card-front" role="button" tabindex="0" aria-label="Open details for Composite model-based estimate of the ocean carbon sink from 1959 to 2022">
             <div class="card-header">
                 <h3>Composite model-based estimate of the ocean carbon sink from 1959 to 2022</h3>
                 <div class="card-subheading">Terhaar (2025)</div>
@@ -3501,7 +3565,7 @@ Margins (NAACOM)
     </div>
 </div><div class="product-card" data-data-type="Model-based" data-spatial-domains="Regional" data-temporal-resolution="monthly" data-spatial-resolution="0.083° x 0.083°" data-period="1980-2019">
     <div class="card-inner">
-        <div class="card-front">
+        <div class="card-front" role="button" tabindex="0" aria-label="Open details for pCIBR_Clim and pCIBR_Int">
             <div class="card-header">
                 <h3>pCIBR_Clim and pCIBR_Int</h3>
                 <div class="card-subheading">Ghoshal et al. (2025)</div>
@@ -3550,7 +3614,7 @@ Margins (NAACOM)
     </div>
 </div><div class="product-card" data-data-type="Model-based" data-spatial-domains="Regional" data-temporal-resolution="monthly" data-spatial-resolution="0.083° x 0.083°" data-period="1980-2019">
     <div class="card-inner">
-        <div class="card-front">
+        <div class="card-front" role="button" tabindex="0" aria-label="Open details for INCOIS‐BIO‐ROMS Surface pCO2 and pH">
             <div class="card-header">
                 <h3>INCOIS‐BIO‐ROMS Surface pCO2 and pH</h3>
                 <div class="card-subheading">Chakraborty et al. (2024)</div>
@@ -3599,7 +3663,7 @@ Margins (NAACOM)
     </div>
 </div><div class="product-card" data-data-type="Model-based" data-spatial-domains="Open ocean" data-temporal-resolution="yearly" data-spatial-resolution="2° x 2°" data-period="1780-2020">
     <div class="card-inner">
-        <div class="card-front">
+        <div class="card-front" role="button" tabindex="0" aria-label="Open details for Ocean Circulation Inverse Model (OCIM2-48L)">
             <div class="card-header">
                 <h3>Ocean Circulation Inverse Model (OCIM2-48L)</h3>
                 <div class="card-subheading">DeVries (2022b)</div>
