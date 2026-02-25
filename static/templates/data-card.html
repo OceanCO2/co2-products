@@ -20,6 +20,12 @@
                 </div>
                 {%- endif -%}
                 {%- endfor -%}
+                {%- if p['data-category'] -%}
+                <div class="card-attr card-dataset-type-chip">
+                    <i class="fa-solid fa-circle-info" title="Dataset Type" aria-hidden="true"></i>
+                    <span class="card-attribute-value">{{ p['data-category'] }}</span>
+                </div>
+                {%- endif -%}
             </div>
         </div>
         <div class="card-back">

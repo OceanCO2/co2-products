@@ -364,6 +364,10 @@ body {
     padding: 12px 14px 14px;
 }
 
+.card-attributes {
+    flex-wrap: wrap-reverse;
+}
+
 .card-attr {
     margin: 0;
     display: inline-flex;
