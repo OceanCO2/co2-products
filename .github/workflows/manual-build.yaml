@@ -6,12 +6,10 @@ on:
       spreadsheet_id:
         # set the value when manually triggering the workflow
         description: 'Google Sheet ID'
-        default: ${{ secrets.GOOGLE_SHEET_ID }}
-        required: true
+        required: false
       spreadsheet_tab_id:
         description: 'Google Sheet Tab ID'
-        default: '0'
-        required: true
+        required: false
 
 jobs:
   run-python-script:
@@ -46,8 +44,9 @@ jobs:
       env:
         # This securely passes the data from the Apps Script payload
         # into your script as environment variables.
-        GOOGLE_SHEET_ID: ${{ github.event.inputs.spreadsheet_id }}
-        GOOGLE_TAB_ID: ${{ github.event.inputs.spreadsheet_tab_id }}
+        # if not provided, then GOOGLE_SHEET_ID and GOOGLE_TAB_ID are fetched from the repository secrets instead of the workflow dispatch inputs
+        GOOGLE_SHEET_ID: ${{ github.event.inputs.spreadsheet_id || secrets.GOOGLE_SHEET_ID }}
+        GOOGLE_TAB_ID: ${{ github.event.inputs.spreadsheet_tab_id || secrets.GOOGLE_TAB_ID }}
         LOGGER_LEVEL: DEBUG
       run: |
         # Activate the virtual environment created by uv
