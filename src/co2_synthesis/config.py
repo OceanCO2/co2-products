@@ -21,9 +21,11 @@ class Config(BaseSettings):
 
     # website settings
     WEBSITE_TITLE: str = "Ocean CO2 Products"
-    WEBSITE_DESCRIPTION: str = "Ocean carbon products from Jiang et al. (2025)"
     WEBSITE_IMAGE_MB: float = 0.3  # target max image size in MB
     WEBSITE_COLOR: str = "#0095ff"  # primary color for website
+    WEBSITE_SUBTITLE: str = "Ocean carbon products from "
+    PUBLICATION_LINK: str = "https://essd.copernicus.org/articles/18/1405/2026/"
+    PUBLICATION_CITATION: str = "Jiang et al. (2026)"
 
     # Filter settings
     DATA_FILTERS: tuple[str, ...] = (
