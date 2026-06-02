@@ -23,7 +23,7 @@ class Config(BaseSettings):
     WEBSITE_TITLE: str = "Ocean CO2 Products"
     WEBSITE_IMAGE_MB: float = 0.3  # target max image size in MB
     WEBSITE_COLOR: str = "#0095ff"  # primary color for website
-    WEBSITE_SUBTITLE: str = "A unified interface to access all ocean carbon products. For more information:"
+    WEBSITE_SUBTITLE: str = "A unified interface to access all ocean CO2 data products. For more information, check out:"
     PUBLICATION_LINK: str = "https://essd.copernicus.org/articles/18/1405/2026/"
     PUBLICATION_CITATION: str = "Jiang et al. (2026)"
 
