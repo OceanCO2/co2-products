@@ -61,7 +61,7 @@ body {
     margin: 8px 0 0;
     font-size: 1rem;
     color: var(--primary-color-text-secondary);
-    max-width: 70ch;
+    max-width: 90ch;
 }
 
 .subheader-publication-chip {
