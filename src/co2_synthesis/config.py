@@ -16,7 +16,7 @@ class Config(BaseSettings):
     GOOGLE_SHEET_INDEXCOL: int = 0
 
     GITHUB_REPO: str = 'https://github.com/OceanCO2/co2-products'
-    SUBMISSION_FORM: str = "https://docs.google.com/forms/d/e/1FAIpQLSeNP4JO0QeNak7F5cYL_r7yKzxQCRsZi7bkP7kYD4G_chdBBg/viewform"
+    SUBMISSION_FORM: str = "https://docs.google.com/forms/d/e/1FAIpQLSdAOMm0apbSuZsQnbeJIHE0NLsY_gySDNLyfMk6A6uF4_jaZA/viewform?usp=publish-editor"
     CONTACT_EMAIL: str = "noaa.ocads@noaa.gov"
 
     # website settings
