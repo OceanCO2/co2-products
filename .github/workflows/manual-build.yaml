@@ -1,6 +1,9 @@
 name: Build HTML manually
 
 on:
+  schedule:
+    # nightly at 10:17 UTC = 2:17 a.m. PST (3:17 a.m. during daylight time)
+    - cron: '17 10 * * *'
   workflow_dispatch:
     inputs:
       spreadsheet_id:
