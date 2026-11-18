@@ -43,7 +43,7 @@ jobs:
         uses: actions/checkout@v4
         with:
           # For workflow_run use the exact commit SHA that produced docs; else default
-          ref: ${{ github.event_name == 'workflow_run' && github.event.workflow_run.head_sha || '' }}
+          ref: main
       - name: Setup Pages
         uses: actions/configure-pages@v5
       - name: Upload artifact
