@@ -26,28 +26,24 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  # Single deploy job since we're just deploying
   deploy:
-    # Run only if:
-    #  - workflow_run finished successfully OR
-    #  - push/manual dispatch NOT created by the auto-commit message
-    if: >
-      ${{ (github.event_name == 'workflow_run' && github.event.workflow_run.conclusion == 'success') ||
-      (github.event_name != 'workflow_run' && !(github.event_name == 'push' && contains(github.event.head_commit.message, 'ci: Auto-update files from Google Sheet trigger'))) }}
+    if: >-
+      (github.event_name == 'workflow_run' && github.event.workflow_run.conclusion == 'success') ||
+      (github.event_name != 'workflow_run' &&
+       !(github.event_name == 'push' && contains(github.event.head_commit.message, 'ci: Auto-update files from Google Sheet trigger')))
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
       - name: Checkout docs revision
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
         with:
-          # For workflow_run use the exact commit SHA that produced docs; else default
           ref: main
       - name: Setup Pages
         uses: actions/configure-pages@v5
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
+        uses: actions/upload-pages-artifact@v4
         with:
           path: './docs/'
       - name: Deploy to GitHub Pages
